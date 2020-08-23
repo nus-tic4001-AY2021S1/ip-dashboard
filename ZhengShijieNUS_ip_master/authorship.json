@@ -1,0 +1,1287 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Tasks.Deadlines;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Tasks.Events;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Tasks.Task;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Tasks.ToDos;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        String hello \u003d \" Hello! I\u0027m Duke\\n\" +"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                \" What can I do for you?\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        String bye \u003d \" Bye. Hope to see you again soon!\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        System.out.println(\"________________________________________________________\");"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        System.out.println(hello);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        System.out.println(\"________________________________________________________\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Scanner scanner \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        ArrayList\u003cTask\u003e tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        while(true){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            String input \u003d scanner.nextLine();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            String[] cmd \u003d input.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            if(cmd[0].equalsIgnoreCase(\"bye\")){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                switch(cmd[0]){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                    case \"list\":"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        int i \u003d 1;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        for (Task s : tasks) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                            System.out.println(i + \".\" + s.toString());"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                            i++;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                    case \"done\":"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        int index \u003d Integer.parseInt(input.split(\" \")[1]);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        tasks.get(index - 1).setDone(true);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Nice! I\u0027ve marked this task as done: \");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        //System.out.println(tasks.get(index - 1).getSymbol() + \" \" + tasks.get(index - 1).getTaskDescription());"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(tasks.get(index - 1).toString());"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                    case \"todo\":"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        ToDos t \u003d new ToDos(input.substring(5,input.length()));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        tasks.add(t);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(t.toString());"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Now you have \"+ tasks.size()+\" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                    case \"deadline\":"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        String[] deadlineContent \u003d input.split(\" /by \");"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        Deadlines d \u003dnew Deadlines(deadlineContent[0].substring(9,deadlineContent[0].length()),deadlineContent[1]);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        tasks.add(d);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(d.toString());"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Now you have \"+ tasks.size()+\" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                    case \"event\":"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        String[]  eventContent \u003d input.split(\" /at \");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        Events e \u003dnew Events(eventContent[0].substring(6,eventContent[0].length()),eventContent[1]);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        tasks.add(e);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(e.toString());"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Now you have \"+ tasks.size()+\" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                    default:"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                        System.out.println(\"Command is unknown,please re-try.\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            }catch(Exception e){"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                System.out.println(\"Internal error occurs,please re-enter the command.\");"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "                continue;"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            System.out.println(\"________________________________________________________\");"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        System.out.println(\"________________________________________________________\");"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        System.out.println(bye);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        System.out.println(\"________________________________________________________\");"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ZhengShijieNUS": 81,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/Deadlines.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "public class Deadlines extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    private String deadline;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public Deadlines(String taskDescription,String deadline) {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        super.type \u003d \"[D]\";"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        this.deadline \u003d deadline;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        return super.toString()+\" (by: \"+deadline+\")\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ZhengShijieNUS": 16
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/Events.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "public class Events extends Task{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    private String eventTime;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public Events(String taskDescription,String eventTime) {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        super.type \u003d \"[E]\";"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        this.eventTime \u003d eventTime;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        return super.toString()+\" (at: \"+eventTime+\")\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ZhengShijieNUS": 16
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "public abstract class Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    protected String type;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    protected boolean done \u003d false;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    protected String taskDescription;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    protected String symbol \u003d \"[✗]\";"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public Task(String taskDescription) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        this.taskDescription \u003d taskDescription;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public String getType(){"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        return type;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        return type+symbol+\" \"+taskDescription;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public String getTaskDescription() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        return taskDescription;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public void setTaskDescription(String taskDescription) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        this.taskDescription \u003d taskDescription;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public boolean isDone() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        return done;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public void setDone(boolean done) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        this.done \u003d done;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        setSymbol();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public String getSymbol() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        return symbol;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    private void setSymbol() {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        if(done){"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            this.symbol \u003d \"[✓]\";"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        }else{"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            this.symbol \u003d \"[✗]\";"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ZhengShijieNUS": 50
+    }
+  },
+  {
+    "path": "src/main/java/Tasks/ToDos.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "package Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "public class ToDos extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    public ToDos(String taskDescription) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        super(taskDescription);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        super.type \u003d \"[T]\";"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ZhengShijieNUS": 10
+    }
+  }
+]

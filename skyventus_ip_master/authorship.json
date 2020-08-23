@@ -1,0 +1,1201 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private Ui ui;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private TaskList task;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void run(){"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        task \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        ui.printWelcome();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String Description;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        int idx;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String fullCommand \u003d ui.readUserCommand().toLowerCase();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String command;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        if(fullCommand.contains(\"done\"))"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            command\u003d\"done\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        else"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            command\u003dfullCommand;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        while(!command.equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            switch(command){"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                case(\"list\"):"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    task.printTasks();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                case(\"done\"):"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    idx \u003d Integer.parseInt(fullCommand.replace(\"done\", \"\").trim());"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    Ui.printDone();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    task.completedTask(idx);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    task.printOneTask(idx);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                default:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    if(!fullCommand.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                        task.addTask(new Task(fullCommand));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                        Ui.printAdded(fullCommand);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    }else{"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                        Ui.printError(\"Please key in your task...\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            fullCommand \u003d ui.readUserCommand().toLowerCase();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            if(fullCommand.contains(\"done\"))"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                command\u003d\"done\";"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                command\u003dfullCommand;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        } ui.printBye();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        new Duke().run();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "skyventus": 46,
+      "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "public class Task {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private String description;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private boolean isDone;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public Task(String desc){"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        this.description\u003ddesc;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        this.isDone\u003dfalse;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void setDone(boolean done) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        isDone \u003d done;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public boolean isDone(){"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return this.isDone;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String getDescription(){"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return this.description;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return  description;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "skyventus": 25
+    }
+  },
+  {
+    "path": "src/main/java/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "public class TaskList {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private List\u003cTask\u003e tasks;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public TaskList(){"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        this.tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void addTask(Task task){"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        //tasks.add(task);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        tasks.add(task);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        //System.out.println(\"Tasks in the list: \" + tasks.size());"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void printTasks() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String checkedMark \u003d \"\\u2713\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String cross \u003d \"\\u2715\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        if(tasks.isEmpty())"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            System.out.println(\"No tasks has been added to the list yet.\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        int i\u003d0;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        for(Task task: tasks) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            if(task.isDone())"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                System.out.println((i + 1) + \". [\" + checkedMark  + \"] \" + task.getDescription());"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            else"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                System.out.println((i + 1) + \". [\" + cross  + \"] \" + task.getDescription());"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            i++;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void printOneTask(int idx) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String checkedMark \u003d \"\\u2713\";"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String indent \u003d \"    \";"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent + \" [\" + checkedMark  + \"] \" +      tasks.get(idx-1).getDescription());"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void completedTask(int idx){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        tasks.get(idx-1).setDone(true);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public int getSize(){"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return tasks.size();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public boolean isEmpty(){"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return tasks.isEmpty();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void deleteTask(int idx){"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        tasks.remove(tasks.get(idx-1));"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(\"Task has been deleted.\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "skyventus": 54
+    }
+  },
+  {
+    "path": "src/main/java/Ui.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "public class Ui {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private Scanner in;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    static String indent \u003d \"    \";"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public Ui() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public static void printWelcome(){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent+\"Hello! I\u0027m Duke\");"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent+\"What can I do for you?\");"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public static void printError(String message) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(message);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public static void printAdded(String command){"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent+ \"Added: \" + command);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public static void printDone() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent + \" Nice! I\u0027ve marked this task as done: \");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String readUserCommand() {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.print(\"Your task? \\n\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return in.nextLine().trim();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void printBye() {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent+ \"Bye. Hope to see you again\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "skyventus": 37
+    }
+  }
+]

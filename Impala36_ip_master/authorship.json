@@ -1,0 +1,1429 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import java.lang.reflect.Array;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import java.util.*;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * A Personal Assistant Chatbot that helps a person to keep track of various things."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * @author Wang Zhenquan"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * @version Level 3"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * @since 20/08/2020"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "class Duke {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private UI ui \u003d new UI();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private boolean repeat \u003d true;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private void run() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        TaskList tasks \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        ui.greet();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        while (repeat) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            repeat \u003d parser.parseInput(in.nextLine(), ui, tasks);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        new Duke().run();"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 26,
+      "-": 9
+    }
+  },
+  {
+    "path": "src/main/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * Inherits the Exception class. \u003cp\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * Overrides the constructor that takes a String parameter with custom error information"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * when you create a TaskManagerException object.\u003cp\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * Throw a new TaskManagerException object when you detect some necessary information"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * is missing in the command. \u003cp\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * Catch that exception somewhere else and print the message inside the exception object."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    DukeException(String input) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        super(input);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 13
+    }
+  },
+  {
+    "path": "src/main/java/Parser.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "public class Parser {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "     * @param line The entire user input."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    String getCommandWord(String line) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return line.trim().split(\" \")[0];"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "     * @param line     The entire user input."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "     * @param ui       The UI created in the Duke class."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "     * @param tasks    The TaskList created in the Duke class."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    boolean parseInput(String line, UI ui, TaskList tasks) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String command \u003d getCommandWord(line);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        switch (command) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            case \"list\" -\u003e {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                    System.out.println((i + 1) + \". \" + tasks.get(i).getDescription());"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                return true;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            case \"done\" -\u003e {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                tasks.changeDone(line, ui, tasks);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                return true;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            // also exit when user input is empty"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            case \"bye\", \"\" -\u003e {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                ui.farewell();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                return false;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            default -\u003e {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                tasks.add(new Task(line));"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                System.out.println(line);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                return true;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 40
+    }
+  },
+  {
+    "path": "src/main/java/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * A class for tasks."
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "class Task {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    String task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private boolean isDone;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    Task(String input) {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        task \u003d input;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    void setDone(boolean isDone) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        this.isDone \u003d isDone;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    boolean getDone() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return isDone;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    String getTaskStatus(Boolean isDone) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return \"[\" + (isDone ? \"\\u2713\" : \"\\u2718\") + \"] \"; //return tick or X symbols"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    String getDescription() {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return getTaskStatus(isDone) + task;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 26
+    }
+  },
+  {
+    "path": "src/main/java/TaskList.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * Responsible for keeping the in-memory task list. This class will use an ArrayList inside it."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "class TaskList {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private ArrayList\u003cTask\u003e tasks;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    TaskList(ArrayList\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        this.tasks \u003d tasks;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    TaskList() {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        tasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    int size() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return tasks.size();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    void add(Task task) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        tasks.add(task);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    Task get(int index) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return tasks.get(index);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    void changeDone(String line, UI ui, TaskList tasks) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        line \u003d line.substring(\"done\".length()).trim();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            if (!line.isEmpty()) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                markAsDone(line, ui, tasks);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                throw new DukeException(ui.colorRed(\"Please type in the\" +"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                        \" \u0027done \u003ctask index number\u003e\u0027 format.\"));"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (DukeException e) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printError(e.getMessage());"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private void markAsDone(String line, UI ui, TaskList tasks) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            if (tasks.size() !\u003d 0) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                int index \u003d Integer.parseInt(line);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                tasks.get(index - 1).setDone(true);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                ui.markedAsDone(index, tasks);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            } else System.out.println(ui.colorRed(\"There are no tasks to mark as done.\"));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            System.out.println(ui.colorRed(\"Please type a number for the index.\"));"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            System.out.println(ui.colorRed(\"Please type an index number from 1 to \""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                    + tasks.size() + \".\"));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 57
+    }
+  },
+  {
+    "path": "src/main/java/UI.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "public class UI {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    void greet() {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String greeting \u003d \"____________________________________________________________\\n\""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + \"Hello! I\u0027m Duke\\n\""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + \"What can I do for you?\\n\""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + \"____________________________________________________________\\n\";"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        System.out.println(greeting);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    void farewell() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String farewell \u003d \"Bye. Hope to see you again soon!\\n\""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + \"____________________________________________________________\\n\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        System.out.println(farewell);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    void markedAsDone(int index, TaskList tasks) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        System.out.println(\"\\033[33mTask [\" + index + \"] \""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + tasks.get(index - 1).getDescription() + \" has been set as completed.\\033[0m\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    void printError(String s) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        System.out.println(s);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    String colorRed(String input) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return \"\\033[31m\" + input + \"\\033[0m\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 25
+    }
+  }
+]

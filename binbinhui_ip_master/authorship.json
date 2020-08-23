@@ -1,0 +1,644 @@
+[
+  {
+    "path": "src/main/java/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String logo \u003d \" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        // symbol"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        int tick1 \u003d 10003;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        int cross1 \u003d 9587;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        String tick \u003d Character.toString((char)tick1);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        String cross \u003d Character.toString((char)cross1);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        System.out.println(tick);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        System.out.println(cross);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        // creating array"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        ArrayList commandName \u003d new ArrayList(100);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        ArrayList check \u003d new ArrayList(100);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        // Welcome msg"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\\n\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        // user input"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        Scanner myObj \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        while (myObj.hasNext()) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "           // System.out.println(\"Added task press 1\");"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "           // System.out.println(\"Show current task press 2\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            String obj1 \u003d myObj.nextLine();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            if(obj1.equalsIgnoreCase(\"bye\")){"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            else if(obj1.equalsIgnoreCase(\"list\")){"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                System.out.println(\"Here are the tasks in your list:\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                int number \u003d 1;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                for( int i \u003d 0; i \u003c commandName.size(); i++){"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    System.out.println(number +\".\" +\"[\"+check.get(i)+\"]\"+\" \"+commandName.get(i));"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    number++;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            else if(obj1.equalsIgnoreCase(\"done 2\")){"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                //remove all characters in the string"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                String clean \u003d obj1.replaceAll(\"\\\\D+\",\"\");"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                int i \u003d Integer.parseInt(clean);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                //System.out.println(i);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                check.set(i-1,tick);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            else{"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                //job \u003d \"[\" + cross + \"]\" + obj1;"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                System.out.println(\"added: \" + obj1);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                commandName.add(obj1);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                check.add(cross);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        //Good Bye msg"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "binbinhui": 75,
+      "-": 10
+    }
+  },
+  {
+    "path": "src/main/java/MakeDone.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "public class MakeDone {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "binbinhui": 4
+    }
+  }
+]
