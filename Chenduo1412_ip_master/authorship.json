@@ -1,5 +1,112 @@
 [
   {
+    "path": "src/main/java/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    protected String by;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    public Deadline(String description, String by) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        this.by \u003d by;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        return \"[D] \" + super.toString() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chenduo1412": 14
+    }
+  },
+  {
     "path": "src/main/java/Duke.java",
     "fileType": "java",
     "lines": [
@@ -127,164 +234,290 @@
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "            if(!str.equals(\"\") \u0026 !str.equals(\"bye\")){"
+        "content": "            if(!str.equals(\"\") \u0026 !str.equals(\"bye\")) {"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                if(str.equals(\"list\")){"
+        "content": "                if (str.equals(\"list\")) {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    ui.printMsg(tasks,count);"
+        "content": "                    ui.printList(tasks, count);"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                }"
+        "content": "                } else if (str.contains(\"done\")) {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                else if (str.contains(\"done\")){"
+        "content": "                    selectedIn \u003d Integer.parseInt(str.split(\" \")[1]) - 1;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    selectedIn\u003dInteger.parseInt(str.split(\" \")[1])-1;"
+        "content": "                    tasks[selectedIn].markAsDone();"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    tasks[selectedIn].markAsDone();"
+        "content": "                    ui.printMsg(tasks[selectedIn]);"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    ui.printMsg(tasks[selectedIn]);"
+        "content": "                } else {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                }else {"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    singleTask\u003dnew Task(str);"
+        "content": "                    if (str.split(\" \")[0].equals(\"todo\")) {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    ui.printMsg(str);"
+        "content": "                        singleTask \u003d new Todo(str.substring(5));"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": ""
+        "content": "                        paser.storeInArray(singleTask, count);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    paser.storeInArray(singleTask,count);"
+        "content": "                        count++;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                    count++;"
+        "content": "                        ui.printTask(singleTask.toString(), count);"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                }"
+        "content": "                    } else if (str.split(\" \")[0].equals(\"deadline\")) {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "            }"
+        "content": "                        String[] dl \u003d str.substring(9).split(\" /by \");"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "           else if (str.equals(\"bye\")) {"
+        "content": "                        if (dl.length \u003d\u003d 2) {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                ui.exitInfo();"
+        "content": "                            singleTask \u003d new Deadline(dl[0], dl[1]);"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "            }"
+        "content": "                            paser.storeInArray(singleTask, count);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": ""
+        "content": "                            count++;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "        }"
+        "content": "                            ui.printTask(singleTask.toString(), count);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": ""
+        "content": "                        }"
       },
       {
         "lineNumber": 40,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                    } else if (str.split(\" \")[0].equals(\"event\")) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                        String[] ev \u003d str.substring(6).split(\" /at \");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                        if (ev.length \u003d\u003d 2) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                            singleTask \u003d new Event(ev[0], ev[1]);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                            paser.storeInArray(singleTask, count);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                            count++;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                            ui.printTask(singleTask.toString(), count);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "           if(str.equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "                ui.exitInfo();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
@@ -292,8 +525,108 @@
       }
     ],
     "authorContributionMap": {
-      "Chenduo1412": 37,
+      "Chenduo1412": 55,
       "-": 4
+    }
+  },
+  {
+    "path": "src/main/java/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "public class Event extends Task{"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    protected String at;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    public Event(String description, String at) {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        return \"[E] \" + super.toString() + \" (at: \" + at + \")\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chenduo1412": 13
     }
   },
   {
@@ -545,11 +878,125 @@
         "author": {
           "gitId": "Chenduo1412"
         },
+        "content": "    public String toString(){"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        return this.getStatusIcon() + this.description;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "Chenduo1412": 16
+      "Chenduo1412": 19
+    }
+  },
+  {
+    "path": "src/main/java/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "public class Todo extends Task{"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    public Todo(String description) {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "        return \"[T] \" + super.toString();"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "Chenduo1412": 12
     }
   },
   {
@@ -715,7 +1162,7 @@
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "    public void printMsg(Task [] tasks,int size){"
+        "content": "    public void printList(Task [] tasks,int size){"
       },
       {
         "lineNumber": 24,
@@ -771,52 +1218,59 @@
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "    public void printMsg(String str){"
+        "content": "    public void printTask(String str,int count){"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "        System.out.println(\"-----------\\nadded: \" + str + \"\\n-----------\");"
+        "content": "        System.out.println(\"--------------\\nGot it. I\u0027ve added this task: \" + \"\\n\"+str);"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Now you have \"+count+\" in the list.\\n-------------------\");"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "    public void printMsg(Task t){"
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "        System.out.println( \"-----------------\\n\"+\"Nice! I\u0027ve marked this task as done:\\n\"+\"[\"+t.getStatusIcon()+\"] \"+"
+        "content": "    public void printMsg(Task t){"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                t.description);"
+        "content": "        System.out.println( \"-----------------\\n\"+\"Nice! I\u0027ve marked this task as done:\\n\"+\"[\"+t.getStatusIcon()+\"] \"+"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "    }"
+        "content": "                t.description);"
       },
       {
         "lineNumber": 38,
+        "author": {
+          "gitId": "Chenduo1412"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
         "author": {
           "gitId": "Chenduo1412"
         },
@@ -824,7 +1278,7 @@
       }
     ],
     "authorContributionMap": {
-      "Chenduo1412": 38
+      "Chenduo1412": 39
     }
   }
 ]
