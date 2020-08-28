@@ -1,8 +1,3 @@
-const commitSortDict = {
-  lineOfCode: (commit) => commit.insertions,
-  time: (commit) => commit.date,
-};
-
 window.vZoom = {
   props: ['info'],
   template: window.$('v_zoom').innerHTML,
@@ -17,8 +12,12 @@ window.vZoom = {
 
   computed: {
     sortingFunction() {
+      const commitSortFunction = this.commitsSortType === 'time'
+        ? (commit) => commit.date
+        : (commit) => commit.insertions;
+
       return (a, b) => (this.toReverseSortedCommits ? -1 : 1)
-      * window.comparator(commitSortDict[this.commitsSortType])(a, b);
+        * window.comparator(commitSortFunction)(a, b);
     },
     filteredUser() {
       const {
@@ -51,14 +50,15 @@ window.vZoom = {
       if (!this.info.zUser) { // restoring zoom tab from reloaded page
         this.restoreZoomTab();
       }
-      this.setInfoHash();
     },
+
     openSummary() {
-      this.$emit('view-summary', this.info.zSince, this.info.zUntil);
+      const info = { since: this.info.zSince, until: this.info.zUntil };
+      this.$store.commit('updateSummaryDates', info);
     },
 
     getSliceLink(slice) {
-      if (this.info.isMergeGroup) {
+      if (this.info.zIsMerge) {
         return `${window.getBaseLink(slice.repoId)}/commit/${slice.hash}`;
       }
       return `${window.getBaseLink(this.info.zUser.repoId)}/commit/${slice.hash}`;
@@ -79,22 +79,19 @@ window.vZoom = {
     setInfoHash() {
       const { addHash, encodeHash } = window;
       const {
-        zAvgCommitSize, zSince, zUntil, zFilterGroup, zTimeFrame, zIsMerge, zSorting,
-        zSortingWithin, zIsSortingDsc, zIsSortingWithinDsc, zAuthor, zRepo,
+        zAvgCommitSize, zSince, zUntil, zFilterGroup,
+        zTimeFrame, zIsMerge, zAuthor, zRepo, zFilterSearch,
       } = this.info;
 
       addHash('zA', zAuthor);
       addHash('zR', zRepo);
       addHash('zACS', zAvgCommitSize);
       addHash('zS', zSince);
+      addHash('zFS', zFilterSearch);
       addHash('zU', zUntil);
       addHash('zMG', zIsMerge);
       addHash('zFTF', zTimeFrame);
       addHash('zFGS', zFilterGroup);
-      addHash('zSO', zSorting);
-      addHash('zSWO', zSortingWithin);
-      addHash('zSD', zIsSortingDsc);
-      addHash('zSWD', zIsSortingWithinDsc);
       encodeHash();
     },
 
@@ -115,12 +112,29 @@ window.vZoom = {
       this.expandedCommitMessagesCount = document.getElementsByClassName('commit-message message-body active')
           .length;
     },
+
+    removeZoomHashes() {
+      window.removeHash('zA');
+      window.removeHash('zR');
+      window.removeHash('zFS');
+      window.removeHash('zACS');
+      window.removeHash('zS');
+      window.removeHash('zU');
+      window.removeHash('zFGS');
+      window.removeHash('zFTF');
+      window.removeHash('zMG');
+      window.encodeHash();
+    },
   },
   created() {
     this.initiate();
   },
   mounted() {
+    this.setInfoHash();
     this.updateExpandedCommitMessagesCount();
+  },
+  beforeDestroy() {
+    this.removeZoomHashes();
   },
   components: {
     vRamp: window.vRamp,

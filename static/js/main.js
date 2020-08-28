@@ -1,90 +1,5 @@
-window.BASE_URL = 'https://github.com';
-window.REPORT_ZIP = null;
-window.REPOS = {};
-window.isMacintosh = navigator.platform.includes('Mac');
-
-window.hashParams = {};
-window.addHash = function addHash(newKey, newVal) {
-  window.hashParams[newKey] = newVal;
-};
-window.removeHash = function removeHash(key) {
-  delete window.hashParams[key];
-};
-
-window.encodeHash = function encodeHash() {
-  const { hashParams } = window;
-
-  window.location.hash = Object.keys(hashParams)
-      .map((key) => `${key}=${encodeURIComponent(hashParams[key])}`)
-      .join('&');
-};
-
-window.decodeHash = function decodeHash() {
-  const hashParams = {};
-
-  window.location.hash.slice(1).split('&')
-      .forEach((param) => {
-        const [key, val] = param.split('=');
-        if (key) {
-          try {
-            hashParams[key] = decodeURIComponent(val);
-          } catch (error) {
-            this.userUpdated = false;
-            this.isLoading = false;
-          }
-        }
-      });
-  window.hashParams = hashParams;
-};
-
-const DRAG_BAR_WIDTH = 13.25;
-const SCROLL_BAR_WIDTH = 17;
-const GUIDE_BAR_WIDTH = 2;
-
-const throttledEvent = (delay, handler) => {
-  let lastCalled = 0;
-  return (...args) => {
-    if (Date.now() - lastCalled > delay) {
-      lastCalled = Date.now();
-      handler(...args);
-    }
-  };
-};
-
-let guideWidth = (0.5 * window.innerWidth - (GUIDE_BAR_WIDTH / 2))
-    / window.innerWidth;
-let flexWidth = 0.5;
-
-window.mouseMove = () => {};
-window.registerMouseMove = () => {
-  const innerMouseMove = (event) => {
-    guideWidth = (
-      Math.min(
-          Math.max(
-              window.innerWidth - event.clientX,
-              SCROLL_BAR_WIDTH + DRAG_BAR_WIDTH,
-          ),
-          window.innerWidth - SCROLL_BAR_WIDTH,
-      )
-        - (GUIDE_BAR_WIDTH / 2)
-    ) / window.innerWidth;
-    window.$('tab-resize-guide').style.right = `${guideWidth * 100}%`;
-  };
-  window.$('tab-resize-guide').style.display = 'block';
-  window.$('app-wrapper').style['user-select'] = 'none';
-  window.mouseMove = throttledEvent(30, innerMouseMove);
-};
-
-window.deregisterMouseMove = () => {
-  flexWidth = (guideWidth * window.innerWidth + (GUIDE_BAR_WIDTH / 2))
-        / window.innerWidth;
-  window.mouseMove = () => {};
-  if (window.$('tabs-wrapper')) {
-    window.$('tabs-wrapper').style.flex = `0 0 ${flexWidth * 100}%`;
-  }
-  window.$('tab-resize-guide').style.display = 'none';
-  window.$('app-wrapper').style['user-select'] = 'auto';
-};
+// eslint-disable-next-line import/extensions
+import store from './store.js';
 
 /* global Vue hljs */
 Vue.directive('hljs', {
@@ -96,8 +11,11 @@ Vue.directive('hljs', {
   },
 });
 
+Vue.component('font-awesome-icon', window['vue-fontawesome'].FontAwesomeIcon);
+
 window.app = new window.Vue({
   el: '#app',
+  store,
   data: {
     repos: {},
     users: [],
@@ -114,6 +32,16 @@ window.app = new window.Vue({
     creationDate: '',
 
     errorMessages: {},
+  },
+  watch: {
+    '$store.state.tabZoomInfo': function () {
+      this.tabInfo.tabZoom = Object.assign({}, this.$store.state.tabZoomInfo);
+      this.activateTab('zoom');
+    },
+    '$store.state.tabAuthorshipInfo': function () {
+      this.tabInfo.tabAuthorship = Object.assign({}, this.$store.state.tabAuthorshipInfo);
+      this.activateTab('authorship');
+    },
   },
   methods: {
     // model functions //
@@ -173,8 +101,8 @@ window.app = new window.Vue({
     activateTab(tabName) {
       // changing isTabActive to trigger redrawing of component
       this.isTabActive = false;
-      if (document.getElementById('tabs-wrapper')) {
-        document.getElementById('tabs-wrapper').scrollTop = 0;
+      if (this.$refs.tabWrapper) {
+        this.$refs.tabWrapper.scrollTop = 0;
       }
 
       this.isTabActive = true;
@@ -190,45 +118,7 @@ window.app = new window.Vue({
       this.isTabActive = false;
       window.addHash('tabOpen', this.isTabActive);
       window.removeHash('tabType');
-      this.removeZoomHashes();
-      this.removeAuthorshipHashes();
       window.encodeHash();
-    },
-
-    removeAuthorshipHashes() {
-      window.removeHash('tabAuthor');
-      window.removeHash('tabRepo');
-    },
-
-    removeZoomHashes() {
-      window.removeHash('zA');
-      window.removeHash('zR');
-      window.removeHash('zACS');
-      window.removeHash('zS');
-      window.removeHash('zU');
-      window.removeHash('zFGS');
-      window.removeHash('zFTF');
-      window.removeHash('zMG');
-      window.removeHash('zSO');
-      window.removeHash('zSWO');
-      window.removeHash('zSD');
-      window.removeHash('zSWD');
-    },
-
-    updateTabAuthorship(obj) {
-      this.removeZoomHashes();
-      this.tabInfo.tabAuthorship = Object.assign({}, obj);
-      this.activateTab('authorship');
-    },
-    updateTabZoom(obj) {
-      this.removeAuthorshipHashes();
-      this.tabInfo.tabZoom = Object.assign({}, obj);
-      this.activateTab('zoom');
-    },
-
-    // updating summary view
-    updateSummaryDates(since, until) {
-      this.$refs.summary.updateDateRange(since, until);
     },
 
     renderAuthorShipTabHash(minDate, maxDate) {
@@ -236,12 +126,13 @@ window.app = new window.Vue({
       const info = {
         author: hash.tabAuthor,
         repo: hash.tabRepo,
+        isMergeGroup: hash.authorshipIsMergeGroup === 'true',
         minDate,
         maxDate,
       };
-      const tabInfoLength = Object.values(info).filter((x) => x).length;
+      const tabInfoLength = Object.values(info).filter((x) => x !== null).length;
       if (Object.keys(info).length === tabInfoLength) {
-        this.updateTabAuthorship(info);
+        this.$store.commit('updateTabAuthorshipInfo', info);
       } else if (hash.tabOpen === 'false' || tabInfoLength > 2) {
         window.app.isTabActive = false;
       }
@@ -256,16 +147,13 @@ window.app = new window.Vue({
         zSince: hash.zS,
         zUntil: hash.zU,
         zFilterGroup: hash.zFGS,
+        zFilterSearch: hash.zFS,
         zTimeFrame: hash.zFTF,
         zIsMerge: hash.zMG === 'true',
-        zSorting: hash.zSO,
-        zSortingWithin: hash.zSWO,
-        zIsSortingDsc: hash.zSD === 'true',
-        zIsSortingWithinDsc: hash.zSWD === 'true',
       };
       const tabInfoLength = Object.values(zoomInfo).filter((x) => x !== null).length;
       if (Object.keys(zoomInfo).length === tabInfoLength) {
-        this.updateTabZoom(zoomInfo);
+        this.$store.commit('updateTabZoomInfo', zoomInfo);
       } else if (hash.tabOpen === 'false' || tabInfoLength > 2) {
         window.app.isTabActive = false;
       }
@@ -298,15 +186,27 @@ window.app = new window.Vue({
     },
 
     getRepoSenseHomeLink() {
-      return 'http://reposense.org';
+      const version = window.app.repoSenseVersion;
+      if (version.startsWith('v')) {
+        return `${window.HOME_PAGE_URL}`;
+      }
+      return `${window.HOME_PAGE_URL}/RepoSense/`;
     },
 
-    getUserGuideVersionLink() {
+    getSpecificCommitLink() {
       const version = window.app.repoSenseVersion;
-      if (!version) {
-        return `${window.BASE_URL}/reposense/RepoSense`;
+      if (version.startsWith('v')) {
+        return `${window.BASE_URL}/reposense/RepoSense/releases/tag/${version}`;
       }
-      return `${window.BASE_URL}/reposense/RepoSense/blob/${version}/docs/UserGuide.md`;
+      return `${window.BASE_URL}/reposense/RepoSense/commit/${version}`;
+    },
+
+    getUserGuideLink() {
+      const version = window.app.repoSenseVersion;
+      if (version.startsWith('v')) {
+        return `${window.HOME_PAGE_URL}/ug/index.html`;
+      }
+      return `${window.HOME_PAGE_URL}/RepoSense/ug/index.html`;
     },
 
     receiveDates(dates) {
@@ -318,6 +218,7 @@ window.app = new window.Vue({
     },
   },
   components: {
+    vResizer: window.vResizer,
     vZoom: window.vZoom,
     vSummary: window.vSummary,
     vAuthorship: window.vAuthorship,
@@ -325,12 +226,5 @@ window.app = new window.Vue({
   },
   created() {
     this.updateReportDir();
-  },
-  updated() {
-    this.$nextTick(() => {
-      if (window.$('tabs-wrapper')) {
-        window.$('tabs-wrapper').style.flex = `0 0 ${flexWidth * 100}%`;
-      }
-    });
   },
 });
