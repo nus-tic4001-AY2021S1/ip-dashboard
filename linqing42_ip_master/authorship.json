@@ -206,371 +206,371 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        //Declare the object and initialize with"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    //Declare the object and initialize with"
+        "content": "        Scanner in \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    //predefined standard input object"
+        "content": "        //String input"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        Scanner in \u003d new Scanner(System.in);"
+        "content": "        String input \u003d in.nextLine();"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        //String input"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        String input \u003d in.nextLine();"
+        "content": "        while (!input.isEmpty()) {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "            if (input.startsWith(\"bye\")) {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        while (!input.isEmpty()) {"
+        "content": "                break;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            if (input.equals(\"bye\")) {"
+        "content": "            } else if (input.startsWith(\"list\")) {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "                System.out.println(\"    ___________________________________________________________________\\n\""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            } else if (input.equals(\"list\")) {"
+        "content": "                        + \"     Here are the tasks in your list:\");"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                System.out.println(\"    ___________________________________________________________________\\n\""
+        "content": "                for (int i \u003d 0; i \u003c tasks.size(); i++) {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + \"     Here are the tasks in your list:\");"
+        "content": "                    System.out.println(\"    \" + (i + 1) + \".\" + tasks.get(i));"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+        "content": "                }"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    System.out.println(\"    \" + (i + 1) + \".\" + tasks.get(i));"
+        "content": "            } else if (input.startsWith(\"done\")) {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": "                String listActionIndex \u003d (input.split(\" \"))[1];"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                int arrayIndex \u003d Integer.parseInt(listActionIndex) - 1;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            } else if (input.startsWith(\"done\")) {"
+        "content": "                markAsDone(arrayIndex);"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String listActionIndex \u003d (input.split(\" \"))[1];"
+        "content": "            } else if (input.startsWith(\"todo\")) {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                int arrayIndex \u003d Integer.parseInt(listActionIndex) - 1;"
+        "content": "                Task ignoreWord \u003d new ToDo(input.substring(5));"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                markAsDone(arrayIndex);"
+        "content": "                tasks.add(ignoreWord);"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            } else if (input.startsWith(\"todo\")){"
+        "content": "                System.out.println(\"Got it, I\u0027ve added the following task:\\n\""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                 Task todo \u003d new ToDo(input.substring(5));"
+        "content": "                        + \"  \""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                 tasks.add(todo);"
+        "content": "                        + ignoreWord"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                 System.out.println(\"Got it, I\u0027ve added the following task:\\n\" + \"  \" + todo + \"\\n\""
+        "content": "                        + \"\\n\""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                            + \"Now you have \" + tasks.size() + \" tasks in the list.\\n\""
+        "content": "                        + \"Now you have \""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                 +\"___________________________________________________________________\\n\");"
+        "content": "                        + tasks.size()"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                        + \" tasks in the list.\\n\""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                } else if(input.startsWith(\"deadline\")){"
+        "content": "                        + \"___________________________________________________________________\\n\");"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String[] splitDetail \u003d input.split(\"/by\" );"
+        "content": "            } else if (input.startsWith(\"deadline\")) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String task \u003d splitDetail[0];"
+        "content": "                String[] splitDetail \u003d input.split(\"/by\");"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String date \u003d splitDetail[1];"
+        "content": "                String task \u003d splitDetail[0];"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                Task detail \u003d new Deadline (task, date);"
+        "content": "                String date \u003d splitDetail[1];"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                tasks.add(detail);"
+        "content": "                Task detail \u003d new Deadline(task, date);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                System.out.println(\"Got it. I\u0027ve added this task:\\n\""
+        "content": "                tasks.add(detail);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + \"  \""
+        "content": "                System.out.println(\"Got it. I\u0027ve added this task:\\n\""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + detail"
+        "content": "                        + \"  \""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + \"\\n\""
+        "content": "                        + detail"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + \"Now you have \" + tasks.size() +\" tasks in the list.\\n\"+\"___________________________________________________________________\\n\");"
+        "content": "                        + \"\\n\""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                        + \"Now you have \" + tasks.size() + \" tasks in the list.\\n\""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            } else if(input.startsWith(\"event\")){"
+        "content": "                        + \"___________________________________________________________________\\n\");"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String[] splitEvent \u003d input.split(\"/at\" );"
+        "content": "            } else if (input.startsWith(\"event\")) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String event \u003d splitEvent[0];"
+        "content": "                String[] splitEvent \u003d input.split(\"/at\");"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String time \u003d splitEvent[1];"
+        "content": "                String event \u003d splitEvent[0];"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                Task details \u003d new Event(event, time);"
+        "content": "                String time \u003d splitEvent[1];"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                tasks.add(details);"
+        "content": "                Task details \u003d new Event(event, time);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                System.out.println(\"Got it. I\u0027ve added this task:\\n\""
+        "content": "                tasks.add(details);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + \"  \""
+        "content": "                System.out.println(\"Got it. I\u0027ve added this task:\\n\""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + details"
+        "content": "                        + \"  \""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + \"\\n\""
+        "content": "                        + details"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        + \"Now you have \" + tasks.size() +\" tasks in the list.\\n\""
+        "content": "                        + \"\\n\""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                        +\"___________________________________________________________________\\n\");"
+        "content": "                        + \"Now you have \" + tasks.size() + \" tasks in the list.\\n\""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                        + \"___________________________________________________________________\\n\");"
       },
       {
         "lineNumber": 68,
@@ -584,154 +584,154 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "            input \u003d in.nextLine();"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            input \u003d in.nextLine();"
+        "content": "        }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        showExit();"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        showExit();"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "linqing42"
-        },
         "content": ""
       },
       {
-        "lineNumber": 76,
+        "lineNumber": 74,
         "author": {
           "gitId": "linqing42"
         },
         "content": "    public static void printWelcome() {"
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 75,
         "author": {
           "gitId": "linqing42"
         },
         "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\\n\");"
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 76,
         "author": {
           "gitId": "linqing42"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 77,
         "author": {
           "gitId": "linqing42"
         },
         "content": ""
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 78,
         "author": {
           "gitId": "linqing42"
         },
         "content": "    public static void showExit() {"
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 79,
         "author": {
           "gitId": "linqing42"
         },
         "content": "        System.out.println(\"   Bye. Hope to see you again soon!\");"
       },
       {
-        "lineNumber": 82,
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 81,
         "author": {
           "gitId": "linqing42"
         },
         "content": ""
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 82,
         "author": {
           "gitId": "linqing42"
         },
         "content": "    public static void markAsDone(int arrayIndex) {"
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 83,
         "author": {
           "gitId": "linqing42"
         },
         "content": "        Task task \u003d tasks.get(arrayIndex);"
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 84,
         "author": {
           "gitId": "linqing42"
         },
         "content": "        task.setDone();"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 85,
         "author": {
           "gitId": "linqing42"
         },
         "content": "        System.out.println(\"     Nice! I\u0027ve marked this task as done:\\n\""
       },
       {
-        "lineNumber": 88,
+        "lineNumber": 86,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                + task + \"\\n\""
+        "content": "                + task"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 87,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                + \"\\n\""
+      },
+      {
+        "lineNumber": 88,
         "author": {
           "gitId": "linqing42"
         },
         "content": "                + \"___________________________________________________________________\\n\");"
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
       },
       {
         "lineNumber": 91,
@@ -743,13 +743,6 @@
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 93,
-        "author": {
           "gitId": "linqing42"
         },
         "content": ""
@@ -757,7 +750,7 @@
     ],
     "authorContributionMap": {
       "linqing42": 81,
-      "-": 12
+      "-": 11
     }
   },
   {
@@ -876,192 +869,157 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "public class Task {"
       },
       {
         "lineNumber": 2,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    protected String description;"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "public class Task {"
+        "content": "    protected boolean isDone;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    protected String description;"
+        "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    protected boolean isDone;"
+        "content": "    public Task(String description) {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        this.description \u003d description;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public Task(String description) {"
+        "content": "        this.isDone \u003d false;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        this.description \u003d description;"
+        "content": "    }"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        this.isDone \u003d false;"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "    public String getStatusIcon() {"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public String getStatusIcon() {"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+        "content": "    public void setDone(){"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        this.isDone \u003d true;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void setDone(){"
+        "content": "    }"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        this.isDone \u003d true;"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        return \"[\" + getStatusIcon() + \"] \" + description;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        return \"[\" + getStatusIcon() + \"] \" + description;"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "linqing42"
-        },
         "content": "}"
       },
       {
-        "lineNumber": 28,
+        "lineNumber": 23,
         "author": {
           "gitId": "linqing42"
         },
@@ -1069,7 +1027,7 @@
       }
     ],
     "authorContributionMap": {
-      "linqing42": 28
+      "linqing42": 23
     }
   },
   {
@@ -1123,38 +1081,31 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    @Override"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public String toString() {"
+        "content": "        return \"[T]\" + super.toString();"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    return \"[T]\" + super.toString();"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "linqing42"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 12,
+        "lineNumber": 11,
         "author": {
           "gitId": "linqing42"
         },
@@ -1162,7 +1113,7 @@
       }
     ],
     "authorContributionMap": {
-      "linqing42": 12
+      "linqing42": 11
     }
   },
   {
