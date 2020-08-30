@@ -113,297 +113,339 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    List.addToDo(Body);"
+        "content": "                    String todoBody \u003d InputUnit.extractTodoBody(Body);"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    Task todoTaskAdded \u003d (Task) List.GetList().lastElement();"
+        "content": "                    List.addToDo(todoBody);"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    DisplayUnit.ShowTaskAdded(List.GetList().size(), todoTaskAdded);"
+        "content": "                    Task todoTaskAdded \u003d (Task) List.GetList().lastElement();"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    break;"
+        "content": "                    DisplayUnit.ShowTaskAdded(List.GetList().size(), todoTaskAdded);"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case DEADLINE:"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    String deadlineBody \u003d InputUnit.extractDeadlineBody(Body);"
+        "content": "                case DEADLINE:"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    String deadlineByDate \u003d InputUnit.extractDeadlineByDay(Body);"
+        "content": "                    String deadlineBody \u003d InputUnit.extractDeadlineBody(Body);"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    String deadlineByTime \u003d InputUnit.extractDeadlineByTime(Body);"
+        "content": "                    String deadlineByDate \u003d InputUnit.extractDeadlineByDay(Body);"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    List.addDeadline(deadlineBody, deadlineByDate, deadlineByTime);"
+        "content": "                    String deadlineByTime \u003d InputUnit.extractDeadlineByTime(Body);"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    Task deadlineTaskAdded \u003d (Task) List.GetList().lastElement();"
+        "content": "                    List.addDeadline(deadlineBody, deadlineByDate, deadlineByTime);"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    DisplayUnit.ShowTaskAdded(List.GetList().size(), deadlineTaskAdded);"
+        "content": "                    Task deadlineTaskAdded \u003d (Task) List.GetList().lastElement();"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    break;"
+        "content": "                    DisplayUnit.ShowTaskAdded(List.GetList().size(), deadlineTaskAdded);"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case EVENT:"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    String eventBody \u003d InputUnit.extractEventBody(Body);"
+        "content": "                case EVENT:"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    String eventDay \u003d InputUnit.extractEventAtDay(Body);;"
+        "content": "                    String eventBody \u003d InputUnit.extractEventBody(Body);"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    String eventTime \u003d InputUnit.extractEventAtTime(Body);"
+        "content": "                    String eventDay \u003d InputUnit.extractEventAtDay(Body);;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    List.addEvent(eventBody, eventDay, eventTime);"
+        "content": "                    String eventTime \u003d InputUnit.extractEventAtTime(Body);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    Task EventTaskAdded \u003d (Task) List.GetList().lastElement();"
+        "content": "                    List.addEvent(eventBody, eventDay, eventTime);"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    DisplayUnit.ShowTaskAdded(List.GetList().size(), EventTaskAdded);"
+        "content": "                    Task EventTaskAdded \u003d (Task) List.GetList().lastElement();"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    break;"
+        "content": "                    DisplayUnit.ShowTaskAdded(List.GetList().size(), EventTaskAdded);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case LIST:"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    DisplayUnit.DisplayList(List.GetList());"
+        "content": "                case LIST:"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    break;"
+        "content": "                    DisplayUnit.DisplayList(List.GetList());"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case DONE:"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    Task task \u003d List.UpdateListItem(Body);"
+        "content": "                case DONE:"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    DisplayUnit.DisplayChanges(task);"
+        "content": "                    Task task \u003d List.UpdateListItem(Body);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    break;"
+        "content": "                    DisplayUnit.DisplayChanges(task);"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case BYE:"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    DisplayUnit.ProgramEnding();"
+        "content": "                case BYE:"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    System.exit(0);"
+        "content": "                    DisplayUnit.ProgramEnding();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    break;"
+        "content": "                    System.exit(0);"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            }"
+        "content": "                    break;"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        } catch (Exception e){"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            DisplayUnit.DisplayInvalidInput();"
+        "content": "        } catch (Exception e){"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": "            if(e instanceof IncorrectInputException){"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "                DisplayUnit.DisplayCustomException(e);"
       },
       {
         "lineNumber": 58,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                DisplayUnit.DisplayInvalidInput();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
         "author": {
           "gitId": "tototto"
         },
@@ -411,7 +453,7 @@
       }
     ],
     "authorContributionMap": {
-      "tototto": 58
+      "tototto": 64
     }
   },
   {
@@ -670,7 +712,7 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "    final private String INVALID_INPUT_MSG \u003d \" That input was invalid! Try Again!\";"
+        "content": "    final private String INVALID_INPUT_MSG \u003d \" ☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\";"
       },
       {
         "lineNumber": 18,
@@ -691,350 +733,350 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    final static public String EMPTY_TODO \u003d \"☹ OOPS!!! The description of a todo cannot be empty\";"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Greeter(){"
+        "content": "    final static public String EMPTY_DEADLINE_DESC \u003d \"☹ OOPS!!! The description of a Deadline cannot be empty \u0026 must be accompanied by Date and Time\";"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(GREETING_MSG);"
+        "content": "    final static public String EMPTY_DEADLINE_DAY \u003d \"☹ OOPS!!! The description of a Deadline Day cannot be empty\";"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "    final static public String EMPTY_DEADLINE_TIME \u003d \"☹ OOPS!!! The description of a Deadline Time cannot be empty\";"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    final static public String EMPTY_EVENT_DESC \u003d \"☹ OOPS!!! The description of a Event cannot be empty \u0026 must be accompanied by Date and Time Range\";"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Goodbye(){"
+        "content": "    final static public String EMPTY_EVENT_DAY \u003d \"☹ OOPS!!! The description of a Event Day cannot be empty\";"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(GOODBYE_MSG);"
+        "content": "    final static public String EMPTY_EVENT_TIME \u003d \"☹ OOPS!!! The description of a Event Time cannot be empty\";"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    private void Greeter(){"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Divider(){"
+        "content": "        System.out.println(GREETING_MSG);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(LINE_DIVIDER);"
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    private void Goodbye(){"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Logo(){"
+        "content": "        System.out.println(GOODBYE_MSG);"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(LOGO_ICON);"
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    private void Divider(){"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Success(){"
+        "content": "        System.out.println(LINE_DIVIDER);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(SUCCESS_MSG);"
+        "content": "    }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    private void Logo(){"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void InvalidInput(){"
+        "content": "        System.out.println(LOGO_ICON);"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(INVALID_INPUT_MSG);"
+        "content": "    }"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    private void Success(){"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void ShowListMsg() { System.out.println(LIST_MSG); }"
+        "content": "        System.out.println(SUCCESS_MSG);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayNumAddedTask(int listNum) {"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.printf(LIST_NUMBER, listNum);"
+        "content": "    private void InvalidInput(){"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.println(INVALID_INPUT_MSG);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void Done(){"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(DONE_MSG);"
+        "content": "    private void ShowListMsg() { System.out.println(LIST_MSG); }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void DisplayNumAddedTask(int listNum) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayIndividualTask(Task task){"
+        "content": "        System.out.printf(LIST_NUMBER, listNum);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(\"   \" + task);"
+        "content": "    }"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void Done(){"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void ListResult(Vector result){"
+        "content": "        System.out.println(DONE_MSG);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        ShowListMsg();"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Iterator iter \u003d result.iterator();"
+        "content": "    public void DisplayIndividualTask(Task task){"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        System.out.println(\"   \" + task);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        for(int i \u003d 0; iter.hasNext(); i++){"
+        "content": "    }"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            int currIndex \u003d i + 1 ;"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            Task element \u003d (Task)iter.next();"
+        "content": "    private void ListResult(Vector result){"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            System.out.println(\" \" + currIndex + \".\" + element);"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": "        ShowListMsg();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        Iterator iter \u003d result.iterator();"
       },
       {
         "lineNumber": 70,
@@ -1048,287 +1090,287 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayInvalidInput(){"
+        "content": "        for(int i \u003d 0; iter.hasNext(); i++){"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        InvalidInput();"
+        "content": "            int currIndex \u003d i + 1 ;"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "            Task element \u003d (Task)iter.next();"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "            System.out.println(\" \" + currIndex + \".\" + element);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayChanges(Task task) {"
+        "content": "        }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    }"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        try{"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            task.getStatusIcon(); // check if exception will be thrown, this line has no functional usage"
+        "content": "    public void DisplayInvalidInput(){"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        InvalidInput();"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            Done();"
+        "content": "    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            System.out.println(task);"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void DisplayChanges(Task task) {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        } catch (NullPointerException e) {"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            InvalidInput();"
+        "content": "        try{"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": "            task.getStatusIcon(); // check if exception will be thrown, this line has no functional usage"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "            Done();"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "            System.out.println(task);"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayList(Vector result) {"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "        } catch (NullPointerException e) {"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        ListResult(result);"
+        "content": "            InvalidInput();"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "        }"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void ShowTaskAdded(int ListNum, Task task){"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    public void DisplayList(Vector result) {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Success();"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        DisplayIndividualTask(task);"
+        "content": "        ListResult(result);"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        DisplayNumAddedTask(ListNum);"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void ShowTaskAdded(int ListNum, Task task){"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void ProgramOpening(){"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        // User Interface Display Section"
+        "content": "        Success();"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "        DisplayIndividualTask(task);"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Logo();"
+        "content": "        DisplayNumAddedTask(ListNum);"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Greeter();"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    }"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void ProgramOpening(){"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void ProgramEnding(){"
+        "content": "        // User Interface Display Section"
       },
       {
         "lineNumber": 112,
@@ -1342,24 +1384,101 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Goodbye();"
+        "content": "        Logo();"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "        Greeter();"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 116,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public void ProgramEnding(){"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        Divider();"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        Goodbye();"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        Divider();"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public void DisplayCustomException(Exception e) {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 127,
         "author": {
           "gitId": "tototto"
         },
@@ -1367,7 +1486,7 @@
       }
     ],
     "authorContributionMap": {
-      "tototto": 116
+      "tototto": 127
     }
   },
   {
@@ -1712,6 +1831,50 @@
     }
   },
   {
+    "path": "src/main/java/IncorrectInputException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "public class IncorrectInputException extends Exception {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public IncorrectInputException(String message){"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        super(message);"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "tototto": 5
+    }
+  },
+  {
     "path": "src/main/java/InputHandler.java",
     "fileType": "java",
     "lines": [
@@ -2023,35 +2186,35 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "    // For Deadlines"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public String extractDeadlineBody(String DeadlineInput){"
+        "content": "    // For Todos"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        int indx \u003d DeadlineInput.indexOf(\"/by\");"
+        "content": "    public String extractTodoBody(String TodoInput) throws IncorrectInputException {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return DeadlineInput.substring(0, indx);"
+        "content": "        if(TodoInput.isEmpty())"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "            throw new IncorrectInputException(DisplayHandler.EMPTY_TODO);"
       },
       {
         "lineNumber": 35,
@@ -2065,304 +2228,731 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public String extractDeadlineByDay(String DeadlineInput){"
+        "content": "        return TodoInput;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        int indx \u003d DeadlineInput.indexOf(\"/by\");"
+        "content": "    }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        String by \u003d DeadlineInput.substring(indx, DeadlineInput.length());"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        String[] array \u003d by.split(\" \");"
+        "content": "    // For Deadlines"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return array[1];"
+        "content": "    public String extractDeadlineBody(String DeadlineInput) throws IncorrectInputException {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        String result \u003d \"\";"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        try{"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public String extractDeadlineByTime(String DeadlineInput){"
+        "content": "            int indx \u003d DeadlineInput.indexOf(\"/by\");"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        try{"
+        "content": "            result \u003d DeadlineInput.substring(0, indx);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            int indx \u003d DeadlineInput.indexOf(\"/by\");"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            String by \u003d DeadlineInput.substring(indx);"
+        "content": "        } catch (Exception e){"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            String[] array \u003d by.split(\" \");"
+        "content": "            if(result.length() \u003c 1){"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            return array[2];"
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_DESC);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }catch (Exception e)"
+        "content": "            }"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        {"
+        "content": "        }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            return \"\";"
+        "content": "        return result;"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    // For Events"
+        "content": "    public String extractDeadlineByDay(String DeadlineInput) throws IncorrectInputException{"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public String extractEventBody(String EventInput){"
+        "content": "        String day \u003d \"\";"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        int indx \u003d EventInput.indexOf(\"/at\");"
+        "content": "        try{"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return EventInput.substring(0, indx);"
+        "content": "            int indx \u003d DeadlineInput.indexOf(\"/by\");"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "            String by \u003d DeadlineInput.substring(indx, DeadlineInput.length());"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "            String[] array \u003d by.split(\" \");"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public String extractEventAtDay(String EventInput){"
+        "content": "            day \u003d array[1];"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        int indx \u003d EventInput.indexOf(\"/at\");"
+        "content": "            return day;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        String by \u003d EventInput.substring(indx, EventInput.length());"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        String[] array \u003d by.split(\" \");"
+        "content": "        }catch (Exception e) {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return array[1];"
+        "content": "            if(day.length() \u003c 1){"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_DAY);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public String extractEventAtTime(String EventInput){"
+        "content": "        }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        try{"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            int indx \u003d EventInput.indexOf(\"/at\");"
+        "content": "        return day;"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            String by \u003d EventInput.substring(indx);"
+        "content": "    }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            String[] array \u003d by.split(\" \");"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            return array[2];"
+        "content": "    public String extractDeadlineByTime(String DeadlineInput) throws IncorrectInputException {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }catch (Exception e)"
+        "content": "        String time \u003d \"\";"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        {"
+        "content": "        try{"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            return \"\";"
+        "content": "            int indx \u003d DeadlineInput.indexOf(\"/by\");"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": "            String by \u003d DeadlineInput.substring(indx);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "            String[] array \u003d by.split(\" \");"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "            time \u003d array[2];"
       },
       {
         "lineNumber": 79,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(time.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_TIME);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return time;"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    // For Events"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public String extractEventBody(String EventInput) throws IncorrectInputException {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String result \u003d \"\";"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            int indx \u003d EventInput.indexOf(\"/at\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            result \u003d EventInput.substring(0, indx);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }catch (Exception e){"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(result.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_DESC);"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return result;"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public String extractEventAtDay(String EventInput) throws IncorrectInputException{"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String day \u003d \"\";"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            int indx \u003d EventInput.indexOf(\"/at\");"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            String by \u003d EventInput.substring(indx, EventInput.length());"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            String[] array \u003d by.split(\" \");"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            day \u003d array[1];"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }catch (Exception e) {"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(day.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_DAY);"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return day;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public String extractEventAtTime(String EventInput) throws IncorrectInputException {"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String time \u003d \"\";"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            int indx \u003d EventInput.indexOf(\"/at\");"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            String by \u003d EventInput.substring(indx);"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            String[] array \u003d by.split(\" \");"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            time \u003d array[2];"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(time.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_TIME);"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return time;"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 140,
         "author": {
           "gitId": "tototto"
         },
@@ -2370,7 +2960,7 @@
       }
     ],
     "authorContributionMap": {
-      "tototto": 79
+      "tototto": 140
     }
   },
   {
@@ -2713,9 +3303,9 @@
       {
         "lineNumber": 1,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "public class Task {"
+        "content": "public abstract class Task {"
       },
       {
         "lineNumber": 2,
@@ -2894,7 +3484,8 @@
       }
     ],
     "authorContributionMap": {
-      "tototto": 26
+      "tototto": 25,
+      "-": 1
     }
   },
   {
