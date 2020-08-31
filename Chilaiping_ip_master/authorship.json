@@ -143,7 +143,7 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    static String PATTERNLINE \u003d \"____________________________________________________________\";"
+        "content": "    static String PATTERNLINE \u003d \"____________________________________________________________________________\";"
       },
       {
         "lineNumber": 6,
@@ -239,9 +239,9 @@
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "-"
+          "gitId": "Chilaiping"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "    public static void main(String[] args) throws DukeException {"
       },
       {
         "lineNumber": 20,
@@ -549,7 +549,7 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    private static void processInput(String input, ArrayList\u003cTask\u003e tasks) {"
+        "content": "    private static void processInput(String input, ArrayList\u003cTask\u003e tasks) throws DukeException {"
       },
       {
         "lineNumber": 64,
@@ -570,7 +570,7 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        Action action;"
+        "content": "        Action action;// \u003d Action.Invalid;"
       },
       {
         "lineNumber": 67,
@@ -591,364 +591,364 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        if(command.startsWith(\"list\")) {"
+        "content": "        try {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            action \u003d Action.List;"
+        "content": "            action \u003d validateCommand(command);"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        } else if (command.length()\u003e 4 \u0026\u0026 command.substring(0, 4).equals(\"done\")) {"
+        "content": "        } catch (Exception g) {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            action \u003d Action.Done;"
+        "content": "            System.out.println(g + \"\\n\" + Global.PATTERNLINE);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        } else if (command.length()\u003e 5 \u0026\u0026 command.substring(0, 4).equals(\"todo\")) {"
+        "content": "            return;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            action \u003d Action.AddTodo;"
+        "content": "        }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        } else if (command.length()\u003e 9 \u0026\u0026 command.substring(0, 8).equals(\"deadline\")) {"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            action \u003d Action.AddDeadlines;"
+        "content": "        try {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }else if (command.length()\u003e 6 \u0026\u0026 command.substring(0, 5).equals(\"event\")) {"
+        "content": "            switch(action) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            action \u003d Action.AddEvents;"
+        "content": "            case List:"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }else {"
+        "content": "                printList(tasks);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            action \u003d Action.Invalid;"
+        "content": "                break;"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "            case Done:"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        switch(action) {"
+        "content": "                markDone(command, tasks);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        case List :"
+        "content": "                break;"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            printList(tasks);"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            break;"
+        "content": "            case AddTodo:"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "                addTodo(tasks, input, count);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        case Done :"
+        "content": "                break;"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            markDone(command,tasks);"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            break;"
+        "content": "            case AddDeadlines:"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "                addDeadlines(tasks, input, count);"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        case AddTodo:"
+        "content": "                break;"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            addTodo(tasks, input, count);"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            break;"
+        "content": "            case AddEvents:"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "                addEvents(tasks, input, count);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        case AddDeadlines:"
+        "content": "                break;"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            addDeadlines(tasks, input, count);"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            break;"
+        "content": "            default:"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "                System.out.println(Global.PATTERNLINE + \"\\nYou have entered invalid input. Please re-input or \\n\" +"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        case AddEvents:"
+        "content": "                        \"Enter bye to terminate the program.\\n\" + Global.PATTERNLINE);"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            addEvents(tasks, input, count);"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            break;"
+        "content": "            }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "        } catch (Exception m) {"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        default:"
+        "content": "            System.out.println(m + Global.PATTERNLINE);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            System.out.println(Global.PATTERNLINE + \"\\nYou have entered invalid input. Please re-input or \\n\" +"
+        "content": "        }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "                    \"Enter bye to terminate the program.\\n\" + Global.PATTERNLINE);"
+        "content": "    }"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    private static void replyLine(ArrayList\u003cTask\u003e tasks, String input, int count) {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }"
+        "content": "        System.out.print(Global.PATTERNLINE + \"\\nGot it. I\u0027ve added this task: \\n\\t\" );"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        tasks.get(count).printTask();"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    private static void replyLine(ArrayList\u003cTask\u003e tasks, String input, int count) {"
+        "content": "        count +\u003d 1;"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        System.out.print(Global.PATTERNLINE + \"\\nGot it. I\u0027ve added this task: \\n\\t\" );"
+        "content": "        System.out.println(\"Now you have \" + count + \" tasks in the list.\\n\" + Global.PATTERNLINE );"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        tasks.get(count).printTask();"
+        "content": "    }"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        count +\u003d 1;"
+        "content": "    private static void printList(ArrayList\u003cTask\u003e tasks) throws DukeException {"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        System.out.println(\"Now you have \" + count + \" tasks in the list.\\n\" + Global.PATTERNLINE );"
+        "content": "        if(tasks.size() \u003d\u003d 0) {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "            throw new DukeException(\"Your List is Empty\\n\");"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    private static void printList(ArrayList\u003cTask\u003e tasks) {"
+        "content": "        }"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        if(tasks.size() \u003d\u003d 0) {"
+        "content": "        System.out.println(Global.PATTERNLINE);"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            String noItem \u003d Global.PATTERNLINE + \"\\nYour List is Empty\\n\" + Global.PATTERNLINE;"
+        "content": "        for(int i \u003d 1; i \u003c\u003d tasks.size(); i++) {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            System.out.println(noItem);"
+        "content": "            System.out.print(i + \". \");"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            return;"
+        "content": "            tasks.get(i-1).printTask();"
       },
       {
         "lineNumber": 121,
@@ -969,126 +969,126 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        for(int i \u003d 1; i \u003c\u003d tasks.size(); i++) {"
+        "content": "    }"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            System.out.print(i + \". \");"
+        "content": "    private static void markDone(String command, ArrayList\u003cTask\u003e tasks) {"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            tasks.get(i-1).printTask();"
+        "content": "        int index \u003d 0;"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        System.out.println(Global.PATTERNLINE);"
+        "content": "        // If user input done1 instead of done 1"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        if(command.contains(\" \")) {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    private static void markDone(String command, ArrayList\u003cTask\u003e tasks) {"
+        "content": "            index \u003d Integer.parseInt(command.substring(5));"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        int index \u003d 0;"
+        "content": "        } else {"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "            index \u003d Integer.parseInt(command.substring(4));"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        // If user input done1 instead of done 1"
+        "content": "        }"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        if(command.contains(\" \")) {"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            index \u003d Integer.parseInt(command.substring(5));"
+        "content": "        try {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        } else {"
+        "content": "            tasks.get(index-1).markAsDone();"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            index \u003d Integer.parseInt(command.substring(4));"
+        "content": "            System.out.println(Global.PATTERNLINE + \"\\nNice! I\u0027ve marked this task as done:\");"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }"
+        "content": "            tasks.get(index-1).printTask();"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "            System.out.println(Global.PATTERNLINE);"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        // If user input Done item out of bound"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        if (index \u003e tasks.size() || index \u003d\u003d 0) {"
+        "content": "        } catch (IndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 141,
@@ -1109,269 +1109,486 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            return;"
+        "content": "        }"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        tasks.get(index-1).markAsDone();"
+        "content": ""
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        System.out.println(Global.PATTERNLINE + \"\\nNice! I\u0027ve marked this task as done:\");"
+        "content": "    private static void addTodo(ArrayList\u003cTask\u003e tasks, String input, int count) throws DukeException{"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        tasks.get(index-1).printTask();"
+        "content": "        if (input.length() \u003c 6) {"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        System.out.println(Global.PATTERNLINE);"
+        "content": "            throw new DukeException(\"☹ OOPS!!! The description of a Todo cannot be empty.\\n\" +"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "                    \"Please re-input or enter bye to terminate the program\\n\");"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    private static void addTodo(ArrayList\u003cTask\u003e tasks, String input, int count) {"
+        "content": "        tasks.add(new ToDos(input.substring(5)));"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        tasks.add(new ToDos(input.substring(5)));"
+        "content": "        replyLine(tasks, input, count);"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        replyLine(tasks, input, count);"
+        "content": "    }"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "    private static void addDeadlines(ArrayList\u003cTask\u003e tasks, String input, int count) throws DukeException{"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    private static void addDeadlines(ArrayList\u003cTask\u003e tasks, String input, int count) {"
+        "content": "        if(!input.contains(\" \")) {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        int index \u003d input.indexOf(\"/by\");"
+        "content": "            throw new DukeException(\"☹ OOPS!!! The description of a Deadlines cannot be empty.\\n \" +"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        if(index \u003d\u003d -1) {"
+        "content": "                    \"Please re-input or enter bye to terminate the program\\n\");"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            System.out.println(\"You have not input your Schedule or Wrong format. \\nPlease include -\u003e /by when\");"
+        "content": "        } else if(input.length()-1 \u003d\u003d input.indexOf(\" \")) {"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            return;"
+        "content": "            throw new DukeException(\"☹ OOPS!!! The description of a Deadlines cannot be empty.\\n \" +"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }"
+        "content": "                    \"Please re-input or enter bye to terminate the program\\n\");"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        String schedule \u003d input.substring(index + 4);"
+        "content": "        }"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        String taskName \u003d input.substring(input.indexOf(\" \")+1, index);"
+        "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        tasks.add(new Deadlines(taskName, schedule));"
+        "content": "        int index \u003d input.indexOf(\"/by\");"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        replyLine(tasks, input, count);"
+        "content": "        if(index \u003d\u003d -1) {"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "            throw new DukeException(\"You have input your Schedule or Wrong format\\nPlease include -\u003e /by when\\n\");"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    private static void addEvents(ArrayList\u003cTask\u003e tasks, String input, int count){"
+        "content": "        }"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        int index \u003d input.indexOf(\"/at\");"
+        "content": "        String schedule \u003d input.substring(index + 4);"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        String schedule, taskName;"
+        "content": "        String taskName \u003d input.substring(input.indexOf(\" \")+1, index);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "        tasks.add(new Deadlines(taskName, schedule));"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        if(index \u003d\u003d -1) {"
+        "content": "        replyLine(tasks, input, count);"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            System.out.println(\"You have not input your Schedule or Wrong format. \\nPlease include -\u003e /at when\");"
+        "content": "    }"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "            return;"
+        "content": "    private static void addEvents(ArrayList\u003cTask\u003e tasks, String input, int count) throws DukeException{"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        }"
+        "content": "        if(!input.contains(\" \")) {"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        schedule \u003d input.substring(index + 4);"
+        "content": "            throw new DukeException(\"☹ OOPS!!! The description of a Events cannot be empty.\\n \" +"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        taskName \u003d input.substring(input.indexOf(\" \")+1, index);"
+        "content": "                    \"Please re-input or enter bye to terminate the program\\n\");"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        tasks.add(new Events(taskName, schedule));"
+        "content": "        } else if(input.length()-1 \u003d\u003d input.indexOf(\" \")) {"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        replyLine(tasks, input, count);"
+        "content": "            throw new DukeException(\"☹ OOPS!!! The description of a Events cannot be empty.\\n \" +"
       },
       {
         "lineNumber": 179,
         "author": {
-          "gitId": "-"
+          "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "                    \"Please re-input or enter bye to terminate the program\\n\");"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 181,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        int index \u003d input.indexOf(\"/at\");"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        String schedule, taskName;"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        if(index \u003d\u003d -1) {"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "           // System.out.println(\"You have not input your Schedule or Wrong format. \\nPlease include -\u003e /at when\");"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            throw new DukeException(\"You have not input your Schedule or Wrong format. \\nPlease include -\u003e /at when\\n\");"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        schedule \u003d input.substring(index + 4);"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        taskName \u003d input.substring(input.indexOf(\" \")+1, index);"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        tasks.add(new Events(taskName, schedule));"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        replyLine(tasks, input, count);"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    static Action validateCommand(String command) throws DukeException {"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        if(command.startsWith(\"list\")) {"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            return  Action.List;"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if (command.length()\u003e 4 \u0026\u0026 command.substring(0, 4).equals(\"done\")) {"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            return Action.Done;"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if (command.length()\u003e 3 \u0026\u0026 command.substring(0, 4).equals(\"todo\")) {"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            return Action.AddTodo;"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if (command.length()\u003e 7 \u0026\u0026 command.substring(0, 8).equals(\"deadline\")) {"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            return Action.AddDeadlines;"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else if (command.length()\u003e 4 \u0026\u0026 command.substring(0, 5).equals(\"event\")) {"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            return Action.AddEvents;"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "            throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\\n\" +"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "                    \"Please re-input or enter bye to terminate the program\");"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
@@ -1379,8 +1596,59 @@
       }
     ],
     "authorContributionMap": {
-      "Chilaiping": 170,
-      "-": 11
+      "Chilaiping": 202,
+      "-": 10
+    }
+  },
+  {
+    "path": "src/main/java/DukeException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "public class DukeException extends Exception {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    DukeException(String s) {"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        super(s);"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(Global.PATTERNLINE);"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Chilaiping": 6
     }
   },
   {

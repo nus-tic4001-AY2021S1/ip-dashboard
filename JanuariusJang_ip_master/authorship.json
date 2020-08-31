@@ -241,287 +241,287 @@
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            if (textInput.equals(\"list\")) {"
+        "content": "            switch (arrayOfStr[0]) {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(taskList);"
+        "content": "                case \"list\":"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                for (int i \u003d 0; i \u003c taskList.size();i++)"
+        "content": "                    for (int i \u003d 0; i \u003c taskList.size();i++)"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                {"
+        "content": "                    {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                    System.out.println(i+1 + taskList.get(i).toString());"
+        "content": "                        System.out.println(i+1 + taskList.get(i).toString());"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                }"
+        "content": "                    }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            }"
+        "content": "                    break;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            else if(arrayOfStr[0].equals(\"done\")){"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(\"Done detected\");"
+        "content": "                case \"done\":"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                int index\u003dInteger.parseInt(arrayOfStr[1])-1;"
+        "content": "                    int index\u003dInteger.parseInt(arrayOfStr[1])-1;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                taskList.get(index).markAsDone();"
+        "content": "                    taskList.get(index).markAsDone();"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"Nice! I\u0027ve marked this task as done: \"+ \"[\" +taskList.get(index).getStatusIcon() +\"] \"  +taskList.get(index).toString());"
+        "content": "                    System.out.println(\"Nice! I\u0027ve marked this task as done: \"+ \"[\" +taskList.get(index).getStatusIcon() +\"] \"  +taskList.get(index).toString());"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            }"
+        "content": "                    break;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            else if(arrayOfStr[0].equals(\"deadline\")){"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(\"Done detected\\n\");"
+        "content": "                case \"deadline\":"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(\"Body of text:\" + arrayOfStr[1]);"
+        "content": "                    String[]arrayOfDoneDetails\u003darrayOfStr[1].split(\"by \",2);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                String[]arrayOfDoneDetails\u003darrayOfStr[1].split(\"by \",2);"
+        "content": "                    Task d\u003dnew Deadline(arrayOfDoneDetails[0],arrayOfDoneDetails[1] );"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //arrayOfDoneDetails[0] contains description, arrayOfDoneDetails[1] contains the date."
+        "content": "                    taskList.add((d));"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(\"by: \" + arrayOfDoneStr[1]);"
+        "content": "                    System.out.println(\"Got it. I\u0027ve added this task: \\n\" + d.toString());"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                Task t\u003dnew Deadline(arrayOfDoneDetails[0],arrayOfDoneDetails[1] );"
+        "content": "                    System.out.println(\"Now you have \" + taskList.size()+ \" tasks in the list\");"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                taskList.add((t));"
+        "content": "                    break;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"Got it. I\u0027ve added this task: \\n\" + t.toString());"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"Now you have \" + taskList.size()+ \" tasks in the list\");"
+        "content": "                case \"event\":"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            }"
+        "content": "                    String[]arrayOfEventDetails\u003darrayOfStr[1].split(\"at \",2);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            else if(arrayOfStr[0].equals(\"event\")){"
+        "content": "                    //arrayOfDoneDetails[0] contains description, arrayOfDoneDetails[1] contains the date."
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(\"Done detected\\n\");"
+        "content": "                    //System.out.println(\"by: \" + arrayOfDoneStr[1]);"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(\"Body of text:\" + arrayOfStr[1]);"
+        "content": "                    Task e\u003dnew Event(arrayOfEventDetails[0],arrayOfEventDetails[1] );"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                String[]arrayOfDoneDetails\u003darrayOfStr[1].split(\"at \",2);"
+        "content": "                    taskList.add((e));"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //arrayOfDoneDetails[0] contains description, arrayOfDoneDetails[1] contains the date."
+        "content": "                    System.out.println(\"Got it. I\u0027ve added this task: \\n\" + e.toString());"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                //System.out.println(\"by: \" + arrayOfDoneStr[1]);"
+        "content": "                    System.out.println(\"Now you have \" + taskList.size()+ \" tasks in the list\");"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                Task t\u003dnew Event(arrayOfDoneDetails[0],arrayOfDoneDetails[1] );"
+        "content": "                    break;"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                taskList.add((t));"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"Got it. I\u0027ve added this task: \\n\" + t.toString());"
+        "content": "                case \"todo\":"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"Now you have \" + taskList.size()+ \" tasks in the list\");"
+        "content": "                    Task t\u003dnew Todo(arrayOfStr[1]);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            }"
+        "content": "                    taskList.add((t));"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            else if(arrayOfStr[0].equals(\"todo\")){"
+        "content": "                    System.out.println(\"Got it. I\u0027ve added this task: \\n\" + t.toString());"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": ""
+        "content": "                    System.out.println(\"Now you have \" + taskList.size()+ \" tasks in the list\");"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                Task t\u003dnew Todo(arrayOfStr[1]);"
+        "content": "                    break;"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                taskList.add((t));"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"Got it. I\u0027ve added this task: \\n\" + t.toString());"
+        "content": "                default:"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"Now you have \" + taskList.size()+ \" tasks in the list\");"
+        "content": "                    System.out.println(\" ☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
       },
       {
         "lineNumber": 62,
@@ -535,49 +535,49 @@
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            else {"
+        "content": "            "
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                Task t\u003dnew Task(textInput);"
+        "content": "            textInput \u003d reader.readLine();"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                taskList.add((t));"
+        "content": "        }"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "                System.out.println(\"added: \" + t.toString());"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            }"
+        "content": "        System.out.println(\" Bye.Hope to see you again soon!\\n\" );"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "            textInput \u003d reader.readLine();"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 70,
@@ -591,7 +591,7 @@
         "author": {
           "gitId": "JanuariusJang"
         },
-        "content": "        System.out.println(\" Bye.Hope to see you again soon!\\n\" );"
+        "content": ""
       },
       {
         "lineNumber": 72,
@@ -610,40 +610,12 @@
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "JanuariusJang"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "JanuariusJang"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "JanuariusJang"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 77,
-        "author": {
-          "gitId": "JanuariusJang"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 78,
-        "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
@@ -651,7 +623,7 @@
       }
     ],
     "authorContributionMap": {
-      "JanuariusJang": 76,
+      "JanuariusJang": 72,
       "-": 3
     }
   },
