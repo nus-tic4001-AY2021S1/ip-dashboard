@@ -62,7 +62,8 @@
             "messageTitle": "Duke class: add function to mark tasks as done",
             "messageBody": "There is no function to mark tasks as done.\n\nIt allows users to mark tasks as done so that the users can keep track of what are the outstanding tasks.\n\nLet\u0027s add a function that marks tasks as done when the users enter \"done x\", in which x is the index of the task.\n\nThis version fulfils Level-3 requirements.\n",
             "tags": [
-              "Level-3"
+              "Level-3",
+              "A-Classes"
             ],
             "fileTypesAndContributionMap": {
               "java": {
@@ -81,7 +82,8 @@
             "messageTitle": "Duke class: Add support for ToDos, Events, Deadlines",
             "messageBody": "",
             "tags": [
-              "Level-4"
+              "Level-4",
+              "A-Inheritance"
             ],
             "fileTypesAndContributionMap": {
               "java": {
@@ -123,12 +125,42 @@
             }
           }
         ]
+      },
+      {
+        "date": "2020-08-31",
+        "commitResults": [
+          {
+            "hash": "41c832b1e23db1680dfba16fa84523824446226e",
+            "messageTitle": "Add DukeException to represent exceptions specific to Duke",
+            "messageBody": "",
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 21,
+                "deletions": 15
+              }
+            }
+          },
+          {
+            "hash": "f842b04776655199111d315c84a26a900474c46e",
+            "messageTitle": "Add error message when the description for deadline/event task is missing",
+            "messageBody": "",
+            "tags": [
+              "A-Exceptions"
+            ],
+            "fileTypesAndContributionMap": {
+              "java": {
+                "insertions": 22,
+                "deletions": 10
+              }
+            }
+          }
+        ]
       }
     ]
   },
   "authorFileTypeContributionMap": {
     "e0260222": {
-      "java": 223,
+      "java": 241,
       "md": 0,
       "fxml": 0,
       "sh": 0,
@@ -138,7 +170,7 @@
     }
   },
   "authorContributionVariance": {
-    "e0260222": 5069.8345
+    "e0260222": 3450.3198
   },
   "authorDisplayNameMap": {
     "e0260222": "CHAN..HONG"
