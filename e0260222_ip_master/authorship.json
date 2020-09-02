@@ -1,6 +1,6 @@
 [
   {
-    "path": "src/main/java/Deadline.java",
+    "path": "src/main/java/duke/Deadline.java",
     "fileType": "java",
     "lines": [
       {
@@ -8,87 +8,101 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "public class Deadline extends Task {"
+        "content": "package duke;"
       },
       {
         "lineNumber": 2,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private String by;"
+        "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "public class Deadline extends Task {"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    public Deadline(String description, String by) {"
+        "content": "    private String by;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        super(description);"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        this.by \u003d by;"
+        "content": "    public Deadline(String description, String by) {"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        super(description);"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "        this.by \u003d by;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    public String toString() {"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        return \"[D][\" + getStatusIcon() + \"] \" + getDescription() + \" (by: \" + by + \")\";"
+        "content": "    @Override"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 13,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
         "author": {
           "gitId": "e0260222"
         },
@@ -96,11 +110,11 @@
       }
     ],
     "authorContributionMap": {
-      "e0260222": 13
+      "e0260222": 15
     }
   },
   {
-    "path": "src/main/java/Duke.java",
+    "path": "src/main/java/duke/Duke.java",
     "fileType": "java",
     "lines": [
       {
@@ -108,56 +122,56 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "package duke;"
       },
       {
         "lineNumber": 2,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "import java.util.Scanner;"
+        "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "e0260222"
         },
-        "content": "public class Duke {"
+        "content": "import java.util.Scanner;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static final String LINE \u003d \"____________________________________________________________\";"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "e0260222"
+          "gitId": "-"
         },
-        "content": "    private static final String INDENT \u003d \"      \";"
+        "content": "public class Duke {"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    private static final String LINE \u003d \"____________________________________________________________\";"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static ArrayList\u003cTask\u003e tasks \u003d new ArrayList\u003c\u003e();"
+        "content": "    private static final String INDENT \u003d \"      \";"
       },
       {
         "lineNumber": 9,
@@ -169,121 +183,121 @@
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "e0260222"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "    private static ArrayList\u003cTask\u003e tasks \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        printWelcome();"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "e0260222"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    public static void main(String[] args) {"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        boolean isExit \u003d false;"
+        "content": "        printWelcome();"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        while (!isExit) {"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            String userInput \u003d readUserInput();"
+        "content": "        boolean isBye \u003d false;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            String command \u003d getCommand(userInput);"
+        "content": "        while (!isBye) {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            String commandParameter \u003d getCommandParameter(userInput);"
+        "content": "            String userInput \u003d readUserInput();"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            System.out.println(LINE);"
+        "content": "            String command \u003d getCommand(userInput);"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "            String commandParameter \u003d getCommandParameter(userInput);"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            try {"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                switch(command) {"
+        "content": "            System.out.println(LINE);"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                case \"bye\":"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    isExit \u003d true;"
+        "content": "            try {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    break;"
+        "content": "                switch(command) {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                case \"todo\":"
+        "content": "                case \"bye\":"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    addTodo(commandParameter);"
+        "content": "                    isBye \u003d true;"
       },
       {
         "lineNumber": 27,
@@ -297,14 +311,14 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                case \"deadline\":"
+        "content": "                case \"todo\":"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    addDeadline(commandParameter);"
+        "content": "                    addTodo(commandParameter);"
       },
       {
         "lineNumber": 30,
@@ -318,14 +332,14 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                case \"event\":"
+        "content": "                case \"deadline\":"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    addEvent(commandParameter);"
+        "content": "                    addDeadline(commandParameter);"
       },
       {
         "lineNumber": 33,
@@ -339,14 +353,14 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                case \"done\":"
+        "content": "                case \"event\":"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    markTaskAsDone(commandParameter);"
+        "content": "                    addEvent(commandParameter);"
       },
       {
         "lineNumber": 36,
@@ -360,14 +374,14 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                case \"list\":"
+        "content": "                case \"done\":"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    listTasks();"
+        "content": "                    markTaskAsDone(commandParameter);"
       },
       {
         "lineNumber": 39,
@@ -381,714 +395,714 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                default:"
+        "content": "                case \"list\":"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                    printError(\"Duke: \\u2639 OPPS!!! \""
+        "content": "                    listTasks();"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                            + \"I\u0027m sorry, I don\u0027t know what that means.\");"
+        "content": "                    break;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                }"
+        "content": "                default:"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            } catch (DukeException e) {"
+        "content": "                    printError(\"I\u0027m sorry, I don\u0027t know what that means.\");"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                System.out.print(\"Duke: \\u2639 OPPS!!! \");"
+        "content": "                }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                printError(e.getMessage());"
+        "content": "            } catch (DukeException e) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            }"
+        "content": "                printError(e.getMessage());"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        printGoodbye();"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        printGoodbye();"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void printWelcome() {"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        String logo \u003d \" ____        _        \" + System.lineSeparator()"
+        "content": "    private static void printWelcome() {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                + \"|  _ \\\\ _   _| | _____ \" + System.lineSeparator()"
+        "content": "        String logo \u003d \" ____        _        \" + System.lineSeparator()"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                + \"| | | | | | | |/ / _ \\\\\" + System.lineSeparator()"
+        "content": "                + \"|  _ \\\\ _   _| | _____ \" + System.lineSeparator()"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                + \"| |_| | |_| |   \u003c  __/\" + System.lineSeparator()"
+        "content": "                + \"| | | | | | | |/ / _ \\\\\" + System.lineSeparator()"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\" + System.lineSeparator();"
+        "content": "                + \"| |_| | |_| |   \u003c  __/\" + System.lineSeparator()"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\" + System.lineSeparator();"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(logo);"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: Hello! I\u0027m Duke, your personal chatbot.\");"
+        "content": "        System.out.println(LINE);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: What can I do for you?\");"
+        "content": "        System.out.println(logo);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": "        System.out.println(\"Duke: Hello! I\u0027m Duke, your personal chatbot.\");"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Duke: What can I do for you?\");"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "        System.out.println(LINE);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static String readUserInput() {"
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        Scanner in \u003d new Scanner(System.in);"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.print(\"You:  \");"
+        "content": "    private static String readUserInput() {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        return in.nextLine().trim();"
+        "content": "        Scanner in \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        System.out.print(\"You:  \");"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "        return in.nextLine().trim();"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void printGoodbye() {"
+        "content": "    }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: Bye! Hope to see you again soon.\");"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": "    private static void printGoodbye() {"
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "-"
+          "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Duke: Bye! Hope to see you again soon.\");"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "        System.out.println(LINE);"
       },
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "e0260222"
+          "gitId": "-"
         },
-        "content": "    private static void printError(String errorMessage) {"
+        "content": "    }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(errorMessage);"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": "    private static void printError(String errorMessage) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Duke: \\u2639 OPPS!! \" + errorMessage);"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "        System.out.println(LINE);"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void addTodo(String commandParameter) throws DukeException{"
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        if (commandParameter.isEmpty()){"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The description of a todo task cannot be empty.\");"
+        "content": "    private static void addTodo(String commandParameter) throws DukeException{"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        if (commandParameter.isEmpty()){"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        tasks.add(new Task(commandParameter));"
+        "content": "            throw new DukeException(\"The description of a todo task cannot be empty.\");"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: Got it! I have added this task:\");"
+        "content": "        }"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(INDENT + tasks.get(tasks.size() - 1).toString());"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(INDENT + \"Now you have \" + tasks.size() + \" tasks in the list.\");"
+        "content": "        tasks.add(new Todo(commandParameter));"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        printAddedTask();"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void addDeadline(String commandParameter) throws DukeException {"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        if (commandParameter.isEmpty()){"
+        "content": "    private static void addDeadline(String commandParameter) throws DukeException {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The description of a deadline task cannot be empty.\");"
+        "content": "        if (commandParameter.isEmpty()){"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "            throw new DukeException(\"The description of a deadline task cannot be empty.\");"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        String description;"
+        "content": "        }"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        String by;"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        try {"
+        "content": "        String description;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            description \u003d commandParameter.split(\"/by\")[0].trim();"
+        "content": "        String by;"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            by \u003d commandParameter.split(\"/by\")[1].trim();"
+        "content": "        try {"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        } catch(ArrayIndexOutOfBoundsException e) {"
+        "content": "            description \u003d commandParameter.split(\"/by\")[0].trim();"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The by field of the deadline task is missing.\");"
+        "content": "            by \u003d commandParameter.split(\"/by\")[1].trim();"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        } catch(ArrayIndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        if (description.isEmpty()){"
+        "content": "            throw new DukeException(\"The by field of the deadline task is missing.\");"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The description of a deadline task cannot be empty.\");"
+        "content": "        }"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        if (description.isEmpty()){"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        tasks.add(new Deadline(description, by));"
+        "content": "            throw new DukeException(\"The description of a deadline task cannot be empty.\");"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: Got it! I have added this task:\");"
+        "content": "        }"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(INDENT + tasks.get(tasks.size() - 1).toString());"
+        "content": ""
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(INDENT + \"Now you have \" + tasks.size() + \" tasks in the list.\");"
+        "content": "        tasks.add(new Deadline(description, by));"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": ""
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        printAddedTask();"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void addEvent(String commandParameter) throws DukeException {"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        if (commandParameter.isEmpty()){"
+        "content": "    private static void addEvent(String commandParameter) throws DukeException {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The description of an event task cannot be empty.\");"
+        "content": "        if (commandParameter.isEmpty()){"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "            throw new DukeException(\"The description of an event task cannot be empty.\");"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        String description;"
+        "content": "        }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        String at;"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        try {"
+        "content": "        String description;"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            description \u003d commandParameter.split(\"/at\")[0].trim();"
+        "content": "        String at;"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            at \u003d commandParameter.split(\"/at\")[1].trim();"
+        "content": "        try {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        } catch(ArrayIndexOutOfBoundsException e) {"
+        "content": "            description \u003d commandParameter.split(\"/at\")[0].trim();"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The at field of the event task is missing.\");"
+        "content": "            at \u003d commandParameter.split(\"/at\")[1].trim();"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        } catch(ArrayIndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        if (description.isEmpty()){"
+        "content": "            throw new DukeException(\"The at field of the event task is missing.\");"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The description of an event task cannot be empty.\");"
+        "content": "        }"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        if (description.isEmpty()){"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        tasks.add(new Event(description, at));"
+        "content": "            throw new DukeException(\"The description of an event task cannot be empty.\");"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: Got it! I have added this task:\");"
+        "content": "        }"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(INDENT + tasks.get(tasks.size() - 1).toString());"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(INDENT + \"Now you have \" + tasks.size() + \" tasks in the list.\");"
+        "content": "        tasks.add(new Event(description, at));"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": ""
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        printAddedTask();"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void listTasks() {"
+        "content": ""
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: Here are the tasks in your list:\");"
+        "content": "    private static void printAddedTask() {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+        "content": "        System.out.println(\"Duke: Got it! I have added this task:\");"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            System.out.println(INDENT + (i + 1) + \". \" + tasks.get(i).toString());"
+        "content": "        System.out.println(INDENT + tasks.get(tasks.size() - 1).toString());"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        System.out.println(INDENT + \"Now you have \" + tasks.size() + \" tasks in the list.\");"
       },
       {
         "lineNumber": 142,
@@ -1116,297 +1130,374 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static String getCommand(String userInput) {"
+        "content": "    private static void listTasks() {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        return userInput.split(\" \")[0];"
+        "content": "        System.out.println(\"Duke: Here are the tasks in your list:\");"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        for (int i \u003d 0; i \u003c tasks.size(); i++) {"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "            System.out.println(INDENT + (i + 1) + \". \" + tasks.get(i).toString());"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static String getCommandParameter(String userInput) {"
+        "content": "        }"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        String commandParameter \u003d userInput.replace(\"todo\", \"\")"
+        "content": "        System.out.println(LINE);"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                .replace(\"deadline\", \"\")"
+        "content": "    }"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                .replace(\"event\", \"\")"
+        "content": ""
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                .replace(\"done\", \"\")"
+        "content": "    private static String getCommand(String userInput) {"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                .replace(\"list\", \"\")"
+        "content": "        return userInput.split(\" \")[0];"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "                .trim();"
+        "content": "    }"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        return commandParameter;"
+        "content": ""
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "    private static String getCommandParameter(String userInput) {"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "        String commandParameter \u003d userInput.replace(\"todo\", \"\")"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void markTaskAsDone(String commandParameter) throws DukeException {"
+        "content": "                .replace(\"deadline\", \"\")"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        int taskIndex \u003d getTaskIndex(commandParameter);"
+        "content": "                .replace(\"event\", \"\")"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        setTaskAsDone(taskIndex);"
+        "content": "                .replace(\"done\", \"\")"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(\"Duke: I have marked this task as done:\");"
+        "content": "                .replace(\"list\", \"\")"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(INDENT + tasks.get(taskIndex - 1).toString());"
+        "content": "                .trim();"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        System.out.println(LINE);"
+        "content": ""
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        return commandParameter;"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static void setTaskAsDone(int taskIndex) throws DukeException {"
+        "content": ""
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        try {"
+        "content": "    private static void markTaskAsDone(String commandParameter) throws DukeException {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            tasks.get(taskIndex - 1).setDone(true);"
+        "content": "        int taskIndex \u003d getTaskIndex(commandParameter);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        } catch (IndexOutOfBoundsException e) {"
+        "content": "        setTaskAsDone(taskIndex);"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The task index is invalid.\");"
+        "content": "        System.out.println(\"Duke: I have marked this task as done:\");"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        System.out.println(INDENT + tasks.get(taskIndex - 1).toString());"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "        System.out.println(LINE);"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private static int getTaskIndex(String commandParameter) throws DukeException {"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        int taskIndex;"
+        "content": "    private static void setTaskAsDone(int taskIndex) throws DukeException {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        if (commandParameter.isEmpty()) {"
+        "content": "        try {"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The task index is missing.\");"
+        "content": "            tasks.get(taskIndex - 1).setDone(true);"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "        } catch (IndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        try {"
+        "content": "            throw new DukeException(\"The task index is invalid.\");"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            taskIndex \u003d Integer.parseInt(commandParameter);"
+        "content": "        }"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        } catch(NumberFormatException e) {"
+        "content": "    }"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "            throw new DukeException(\"The task index is invalid.\");"
+        "content": ""
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        }"
+        "content": "    private static int getTaskIndex(String commandParameter) throws DukeException {"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        return taskIndex;"
+        "content": "        if (commandParameter.isEmpty()) {"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "            throw new DukeException(\"The task index is missing.\");"
       },
       {
         "lineNumber": 187,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        int taskIndex;"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "            taskIndex \u003d Integer.parseInt(commandParameter);"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        } catch(NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "            throw new DukeException(\"The task index is invalid.\");"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        return taskIndex;"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
@@ -1414,12 +1505,12 @@
       }
     ],
     "authorContributionMap": {
-      "e0260222": 183,
+      "e0260222": 194,
       "-": 4
     }
   },
   {
-    "path": "src/main/java/DukeException.java",
+    "path": "src/main/java/duke/DukeException.java",
     "fileType": "java",
     "lines": [
       {
@@ -1427,31 +1518,45 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "public class DukeException extends Exception {"
+        "content": "package duke;"
       },
       {
         "lineNumber": 2,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    public DukeException(String errorMessage) {"
+        "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        super(errorMessage);"
+        "content": "public class DukeException extends Exception {"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": "    public DukeException(String errorMessage) {"
       },
       {
         "lineNumber": 5,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        super(errorMessage);"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
         "author": {
           "gitId": "e0260222"
         },
@@ -1459,11 +1564,11 @@
       }
     ],
     "authorContributionMap": {
-      "e0260222": 5
+      "e0260222": 7
     }
   },
   {
-    "path": "src/main/java/Event.java",
+    "path": "src/main/java/duke/Event.java",
     "fileType": "java",
     "lines": [
       {
@@ -1471,28 +1576,354 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "public class Event extends Task{"
+        "content": "package duke;"
       },
       {
         "lineNumber": 2,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    private String at;"
+        "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "public class Event extends Task {"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "e0260222"
         },
+        "content": "    private String at;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "e0260222"
+        },
         "content": "    public Event(String description, String at) {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        return \"[E]\" + super.toString() + \" (at: \" + at + \")\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "e0260222": 15
+    }
+  },
+  {
+    "path": "src/main/java/duke/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "public abstract class Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    private String description;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    private boolean isDone;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        isDone \u003d false;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    public String getDescription() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        return description;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        //return tick or X symbol based on isDone value"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    public void setDone(boolean isDone) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        this.isDone \u003d true;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "        return \"[\" + getStatusIcon() + \"] \" + getDescription();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "e0260222": 29
+    }
+  },
+  {
+    "path": "src/main/java/duke/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "package duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "e0260222"
+        },
+        "content": "    public Todo(String description) {"
       },
       {
         "lineNumber": 5,
@@ -1506,52 +1937,45 @@
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        this.at \u003d at;"
+        "content": "    }"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "e0260222"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    @Override"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "    public String toString() {"
+        "content": "        return \"[T]\" + super.toString();"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "e0260222"
         },
-        "content": "        return \"[E][\" + getStatusIcon() + \"] \" + getDescription() + \" (at: \" + at + \")\";"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "e0260222"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 12,
         "author": {
           "gitId": "e0260222"
         },
@@ -1559,205 +1983,7 @@
       }
     ],
     "authorContributionMap": {
-      "e0260222": 13
-    }
-  },
-  {
-    "path": "src/main/java/Task.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "public class Task {"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    private String description;"
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    private boolean isDone;"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    public Task(String description) {"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "        this.description \u003d description;"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "        this.isDone \u003d false;"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    public String getDescription() {"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "        return description;"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    public String getStatusIcon() {"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "        //return tick or X symbol based on isDone value"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\");"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    public void setDone(boolean isDone) {"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "        this.isDone \u003d true;"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "        return \"[T][\" + getStatusIcon() + \"] \" + description;"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "e0260222"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "e0260222": 27
+      "e0260222": 12
     }
   },
   {
