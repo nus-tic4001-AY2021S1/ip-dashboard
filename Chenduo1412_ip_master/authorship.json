@@ -339,21 +339,21 @@
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                        String[] dl \u003d str.substring(9).split(\" /by \");"
+        "content": "                        String[] deadline \u003d str.substring(9).split(\" /by \");"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                        if (dl.length \u003d\u003d 2) {"
+        "content": "                        if (deadline.length \u003d\u003d 2) {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                            singleTask \u003d new Deadline(dl[0], dl[1]);"
+        "content": "                            singleTask \u003d new Deadline(deadline[0], deadline[1]);"
       },
       {
         "lineNumber": 36,
@@ -395,21 +395,21 @@
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                        String[] ev \u003d str.substring(6).split(\" /at \");"
+        "content": "                        String[] event \u003d str.substring(6).split(\" /at \");"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                        if (ev.length \u003d\u003d 2) {"
+        "content": "                        if (event.length \u003d\u003d 2) {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Chenduo1412"
         },
-        "content": "                            singleTask \u003d new Event(ev[0], ev[1]);"
+        "content": "                            singleTask \u003d new Event(event[0], event[1]);"
       },
       {
         "lineNumber": 44,
