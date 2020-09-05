@@ -114,10 +114,45 @@
           "gitId": "-"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": ""
       }
     ],
     "authorContributionMap": {
-      "dgc5213": 12,
+      "dgc5213": 17,
       "-": 4
     }
   },
@@ -237,7 +272,7 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        String task_detail \u003d \"\";"
+        "content": "        String task_detail;"
       },
       {
         "lineNumber": 11,
@@ -258,105 +293,105 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        if (len \u003e 1) {"
+        "content": "        String commandFirstWord \u003d line.split(\" \")[0].toLowerCase();"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            task_detail \u003d line_arr[1];  // filter out the first words"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        } else {"
+        "content": "        if (len \u003e 1) {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            throw new DukeException(\"OOPS!!! The description of a todo cannot be empty.\");"
+        "content": "            task_detail \u003d line_arr[1];  // filter out the first words"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        }"
+        "content": "        } else {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        return task_detail;"
+        "content": "            throw new DukeException(\"\\u2639 OOPS!!! The description of a \" + commandFirstWord + \" cannot be empty.\");"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "        return task_detail;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to parser a String and get the second word from the string."
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "    /**"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param input A String that holds the user input."
+        "content": "     * A method to parser a String and get the second word from the string."
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     *"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "     * @param input A String that holds the user input."
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 28,
@@ -370,35 +405,35 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public String getSecondWord(String input) {"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        String commandSecondWord \u003d input.split(\" \")[1];"
+        "content": "    public String getSecondWord(String input) {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        return commandSecondWord;"
+        "content": "        String commandSecondWord \u003d input.split(\" \")[1];"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        return commandSecondWord;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 34,
@@ -412,98 +447,98 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to parser a String and process necessary steps and tasks based on the user inputs."
+        "content": "    /**"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Assume that the Task Details start from the second words. This method can filter out the first words."
+        "content": "     * A method to parser a String and process necessary steps and tasks based on the user inputs."
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * Assume that the Task Details start from the second words. This method can filter out the first words."
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param input       A String that holds the user input."
+        "content": "     *"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param ui          A Ui that show message to user."
+        "content": "     * @param input       A String that holds the user input."
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param programExit A ProgramExit  to check if it is needed to exit the program."
+        "content": "     * @param ui          A Ui that show message to user."
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param todoList    A TodoList contains the ArrayList of Task objects"
+        "content": "     * @param programExit A ProgramExit  to check if it is needed to exit the program."
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @param todoList    A TodoList contains the ArrayList of Task objects"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void getCommand(String input, Ui ui, ProgramExit programExit, TodoList todoList) {"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    public void getCommand(String input, Ui ui, ProgramExit programExit, TodoList todoList) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        String commandFirstWord \u003d input.split(\" \")[0].toLowerCase();//extract the first word of the user input, and lowercase it."
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "        String commandFirstWord \u003d input.split(\" \")[0].toLowerCase();//extract the first word of the user input, and lowercase it."
       },
       {
         "lineNumber": 49,
@@ -517,28 +552,28 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        try {"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            switch (commandFirstWord) {"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "            switch (commandFirstWord) {"
       },
       {
         "lineNumber": 54,
@@ -552,301 +587,301 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                case \"bye\":"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    ui.sayBye();"
+        "content": "                case \"bye\":"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    programExit.toExit();"
+        "content": "                    ui.sayBye();"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    break;"
+        "content": "                    programExit.toExit();"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                case \"list\":"
+        "content": "                    break;"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                case \"list\":"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.listAllTasks();"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                    todoList.listAllTasks();"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    break;"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                case \"done\":"
+        "content": "                    break;"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                case \"done\":"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.markSelectedTaskDone(getSecondWord(input));"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                    todoList.markSelectedTaskDone(getSecondWord(input));"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    break;"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                case \"todo\":"
+        "content": "                    break;"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                case \"todo\":"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.addToDoType(filterTaskDetails(input));"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.readTaskFromUser(filterTaskDetails(input));"
+        "content": "                    todoList.addToDoType(filterTaskDetails(input));"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                    todoList.readTaskFromUser(filterTaskDetails(input));"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    break;"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                case \"deadline\":"
+        "content": "                    break;"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                case \"deadline\":"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.addDeadlineType(filterTaskDetails(input));"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.readTaskFromUser(filterTaskDetails(input));"
+        "content": "                    todoList.addDeadlineType(filterTaskDetails(input));"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                    todoList.readTaskFromUser(filterTaskDetails(input));"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    break;"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                case \"event\":"
+        "content": "                    break;"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                case \"event\":"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.addEventType(filterTaskDetails(input));"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    todoList.readTaskFromUser(filterTaskDetails(input));"
+        "content": "                    todoList.addEventType(filterTaskDetails(input));"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                    todoList.readTaskFromUser(filterTaskDetails(input));"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    break;"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                default:"
+        "content": "                    break;"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                default:"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.showMessage(\"OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.printLine();"
+        "content": "                    Ui.showMessage(\"\\u2639 OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "                    Ui.printLine();"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        } catch (Exception e) {"
+        "content": ""
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            Ui.showMessage(e.getMessage());"
+        "content": "        } catch (Exception e) {"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        }"
+        "content": "            Ui.showMessage(e.getMessage());"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 98,
@@ -860,14 +895,14 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 101,
@@ -881,14 +916,14 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 104,
@@ -994,10 +1029,17 @@
           "gitId": "dgc5213"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": ""
       }
     ],
     "authorContributionMap": {
-      "dgc5213": 118
+      "dgc5213": 119
     }
   },
   {
@@ -1030,161 +1072,161 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    //yt test branch"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Creating an object of ProgramExit class"
+        "content": "    /**"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * set the default Exit as false"
+        "content": "     * Creating an object of ProgramExit class"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * set the default Exit as false"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    ProgramExit() {"
+        "content": "     */"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        isExit \u003d false;"
+        "content": "    ProgramExit() {"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        isExit \u003d false;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to set the Exit as true"
+        "content": "    /**"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * A method to set the Exit as true"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void toExit() {"
+        "content": "     */"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        isExit \u003d true;"
+        "content": "    public void toExit() {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        isExit \u003d true;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to return the Exit status"
+        "content": "    /**"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * A method to return the Exit status"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public boolean getIsExit() {"
+        "content": "     */"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        return isExit;"
+        "content": "    public boolean getIsExit() {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        return isExit;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 27,
@@ -1198,11 +1240,18 @@
         "author": {
           "gitId": "dgc5213"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "dgc5213"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "dgc5213": 28
+      "dgc5213": 29
     }
   },
   {
@@ -1326,7 +1375,7 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    "
       },
       {
         "lineNumber": 18,
@@ -1666,371 +1715,371 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "//A-Packages: Organize into Packages named Tasks"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "public class Task {"
+        "content": "//A-AbstractClasses:abstract class Task declares some methods that it implements here, and some that are implemented by the subclasses."
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    // A String that holds the description of a task"
+        "content": "public abstract class Task {"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    protected String description;"
+        "content": "    // A String that holds the description of a task"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    // A boolean value, if true: the task is completed, otherwise false."
+        "content": "    protected String description;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    protected boolean isDone;"
+        "content": "    // A boolean value, if true: the task is completed, otherwise false."
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    protected boolean isDone;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Creating an object of Task class"
+        "content": "    /**"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * Creating an object of Task class"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param description A String that holds the description of a task"
+        "content": "     *"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @param description A String that holds the description of a task"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public Task(String description) {"
+        "content": "     */"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        this.description \u003d description;"
+        "content": "    public Task(String description) {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        isDone \u003d false;"
+        "content": "        this.description \u003d description;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        isDone \u003d false;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to get the Task Status Icon"
+        "content": "    /**"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * A method to get the Task Status Icon"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @return a String containing the icon: tick or X symbols"
+        "content": "     *"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @return a String containing the icon: tick or X symbols"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public String getStatusIcon() {"
+        "content": "     */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+        "content": "    public String getStatusIcon() {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to get the Task description"
+        "content": "    /**"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * A method to get the Task description"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @return a String containing the description of task"
+        "content": "     *"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @return a String containing the description of task"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public String getDescription() {"
+        "content": "     */"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        return description;"
+        "content": "    public String getDescription() {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        return description;"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to set the Task as done/completed"
+        "content": "    /**"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * A method to set the Task as done/completed"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void setDone() {"
+        "content": "     */"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        isDone \u003d true;"
+        "content": "    public void setDone() {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        isDone \u003d true;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to get the Task data as formatted string to display both task status and task description"
+        "content": "    /**"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * A method to get the Task data as formatted string to display both task status and task description"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @return a formatted String of task status and task description"
+        "content": "     *"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @return a formatted String of task status and task description"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        return \"[\" + getStatusIcon() + \"]\" + \" \" + getDescription();"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        return \"[\" + getStatusIcon() + \"]\" + \" \" + getDescription();"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 55,
@@ -2044,11 +2093,18 @@
         "author": {
           "gitId": "dgc5213"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "dgc5213"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "dgc5213": 56
+      "dgc5213": 57
     }
   },
   {
@@ -2200,21 +2256,21 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "        return \"[T]\" + super.toString();"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        return \"[T]\" + super.toString();"
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 24,
@@ -2286,7 +2342,7 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "//// test branch"
       },
       {
         "lineNumber": 8,
@@ -2300,70 +2356,70 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    // An array list of task objects"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    private ArrayList\u003cTask\u003e taskList;"
+        "content": "    // An array list of task objects"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    private ArrayList\u003cTask\u003e taskList;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * creating an TodoList object"
+        "content": "    /**"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * creating an TodoList object"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public TodoList() {"
+        "content": "     */"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        taskList \u003d new ArrayList\u003c\u003e();"
+        "content": "    public TodoList() {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        taskList \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 19,
@@ -2377,406 +2433,406 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to list done all the tasks from the list and show the list to user."
+        "content": "    /**"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Show the message to user and notify the user that \"Here are the tasks in your list\""
+        "content": "     * A method to list done all the tasks from the list and show the list to user."
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * Show the message to user and notify the user that \"Here are the tasks in your list\""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void listAllTasks() {"
+        "content": "     */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        Ui.showMessage(\"Here are the tasks in your list:\");"
+        "content": "    public void listAllTasks() {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        for (int i \u003d 0; i \u003c taskList.size(); i++) {"
+        "content": "        Ui.showMessage(\"Here are the tasks in your list:\");"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            Ui.showMessage((i + 1) + \".\" + taskList.get(i).toString());"
+        "content": "        for (int i \u003d 0; i \u003c taskList.size(); i++) {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        }"
+        "content": "            Ui.showMessage((i + 1) + \".\" + taskList.get(i).toString());"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Adding a Task object in ArrayList"
+        "content": "    /**"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * The Task is in \"Todo\""
+        "content": "     * Adding a Task object in ArrayList"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * The Task is in \"Todo\""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param toAddTaskDetails A String that holds the details of a task and it cannot be empty or null."
+        "content": "     *"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @param toAddTaskDetails A String that holds the details of a task and it cannot be empty or null."
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void addToDoType(String toAddTaskDetails) {"
+        "content": "     */"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        taskList.add(new Todo(toAddTaskDetails));"
+        "content": "    public void addToDoType(String toAddTaskDetails) {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        taskList.add(new Todo(toAddTaskDetails));"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Adding a Task object in ArrayList"
+        "content": "    /**"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * The Task is in \"Deadline\""
+        "content": "     * Adding a Task object in ArrayList"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * The Task is in \"Deadline\""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param toAddTaskDetails A String that holds the details of a task and it cannot be empty or null."
+        "content": "     *"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @param toAddTaskDetails A String that holds the details of a task and it cannot be empty or null."
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void addDeadlineType(String toAddTaskDetails) {"
+        "content": "     */"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        String taskDescription \u003d (toAddTaskDetails.split(\"(?i)/by\")[0]).trim();// splits case insensitive"
+        "content": "    public void addDeadlineType(String toAddTaskDetails) {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        String taskDeadline \u003d (toAddTaskDetails.split(\"(?i)/by\")[1]).trim();// splits case insensitive"
+        "content": "        String taskDescription \u003d (toAddTaskDetails.split(\"(?i)/by\")[0]).trim();// splits case insensitive"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        taskList.add(new Deadline(taskDescription, taskDeadline));"
+        "content": "        String taskDeadline \u003d (toAddTaskDetails.split(\"(?i)/by\")[1]).trim();// splits case insensitive"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        taskList.add(new Deadline(taskDescription, taskDeadline));"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Adding a Task object in ArrayList"
+        "content": "    /**"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * The Task is in \"Event\""
+        "content": "     * Adding a Task object in ArrayList"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * The Task is in \"Event\""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param toAddTaskDetails A String that holds the details of a task and it cannot be empty or null."
+        "content": "     *"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @param toAddTaskDetails A String that holds the details of a task and it cannot be empty or null."
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void addEventType(String toAddTaskDetails) {"
+        "content": "     */"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        String taskDescription \u003d (toAddTaskDetails.split(\"(?i)/at\")[0]).trim();// splits case insensitive"
+        "content": "    public void addEventType(String toAddTaskDetails) {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        String taskEventDate \u003d (toAddTaskDetails.split(\"(?i)/at\")[1]).trim();// splits case insensitive"
+        "content": "        String taskDescription \u003d (toAddTaskDetails.split(\"(?i)/at\")[0]).trim();// splits case insensitive"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        taskList.add(new Event(taskDescription, taskEventDate));"
+        "content": "        String taskEventDate \u003d (toAddTaskDetails.split(\"(?i)/at\")[1]).trim();// splits case insensitive"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        taskList.add(new Event(taskDescription, taskEventDate));"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to read the value from user."
+        "content": "    /**"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * Show the message to user and notify the user that a current task is added in the list"
+        "content": "     * A method to read the value from user."
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * Show the message to user and notify the user that a current task is added in the list"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param input A String that holds the user input from the terminal"
+        "content": "     *"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @param input A String that holds the user input from the terminal"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void readTaskFromUser(String input) {"
+        "content": "     */"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        Ui.showMessage(\"Got it. I\u0027ve added this task:\");"
+        "content": "    public void readTaskFromUser(String input) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        int currentNewAddedTaskIndex \u003d (taskList.size() - 1);"
+        "content": "        Ui.showMessage(\"Got it. I\u0027ve added this task:\");"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        Ui.showMessage(\"  \" + taskList.get(currentNewAddedTaskIndex).toString());"
+        "content": "        int currentNewAddedTaskIndex \u003d (taskList.size() - 1);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        Ui.showMessage(\"Now you have \" + taskList.size() + \" tasks in the list.\");"
+        "content": "        Ui.showMessage(\"  \" + taskList.get(currentNewAddedTaskIndex).toString());"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        Ui.showMessage(\"Now you have \" + taskList.size() + \" tasks in the list.\");"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 78,
@@ -2790,147 +2846,147 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * A method to mark the selected task as completed"
+        "content": "    /**"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * update value of the task field:isDone \u003d true"
+        "content": "     * A method to mark the selected task as completed"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     *"
+        "content": "     * update value of the task field:isDone \u003d true"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @param selectedTask A String that holds the ID (number) of a task"
+        "content": "     *"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @throws NullPointerException           If TASK NUM is Empty/Null: Returning to Main Menu"
+        "content": "     * @param selectedTask A String that holds the ID (number) of a task"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     * @throws ArrayIndexOutOfBoundsException If TASK NUM is invalid, TASK NUM cannot be found in the task list: Returning to Main Menu"
+        "content": "     * @throws NullPointerException           If TASK NUM is Empty/Null: Returning to Main Menu"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "     */"
+        "content": "     * @throws ArrayIndexOutOfBoundsException If TASK NUM is invalid, TASK NUM cannot be found in the task list: Returning to Main Menu"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    public void markSelectedTaskDone(String selectedTask) {"
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    public void markSelectedTaskDone(String selectedTask) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        try {"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            // checking if the task number is given and empty string or null"
+        "content": "        try {"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            if (selectedTask.trim().equals(\"\")) {"
+        "content": "            // checking if the task number is given and empty string or null"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                throw new NullPointerException(\"TASK NUM is Empty/Null: Returning to Main Menu\");"
+        "content": "            if (selectedTask.trim().equals(\"\")) {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            }"
+        "content": "                throw new NullPointerException(\"TASK NUM is Empty/Null: Returning to Main Menu\");"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            int taskIndex \u003d Integer.parseInt(selectedTask) - 1;"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            if (taskIndex \u003c 0 || taskIndex \u003e taskList.size()) {"
+        "content": "            int taskIndex \u003d Integer.parseInt(selectedTask) - 1;"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                throw new ArrayIndexOutOfBoundsException(\"TASK NUM cannot be found in the task list: Returning to Main Menu\");"
+        "content": "            if (taskIndex \u003c 0 || taskIndex \u003e taskList.size()) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            }"
+        "content": "                throw new ArrayIndexOutOfBoundsException(\"TASK NUM cannot be found in the task list: Returning to Main Menu\");"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 100,
@@ -2944,77 +3000,77 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            for (int i \u003d 0; i \u003c taskList.size(); i++) {"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                if (i \u003d\u003d taskIndex) {"
+        "content": "            for (int i \u003d 0; i \u003c taskList.size(); i++) {"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "                if (i \u003d\u003d taskIndex) {"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.showMessage(\"Nice! I\u0027ve marked this task as done: \");"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    taskList.get(i).setDone();"
+        "content": "                    Ui.showMessage(\"Nice! I\u0027ve marked this task as done: \");"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "                    taskList.get(i).setDone();"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                    Ui.showMessage(\"[\" + taskList.get(i).getStatusIcon() + \"] \" + taskList.get(i).getDescription());"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                }"
+        "content": "                    Ui.showMessage(\"[\" + taskList.get(i).getStatusIcon() + \"] \" + taskList.get(i).getDescription());"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "                }"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 112,
@@ -3028,31 +3084,38 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        } catch (Exception e) {"
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            Ui.showMessage(e.getMessage());"
+        "content": "        } catch (Exception e) {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        }"
+        "content": "            Ui.showMessage(e.getMessage());"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 117,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 118,
         "author": {
           "gitId": "dgc5213"
         },
@@ -3060,7 +3123,7 @@
       }
     ],
     "authorContributionMap": {
-      "dgc5213": 117
+      "dgc5213": 118
     }
   },
   {
