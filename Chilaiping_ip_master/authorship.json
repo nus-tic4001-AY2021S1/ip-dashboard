@@ -64,7 +64,7 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    @Override"
+        "content": "    //@Override"
       },
       {
         "lineNumber": 10,
@@ -78,24 +78,31 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
+        "content": "        //return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        return \"[D]\" + \"[\" + this.getStatusIcon() + \"] \" +  this.description + \" (by: \" + by+ \")\";"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
         "author": {
           "gitId": "Chilaiping"
         },
@@ -103,7 +110,7 @@
       }
     ],
     "authorContributionMap": {
-      "Chilaiping": 14
+      "Chilaiping": 15
     }
   },
   {
@@ -1723,7 +1730,7 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "   @Override"
+        "content": "   //@Override"
       },
       {
         "lineNumber": 10,
@@ -1737,24 +1744,31 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        return \"[E]\" + super.toString() + \" (at: \" + on + \")\";"
+        "content": "        //return \"[E]\" + super.toString() + \" (at: \" + on + \")\";"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        return \"[E]\" + \"[\" + this.getStatusIcon() + \"] \" +  this.description + \" (at: \" + on + \")\";"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
         "author": {
           "gitId": "Chilaiping"
         },
@@ -1762,7 +1776,7 @@
       }
     ],
     "authorContributionMap": {
-      "Chilaiping": 14
+      "Chilaiping": 15
     }
   },
   {
@@ -1774,185 +1788,199 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "public class Task {"
+        "content": "//public class Task {"
       },
       {
         "lineNumber": 2,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    protected String description;"
+        "content": "abstract class Task {"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    protected boolean isDone;"
+        "content": "    protected String description;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    protected boolean isDone;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    public Task(String description) {"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        this.description \u003d description;"
+        "content": "    public Task(String description) {"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        this.isDone \u003d false;"
+        "content": "        this.description \u003d description;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        this.isDone \u003d false;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    public String getStatusIcon() {"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+        "content": "    public String getStatusIcon() {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    public void markAsDone() {"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        this.isDone \u003d true;"
+        "content": "    public void markAsDone() {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        this.isDone \u003d true;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    public String toString() {"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        //return this.toString() ;"
+        "content": "    //public String toString() {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        return (\"[\" + this.getStatusIcon() + \"] \" +  this.description );"
+        "content": "    abstract public String toString(); /*{"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        //return this.toString() ;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "        return (\"[\" + this.getStatusIcon() + \"] \" +  this.description );"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    public void printTask() {"
+        "content": "    }*/"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        //System.out.println(\"[\" + this.getStatusIcon() + \"] \" +  this.description ) ;"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        System.out.println(this.toString());"
+        "content": "    public void printTask() {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        //System.out.println(\"[\" + this.getStatusIcon() + \"] \" +  this.description ) ;"
       },
       {
         "lineNumber": 27,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "        System.out.println(this.toString());"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
         "author": {
           "gitId": "Chilaiping"
         },
@@ -1960,7 +1988,7 @@
       }
     ],
     "authorContributionMap": {
-      "Chilaiping": 27
+      "Chilaiping": 29
     }
   },
   {
@@ -2042,24 +2070,31 @@
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "        return \"[T]\" + super.toString() ;"
+        "content": "        //return \"[T]\" + super.toString() ;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": "    }"
+        "content": "        return \"[T]\" + \"[\" + this.getStatusIcon() + \"] \" +  this.description;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Chilaiping"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 14,
+        "author": {
+          "gitId": "Chilaiping"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
         "author": {
           "gitId": "Chilaiping"
         },
@@ -2067,7 +2102,7 @@
       }
     ],
     "authorContributionMap": {
-      "Chilaiping": 14
+      "Chilaiping": 15
     }
   },
   {
