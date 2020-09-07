@@ -29,175 +29,175 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import duke.input.InputHandler;"
+        "content": "import duke.fileManager.FileManager;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "import duke.input.InputParser;"
+        "content": "import duke.input.InputHandler;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "import duke.output.DisplayHandler;"
+        "content": "import duke.input.InputParser;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": "import duke.storage.ListHandler;"
+        "content": "import duke.output.DisplayHandler;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import duke.storage.ListHandler;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": "public class Duke {"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "import java.io.File;"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        // Instantiate program components"
+        "content": "public class Duke {"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "        DisplayHandler displayHandler \u003d new DisplayHandler();"
+        "content": "    public static void main(String[] args) {"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        InputHandler inputHandler \u003d new InputHandler();"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        InputParser parser \u003d new InputParser();"
+        "content": "        // Instantiate program components"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "        ListHandler list \u003d new ListHandler();"
+        "content": "        DisplayHandler displayHandler \u003d new DisplayHandler();"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "        CommandHandler command \u003d new CommandHandler();"
+        "content": "        InputHandler inputHandler \u003d new InputHandler();"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        InputParser parser \u003d new InputParser();"
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        // Uses a Facade to Manage Individual Modular Components"
+        "content": "        ListHandler list \u003d new ListHandler();"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "        displayHandler.ProgramOpening();"
+        "content": "        CommandHandler command \u003d new CommandHandler();"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        FileManager fileManager \u003d new FileManager(\"data.txt\");"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        while(true) {"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        // Uses a Facade to Manage Individual Modular Components"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "            // Get User input"
+        "content": "        displayHandler.ProgramOpening();"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "            String input \u003d inputHandler.getUserInput();"
+        "content": "        // Read from a file"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "            // Parse User input"
+        "content": "        fileManager.ReadFile(list);"
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "            String keyWord \u003d parser.extractKeyWord(input);"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "            String body \u003d parser.extractKeyWordBody(input, keyWord);"
+        "content": "        while(true) {"
       },
       {
         "lineNumber": 29,
@@ -211,80 +211,122 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            // If input is not recognised Keyword"
+        "content": "            // Get User input"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (parser.checkIfKeyWord(keyWord) \u003d\u003d false) {"
+        "content": "            String input \u003d inputHandler.getUserInput();"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "                displayHandler.DisplayInvalidInput();"
+        "content": "            // Parse User input"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "            String keyWord \u003d parser.extractKeyWord(input);"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "            // If input is a recognised Keyword"
+        "content": "            String body \u003d parser.extractKeyWordBody(input, keyWord);"
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "            else {"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "                command.checkCommandType(keyWord, body, list);"
+        "content": "            // If input is not recognised Keyword"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "            }"
+        "content": "            if (parser.checkIfKeyWord(keyWord) \u003d\u003d false) {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                displayHandler.DisplayInvalidInput();"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            // If input is a recognised Keyword"
       },
       {
         "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                command.checkCommandType(keyWord, body, list);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            fileManager.SaveFile(list.GetList());"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
@@ -293,7 +335,7 @@
     ],
     "authorContributionMap": {
       "tototto": 9,
-      "-": 32
+      "-": 38
     }
   },
   {
@@ -359,58 +401,58 @@
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "public class CommandHandler {"
+        "content": "/**"
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": " * Handles all commands that user will input"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "    DisplayHandler displayHandler \u003d new DisplayHandler();"
+        "content": " * Commands are listed in the switch-case statement"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "    InputParser inputParser \u003d new InputParser();"
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "public class CommandHandler {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void checkCommandType(String KeyWord, String Body, ListHandler List) {"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    DisplayHandler displayHandler \u003d new DisplayHandler();"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        KEYWORD keyword \u003d KEYWORD.valueOf(KeyWord.toUpperCase());"
+        "content": "    InputParser inputParser \u003d new InputParser();"
       },
       {
         "lineNumber": 17,
@@ -422,65 +464,65 @@
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        try{"
+        "content": "    /**"
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "     * Used to handles the different behaviors of the respective commands"
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "            switch(keyword){"
+        "content": "     * @param KeyWord Command for duke"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                case TODO:"
+        "content": "     * @param Body User task input"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "                    String todoBody \u003d inputParser.extractTodoBody(Body);"
+        "content": "     * @param List contains the list of user Tasks"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                    List.addToDo(todoBody);"
+        "content": "     */"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    Task todoTaskAdded \u003d (Task) List.GetList().lastElement();"
+        "content": "    public void checkCommandType(String KeyWord, String Body, ListHandler List) {"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    displayHandler.ShowTaskAdded(List.GetList().size(), todoTaskAdded);"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    break;"
+        "content": "        KEYWORD keyword \u003d KEYWORD.valueOf(KeyWord.toUpperCase());"
       },
       {
         "lineNumber": 27,
@@ -494,210 +536,210 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case DEADLINE:"
+        "content": "        try{"
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    String deadlineBody \u003d inputParser.extractDeadlineBody(Body);"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    String deadlineByDate \u003d inputParser.extractDeadlineByDay(Body);"
+        "content": "            switch(keyword){"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    String deadlineByTime \u003d inputParser.extractDeadlineByTime(Body);"
+        "content": "                case TODO:"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                    List.addDeadline(deadlineBody, deadlineByDate, deadlineByTime);"
+        "content": "                    String todoBody \u003d inputParser.extractTodoBody(Body);"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    Task deadlineTaskAdded \u003d (Task) List.GetList().lastElement();"
+        "content": "                    List.addToDo(todoBody);"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    displayHandler.ShowTaskAdded(List.GetList().size(), deadlineTaskAdded);"
+        "content": "                    Task todoTaskAdded \u003d (Task) List.GetList().lastElement();"
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                    break;"
+        "content": "                    displayHandler.ShowTaskAdded(List.GetList().size(), todoTaskAdded);"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case EVENT:"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    String eventBody \u003d inputParser.extractEventBody(Body);"
+        "content": "                case DEADLINE:"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "                    String eventDay \u003d inputParser.extractEventAtDay(Body);;"
+        "content": "                    String deadlineBody \u003d inputParser.extractDeadlineBody(Body);"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "                    String eventTime \u003d inputParser.extractEventAtTime(Body);"
+        "content": "                    String deadlineByDate \u003d inputParser.extractDeadlineByDay(Body);"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                    List.addEvent(eventBody, eventDay, eventTime);"
+        "content": "                    String deadlineByTime \u003d inputParser.extractDeadlineByTime(Body);"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                    Task EventTaskAdded \u003d (Task) List.GetList().lastElement();"
+        "content": "                    List.addDeadline(deadlineBody, deadlineByDate, deadlineByTime);"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    displayHandler.ShowTaskAdded(List.GetList().size(), EventTaskAdded);"
+        "content": "                    Task deadlineTaskAdded \u003d (Task) List.GetList().lastElement();"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                    break;"
+        "content": "                    displayHandler.ShowTaskAdded(List.GetList().size(), deadlineTaskAdded);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case LIST:"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    displayHandler.DisplayList(List.GetList());"
+        "content": "                case EVENT:"
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                    break;"
+        "content": "                    String eventBody \u003d inputParser.extractEventBody(Body);"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "                    String eventDay \u003d inputParser.extractEventAtDay(Body);;"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                case DONE:"
+        "content": "                    String eventTime \u003d inputParser.extractEventAtTime(Body);"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    Task taskDone \u003d List.UpdateListItem(Body);"
+        "content": "                    List.addEvent(eventBody, eventDay, eventTime);"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    displayHandler.DisplayChanges(taskDone);"
+        "content": "                    Task EventTaskAdded \u003d (Task) List.GetList().lastElement();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "                    break;"
+        "content": "                    displayHandler.ShowTaskAdded(List.GetList().size(), EventTaskAdded);"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": ""
+        "content": "                    break;"
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                case DELETE:"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                    Task taskDeleted \u003d List.DeleteListItem(Body);"
+        "content": "                case LIST:"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "                    displayHandler.DisplayDeleteResult(List.GetList().size(), taskDeleted);"
+        "content": "                    displayHandler.DisplayList(List.GetList());"
       },
       {
         "lineNumber": 58,
@@ -718,108 +760,178 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "                case BYE:"
+        "content": "                case DONE:"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "                    displayHandler.ProgramEnding();"
+        "content": "                    Task taskDone \u003d List.UpdateListItem(Body);"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "                    System.exit(0);"
+        "content": "                    displayHandler.DisplayChanges(taskDone);"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
         "content": "                    break;"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "tototto"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                case DELETE:"
+      },
+      {
         "lineNumber": 66,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        } catch (Exception e){"
+        "content": "                    Task taskDeleted \u003d List.DeleteListItem(Body);"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "            if(e instanceof IncorrectInputException){"
+        "content": "                    displayHandler.DisplayDeleteResult(List.GetList().size(), taskDeleted);"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "                displayHandler.DisplayCustomException(e);"
+        "content": "                    break;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            else {"
+        "content": "                case BYE:"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "                displayHandler.DisplayInvalidInput();"
+        "content": "                    displayHandler.ProgramEnding();"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            }"
+        "content": "                    System.exit(0);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": "                    break;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "            }"
       },
       {
         "lineNumber": 75,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        } catch (Exception e){"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(e instanceof IncorrectInputException){"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                displayHandler.DisplayCustomException(e);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            else {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                displayHandler.DisplayInvalidInput();"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
         "author": {
           "gitId": "tototto"
         },
@@ -828,7 +940,7 @@
     ],
     "authorContributionMap": {
       "tototto": 45,
-      "-": 30
+      "-": 40
     }
   },
   {
@@ -852,68 +964,96 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "public enum KEYWORD {"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        TODO,"
+        "content": " * Stores all KeyWords"
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        DEADLINE,"
+        "content": " * Used by Duke to perform differing actions"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        EVENT,"
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        LIST,"
+        "content": "public enum KEYWORD {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        DONE,"
+        "content": "        TODO,"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        DELETE,"
+        "content": "        DEADLINE,"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        BYE"
+        "content": "        EVENT,"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        LIST,"
       },
       {
         "lineNumber": 12,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        DONE,"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        DELETE,"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        BYE"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
         "author": {
           "gitId": "tototto"
         },
@@ -922,7 +1062,7 @@
     ],
     "authorContributionMap": {
       "tototto": 10,
-      "-": 2
+      "-": 6
     }
   },
   {
@@ -946,33 +1086,68 @@
       {
         "lineNumber": 3,
         "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Custom error message"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Handles user input issues"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Used when performing String manipulation"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
           "gitId": "tototto"
         },
         "content": "public class IncorrectInputException extends Exception {"
       },
       {
-        "lineNumber": 4,
+        "lineNumber": 9,
         "author": {
           "gitId": "tototto"
         },
         "content": "    public IncorrectInputException(String message){"
       },
       {
-        "lineNumber": 5,
+        "lineNumber": 10,
         "author": {
           "gitId": "tototto"
         },
         "content": "        super(message);"
       },
       {
-        "lineNumber": 6,
+        "lineNumber": 11,
         "author": {
           "gitId": "tototto"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 7,
+        "lineNumber": 12,
         "author": {
           "gitId": "tototto"
         },
@@ -981,7 +1156,7 @@
     ],
     "authorContributionMap": {
       "tototto": 5,
-      "-": 2
+      "-": 7
     }
   },
   {
@@ -1019,75 +1194,124 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "public class InputHandler {"
+        "content": "/**"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": " * Used to obtain user input from Input Stream"
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    static private Scanner fromInputStream \u003d new Scanner(System.in);"
+        "content": " */"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "public class InputHandler {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public String getUserInput(){"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    static private Scanner fromInputStream \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        String command \u003d fromInputStream.nextLine();"
+        "content": ""
       },
       {
         "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Used to get user input"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return a line of user input e.g. todo Birthday Celebration"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public String getUserInput(){"
+      },
+      {
+        "lineNumber": 17,
         "author": {
           "gitId": "tototto"
         },
         "content": ""
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String command \u003d fromInputStream.nextLine();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
         "author": {
           "gitId": "tototto"
         },
         "content": "        return command;"
       },
       {
-        "lineNumber": 14,
+        "lineNumber": 21,
         "author": {
           "gitId": "tototto"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 15,
+        "lineNumber": 22,
         "author": {
           "gitId": "tototto"
         },
@@ -1096,7 +1320,7 @@
     ],
     "authorContributionMap": {
       "tototto": 13,
-      "-": 2
+      "-": 9
     }
   },
   {
@@ -1148,793 +1372,793 @@
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "public class InputParser {"
+        "content": "/**"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": " * Handles and transform user input"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    // Check if First Word is Keyword"
+        "content": " * Turns input into format accepted by DUKE"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean checkIfKeyWord(String input) {"
+        "content": " */"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "public class InputParser {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        try {"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "            KEYWORD.valueOf(input.toUpperCase());"
+        "content": "    /**"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "            return true;"
+        "content": "     * Determine if user entered a Task"
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "     * @param input value to be checked"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        } catch (IllegalArgumentException e) {"
+        "content": "     * @return returns true if keyword, false otherwise"
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "            return false;"
+        "content": "     */"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        }"
+        "content": "    public boolean checkIfKeyWord(String input) {"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    // Extract Keyword from Input"
+        "content": "            KEYWORD.valueOf(input.toUpperCase());"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "    public String extractKeyWord(String input) {"
+        "content": "            return true;"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        String[] Array \u003d input.split(\" \");"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return Array[0];"
+        "content": "        } catch (IllegalArgumentException e) {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    // Extract Body from Input"
+        "content": "    }"
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "    public String extractKeyWordBody(String input, String keyword) {"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        try {"
+        "content": "    /**"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "            return input.replaceFirst(keyword, \"\");"
+        "content": "     * Get Task keyWord from user input line"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "     * @param input value to be parsed"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        } catch(ArrayIndexOutOfBoundsException e){ // May not be used anymore"
+        "content": "     * @return return keyword from @param input"
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "            return null;"
+        "content": "     */"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        }"
+        "content": "    public String extractKeyWord(String input) {"
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "        String[] Array \u003d input.split(\" \");"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        return Array[0];"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    // For Todos"
+        "content": "    }"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "    public String extractTodoBody(String todoInput) throws IncorrectInputException {"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "        if(todoInput.isEmpty())"
+        "content": "    /**"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "            throw new IncorrectInputException(DisplayHandler.EMPTY_TODO);"
+        "content": "     * Get Task body from user\u0027s input"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "     * @param input full line of user input"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "        return todoInput;"
+        "content": "     * @param keyword keyword of user"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * @return return extracted body"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    // For Deadlines"
+        "content": "    public String extractKeyWordBody(String input, String keyword) {"
       },
       {
         "lineNumber": 46,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public String extractDeadlineBody(String deadlineInput) throws IncorrectInputException {"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        String result \u003d \"\";"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        try{"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            int indx \u003d deadlineInput.indexOf(\"/by\");"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            result \u003d deadlineInput.substring(0, indx);"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        } catch (Exception e){"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            if(result.length() \u003c 1){"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_DESC);"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        return result;"
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public String extractDeadlineByDay(String deadlineInput) throws IncorrectInputException{"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        String day \u003d \"\";"
-      },
-      {
-        "lineNumber": 62,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        try{"
-      },
-      {
-        "lineNumber": 63,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            int indx \u003d deadlineInput.indexOf(\"/by\");"
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            String by \u003d deadlineInput.substring(indx, deadlineInput.length());"
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            String[] array \u003d by.split(\" \");"
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            day \u003d array[1];"
-      },
-      {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            return day;"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        }catch (Exception e) {"
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            if(day.length() \u003c 1){"
-      },
-      {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_DAY);"
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        return day;"
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 77,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 78,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public String extractDeadlineByTime(String deadlineInput) throws IncorrectInputException {"
-      },
-      {
-        "lineNumber": 79,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        String time \u003d \"\";"
-      },
-      {
-        "lineNumber": 80,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        try{"
-      },
-      {
-        "lineNumber": 81,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            int indx \u003d deadlineInput.indexOf(\"/by\");"
-      },
-      {
-        "lineNumber": 82,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            String by \u003d deadlineInput.substring(indx);"
-      },
-      {
-        "lineNumber": 83,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            String[] array \u003d by.split(\" \");"
-      },
-      {
-        "lineNumber": 84,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            time \u003d array[2];"
-      },
-      {
-        "lineNumber": 85,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 86,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        } catch (Exception e) {"
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            if(time.length() \u003c 1){"
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_TIME);"
-      },
-      {
-        "lineNumber": 89,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 91,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 92,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        return time;"
-      },
-      {
-        "lineNumber": 93,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 94,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 95,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "    // For Events"
-      },
-      {
-        "lineNumber": 96,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public String extractEventBody(String eventInput) throws IncorrectInputException {"
-      },
-      {
-        "lineNumber": 97,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        String result \u003d \"\";"
-      },
-      {
-        "lineNumber": 98,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 99,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        try{"
-      },
-      {
-        "lineNumber": 100,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            int indx \u003d eventInput.indexOf(\"/at\");"
-      },
-      {
-        "lineNumber": 101,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            result \u003d eventInput.substring(0, indx);"
-      },
-      {
-        "lineNumber": 102,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 103,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        }catch (Exception e){"
-      },
-      {
-        "lineNumber": 104,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            if(result.length() \u003c 1){"
-      },
-      {
-        "lineNumber": 105,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_DESC);"
-      },
-      {
-        "lineNumber": 106,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 107,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 108,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 109,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        return result;"
-      },
-      {
-        "lineNumber": 110,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 111,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 112,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public String extractEventAtDay(String eventInput) throws IncorrectInputException{"
-      },
-      {
-        "lineNumber": 113,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        String day \u003d \"\";"
-      },
-      {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 115,
         "author": {
           "gitId": "tototto"
         },
         "content": "        try {"
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "            int indx \u003d eventInput.indexOf(\"/at\");"
+        "content": "            return input.replaceFirst(keyword, \"\");"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        } catch(ArrayIndexOutOfBoundsException e){ // May not be used anymore"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "            String by \u003d eventInput.substring(indx, eventInput.length());"
+        "content": "    /**"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Extract body from Todo"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param todoInput take input line from a todo"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return extracted body"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws IncorrectInputException for wrong input format"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String extractTodoBody(String todoInput) throws IncorrectInputException {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if(todoInput.isEmpty())"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            throw new IncorrectInputException(DisplayHandler.EMPTY_TODO);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return todoInput;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    // For Deadlines"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String extractDeadlineBody(String deadlineInput) throws IncorrectInputException {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String result \u003d \"\";"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            int indx \u003d deadlineInput.indexOf(\"/by\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            result \u003d deadlineInput.substring(0, indx);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        } catch (Exception e){"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(result.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_DESC);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return result;"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String extractDeadlineByDay(String deadlineInput) throws IncorrectInputException{"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String day \u003d \"\";"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            int indx \u003d deadlineInput.indexOf(\"/by\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            String by \u003d deadlineInput.substring(indx, deadlineInput.length());"
+      },
+      {
+        "lineNumber": 87,
         "author": {
           "gitId": "tototto"
         },
         "content": "            String[] array \u003d by.split(\" \");"
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 88,
         "author": {
           "gitId": "tototto"
         },
         "content": "            day \u003d array[1];"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            return day;"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }catch (Exception e) {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(day.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_DAY);"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return day;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String extractDeadlineByTime(String deadlineInput) throws IncorrectInputException {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String time \u003d \"\";"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            int indx \u003d deadlineInput.indexOf(\"/by\");"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            String by \u003d deadlineInput.substring(indx);"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            String[] array \u003d by.split(\" \");"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            time \u003d array[2];"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(time.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_DEADLINE_TIME);"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return time;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    // For Events"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String extractEventBody(String eventInput) throws IncorrectInputException {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String result \u003d \"\";"
       },
       {
         "lineNumber": 120,
@@ -1948,178 +2172,332 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }catch (Exception e) {"
-      },
-      {
-        "lineNumber": 122,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            if(day.length() \u003c 1){"
-      },
-      {
-        "lineNumber": 123,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_DAY);"
-      },
-      {
-        "lineNumber": 124,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 126,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        return day;"
-      },
-      {
-        "lineNumber": 127,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 128,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 129,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public String extractEventAtTime(String eventInput) throws IncorrectInputException {"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "        String time \u003d \"\";"
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "tototto"
-        },
         "content": "        try{"
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
         "content": "            int indx \u003d eventInput.indexOf(\"/at\");"
       },
       {
-        "lineNumber": 134,
+        "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "            String by \u003d eventInput.substring(indx);"
+        "content": "            result \u003d eventInput.substring(0, indx);"
       },
       {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            String[] array \u003d by.split(\" \");"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "tototto"
-        },
-        "content": "            time \u003d array[2];"
-      },
-      {
-        "lineNumber": 137,
+        "lineNumber": 124,
         "author": {
           "gitId": "tototto"
         },
         "content": ""
       },
       {
-        "lineNumber": 138,
+        "lineNumber": 125,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        } catch (Exception e) {"
+        "content": "        }catch (Exception e){"
       },
       {
-        "lineNumber": 139,
+        "lineNumber": 126,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            if(time.length() \u003c 1){"
+        "content": "            if(result.length() \u003c 1){"
       },
       {
-        "lineNumber": 140,
+        "lineNumber": 127,
         "author": {
           "gitId": "tototto"
         },
-        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_TIME);"
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_DESC);"
       },
       {
-        "lineNumber": 141,
+        "lineNumber": 128,
         "author": {
           "gitId": "tototto"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 142,
+        "lineNumber": 129,
         "author": {
           "gitId": "tototto"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 143,
+        "lineNumber": 130,
         "author": {
           "gitId": "tototto"
         },
         "content": ""
       },
       {
-        "lineNumber": 144,
+        "lineNumber": 131,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return time;"
+        "content": "        return result;"
       },
       {
-        "lineNumber": 145,
+        "lineNumber": 132,
         "author": {
           "gitId": "tototto"
         },
         "content": "    }"
       },
       {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String extractEventAtDay(String eventInput) throws IncorrectInputException{"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String day \u003d \"\";"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            int indx \u003d eventInput.indexOf(\"/at\");"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            String by \u003d eventInput.substring(indx, eventInput.length());"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            String[] array \u003d by.split(\" \");"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            day \u003d array[1];"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }catch (Exception e) {"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(day.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_DAY);"
+      },
+      {
         "lineNumber": 146,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return day;"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String extractEventAtTime(String eventInput) throws IncorrectInputException {"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        String time \u003d \"\";"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            int indx \u003d eventInput.indexOf(\"/at\");"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            String by \u003d eventInput.substring(indx);"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            String[] array \u003d by.split(\" \");"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            time \u003d array[2];"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            if(time.length() \u003c 1){"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "                throw new IncorrectInputException(DisplayHandler.EMPTY_EVENT_TIME);"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        return time;"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 168,
         "author": {
           "gitId": "tototto"
         },
@@ -2127,8 +2505,8 @@
       }
     ],
     "authorContributionMap": {
-      "tototto": 113,
-      "-": 33
+      "tototto": 109,
+      "-": 59
     }
   },
   {
@@ -2355,331 +2733,331 @@
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    final static public String READ_DATA \u003d \"Reading data file: \";"
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    private void Greeter(){"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        System.out.println(GREETING_MSG);"
+        "content": "    public static void ReadDataMsg(String absolutePath){"
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "        System.out.println(READ_DATA + absolutePath);"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Goodbye(){"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(GOODBYE_MSG);"
+        "content": "    private void Greeter(){"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.println(GREETING_MSG);"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Divider(){"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(LINE_DIVIDER);"
+        "content": "    private void Goodbye(){"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.println(GOODBYE_MSG);"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Logo(){"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(LOGO_ICON);"
+        "content": "    private void Divider(){"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.println(LINE_DIVIDER);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void Success(){"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(SUCCESS_MSG);"
+        "content": "    private void Logo(){"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.println(LOGO_ICON);"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void InvalidInput(){"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(INVALID_INPUT_MSG);"
+        "content": "    private void Success(){"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.println(SUCCESS_MSG);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    private void ShowListMsg() { System.out.println(LIST_MSG); }"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    private void InvalidInput(){"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayNumAddedTask(int listNum) {"
+        "content": "        System.out.println(INVALID_INPUT_MSG);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.printf(LIST_NUMBER, listNum);"
+        "content": "    }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    private void ShowListMsg() { System.out.println(LIST_MSG); }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void Done(){"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(DONE_MSG);"
+        "content": "    public void DisplayNumAddedTask(int listNum) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.printf(LIST_NUMBER, listNum);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "    public void PrintDeleteMsg() {"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        System.out.println(DELETE_TASK);"
+        "content": "    public void Done(){"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        System.out.println(DONE_MSG);"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayIndividualTask(Task task){"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        System.out.println(\"   \" + task);"
+        "content": "    public void PrintDeleteMsg() {"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "        System.out.println(DELETE_TASK);"
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    private void ListResult(Vector result){"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void DisplayIndividualTask(Task task){"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        ShowListMsg();"
+        "content": "        System.out.println(\"   \" + task);"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Iterator iter \u003d result.iterator();"
+        "content": "    }"
       },
       {
         "lineNumber": 79,
@@ -2693,105 +3071,105 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "        for(int i \u003d 0; iter.hasNext(); i++){"
+        "content": "    private void ListResult(Vector result){"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            int currIndex \u003d i + 1 ;"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            Task element \u003d (Task)iter.next();"
+        "content": "        ShowListMsg();"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            System.out.println(\" \" + currIndex + \".\" + element);"
+        "content": "        Iterator iter \u003d result.iterator();"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        for(int i \u003d 0; iter.hasNext(); i++){"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "            int currIndex \u003d i + 1 ;"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayInvalidInput(){"
+        "content": "            Task element \u003d (Task)iter.next();"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        InvalidInput();"
+        "content": "            System.out.println(\" \" + currIndex + \".\" + element);"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayChanges(Task task) {"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    public void DisplayInvalidInput(){"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        try{"
+        "content": "        InvalidInput();"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            task.getStatusIcon(); // check if exception will be thrown, this line has no functional usage"
+        "content": "    }"
       },
       {
         "lineNumber": 95,
@@ -2805,231 +3183,231 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "            Done();"
+        "content": "    public void DisplayChanges(Task task) {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            System.out.println(task);"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        try{"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        } catch (NullPointerException e) {"
+        "content": "            task.getStatusIcon(); // check if exception will be thrown, this line has no functional usage"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "tototto"
         },
-        "content": "            InvalidInput();"
+        "content": ""
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        }"
+        "content": "            Done();"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "            System.out.println(task);"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        } catch (NullPointerException e) {"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "    public void DisplayDeleteResult(int ListNum, Task task) {"
+        "content": "            InvalidInput();"
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "        }"
       },
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        PrintDeleteMsg();"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        System.out.println(task);"
+        "content": "    }"
       },
       {
         "lineNumber": 109,
         "author": {
-          "gitId": "-"
+          "gitId": "tototto"
         },
-        "content": "        DisplayNumAddedTask(ListNum);"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        Divider();"
+        "content": "    public void DisplayDeleteResult(int ListNum, Task task) {"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        PrintDeleteMsg();"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "    public void DisplayList(Vector result) {"
+        "content": "        System.out.println(task);"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
-        "content": "        Divider();"
+        "content": "        DisplayNumAddedTask(ListNum);"
       },
       {
         "lineNumber": 115,
         "author": {
-          "gitId": "tototto"
-        },
-        "content": "        ListResult(result);"
-      },
-      {
-        "lineNumber": 116,
-        "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
         "content": "        Divider();"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 116,
         "author": {
-          "gitId": "tototto"
+          "gitId": "-"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void DisplayList(Vector result) {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void ShowTaskAdded(int ListNum, Task task){"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "        ListResult(result);"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Success();"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        DisplayIndividualTask(task);"
+        "content": "    }"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        DisplayNumAddedTask(ListNum);"
+        "content": ""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    public void ShowTaskAdded(int ListNum, Task task){"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        Success();"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void ProgramOpening(){"
+        "content": "        DisplayIndividualTask(task);"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        // User Interface Display Section"
+        "content": "        DisplayNumAddedTask(ListNum);"
       },
       {
         "lineNumber": 129,
@@ -3043,101 +3421,136 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Logo();"
+        "content": "    }"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Greeter();"
+        "content": ""
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    public void ProgramOpening(){"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        // User Interface Display Section"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "        Divider();"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void ProgramEnding(){"
+        "content": "        Logo();"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "        Greeter();"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Goodbye();"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        Divider();"
+        "content": "    }"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "tototto"
         },
-        "content": ""
+        "content": "    public void ProgramEnding(){"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    public void DisplayCustomException(Exception e) {"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "tototto"
         },
-        "content": "        System.out.println(e.getMessage());"
+        "content": "        Goodbye();"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "tototto"
         },
-        "content": "    }"
+        "content": "        Divider();"
       },
       {
         "lineNumber": 144,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    public void DisplayCustomException(Exception e) {"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "        System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 149,
         "author": {
           "gitId": "tototto"
         },
@@ -3146,7 +3559,7 @@
     ],
     "authorContributionMap": {
       "tototto": 118,
-      "-": 26
+      "-": 31
     }
   },
   {
@@ -3651,7 +4064,7 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return \"[D]\" + super.toString() + \"(by: \" + by + \" \" + time +\")\";"
+        "content": "        return \"[D] \" + super.toString() + \"(by: \" + by + \" \" + time +\")\";"
       },
       {
         "lineNumber": 17,
@@ -3787,7 +4200,7 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return \"[E]\" + super.toString() + \"(at: \" + at + \" \" + timePeriod +\")\";"
+        "content": "        return \"[E] \" + super.toString() + \"(at: \" + at + \" \" + timePeriod +\")\";"
       },
       {
         "lineNumber": 17,
@@ -4094,7 +4507,7 @@
         "author": {
           "gitId": "tototto"
         },
-        "content": "        return \"[T]\" + super.toString();"
+        "content": "        return \"[T] \" + super.toString();"
       },
       {
         "lineNumber": 12,
