@@ -711,7 +711,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public abstract String toString();// add abstract class"
+        "content": "    public abstract String toString();// using abstract class"
       },
       {
         "lineNumber": 25,
@@ -776,66 +776,73 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "public class Todo extends Task {"
+        "content": "// using Inheritance to task class"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public Todo(String description) {"
+        "content": "public class Todo extends Task {"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        super(description);"
+        "content": "    public Todo(String description) {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    }"
+        "content": "        super(description);"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        return \"[T]\" + super.printDescription();"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    }"
+        "content": "        return \"[T]\" + super.printDescription();"
       },
       {
         "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
         "author": {
           "gitId": "daiweinus"
         },
@@ -843,7 +850,7 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 12
+      "daiweinus": 13
     }
   },
   {
@@ -1009,7 +1016,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public static Todo createTodo(String line) throws TaskManagerException {"
+        "content": "    public static Todo createTodo(String line) throws TaskException {"
       },
       {
         "lineNumber": 24,
@@ -1037,7 +1044,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            throw new TaskManagerException(\"Error: Empty description for TODO\");"
+        "content": "            throw new TaskException(\"Error: Empty description for TODO\");"
       },
       {
         "lineNumber": 28,
@@ -1072,7 +1079,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public static Deadline createDeadline(String line) throws TaskManagerException {"
+        "content": "    public static Deadline createDeadline(String line) throws TaskException {"
       },
       {
         "lineNumber": 33,
@@ -1100,7 +1107,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            throw new TaskManagerException(\"Error: Empty description for TODO\");"
+        "content": "            throw new TaskException(\"Error: Empty description for TODO\");"
       },
       {
         "lineNumber": 37,
@@ -1121,7 +1128,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            throw new TaskManagerException(\"☹ OOPS!!!: need \u0027/by\u0027 for DEADLINE\");"
+        "content": "            throw new TaskException(\"☹ OOPS!!!: need \u0027/by\u0027 for DEADLINE\");"
       },
       {
         "lineNumber": 40,
@@ -1366,73 +1373,94 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    default:"
+        "content": "                    case \"delete\":"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        ui.printError();"
+        "content": "                        tasks.deleteTasks(fullCommand);"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                }"
+        "content": "                        break;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            } catch (TaskManagerException e) {"
+        "content": "                    default:"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                ui.printError(e.getMessage());"
+        "content": "                        ui.printError();"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            }"
+        "content": "                }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        }"
+        "content": "            } catch (TaskException e) {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    }"
+        "content": "                ui.printError(e.getMessage());"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "}"
+        "content": "            }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 84,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
         "author": {
           "gitId": "daiweinus"
         },
@@ -1440,7 +1468,72 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 84
+      "daiweinus": 87
+    }
+  },
+  {
+    "path": "src/main/java/duke/command/TaskException.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "// using A Exceptions to throw error"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "public class TaskException extends Exception {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public TaskException(String message) {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        super(message);"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 8
     }
   },
   {
@@ -1529,7 +1622,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    private final ArrayList\u003cTask\u003e tasks;"
+        "content": "    private final ArrayList\u003cTask\u003e tasks; //  Use Java Collections classes ArrayList\u003cTask\u003e"
       },
       {
         "lineNumber": 13,
@@ -1578,7 +1671,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public void addTodo(String fullCommand) throws TaskManagerException {"
+        "content": "    public void addTodo(String fullCommand) throws TaskException {"
       },
       {
         "lineNumber": 20,
@@ -1648,7 +1741,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public void addDeadline(String fullCommand) throws TaskManagerException {"
+        "content": "    public void addDeadline(String fullCommand) throws TaskException {"
       },
       {
         "lineNumber": 30,
@@ -1872,7 +1965,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                System.out.println(\"[\" + (index) + \"] \" + tasks.get(index - 1));"
+        "content": "                ui.printWord(\"[\" + (index) + \"] \" + tasks.get(index - 1));"
       },
       {
         "lineNumber": 62,
@@ -1893,7 +1986,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            System.out.println(\"☹ OOPS!!!Print command should be ‘print\u0027 or \u0027print INTEGER\u0027\");"
+        "content": "            ui.printWord(\"☹ OOPS!!!Print command should be ‘print\u0027 or \u0027print INTEGER\u0027\");"
       },
       {
         "lineNumber": 65,
@@ -1970,103 +2063,150 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                System.out.println(\"duke.Tasks: \" + index + \" has marked as DONE.\");"
+        "content": "                ui.printWord(\"duke.Tasks: \" + index + \" has marked as DONE.\");"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            } else System.out.println(\"☹ OOPS!!!Marking as done range should be 1 to \" + tasks.size());"
+        "content": "                ui.printLine();"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        } catch (NumberFormatException e) {"
+        "content": "            } else ui.printWord(\"☹ OOPS!!!Marking as done range should be 1 to \" + tasks.size());"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            System.out.println(\"☹ OOPS!!!markAsDone command not Integer!\");"
+        "content": "        } catch (NumberFormatException e) {"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        }"
+        "content": "            ui.printWord(\"☹ OOPS!!!markAsDone command not Integer!\");"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "daiweinus": 81
-    }
-  },
-  {
-    "path": "src/main/java/duke/command/TaskManagerException.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "package duke.command;"
+        "content": "    }"
       },
       {
-        "lineNumber": 2,
+        "lineNumber": 82,
         "author": {
           "gitId": "daiweinus"
         },
         "content": ""
       },
       {
-        "lineNumber": 3,
+        "lineNumber": 83,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "public class TaskManagerException extends Exception {"
+        "content": "    public void deleteTasks(String fullCommand) {"
       },
       {
-        "lineNumber": 4,
+        "lineNumber": 84,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public TaskManagerException(String message) {"
+        "content": "        try {"
       },
       {
-        "lineNumber": 5,
+        "lineNumber": 85,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        super(message);"
+        "content": "            int index \u003d Integer.parseInt(fullCommand.substring(\"delete\".length()).trim());"
       },
       {
-        "lineNumber": 6,
+        "lineNumber": 86,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            if (index \u003c\u003d tasks.size() \u0026\u0026 index \u003e 0) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                ui.printWord(\"Noted. I\u0027ve removed this task: \\n\" + \"  \" + tasks.get(index-1));"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                tasks.remove(index - 1);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                ui.printWord(\"Now you have \" + tasks.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                ui.printLine();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            } else ui.printWord(\"☹ OOPS!!!:Deleting range should be 1 to \" + tasks.size());"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            ui.printWord(\"☹ OOPS!!!:Deleted command not Integer!\");"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 95,
         "author": {
           "gitId": "daiweinus"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 7,
+        "lineNumber": 96,
         "author": {
           "gitId": "daiweinus"
         },
@@ -2074,7 +2214,7 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 7
+      "daiweinus": 96
     }
   },
   {
