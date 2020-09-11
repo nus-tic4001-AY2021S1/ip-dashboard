@@ -192,6 +192,36 @@
     }
   },
   {
+    "path": "data/tasks.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "T | 0 | return book"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "D | 0 | finish branch-7 | 1am"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "E | 0 | wtf am I doing so late again ? | 12am-1am"
+      }
+    ],
+    "authorContributionMap": {
+      "adi-kd0021": 3
+    }
+  },
+  {
     "path": "src/main/java/Duke/Deadline.java",
     "fileType": "java",
     "lines": [
@@ -389,11 +419,53 @@
         "author": {
           "gitId": "adi-kd0021"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public String save() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return \"D\" + \" | \" + (this.isDone() ? 1 : 0) + \" | \" + this.getDescription().trim()"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                + \" | \" + this.getDeadLine().trim() + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 28
+      "adi-kd0021": 34
     }
   },
   {
@@ -419,28 +491,28 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "import ui.Parser;"
+        "content": "import ui.Constants;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "import ui.Ui;"
+        "content": "import ui.Parser;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "import ui.Ui;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "public class Duke {"
+        "content": ""
       },
       {
         "lineNumber": 7,
@@ -454,371 +526,371 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    private TaskList tasks;"
+        "content": "import java.io.FileNotFoundException;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    private Ui ui;"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "import java.util.Collections;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public Duke() {"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        ui \u003d new Ui();"
+        "content": "public class Duke {"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        tasks \u003d new TaskList();"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "    private Storage storage;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    private TaskList tasks;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void run() {"
+        "content": "    private Ui ui;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        ui.printWelcome();"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    public Duke(String filePath) {"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        boolean isExit \u003d false;"
+        "content": "        ui \u003d new Ui();"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        while (!isExit) {"
+        "content": "        storage \u003d new Storage(filePath);"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            try {"
+        "content": "        try {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                String fullCommand \u003d ui.readUserCommand();"
+        "content": "            tasks \u003d new TaskList(storage.load());"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                String commandWord \u003d Parser.getCommandWord(fullCommand);"
+        "content": "        } catch (FileNotFoundException | DukeException e) {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                switch (commandWord) {"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"\":"
+        "content": "            if (e.toString().contains(\"FileNotFoundException\")) {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printError(\"No command input! Please enter a command or type \\\"help\\\" to view a list of commands.\");"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": "            } else if (e.toString().contains(\"DukeException\")) {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"exit\":"
+        "content": "                ui.showToUser(Constants.FileNotReadableException);"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        isExit \u003d true;"
+        "content": "            }"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        if (tasks.getNumberOfTasks() \u003e 0) {"
+        "content": "            tasks \u003d new TaskList(new ArrayList\u003c\u003e());"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        } else {"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        }"
+        "content": "    }"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printGoodBye();"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": "    /**"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"help\":"
+        "content": "     * Begin running main processing loop"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.helpMessage();"
+        "content": "     */"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": "    public void run() {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"todo\":"
+        "content": "        ui.printWelcome();"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        tasks.addTask(Parser.createTodo(fullCommand));"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        ui.showToUser(tasks.getTaskCount());"
+        "content": "        boolean isExit \u003d false;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printTaskAddAck(tasks.getTasks().get(TaskList.getNumberOfTasks() - 1), TaskList.getNumberOfTasks());"
+        "content": "        while (!isExit) {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"deadline\":"
+        "content": "            try {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        tasks.addTask(Parser.createDeadLine(fullCommand));"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        ui.showToUser(tasks.getTaskCount());"
+        "content": "                String fullCommand \u003d ui.readUserCommand();"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printTaskAddAck(tasks.getTasks().get(TaskList.getNumberOfTasks() - 1), TaskList.getNumberOfTasks());"
+        "content": "                String commandWord \u003d Parser.getCommandWord(fullCommand);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"event\":"
+        "content": "                switch (commandWord) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        tasks.addTask(Parser.createEvent(fullCommand));"
+        "content": "                    case \"\":"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        ui.showToUser(tasks.getTaskCount());"
+        "content": "                        ui.printError(\"No command input! Please enter a command or type \\\"help\\\" to view a list of commands.\");"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printTaskAddAck(tasks.getTasks().get(TaskList.getNumberOfTasks() - 1), TaskList.getNumberOfTasks());"
+        "content": "                        break;"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"print\":"
+        "content": "                    case \"exit\":"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        tasks.printTasks();"
+        "content": "                        isExit \u003d true;"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printTasks(tasks.getTasks());"
+        "content": "                        if (tasks.getNumberOfTasks() \u003e 0) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": "                            storage.save(tasks.getTasks());"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"done\":"
+        "content": "                        }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        tasks.markAsDone(Parser.parseTaskNum(fullCommand));"
+        "content": "                        ui.endInputFeed();"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printTaskMarkedAsDone(tasks.getTasks().get(Parser.parseTaskNum(fullCommand) - 1));"
+        "content": "                        ui.printGoodBye();"
       },
       {
         "lineNumber": 61,
@@ -832,105 +904,105 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                    case \"undone\":"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        tasks.markAsNotDone(Parser.parseTaskNum(fullCommand));"
+        "content": "                    case \"help\":"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "                        ui.helpMessage();"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    case \"save\":"
+        "content": "                        break;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        storage.save(tasks.getTasks());"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        break;"
+        "content": "                    case \"todo\":"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                    case \"remove\":"
+        "content": "                        tasks.addTask(Parser.createTodo(fullCommand));"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        tasks.removeTask(fullCommand);"
+        "content": "                        ui.printTaskAddAck(tasks.getTasks().get(TaskList.getNumberOfTasks() - 1), TaskList.getNumberOfTasks());"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        ui.showToUser(tasks.getTaskCount());"
+        "content": "                        storage.save(tasks.getTasks());"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        break;"
+        "content": "                        break;"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                    case \"backup\":"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        storage.createBackup(tasks.getTasks());"
+        "content": "                    case \"deadline\":"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//                        break;"
+        "content": "                        tasks.addTask(Parser.createDeadLine(fullCommand));"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                    default:"
+        "content": "                        ui.printTaskAddAck(tasks.getTasks().get(TaskList.getNumberOfTasks() - 1), TaskList.getNumberOfTasks());"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                        ui.printError(\"Unknown command! please try again. Please type \\\"help\\\" to view a list of commands.\");"
+        "content": "                        storage.save(tasks.getTasks());"
       },
       {
         "lineNumber": 77,
@@ -944,115 +1016,276 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                }"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            } catch (Exception e) {"
+        "content": "                    case \"event\":"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                ui.printError(e.getMessage());"
+        "content": "                        tasks.addTask(Parser.createEvent(fullCommand));"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            }"
+        "content": "                        ui.printTaskAddAck(tasks.getTasks().get(TaskList.getNumberOfTasks() - 1), TaskList.getNumberOfTasks());"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "                        storage.save(tasks.getTasks());"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        exit();"
+        "content": "                        break;"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "                    case \"print\":"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "                        ui.printTasks(tasks.getTasks());"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        new Duke().run();"
+        "content": "                        break;"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "                    case \"done\":"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void exit() {"
+        "content": "                        tasks.markAsDone(Parser.parseTaskNum(fullCommand));"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//        System.out.println(0);"
+        "content": "                        ui.printTaskMarkedAsDone(tasks.getTasks().get(Parser.parseTaskNum(fullCommand) - 1));"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "                        storage.save(tasks.getTasks());"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "}"
+        "content": "                        break;"
       },
       {
         "lineNumber": 94,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                    case \"remove\":"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                        tasks.removeTask(fullCommand);"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                        ui.printNumberOfTasks(TaskList.getNumberOfTasks());"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                        storage.save(tasks.getTasks());"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                    default:"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                        ui.printError(\"Unknown command! please try again. Please type \\\"help\\\" to view a list of commands.\");"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                        break;"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            } catch (Exception e) {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                ui.printError(e.getMessage());"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        System.exit(0);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        new Duke(\"data/tasks.txt\").run();"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 117,
         "author": {
           "gitId": "adi-kd0021"
         },
@@ -1060,7 +1293,7 @@
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 94
+      "adi-kd0021": 117
     }
   },
   {
@@ -1340,11 +1573,783 @@
         "author": {
           "gitId": "adi-kd0021"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public String save() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return \"E\" + \" | \" + (this.isDone() ? 1 : 0) + \" | \" + this.getDescription().trim()"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                + \" | \" + this.getSchedule().trim() + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 28
+      "adi-kd0021": 34
+    }
+  },
+  {
+    "path": "src/main/java/Duke/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "package Duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    private String filePath \u003d \"\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public Storage(String filePath) {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public String getFilePath() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return filePath;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public List\u003cTask\u003e load() throws FileNotFoundException, DukeException {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        List\u003cTask\u003e loadedTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        List\u003cString\u003e lines \u003d getLines(this.filePath);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        for (String line : lines) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            if (line.trim().isEmpty()) { //ignore empty lines"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                continue;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            loadedTasks.add(createTask(line)); //convert the line to a task and add to the list"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return loadedTasks;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * Creates a task based on the line read in from the tasks.txt file."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * If it is a T then todo is created,"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * If it is a D then deadline is created."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * If it is a E then a event is created."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @param line"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    private Task createTask(String line) throws DukeException {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        Task task \u003d null;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        String[] s \u003d line.split(\"\\\\|\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        if (s[0].trim().equals(\"T\")) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            task \u003d new Todo(s[2].trim());"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            if ((1 \u003d\u003d Integer.parseInt(s[1].trim()))) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                task.setDone(true);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        } else if (s[0].trim().equals(\"D\")) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            task \u003d new Deadline(s[2], s[3]);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            if ((1 \u003d\u003d Integer.parseInt(s[1].trim()))) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                task.setDone(true);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        } else if (s[0].trim().equals(\"E\")) {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            task \u003d new Event(s[2], s[3]);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            if ((1 \u003d\u003d Integer.parseInt(s[1].trim()))) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                task.setDone(true);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            throw new DukeException(\"Error in creating a task from save file\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return task;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * Returns the lines in the form of a List\u003cString\u003e variable"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @param filePath"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @return List\u003cString\u003e lines"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @throws FileNotFoundException"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    private List\u003cString\u003e getLines(String filePath) throws FileNotFoundException {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        List\u003cString\u003e lines \u003d new ArrayList\u003cString\u003e();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        File f \u003d new File(filePath); // create a File for the given file path"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        Scanner s \u003d new Scanner(f); // create a Scanner using the File as the source"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        while (s.hasNext()) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            lines.add(s.nextLine());"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return lines;"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public void save(List\u003cTask\u003e tasks) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            FileWriter fw \u003d new FileWriter(this.filePath);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            File f \u003d new File(this.filePath); // create a File for the given file path"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            Scanner s \u003d new Scanner(f); // create a Scanner using the File as the source"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            for (Task task : tasks) {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                if (s.hasNext()) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                    fw.write(\"\\r\\n\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                fw.write(task.save());"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            fw.close();"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "adi-kd0021": 103
     }
   },
   {
@@ -1489,14 +2494,14 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void setDescription(String description) {"
+        "content": "    public boolean isDone() {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        this.description \u003d description;"
+        "content": "        return this.isDone;"
       },
       {
         "lineNumber": 22,
@@ -1517,14 +2522,14 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public boolean completionStatus() {"
+        "content": "    public void setDescription(String description) {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        return isDone;"
+        "content": "        this.description \u003d description;"
       },
       {
         "lineNumber": 26,
@@ -1545,14 +2550,14 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void setDone(boolean done) {"
+        "content": "    public boolean completionStatus() {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        this.isDone \u003d done;"
+        "content": "        return isDone;"
       },
       {
         "lineNumber": 30,
@@ -1573,14 +2578,14 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public String toString() {"
+        "content": "    public void setDone(boolean done) {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        return String.format(\"%s\", this.getDescription());"
+        "content": "        this.isDone \u003d done;"
       },
       {
         "lineNumber": 34,
@@ -1594,11 +2599,67 @@
         "author": {
           "gitId": "adi-kd0021"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return String.format(\"%s\", this.getDescription());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public String save() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return this.getDescription();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 35
+      "adi-kd0021": 43
     }
   },
   {
@@ -1659,7 +2720,7 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    private static List\u003cTask\u003e tasks;"
+        "content": "    private static List\u003cTask\u003e tasks \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 9,
@@ -1673,14 +2734,14 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public TaskList() {"
+        "content": "    public TaskList(List\u003cTask\u003e tasks) {"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        tasks \u003d new ArrayList\u003cTask\u003e();"
+        "content": "        this.tasks \u003d tasks;"
       },
       {
         "lineNumber": 12,
@@ -1911,115 +2972,178 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static int getNumberOfTasks() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        return tasks.isEmpty() ? 0 : tasks.size();"
+        "content": "     * Returns the current number of tasks in the list"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "     *"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "     * @return"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void markAsDone(int idx) {"
+        "content": "     */"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        tasks.get(idx - 1).setDone(true);"
+        "content": "    public static int getNumberOfTasks() {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        return tasks.isEmpty() ? 0 : tasks.size();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void markAsNotDone(int idx) {"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        tasks.get(idx - 1).setDone(false);"
+        "content": "    public void markAsDone(int idx) {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        tasks.get(idx - 1).setDone(true);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//    public void removeTask(String fullCommand) {"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//        int index \u003d Integer.parseInt(fullCommand.substring(\"remove\".length()).trim());"
+        "content": "    public void markAsNotDone(int idx) {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//        tasks.remove(index - 1);"
+        "content": "        tasks.get(idx - 1).setDone(false);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//    }"
+        "content": "    }"
       },
       {
         "lineNumber": 60,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * Remove a task at the index specified in the list"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @param fullCommand"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public void removeTask(String fullCommand) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        int index \u003d Integer.parseInt(fullCommand.substring(\"remove\".length()).trim());"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        tasks.remove(index - 1);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
         "author": {
           "gitId": "adi-kd0021"
         },
@@ -2027,7 +3151,7 @@
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 60
+      "adi-kd0021": 69
     }
   },
   {
@@ -2165,11 +3289,46 @@
         "author": {
           "gitId": "adi-kd0021"
         },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public String save() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return \"T\" + \" | \" + (this.isDone() ? 1 : 0) + \" | \" + super.save() + System.lineSeparator();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 19
+      "adi-kd0021": 24
     }
   },
   {
@@ -2349,63 +3508,63 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String TODO \u003d \"todo\";"
+        "content": "    public static final String FileNotReadableException \u003d \"There was an issue with reading from the save file. Loading Duke with an empty task list\";"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String DEADLINE \u003d \"deadline\";"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String SAVE \u003d \"save\";"
+        "content": "    public static final String TODO \u003d \"todo\";"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String PRINT \u003d \"print\";"
+        "content": "    public static final String DEADLINE \u003d \"deadline\";"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String DONE \u003d \"done\";"
+        "content": "    public static final String SAVE \u003d \"save\";"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String EXIT \u003d \"exit\";"
+        "content": "    public static final String PRINT \u003d \"print\";"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    public static final String DONE \u003d \"done\";"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String TODO_HELP_STATEMENT \u003d \"Type \\\"todo\\\" \\\"description of task\\\" and press \u0027Enter\u0027 to create a new Todo Task.\" +"
+        "content": "    public static final String REMOVE \u003d \"remove\";"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            \" E.g. todo Return textbook\";"
+        "content": "    public static final String EXIT \u003d \"exit\";"
       },
       {
         "lineNumber": 34,
@@ -2419,14 +3578,14 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String DEADLINE_HELP_STATEMENT \u003d \"Type \\\"deadline\\\" \\\"description of task\\\" /by \\\"description of deadline\\\" and press \u0027Enter\u0027 to create a new Deadline Task. E.g. deadline Hand in Homework /by Monday 10am \";"
+        "content": "    public static final String TODO_HELP_STATEMENT \u003d \"Type \\\"todo\\\" \\\"description of task\\\" and press \u0027Enter\u0027 to create a new Todo Task.\" +"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "            \" E.g. todo Return textbook\";"
       },
       {
         "lineNumber": 37,
@@ -2440,7 +3599,7 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String PRINT_HELP_STATEMENT \u003d \"Type \\\"print\\\" and press \u0027Enter\u0027 to print out the current list of tasks.\";"
+        "content": "    public static final String DEADLINE_HELP_STATEMENT \u003d \"Type \\\"deadline\\\" \\\"description of task\\\" /by \\\"description of deadline\\\" and press \u0027Enter\u0027 to create a new Deadline Task. E.g. deadline Hand in Homework /by Monday 10am \";"
       },
       {
         "lineNumber": 39,
@@ -2454,38 +3613,87 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String DONE_HELP_STATEMENT \u003d \"Type \\\"done\\\" and the number of the task from the list, then press \u0027Enter\u0027.\" +"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            \"Use \\\"print\\\" to display the tasks and their corresponding number first. E.g. done 1\\n\" +"
+        "content": "    public static final String PRINT_HELP_STATEMENT \u003d \"Type \\\"print\\\" and press \u0027Enter\u0027 to print out the current list of tasks.\";"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            \"\\t\\t\\t   [This will set that task\u0027s status to done/ complete]\";"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    public static final String DONE_HELP_STATEMENT \u003d \"Type \\\"done\\\" and the number of the task from the list, then press \u0027Enter\u0027.\" +"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static final String EXIT_HELP_STATEMENT \u003d \"Type \\\"exit\\\" and press \u0027Enter\u0027 in order to exit the main.java.Duke chatbot application.\";"
+        "content": "            \"Use \\\"print\\\" to display the tasks and their corresponding number first. E.g. done 1\\n\" +"
       },
       {
         "lineNumber": 45,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            \"\\t\\t\\t   [This will set that task\u0027s status to done/ complete]\";"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public static final String REMOVE_HELP_STATEMENT \u003d \"Type \\\"remove\\\" and the number of the task to be removed from the list.\\n\" +"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            \"\\t\\t\\t   Use \\\"print\\\" to display the tasks and their corresponding number first. E.g. remove 1\\n\" +"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            \"\\t\\t\\t   [This will remove that task from the list.]\";"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public static final String EXIT_HELP_STATEMENT \u003d \"Type \\\"exit\\\" and press \u0027Enter\u0027 in order to exit the Duke chatbot.\";"
+      },
+      {
+        "lineNumber": 52,
         "author": {
           "gitId": "adi-kd0021"
         },
@@ -2493,7 +3701,7 @@
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 45
+      "adi-kd0021": 52
     }
   },
   {
@@ -2554,56 +3762,56 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": " * public static getCommandWord(String fullCommand): Returns a the command word i.e., the first word of the given fullCommand"
+        "content": "public class Parser {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": " * e.g., Parser.getCommandWord(\"todo read book\") \"todo\""
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": " * public static createTodo(String fullCommand): Returns a Todo object to match the fullCommand. Assumption: the fullCommand is for creating a Todo object."
+        "content": "    /**"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": " * e.g., Parser.createTodo(\"todo read book\") a Todo object containing the description \"read book\""
+        "content": "     * Split the user input and return the command action to process"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": " */"
+        "content": "     * @param fullCommand"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "public class Parser {"
+        "content": "     * @return"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 16,
@@ -2645,381 +3853,570 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static Todo createTodo(String fullCommand) throws DukeException {"
+        "content": "    /**"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        String description \u003d fullCommand.substring(\"todo\".length()).trim();"
+        "content": "     * Creates a Todo object and returns it."
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        //Use isBlank() rather than isEmpty(). isBlank() checks for whitespace"
+        "content": "     *"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (description.isBlank()) {"
+        "content": "     * @param fullCommand"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            throw new DukeException(\"Empty description for TODO\");"
+        "content": "     * @return"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        } else {"
+        "content": "     * @throws DukeException"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            return new Todo(description);"
+        "content": "     */"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "    public static Todo createTodo(String fullCommand) throws DukeException {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        String description \u003d fullCommand.substring(\"todo\".length()).trim();"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        //Use isBlank() rather than isEmpty(). isBlank() checks for whitespace"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        if (description.isBlank()) {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static Deadline createDeadLine(String fullCommand) throws DukeException {"
+        "content": "            throw new DukeException(\"Empty description for TODO\");"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        int idxOfBy \u003d fullCommand.indexOf(\"/by\");"
+        "content": "        } else {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (idxOfBy \u003c 0) {"
+        "content": "            return new Todo(description);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            throw new DukeException(\"Deadline does not contain /by\");"
+        "content": "        }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        String description \u003d fullCommand.substring(0, idxOfBy).substring(\"deadline\".length()).trim();"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        //Use isBlank() rather than isEmpty(). isBlank() checks for whitespace"
+        "content": "    /**"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (description.isEmpty() || description.equals(\"\")) {"
+        "content": "     * Creates a Deadline object and returns it"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            throw new DukeException(\"Empty description for DEADLINE\");"
+        "content": "     *"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "     * @param fullCommand"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        String deadline \u003d fullCommand.substring(idxOfBy, fullCommand.length()).substring(\"/by\".length()).trim();"
+        "content": "     * @return"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (deadline.isEmpty() || deadline.equals(\"\")) {"
+        "content": "     * @throws DukeException"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            throw new DukeException(\"Empty deadline for DEADLINE\");"
+        "content": "     */"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "    public static Deadline createDeadLine(String fullCommand) throws DukeException {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "//        return new Deadline(description, deadline);"
+        "content": "        int idxOfBy \u003d fullCommand.indexOf(\"/by\");"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        return new Deadline(description, deadline);"
+        "content": "        if (idxOfBy \u003c 0) {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "            throw new DukeException(\"Deadline does not contain /by\");"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static Event createEvent(String fullCommand) throws DukeException {"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        int idxOfBy \u003d fullCommand.indexOf(\"/at\");"
+        "content": "        String description \u003d fullCommand.substring(0, idxOfBy).substring(\"deadline\".length()).trim();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (idxOfBy \u003c 0) {"
+        "content": "        //Use isBlank() rather than isEmpty(). isBlank() checks for whitespace"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            throw new DukeException(\"Event does not contain /at\");"
+        "content": "        if (description.isEmpty() || description.equals(\"\")) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "            throw new DukeException(\"Empty description for DEADLINE\");"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        String description \u003d fullCommand.substring(0, idxOfBy).substring(\"event\".length()).trim();"
+        "content": "        String deadline \u003d fullCommand.substring(idxOfBy, fullCommand.length()).substring(\"/by\".length()).trim();"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        //assert (fullCommand.contains(description)) : \"Something went wrong during the substring for event description\";"
+        "content": "        if (deadline.isEmpty() || deadline.equals(\"\")) {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (description.isEmpty() || description.equals(\"\")) {"
+        "content": "            throw new DukeException(\"Empty deadline for DEADLINE\");"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            throw new DukeException(\"Empty description for EVENT\");"
+        "content": "        }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "//        return new Deadline(description, deadline);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        String schedule \u003d fullCommand.substring(idxOfBy, fullCommand.length()).substring(\"/at\".length()).trim();"
+        "content": "        return new Deadline(description, deadline);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (schedule.isEmpty() || schedule.equals(\"\")) {"
+        "content": "    }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            throw new DukeException(\"Empty schedule for EVENT\");"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "    /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        return new Event(description, schedule);"
+        "content": "     * Creates a Event object and returns it"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "     *"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "     * @param fullCommand"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static int parseTaskNum(String fullCommand) {"
+        "content": "     * @return"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        int index \u003d fullCommand.contains(\"undone\") ?"
+        "content": "     * @throws DukeException"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                Integer.parseInt(fullCommand.substring(\"undone\".length()).trim()) : Integer.parseInt(fullCommand.substring(\"done\".length()).trim());"
+        "content": "     */"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        return index;"
+        "content": "    public static Event createEvent(String fullCommand) throws DukeException {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        int idxOfBy \u003d fullCommand.indexOf(\"/at\");"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        if (idxOfBy \u003c 0) {"
       },
       {
         "lineNumber": 75,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            throw new DukeException(\"Event does not contain /at\");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        String description \u003d fullCommand.substring(0, idxOfBy).substring(\"event\".length()).trim();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        //assert (fullCommand.contains(description)) : \"Something went wrong during the substring for event description\";"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        if (description.isEmpty() || description.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            throw new DukeException(\"Empty description for EVENT\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        String schedule \u003d fullCommand.substring(idxOfBy, fullCommand.length()).substring(\"/at\".length()).trim();"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        if (schedule.isEmpty() || schedule.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "            throw new DukeException(\"Empty schedule for EVENT\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return new Event(description, schedule);"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * Parses the user input for the idx of the Task and returns as Int"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @param fullCommand"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public static int parseTaskNum(String fullCommand) {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        int index \u003d fullCommand.contains(\"undone\") ?"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                Integer.parseInt(fullCommand.substring(\"undone\".length()).trim()) : Integer.parseInt(fullCommand.substring(\"done\".length()).trim());"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        return index;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
         "author": {
           "gitId": "adi-kd0021"
         },
@@ -3027,7 +4424,7 @@
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 75
+      "adi-kd0021": 102
     }
   },
   {
@@ -3235,616 +4632,616 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    /**"
+        "content": "    public void endInputFeed() {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     * Prints \"Welcome to Duke :D\"."
+        "content": "        in.close();"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void printWelcome() {"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.print(Constants.GREETING);"
+        "content": "    /**"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "     * Prints \"Welcome to Duke\"."
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void printGoodBye() {"
+        "content": "    public static void printWelcome() {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        System.out.print(Constants.GREETING);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.FAREWELL);"
+        "content": "    }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    public static void printGoodBye() {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void printTasks(List\u003cTask\u003e tasks) {"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.H_LINE);"
+        "content": "        System.out.println(Constants.FAREWELL);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.DISPLAY_TASK_LIST);"
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        int i \u003d 1;"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        for (Task t : tasks) {"
+        "content": "    public void printTasks(List\u003cTask\u003e tasks) {"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            if (t.getClass().toString().contains(\"main.java.Duke.Todo\")) {"
+        "content": "        System.out.println(Constants.H_LINE);"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                System.out.println(i + \".\" + \"[T] \" + t);"
+        "content": "        System.out.println(Constants.DISPLAY_TASK_LIST);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        int i \u003d 1;"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            } else if (t.getClass().toString().contains(\"main.java.Duke.Deadline\")) {"
+        "content": "        for (Task t : tasks) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                System.out.println(i + \".\" + \"[D] \" + t);"
+        "content": "            if (t.getClass().toString().contains(\"Duke.Todo\")) {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "                System.out.println(i + \".\" + \"[T] \" + t);"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            } else {"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                System.out.println(i + \".\" + \"[E] \" + t);"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            }"
+        "content": "            } else if (t.getClass().toString().contains(\"Duke.Deadline\")) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            i++;"
+        "content": "                System.out.println(i + \".\" + \"[D] \" + t);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.H_LINE);"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "            } else {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "                System.out.println(i + \".\" + \"[E] \" + t);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void printNumberOfTasks(int taskListSize) {"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        //return \"Tasks in the list: \" + tasks.size();"
+        "content": "            }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(String.format(Constants.NUMBER_OF_TASKS, taskListSize));"
+        "content": "            i++;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        System.out.println(Constants.H_LINE);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void printTaskAddAck(Task task, int taskListSize) {"
+        "content": "    }"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.H_LINE);"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.ACKNOWLEDGEMENT);"
+        "content": "    public static void printNumberOfTasks(int taskListSize) {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (task.getClass().toString().contains(\"main.java.Duke.Todo\")) {"
+        "content": "        //return \"Tasks in the list: \" + tasks.size();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            System.out.println(\"[T] \" + task);"
+        "content": "        System.out.println(String.format(Constants.NUMBER_OF_TASKS, taskListSize));"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        } else if (task.getClass().toString().contains(\"main.java.Duke.Deadline\")) {"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            System.out.println(\"[D] \" + task);"
+        "content": "    public void printTaskAddAck(Task task, int taskListSize) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        System.out.println(Constants.H_LINE);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        } else {"
+        "content": "        System.out.println(Constants.ACKNOWLEDGEMENT);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            System.out.println(\"[E] \" + task);"
+        "content": "        if (task.getClass().toString().contains(\"Duke.Todo\")) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "            System.out.println(\"[T] \" + task);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        printNumberOfTasks(taskListSize);"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.H_LINE);"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        } else if (task.getClass().toString().contains(\"Duke.Deadline\")) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "            System.out.println(\"[D] \" + task);"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public void printTaskMarkedAsDone(Task task) {"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.H_LINE);"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.ACKNOWLEDGEMENT_AS_DONE);"
+        "content": "        } else {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        if (task.getClass().toString().contains(\"main.java.Duke.Todo\")) {"
+        "content": "            System.out.println(\"[E] \" + task);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            System.out.println(\"[T] \" + task);"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        } else if (task.getClass().toString().contains(\"main.java.Duke.Deadline\")) {"
+        "content": "        printNumberOfTasks(taskListSize);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            System.out.println(\"[D] \" + task);"
+        "content": "        System.out.println(Constants.H_LINE);"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        } else {"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "            System.out.println(\"[E] \" + task);"
+        "content": "    public void printTaskMarkedAsDone(Task task) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        }"
+        "content": "        System.out.println(Constants.H_LINE);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(Constants.H_LINE);"
+        "content": "        System.out.println(Constants.ACKNOWLEDGEMENT_AS_DONE);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        if (task.getClass().toString().contains(\"main.java.Duke.Todo\")) {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "            System.out.println(\"[T] \" + task);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     * Displays to user the message passed in.(Line by line)"
+        "content": "        } else if (task.getClass().toString().contains(\"main.java.Duke.Deadline\")) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     *"
+        "content": "            System.out.println(\"[D] \" + task);"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     * @param message"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     */"
+        "content": "        } else {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void showToUser(String message) {"
+        "content": "            System.out.println(\"[E] \" + task);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(message);"
+        "content": "        }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        System.out.println(Constants.H_LINE);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     * Display to user the message passed in.(No new line)"
+        "content": "    /**"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     *"
+        "content": "     * Displays to user the message passed in.(Line by line)"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     * @param message"
+        "content": "     *"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     */"
+        "content": "     * @param message"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void showToUserNoNewLine(String message) {"
+        "content": "     */"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.print(message);"
+        "content": "    public static void showToUser(String message) {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": "        System.out.println(message);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     * Displays to user the error message passed in"
+        "content": "    /**"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "     * Not to be confused with showToUser()."
+        "content": "     * Display to user the message passed in.(No new line)"
       },
       {
         "lineNumber": 117,
@@ -3872,14 +5269,14 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void printError(String message) {"
+        "content": "    public static void showToUserNoNewLine(String message) {"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(message);"
+        "content": "        System.out.print(message);"
       },
       {
         "lineNumber": 122,
@@ -3900,73 +5297,150 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    public static void helpMessage() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        String helpMessage \u003d String.format(\"\\n%-15s%s\\n\\n%-15s%s\\n\\n%-15s%s\\n\\n%-15s%s\\n\\n%-15s%s\\n\","
+        "content": "     * Displays to user the error message passed in"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                Constants.TODO, Constants.TODO_HELP_STATEMENT,"
+        "content": "     * Not to be confused with showToUser()."
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                Constants.DEADLINE, Constants.DEADLINE_HELP_STATEMENT,"
+        "content": "     *"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                Constants.PRINT, Constants.PRINT_HELP_STATEMENT,"
+        "content": "     * @param message"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                Constants.DONE, Constants.DONE_HELP_STATEMENT,"
+        "content": "     */"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "                Constants.EXIT, Constants.EXIT_HELP_STATEMENT);"
+        "content": "    public static void printError(String message) {"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": ""
+        "content": "        System.out.println(message);"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "        System.out.println(helpMessage);"
+        "content": "    }"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 134,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    public static void helpMessage() {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        String helpMessage \u003d String.format(\"\\n%-15s%s\\n\\n%-15s%s\\n\\n%-15s%s\\n\\n%-15s%s\\n\\n%-15s%s\\n\\n%-15s%s\\n\","
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                Constants.TODO, Constants.TODO_HELP_STATEMENT,"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                Constants.DEADLINE, Constants.DEADLINE_HELP_STATEMENT,"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                Constants.PRINT, Constants.PRINT_HELP_STATEMENT,"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                Constants.DONE, Constants.DONE_HELP_STATEMENT,"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                Constants.REMOVE, Constants.REMOVE_HELP_STATEMENT,"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "                Constants.EXIT, Constants.EXIT_HELP_STATEMENT);"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "        System.out.println(helpMessage);"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 145,
         "author": {
           "gitId": "adi-kd0021"
         },
@@ -3974,7 +5448,7 @@
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 134
+      "adi-kd0021": 145
     }
   },
   {
@@ -3986,11 +5460,18 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "hep"
+        "content": "help"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "adi-kd0021"
+        },
+        "content": "exit"
       }
     ],
     "authorContributionMap": {
-      "adi-kd0021": 1
+      "adi-kd0021": 2
     }
   },
   {
@@ -4072,7 +5553,7 @@
         "author": {
           "gitId": "adi-kd0021"
         },
-        "content": "javac  -cp ..\\src\\main\\java\\Duke;..\\src\\main\\java\\ui -Xlint:none -d ..\\bin ..\\src\\main\\java\\Duke\\*.java ..\\src\\main\\java\\ui\\*.java"
+        "content": "javac -cp ..\\src\\main\\java -Xlint:none -d ..\\bin ..\\src\\main\\java\\Duke\\*.java"
       },
       {
         "lineNumber": 12,
@@ -4084,82 +5565,75 @@
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "adi-kd0021"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "IF ERRORLEVEL 1 ("
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "IF ERRORLEVEL 1 ("
+        "content": "    echo ********** BUILD FAILURE **********"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "    echo ********** BUILD FAILURE **********"
+        "content": "    exit /b 1"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "    exit /b 1"
+        "content": ")"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": ")"
+        "content": "REM no error here, errorlevel \u003d\u003d 0"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "REM no error here, errorlevel \u003d\u003d 0"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "REM run the program, feed commands from input.txt file and redirect the output to the ACTUAL.TXT"
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "-"
+          "gitId": "adi-kd0021"
         },
-        "content": "REM run the program, feed commands from input.txt file and redirect the output to the ACTUAL.TXT"
+        "content": "java -classpath ..\\bin Duke.Duke \u003c input.txt \u003e ACTUAL.TXT"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "java -classpath ..\\bin Duke \u003c input.txt \u003e ACTUAL.TXT"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "-"
-        },
         "content": "REM compare the output to the expected output"
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
@@ -4167,7 +5641,7 @@
       }
     ],
     "authorContributionMap": {
-      "-": 19,
+      "-": 18,
       "adi-kd0021": 5
     }
   },

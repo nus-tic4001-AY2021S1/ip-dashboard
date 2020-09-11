@@ -200,7 +200,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package duke;"
+        "content": "package main.java.duke;"
       },
       {
         "lineNumber": 2,
@@ -214,49 +214,49 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public class Deadline extends Todo{"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    private String deadline;"
+        "content": " * Deadline is a class that extends Todo"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": " * As Deadline consist of deadline information in this class."
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public Deadline(String description, String deadline) {"
+        "content": " * @author olivier cheah"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        super(description);"
+        "content": " */"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        this.deadline \u003d deadline;"
+        "content": "public class Deadline extends Todo{"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "    private String deadline;"
       },
       {
         "lineNumber": 10,
@@ -270,21 +270,21 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    @Override"
+        "content": "    public Deadline(String description, String deadline) {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public String toString() {"
+        "content": "        super(description);"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return super.toString() + \" (by: \" + deadline + \")\";"
+        "content": "        this.deadline \u003d deadline;"
       },
       {
         "lineNumber": 14,
@@ -305,11 +305,81 @@
         "author": {
           "gitId": "skyventus"
         },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return super.toString() + \" (by: \" + deadline + \")\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String saveTask(){"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return \"D | \" + (super.isDone() ? \"1\" : \"0\") + \" | \" + super.getDescription() + \" | \" + deadline + \"\\n\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "skyventus"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "skyventus": 16
+      "skyventus": 26
     }
   },
   {
@@ -321,7 +391,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package duke;"
+        "content": "package main.java.duke;"
       },
       {
         "lineNumber": 2,
@@ -335,84 +405,84 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import utils.Ui;"
+        "content": "import main.java.utils.Storage;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import utils.Parser;"
+        "content": "import main.java.utils.Ui;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "import main.java.utils.Parser;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public class Duke {"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "public class Duke {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    private Ui ui;"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    private TaskList task;"
+        "content": "    private Ui ui;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    private TaskList task;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void run(){"
+        "content": "    private Storage storage \u003d new Storage(\"data\",\"Duke.txt\");"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        ui \u003d new Ui();"
+        "content": "    public void run(){"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        task \u003d new TaskList();"
+        "content": "        ui \u003d new Ui();"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        ui.printWelcome();"
+        "content": "        task \u003d new TaskList();"
       },
       {
         "lineNumber": 15,
@@ -426,283 +496,339 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        String fullCommand \u003d ui.readUserCommand().toLowerCase();"
+        "content": "        ui.printWelcome();"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        String commandWord \u003d Parser.getCommandWord(fullCommand);"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        String fullCommand \u003d ui.readUserCommand().toLowerCase();"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        while(!commandWord.equals(\"bye\")) {"
+        "content": "        String commandWord \u003d Parser.getCommandWord(fullCommand);"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            try{"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                switch(commandWord){"
+        "content": "        while(!commandWord.equals(\"bye\")) {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    case(\"list\"):"
+        "content": "            try{"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        task.printTasks();"
+        "content": "                switch(commandWord){"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        break;"
+        "content": "                    case(\"list\"):"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    case(\"done\"):"
+        "content": "                        task.printTasks();"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        task.setTaskDone(Parser.getTaskIndex(fullCommand));"
+        "content": "                        break;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        break;"
+        "content": "                    case(\"done\"):"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    case(\"todo\"):"
+        "content": "                        task.setTaskDone(Parser.getTaskIndex(fullCommand));"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        task.addTask(Parser.createTodo(Parser.getTodoDescription(fullCommand,commandWord)));"
+        "content": "                        break;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        break;"
+        "content": "                    case(\"todo\"):"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    case(\"deadline\"):"
+        "content": "                        task.addTask(Parser.createTodo(Parser.getTodoDescription(fullCommand,commandWord)));"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        task.addTask(Parser.createDeadline(Parser.getDescriptionOnly(fullCommand,commandWord, \"/by\")"
+        "content": "                        break;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                                ,Parser.getDeadline(fullCommand)));"
+        "content": "                    case(\"deadline\"):"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        break;"
+        "content": "                        task.addTask(Parser.createDeadline(Parser.getDescriptionOnly(fullCommand,commandWord, \"/by\")"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    case(\"event\"):"
+        "content": "                                ,Parser.getDeadline(fullCommand)));"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        task.addTask(Parser.createEvent(Parser.getDescriptionOnly(fullCommand,commandWord, \"/at\")"
+        "content": "                        break;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                                ,Parser.getEventTiming(fullCommand)));"
+        "content": "                    case(\"event\"):"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        break;"
+        "content": "                        task.addTask(Parser.createEvent(Parser.getDescriptionOnly(fullCommand,commandWord, \"/at\")"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    default:"
+        "content": "                                ,Parser.getEventTiming(fullCommand)));"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        Ui.showToUser(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+        "content": "                        break;"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                        break;"
+        "content": "                    case(\"delete\"):"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                }"
+        "content": "                        task.removeTask(Parser.getDeleteIndex(fullCommand));"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            }catch (DukeException e){"
+        "content": "                        break;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                System.out.println(e.getMessage());"
+        "content": "                    case(\"save\"):"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            }"
+        "content": "                        storage.save(task);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            fullCommand \u003d ui.readUserCommand().toLowerCase();"
+        "content": "                        break;"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            commandWord \u003d Parser.getCommandWord(fullCommand);"
+        "content": "                    default:"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": "                        Ui.showToUser(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "                        break;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        ui.showByeMessage();"
+        "content": "                }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "            }catch (DukeException e){"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "                System.out.println(e.getMessage());"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "            }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        new Duke().run();"
+        "content": "            fullCommand \u003d ui.readUserCommand().toLowerCase();"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "            commandWord \u003d Parser.getCommandWord(fullCommand);"
       },
       {
         "lineNumber": 56,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        ui.showByeMessage();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        new Duke().run();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
         "author": {
           "gitId": "skyventus"
         },
@@ -710,7 +836,7 @@
       }
     ],
     "authorContributionMap": {
-      "skyventus": 56
+      "skyventus": 64
     }
   },
   {
@@ -722,7 +848,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package duke;"
+        "content": "package main.java.duke;"
       },
       {
         "lineNumber": 2,
@@ -808,7 +934,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package duke;"
+        "content": "package main.java.duke;"
       },
       {
         "lineNumber": 2,
@@ -822,94 +948,164 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public class Event extends Todo {"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    private String eventInformation;"
+        "content": " * Event is a class that extends Todo"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": " * As Event consist of event information in this class."
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public Event(String description, String event){"
+        "content": " * @author olivier cheah"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        super(description);"
+        "content": " */"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        this.eventInformation \u003d event;"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "public class Event extends Todo {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    private String eventInformation;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public String toString() {"
+        "content": "    public Event(String description, String event){"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return super.toString() + \" (at: \" + eventInformation + \")\";"
+        "content": "        super(description);"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        this.eventInformation \u003d event;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 16,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return super.toString() + \" (at: \" + eventInformation + \")\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String saveTask(){"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return \"E | \" + (super.isDone() ? \"1\" : \"0\") + \" | \" + super.getDescription() + \" | \" + eventInformation + \"\\n\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
         "author": {
           "gitId": "skyventus"
         },
@@ -917,7 +1113,7 @@
       }
     ],
     "authorContributionMap": {
-      "skyventus": 16
+      "skyventus": 26
     }
   },
   {
@@ -929,7 +1125,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package duke;"
+        "content": "package main.java.duke;"
       },
       {
         "lineNumber": 2,
@@ -943,105 +1139,105 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public abstract class Task {"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    private String description;"
+        "content": " * Task is the based class for this Duke and is a abstract class."
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "//    private boolean isDone;"
+        "content": " * @author Olivier Cheah"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public Task(String description) {"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        this.description \u003d description;"
+        "content": "public abstract class Task {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "    private String description;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "//    private boolean isDone;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public String getDescription() {"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return this.description;"
+        "content": "    public Task(String description) {"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        this.description \u003d description;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public String toString() {"
+        "content": "    public String getDescription() {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return description;"
+        "content": "        return this.description;"
       },
       {
         "lineNumber": 18,
@@ -1062,28 +1258,28 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    //Abstract methods"
+        "content": "    @Override"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public abstract boolean isDone();"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        return description;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public abstract void setDone(boolean done);"
+        "content": "    }"
       },
       {
         "lineNumber": 24,
@@ -1097,11 +1293,46 @@
         "author": {
           "gitId": "skyventus"
         },
+        "content": "    //Abstract methods"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public abstract boolean isDone();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public abstract String saveTask();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public abstract void setDone(boolean done);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "skyventus"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "skyventus": 25
+      "skyventus": 30
     }
   },
   {
@@ -1113,7 +1344,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package duke;"
+        "content": "package main.java.duke;"
       },
       {
         "lineNumber": 2,
@@ -1127,14 +1358,14 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import utils.Parser;"
+        "content": "import main.java.utils.Parser;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import utils.Ui;"
+        "content": "import main.java.utils.Ui;"
       },
       {
         "lineNumber": 5,
@@ -1169,49 +1400,49 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public class TaskList {"
+        "content": "/**"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    private List\u003cTask\u003e tasks;"
+        "content": " * TaskList is a class that hold a list of tasks and its related function."
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    Ui ui \u003d new Ui();"
+        "content": " * @author Olivier Cheah"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public TaskList() {"
+        "content": "public class TaskList {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        this.tasks \u003d new ArrayList\u003c\u003e();"
+        "content": "    private List\u003cTask\u003e tasks;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "    Ui ui \u003d new Ui();"
       },
       {
         "lineNumber": 16,
@@ -1225,70 +1456,70 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void addTask(Task task) {"
+        "content": "    public TaskList() {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        tasks.add(task);"
+        "content": "        this.tasks \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        ui.printGotIt();"
+        "content": "    }"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        ui.showAddedTask(Parser.getTaskType(task), task.getDescription());"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        ui.showTotalNumberTaskAdded(tasks.size());"
+        "content": "    public void addTask(Task task) {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        tasks.add(task);"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        ui.printGotIt();"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void printTasks() {"
+        "content": "        ui.showAddedTask(Parser.getTaskType(task), task.toString());"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        //to keep track of item starting from 1"
+        "content": "        ui.showTotalNumberTaskAdded(tasks.size());"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        int itemRank \u003d 1;"
+        "content": "    }"
       },
       {
         "lineNumber": 27,
@@ -1302,129 +1533,346 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        if (tasks.isEmpty())"
+        "content": "    public void printTasks() {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            ui.showToUser(\"No tasks has been added to the list yet.\");"
+        "content": "        //to keep track of item starting from 1"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        int itemRank \u003d 1;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        for (Task task : tasks) {"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            ui.showTaskWithOrder(Parser.getTaskType(task), task.toString(), itemRank, task.isDone());"
+        "content": "        if (tasks.isEmpty())"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            itemRank++;"
+        "content": "            ui.showToUser(\"No tasks has been added to the list yet.\");"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        for (Task task : tasks) {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "            ui.showTaskWithOrder(Parser.getTaskType(task), task.toString(), itemRank, task.isDone());"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void setTaskDone(int idx) throws DukeException {"
+        "content": "            itemRank++;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        try {"
+        "content": "        }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            ui.printDone();"
+        "content": "    }"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            tasks.get(idx - 1).setDone(true);"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            ui.showDoneTask(Parser.getTaskType(tasks.get(idx - 1)), tasks.get(idx - 1).toString());"
+        "content": "    public void setTaskDone(int idx) throws DukeException {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        } catch (IndexOutOfBoundsException e) {"
+        "content": "        try {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            throw new DukeException(\"[ERROR] No task found for the number you want to set done\");"
+        "content": "            ui.printDone();"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": "            tasks.get(idx - 1).setDone(true);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "            ui.showDoneTask(Parser.getTaskType(tasks.get(idx - 1)), tasks.get(idx - 1).toString());"
       },
       {
         "lineNumber": 46,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            throw new DukeException(\"[ERROR] No task found for the number you want to set done\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void removeTask(int idx) throws DukeException{"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        try{"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            ui.showDeleteMessage();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            ui.showDeleteTaskDetails(Parser.getTaskType(tasks.get(idx - 1)), tasks.get(idx - 1).toString(), tasks.get(idx - 1).isDone());"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            tasks.remove(idx - 1);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            ui.showTotalNumberTaskAdded(tasks.size());"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }catch (IndexOutOfBoundsException e){"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            throw new DukeException(\"[ERROR] No task found for the number you want to set done\");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public boolean isEmpty() {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        boolean isEmpty \u003d tasks.isEmpty();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return isEmpty;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public int getSize(){"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return tasks.size();"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String saveTask(int idx){"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        String value \u003d tasks.get(idx).saveTask();"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        //System.out.println(value);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return value;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
         "author": {
           "gitId": "skyventus"
         },
@@ -1432,7 +1880,7 @@
       }
     ],
     "authorContributionMap": {
-      "skyventus": 46
+      "skyventus": 77
     }
   },
   {
@@ -1444,7 +1892,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package duke;"
+        "content": "package main.java.duke;"
       },
       {
         "lineNumber": 2,
@@ -1458,70 +1906,70 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public class Todo extends Task {"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    boolean taskStatus;"
+        "content": " * Todo is a class that extends to task. As it contains the status of the tasks."
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": " * @author Olivier Cheah"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public Todo(String Desc){"
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        super(Desc);"
+        "content": "public class Todo extends Task {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        taskStatus\u003dfalse;"
+        "content": "    boolean taskStatus;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    @Override"
+        "content": "    public Todo(String Desc){"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public boolean isDone() {"
+        "content": "        super(Desc);"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return taskStatus;"
+        "content": "        taskStatus\u003dfalse;"
       },
       {
         "lineNumber": 13,
@@ -1535,38 +1983,108 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    @Override"
+        "content": "    public boolean isDone() {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void setDone(boolean done) {"
+        "content": "        return taskStatus;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        this.taskStatus\u003ddone;"
+        "content": "    }"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public String saveTask(){"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        return \"T | \" + (taskStatus ? \"1\" : \"0\")+ \" | \" + super.getDescription() + \"\\n\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void setDone(boolean done) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        this.taskStatus\u003ddone;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
         "author": {
           "gitId": "skyventus"
         },
@@ -1574,7 +2092,7 @@
       }
     ],
     "authorContributionMap": {
-      "skyventus": 19
+      "skyventus": 29
     }
   },
   {
@@ -1586,7 +2104,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package utils;"
+        "content": "package main.java.utils;"
       },
       {
         "lineNumber": 2,
@@ -1600,35 +2118,35 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import duke.Deadline;"
+        "content": "import main.java.duke.Deadline;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import duke.DukeException;"
+        "content": "import main.java.duke.DukeException;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import duke.Event;"
+        "content": "import main.java.duke.Event;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import duke.Task;"
+        "content": "import main.java.duke.Task;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "import duke.Todo;"
+        "content": "import main.java.duke.Todo;"
       },
       {
         "lineNumber": 8,
@@ -1642,140 +2160,140 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public class Parser {"
+        "content": "/**"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": " * Parser is a class that help to parser needed information into program friendly terms"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static String getCommandWord(String fullCommand) {"
+        "content": " * @author olivier cheah"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        String[] task;"
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "public class Parser {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        fullCommand \u003d fullCommand.toLowerCase().trim();"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    public static String getCommandWord(String fullCommand) {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        task \u003d fullCommand.split(\" \");"
+        "content": "        String[] task;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        try {"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            if (task[0].equals(\"todo\"))"
+        "content": "        fullCommand \u003d fullCommand.toLowerCase().trim();"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                return \"todo\";"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        } catch (ArrayIndexOutOfBoundsException e) {"
+        "content": "        task \u003d fullCommand.split(\" \");"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            Ui.printError(e.getMessage());"
+        "content": "        try {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": "            if (task[0].equals(\"todo\"))"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return task[0];"
+        "content": "                return \"todo\";"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        } catch (ArrayIndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "            Ui.printError(e.getMessage());"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static Todo createTodo(String fullCommand) {"
+        "content": "        }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        return task[0];"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        Todo task \u003d new Todo(fullCommand.trim());"
+        "content": "    }"
       },
       {
         "lineNumber": 29,
@@ -1789,378 +2307,378 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return task;"
+        "content": "    public static Todo createTodo(String fullCommand) {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        Todo task \u003d new Todo(fullCommand.trim());"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static Event createEvent(String fullCommand, String at) {"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        Event event \u003d new Event(fullCommand.trim(), at);"
+        "content": "        return task;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return event;"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "    public static Event createEvent(String fullCommand, String at) {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        Event event \u003d new Event(fullCommand.trim(), at);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static Deadline createDeadline(String fullCommand, String by) {"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        Deadline deadline \u003d new Deadline(fullCommand, by);"
+        "content": "        return event;"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return deadline;"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "    public static Deadline createDeadline(String fullCommand, String by) {"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        Deadline deadline \u003d new Deadline(fullCommand, by);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static String getDescriptionOnly(String fullCommand, String commandWord, String additionalInfo) throws DukeException {"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        try {"
+        "content": "        return deadline;"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            String description \u003d fullCommand.substring(0, fullCommand.indexOf(additionalInfo))"
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    .replace(commandWord, \"\").trim();"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            if (description.isEmpty())"
+        "content": "    public static String getDescriptionOnly(String fullCommand, String commandWord, String additionalInfo) throws DukeException {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                throw new DukeException(\"[ERROR] no description found.\");"
+        "content": "        try {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            return description;"
+        "content": "            String description \u003d fullCommand.substring(0, fullCommand.indexOf(additionalInfo))"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        } catch (IndexOutOfBoundsException e) {"
+        "content": "                    .replace(commandWord, \"\").trim();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            throw new DukeException(\"[ERROR] Missing /at or /by in the command.\");"
+        "content": "            if (description.isEmpty())"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": "                throw new DukeException(\"[ERROR] no description found.\");"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "            return description;"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        } catch (IndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static String getTodoDescription(String fullCommand, String commandWord) throws DukeException {"
+        "content": "            throw new DukeException(\"[ERROR] Missing /at or /by in the command.\");"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        String description \u003d fullCommand.replace(commandWord, \"\");"
+        "content": "    }"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        if (description.isEmpty()) {"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            throw new DukeException(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
+        "content": "    public static String getTodoDescription(String fullCommand, String commandWord) throws DukeException {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return description;"
+        "content": "        String description \u003d fullCommand.replace(commandWord, \"\");"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        if (description.isEmpty()) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "            throw new DukeException(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static String getDeadline(String fullCommand) throws DukeException {"
+        "content": "        }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        return description;"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        try {"
+        "content": "    }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            String deadline \u003d fullCommand.substring(fullCommand.indexOf(\"/by\"))"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    .replace(\"/by\", \"\").trim();"
+        "content": "    public static String getDeadline(String fullCommand) throws DukeException {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            if (deadline.isEmpty())"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                throw new DukeException(\"[ERROR] no description found.\");"
+        "content": "        try {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            return deadline;"
+        "content": "            String deadline \u003d fullCommand.substring(fullCommand.indexOf(\"/by\"))"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        } catch (IndexOutOfBoundsException e) {"
+        "content": "                    .replace(\"/by\", \"\").trim();"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            throw new DukeException(\"[ERROR] Missing /by in the command.\");"
+        "content": "            if (deadline.isEmpty())"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": "                throw new DukeException(\"[ERROR] no description found.\");"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "            return deadline;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        } catch (IndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static String getEventTiming(String fullCommand) throws DukeException {"
+        "content": "            throw new DukeException(\"[ERROR] Missing /by in the command.\");"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        try {"
+        "content": "    }"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            String eventTiming \u003d fullCommand.substring(fullCommand.indexOf(\"/at\"))"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                    .replace(\"/at\", \"\").trim();"
+        "content": "    public static String getEventTiming(String fullCommand) throws DukeException {"
       },
       {
         "lineNumber": 84,
@@ -2174,63 +2692,63 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            return eventTiming;"
+        "content": "        try {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        } catch (Exception e) {"
+        "content": "            String eventTiming \u003d fullCommand.substring(fullCommand.indexOf(\"/at\"))"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            throw new DukeException(\"[ERROR] Missing /at in the command.\");"
+        "content": "                    .replace(\"/at\", \"\").trim();"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "            return eventTiming;"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        } catch (Exception e) {"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static int getTaskIndex(String fullCommand) {"
+        "content": "            throw new DukeException(\"[ERROR] Missing /at in the command.\");"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        int idx \u003d Integer.parseInt(fullCommand.replace(\"done\", \"\")"
+        "content": "        }"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "                .trim());"
+        "content": "    }"
       },
       {
         "lineNumber": 94,
@@ -2244,87 +2762,157 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return idx;"
+        "content": "    public static int getTaskIndex(String fullCommand) {"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        int idx \u003d Integer.parseInt(fullCommand.replace(\"done\", \"\")"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "                .trim());"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static String getTaskType(Task task) {"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        if (task instanceof Deadline)"
+        "content": "        return idx;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            return \"D\";"
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        else if (task instanceof Event)"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            return \"E\";"
+        "content": "    public static int getDeleteIndex(String fullCommand) {"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        else"
+        "content": "        int idx \u003d Integer.parseInt(fullCommand.replace(\"delete\", \"\")"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "            return \"T\";"
+        "content": "                .trim());"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        return idx;"
       },
       {
         "lineNumber": 107,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public static String getTaskType(Task task) {"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        if (task instanceof Deadline)"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            return \"D\";"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        else if (task instanceof Event)"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            return \"E\";"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        else"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            return \"T\";"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
         "author": {
           "gitId": "skyventus"
         },
@@ -2332,7 +2920,352 @@
       }
     ],
     "authorContributionMap": {
-      "skyventus": 107
+      "skyventus": 117
+    }
+  },
+  {
+    "path": "src/main/java/utils/Storage.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "package main.java.utils;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import main.java.duke.DukeException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import main.java.duke.TaskList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private String filePath;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private String filename;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    private Ui myUI \u003d new Ui();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public Storage(String filePath, String filename){"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        this.filename \u003d filename;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        File directory \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        if(! directory.exists()) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            directory.mkdir();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            System.out.println(directory.exists());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void save(TaskList tasks) throws DukeException {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        FileWriter fw ;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        if(tasks.isEmpty()){"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            System.out.println(\"[INFO] No tasks in the file to save\");"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }else {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                fw \u003d new FileWriter(filePath+\"/\"+filename);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                for (int i \u003d 0; i \u003c tasks.getSize(); i++) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                    fw.write(tasks.saveTask(i));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                fw.close();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                myUI.showFileSavedMessage();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                throw new DukeException(e.getMessage());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            } catch (ArrayIndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "                throw new DukeException(e.getMessage());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "skyventus": 48
     }
   },
   {
@@ -2344,7 +3277,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "package utils;"
+        "content": "package main.java.utils;"
       },
       {
         "lineNumber": 2,
@@ -2372,133 +3305,133 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "public class Ui {"
+        "content": " * UI is a class that create a scanner also showing general message all in one place."
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": " * @author olivier cheah"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    private Scanner in;"
+        "content": " */"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    static String indent \u003d \"    \";"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public Ui() {"
+        "content": "public class Ui {"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        in \u003d new Scanner(System.in);"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "    private Scanner in;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    String checkedMark \u003d \"\\u2713\";"
+        "content": "    static String indent \u003d \"    \";"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    String cross \u003d \"\\u2718\";"
+        "content": "    public Ui() {"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "        in \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static void printWelcome(){"
+        "content": "    String checkedMark \u003d \"\\u2713\";"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent+\"Hello! I\u0027m Duke.Duke\");"
+        "content": "    String cross \u003d \"\\u2718\";"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent+\"What can I do for you?\");"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    public static void printWelcome(){"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static void printError(String message) {"
+        "content": "        System.out.println(indent+\"Hello! I\u0027m Duke.Duke\");"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(message);"
+        "content": "        System.out.println(indent+\"What can I do for you?\");"
       },
       {
         "lineNumber": 24,
@@ -2519,14 +3452,14 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static void printDone() {"
+        "content": "    public static void printError(String message) {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent + \" Nice! I\u0027ve marked this task as done: \");"
+        "content": "        System.out.println(message);"
       },
       {
         "lineNumber": 28,
@@ -2547,14 +3480,14 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static void showToUser(String s) {"
+        "content": "    public static void printDone() {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(s);"
+        "content": "        System.out.println(indent + \" Nice! I\u0027ve marked this task as done: \");"
       },
       {
         "lineNumber": 32,
@@ -2575,14 +3508,14 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public static void printGotIt(){"
+        "content": "    public static void showToUser(String s) {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent + \"Got it. I\u0027ve added this task:\");"
+        "content": "        System.out.println(s);"
       },
       {
         "lineNumber": 36,
@@ -2603,49 +3536,49 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public String readUserCommand() {"
+        "content": "    public static void printGotIt(){"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.print(\"Your task? \\n\");"
+        "content": "        System.out.println(indent + \"Got it. I\u0027ve added this task:\");"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        return in.nextLine().trim();"
+        "content": "    }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    public String readUserCommand() {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void showAddedTask(String classType, String description){"
+        "content": "        System.out.print(\"Your task? \\n\");"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent + \"  [\"+classType+\"][\" + cross  + \"] \" +  description);"
+        "content": "        return in.nextLine().trim();"
       },
       {
         "lineNumber": 45,
@@ -2666,14 +3599,14 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void showDoneTask(String classType, String description){"
+        "content": "    public void showAddedTask(String classType, String description){"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent + \"  [\"+classType+\"][\" + checkedMark  + \"] \" +  description);"
+        "content": "        System.out.println(indent + \"  [\"+classType+\"][\" + cross  + \"] \" +  description);"
       },
       {
         "lineNumber": 49,
@@ -2687,42 +3620,42 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void showTaskWithOrder(String classType, String description, int rank, boolean isDone){"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent + rank + \".[\"+classType+\"][\" + (isDone ? checkedMark : cross)  + \"] \" +  description);"
+        "content": "    public void showDoneTask(String classType, String description){"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    }"
+        "content": "        System.out.println(indent + \"  [\"+classType+\"][\" + checkedMark  + \"] \" +  description);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "skyventus"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void showTotalNumberTaskAdded(int totalNumberOfTask){"
+        "content": "    public void showTaskWithOrder(String classType, String description, int rank, boolean isDone){"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent + \"Now you have \" + totalNumberOfTask + \" tasks in the list\");"
+        "content": "        System.out.println(indent + rank + \".[\"+classType+\"][\" + (isDone ? checkedMark : cross)  + \"] \" +  description);"
       },
       {
         "lineNumber": 56,
@@ -2743,14 +3676,14 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "    public void showByeMessage() {"
+        "content": "    public void showTotalNumberTaskAdded(int totalNumberOfTask){"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "skyventus"
         },
-        "content": "        System.out.println(indent+ \"Bye. Hope to see you again\");"
+        "content": "        System.out.println(indent + \"Now you have \" + totalNumberOfTask + \" tasks in the list\");"
       },
       {
         "lineNumber": 60,
@@ -2764,11 +3697,123 @@
         "author": {
           "gitId": "skyventus"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void showByeMessage() {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent+ \"Bye. Hope to see you again\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void showDeleteMessage(){"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "            System.out.println(indent + \"Noted. I\u0027ve removed this task: \");"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void showDeleteTaskDetails(String classType, String description, boolean isDone){"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent + \"  [\"+classType+\"][\" + (isDone ? checkedMark : cross)  + \"] \" +  description);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    public void showFileSavedMessage() {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "        System.out.println(indent + \"Your file has been saved to data/Duke.txt directory\");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "skyventus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "skyventus"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "skyventus": 61
+      "skyventus": 77
     }
   },
   {
@@ -2894,7 +3939,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "javac  -cp ..\\src\\main\\* -Xlint:none -d ..\\bin ..\\src\\main\\java\\duke\\duke.java"
+        "content": "javac  -cp ..\\src -Xlint:none -d ..\\bin ..\\src\\main\\java\\duke\\Duke.java"
       },
       {
         "lineNumber": 11,
@@ -2957,7 +4002,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "java -classpath ..\\bin duke.duke \u003c input.txt \u003e ACTUAL.TXT"
+        "content": "java -classpath ..\\bin duke.Duke \u003c input.txt \u003e ACTUAL.TXT"
       },
       {
         "lineNumber": 20,
@@ -3121,7 +4166,7 @@
         "author": {
           "gitId": "skyventus"
         },
-        "content": "if ! javac -cp ../src/main/* -Xlint:none -d ../bin ../src/main/java/duke/duke.java"
+        "content": "if ! javac -cp ../src/main/* -Xlint:none -d ../bin ../src/main/java/duke/Duke.java"
       },
       {
         "lineNumber": 17,
