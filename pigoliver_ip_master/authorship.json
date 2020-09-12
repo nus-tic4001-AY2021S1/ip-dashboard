@@ -1,5 +1,49 @@
 [
   {
+    "path": "data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "D | 1 | return book | June 6th"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "E | 0 | project meeting | Aug 6th 2-4pm"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "T | 1 | join sports club"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "E | 1 | birthday party | 6 to 5pm"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "T | 1 | read book"
+      }
+    ],
+    "authorContributionMap": {
+      "pigoliver": 5
+    }
+  },
+  {
     "path": "src/main/java/duke/Duke.java",
     "fileType": "java",
     "lines": [
@@ -127,7 +171,7 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            } catch (DukeException e) {"
+        "content": "            } catch (Exception e) {"
       },
       {
         "lineNumber": 19,
@@ -251,507 +295,556 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "public class Parser {"
+        "content": " * Parser class handles command parser and identify different keywords with switch cases."
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void getCommand (String input,Storage store, Ui ui) throws DukeException{"
+        "content": " */"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        int index;"
+        "content": "public class Parser {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        ui.printLine();"
+        "content": "    public void getCommand (String input,Storage store, Ui ui) throws Exception{"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        String command, others;"
+        "content": "        int index;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        if(input.contains(\" \")){"
+        "content": "        ui.printLine();"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            command \u003d input.split(\" \",2)[0];"
+        "content": "        String command, others;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            others \u003d input.split(\" \",2)[1];"
+        "content": "        if(input.contains(\" \")){"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        }else{"
+        "content": "            command \u003d input.split(\" \",2)[0];"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            command \u003d input;"
+        "content": "            others \u003d input.split(\" \",2)[1];"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            others \u003d \"\";"
+        "content": "        }else{"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        }"
+        "content": "            command \u003d input;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        switch (command) {"
+        "content": "            others \u003d \"\";"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            case \"bye\":"
+        "content": "        }"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                store.toExit();"
+        "content": "        switch (command) {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.byeToUser();"
+        "content": "            case \"bye\":"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                break;"
+        "content": "                store.toExit();"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            case \"list\":"
+        "content": "                ui.byeToUser();"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"Here are the tasks in your list:\");"
+        "content": "                break;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                for(int i\u003d0;i\u003cstore.getSize();i++){"
+        "content": "            case \"list\":"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                    ui.indentPrint((i+1)+\". \"+store.getTask(i).toString());"
+        "content": "                ui.indentPrint(\"Here are the tasks in your list:\");"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                }"
+        "content": "                for(int i\u003d0;i\u003cstore.getSize();i++){"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                break;"
+        "content": "                    ui.indentPrint((i+1)+\". \"+store.getTask(i).toString());"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            case \"done\":"
+        "content": "                }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                if(others.isEmpty()){"
+        "content": "                break;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                    throw new DukeException(\"The index of a done command cannot be empty.\");"
+        "content": "            case \"done\":"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                }"
+        "content": "                if(others.isEmpty()){"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                index \u003d Integer.parseInt(others);"
+        "content": "                    throw new DukeException(\"The index of a done command cannot be empty.\");"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                store.setDoneAt(index-1);"
+        "content": "                }"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"Nice! I\u0027ve marked this task as done: \");"
+        "content": "                index \u003d Integer.parseInt(others);"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"  \"+store.getTask(index-1).toString());"
+        "content": "                store.setDoneAt(index-1);"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                break;"
+        "content": "                ui.indentPrint(\"Nice! I\u0027ve marked this task as done: \");"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            case \"delete\":"
+        "content": "                ui.indentPrint(\"  \"+store.getTask(index-1).toString());"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                if(others.isEmpty()){"
+        "content": "                store.saveToFile();"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                    throw new DukeException(\"The index of a delete command cannot be empty.\");"
+        "content": "                break;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                }"
+        "content": "            case \"delete\":"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                index \u003d Integer.parseInt(others);"
+        "content": "                if(others.isEmpty()){"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"Noted. I\u0027ve removed this task: \");"
+        "content": "                    throw new DukeException(\"The index of a delete command cannot be empty.\");"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"  \"+store.deleteTaskAt(index-1).toString());"
+        "content": "                }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                break;"
+        "content": "                index \u003d Integer.parseInt(others);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            case \"todo\":"
+        "content": "                ui.indentPrint(\"Noted. I\u0027ve removed this task: \");"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                if(others.isEmpty()){"
+        "content": "                ui.indentPrint(\"  \"+store.deleteTaskAt(index-1).toString());"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                    throw new DukeException(\"The description of a todo cannot be empty.\");"
+        "content": "                store.saveToFile();"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                }"
+        "content": "                break;"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                store.addToDoToTemp(others);"
+        "content": "            case \"todo\":"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"Got it. I\u0027ve added this task: \");"
+        "content": "                if(others.isEmpty()){"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"  \"+store.getTask(store.getSize()-1).toString());"
+        "content": "                    throw new DukeException(\"The description of a todo cannot be empty.\");"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint( \"Now you have \"+store.getSize()+\" tasks in the list.\");"
+        "content": "                }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                break;"
+        "content": "                store.addToDoToTemp(others);"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            case \"deadline\":"
+        "content": "                ui.indentPrint(\"Got it. I\u0027ve added this task: \");"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                if(others.isEmpty()){"
+        "content": "                ui.indentPrint(\"  \"+store.getTask(store.getSize()-1).toString());"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                    throw new DukeException(\"The description of a deadline cannot be empty.\");"
+        "content": "                ui.indentPrint( \"Now you have \"+store.getSize()+\" tasks in the list.\");"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                }"
+        "content": "                store.saveToFile();"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                store.addDeadlineToTemp(others);"
+        "content": "                break;"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"Got it. I\u0027ve added this task: \");"
+        "content": "            case \"deadline\":"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"  \"+store.getTask(store.getSize()-1).toString());"
+        "content": "                if(others.isEmpty()){"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint( \"Now you have \"+store.getSize()+\" tasks in the list.\");"
+        "content": "                    throw new DukeException(\"The description of a deadline cannot be empty.\");"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                break;"
+        "content": "                }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            case \"event\":"
+        "content": "                store.addDeadlineToTemp(others);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                if(others.isEmpty()){"
+        "content": "                ui.indentPrint(\"Got it. I\u0027ve added this task: \");"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                    throw new DukeException(\"The description of a event cannot be empty.\");"
+        "content": "                ui.indentPrint(\"  \"+store.getTask(store.getSize()-1).toString());"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                }"
+        "content": "                ui.indentPrint( \"Now you have \"+store.getSize()+\" tasks in the list.\");"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                store.addEventToTemp(others);"
+        "content": "                store.saveToFile();"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"Got it. I\u0027ve added this task: \");"
+        "content": "                break;"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint(\"  \"+store.getTask(store.getSize()-1).toString());"
+        "content": "            case \"event\":"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                ui.indentPrint( \"Now you have \"+store.getSize()+\" tasks in the list.\");"
+        "content": "                if(others.isEmpty()){"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                break;"
+        "content": "                    throw new DukeException(\"The description of a event cannot be empty.\");"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            default:"
+        "content": "                }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "                throw new DukeException(\"I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+        "content": "                store.addEventToTemp(others);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        }"
+        "content": "                ui.indentPrint(\"Got it. I\u0027ve added this task: \");"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "                ui.indentPrint(\"  \"+store.getTask(store.getSize()-1).toString());"
       },
       {
         "lineNumber": 74,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "                ui.indentPrint( \"Now you have \"+store.getSize()+\" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "                store.saveToFile();"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "                throw new DukeException(\"I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 81,
         "author": {
           "gitId": "pigoliver"
         },
@@ -759,7 +852,7 @@
       }
     ],
     "authorContributionMap": {
-      "pigoliver": 74
+      "pigoliver": 81
     }
   },
   {
@@ -820,353 +913,843 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "import java.io.*;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": ""
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "public class Storage {"
+        "content": "/**"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    private ArrayList\u003cTask\u003e tempStorage;"
+        "content": " * Storage class handles List of task as tempStorage,"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    private boolean isExit;"
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    Storage(){"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        tempStorage \u003d new ArrayList\u003c\u003e(100);"
+        "content": "public class Storage {"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        isExit \u003d false;"
+        "content": "    private String storageFilePath\u003d\"../ip/data/duke.txt\";"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "    private ArrayList\u003cTask\u003e tempStorage;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void addToDoToTemp(String toAdd){"
+        "content": "    private boolean isExit;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        tempStorage.add(new Todo(toAdd));"
+        "content": "    Storage(){"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "        tempStorage \u003d new ArrayList\u003c\u003e(100);"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void addDeadlineToTemp(String toAdd) throws DukeException{"
+        "content": "        isExit \u003d false;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        if(!toAdd.contains(\" /by \")){"
+        "content": "        try{"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            throw new DukeException(\"No /by found in command.\");"
+        "content": "            loadFromFile();"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        }"
+        "content": "        }catch (IOException e){"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        String description \u003d toAdd.split(\" /by \")[0];"
+        "content": "            System.out.println(e);"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        if(toAdd.split(\" /by \").length\u003c2){"
+        "content": "        }"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            throw new DukeException(\"No event time found after keyword /by .\");"
+        "content": "    }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        }"
+        "content": "    public void loadFromFile() throws IOException{"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        String by \u003d toAdd.split(\" /by \")[1];"
+        "content": "        File storage\u003dnew File(storageFilePath);"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        tempStorage.add(new Deadline(description,by));"
+        "content": "        BufferedReader fileReader \u003d new BufferedReader(new FileReader(storage));"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "        String savedTask;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void addEventToTemp(String toAdd) throws DukeException{"
+        "content": "        while((savedTask \u003d fileReader.readLine())!\u003dnull) {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        if(!toAdd.contains(\" /at \")){"
+        "content": "            String taskType \u003d savedTask.split(\" \\\\| \",4)[0];"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            throw new DukeException(\"No /at found in command.\");"
+        "content": "            String isDone \u003d savedTask.split(\" \\\\| \",4)[1];"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        }"
+        "content": "            String taskDescription \u003d savedTask.split(\" \\\\| \",4)[2];"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        String description \u003d toAdd.split(\" /at \")[0];"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        if(toAdd.split(\" /at \").length\u003c2){"
+        "content": "            switch(taskType){"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "            throw new DukeException(\"No event time found after keyword /at .\");"
+        "content": "                case \"T\":"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        }"
+        "content": "                    addToDoToTemp(taskDescription);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        String at \u003d toAdd.split(\" /at \")[1];"
+        "content": "                    if(isDone.matches(\"1\")){"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        tempStorage.add(new Event(description,at));"
+        "content": "                        setDoneAt(getSize()-1);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "                    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public Task deleteTaskAt(int i){"
+        "content": "                    break;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return tempStorage.remove(i);"
+        "content": "                case \"D\":"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "                    String taskDeadline \u003d savedTask.split(\" \\\\| \",4)[3];"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public int getSize(){"
+        "content": "                    tempStorage.add(new Deadline(taskDescription,taskDeadline));"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return tempStorage.size();"
+        "content": "                    if(isDone.matches(\"1\")){"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "                        setDoneAt(getSize()-1);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public Task getTask(int i){"
+        "content": "                    }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return tempStorage.get(i);"
+        "content": "                    break;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "                case \"E\":"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void toExit(){"
+        "content": "                    String taskEventTime \u003d savedTask.split(\" \\\\| \",4)[3];"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        isExit\u003dtrue;"
+        "content": "                    tempStorage.add(new Event(taskDescription,taskEventTime));"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "                    if(isDone.matches(\"1\")){"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public boolean getIsExit(){"
+        "content": "                        setDoneAt(getSize()-1);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return isExit;"
+        "content": "                    }"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "                    break;"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void setDoneAt(int i){tempStorage.get(i).setDone();}"
+        "content": "            }"
       },
       {
         "lineNumber": 58,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        fileReader.close();"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public void saveToFile() throws IOException {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        File storage \u003d new File(storageFilePath);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        BufferedWriter toSaveTask \u003d new BufferedWriter(new FileWriter(storage));"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        for(int i \u003d 0;i\u003c getSize();i++){"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            toSaveTask.write(outputTaskForSave(tempStorage.get(i)));"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            if(i!\u003dgetSize()-1){"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "                toSaveTask.newLine();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        toSaveTask.close();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public String outputTaskForSave(Task toSave){"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        int isDone\u003d0;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        if(toSave.getIsDone()){"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            isDone\u003d1;"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        if(toSave instanceof Deadline){"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            return \"D | \"+isDone+\" | \"+ toSave.getDescription()+ \" | \"+((Deadline) toSave).getBy();"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }else if(toSave instanceof Event){"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            return \"E | \"+isDone+\" | \"+ toSave.getDescription()+ \" | \"+((Event) toSave).getAt();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }else if(toSave instanceof Todo){"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            return \"T | \"+isDone+\" | \"+ toSave.getDescription();"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            return \"\";"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public void addToDoToTemp(String toAdd){"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        tempStorage.add(new Todo(toAdd));"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public void addDeadlineToTemp(String toAdd) throws DukeException{"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        if(!toAdd.contains(\" /by \")){"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            throw new DukeException(\"No /by found in command.\");"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        String description \u003d toAdd.split(\" /by \")[0];"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        if(toAdd.split(\" /by \").length\u003c2){"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            throw new DukeException(\"No event time found after keyword /by .\");"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        String by \u003d toAdd.split(\" /by \")[1];"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        tempStorage.add(new Deadline(description,by));"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public void addEventToTemp(String toAdd) throws DukeException{"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        if(!toAdd.contains(\" /at \")){"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            throw new DukeException(\"No /at found in command.\");"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        String description \u003d toAdd.split(\" /at \")[0];"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        if(toAdd.split(\" /at \").length\u003c2){"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "            throw new DukeException(\"No event time found after keyword /at .\");"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        String at \u003d toAdd.split(\" /at \")[1];"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        tempStorage.add(new Event(description,at));"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public Task deleteTaskAt(int i){"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return tempStorage.remove(i);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public int getSize(){"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return tempStorage.size();"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public Task getTask(int i){"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return tempStorage.get(i);"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public void toExit(){"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        isExit\u003dtrue;"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public boolean getIsExit(){"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return isExit;"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    public void setDoneAt(int i){tempStorage.get(i).setDone();}"
+      },
+      {
+        "lineNumber": 128,
         "author": {
           "gitId": "pigoliver"
         },
@@ -1174,7 +1757,7 @@
       }
     ],
     "authorContributionMap": {
-      "pigoliver": 58
+      "pigoliver": 128
     }
   },
   {
@@ -1207,150 +1790,164 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "public class Ui {"
+        "content": " * Ui class handles all the print out to users, and read input from users."
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    protected Scanner in \u003d new Scanner(System.in);"
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void printLine(){"
+        "content": "public class Ui {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        System.out.println(\"____________________________________________________________\");"
+        "content": "    protected Scanner in \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "    public void printLine(){"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void indentPrint(String toPrint){"
+        "content": "        System.out.println(\"____________________________________________________________\");"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        System.out.println(\" \"+toPrint);"
+        "content": "    }"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "    public void indentPrint(String toPrint){"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void greetUser(){"
+        "content": "        System.out.println(\" \"+toPrint);"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        printLine();"
+        "content": "    }"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        indentPrint(\"Hello! I\u0027m Duke\");"
+        "content": "    public void greetUser(){"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        indentPrint(\"What can I do for you?\");"
+        "content": "        printLine();"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        printLine();"
+        "content": "        indentPrint(\"Hello! I\u0027m Duke\");"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "        indentPrint(\"What can I do for you?\");"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void byeToUser(){"
+        "content": "        printLine();"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        indentPrint(\"Bye. Hope to see you again soon!\");"
+        "content": "    }"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "    public void byeToUser(){"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public String readCommand(){"
+        "content": "        indentPrint(\"Bye. Hope to see you again soon!\");"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return in.nextLine();"
+        "content": "    }"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "    public String readCommand(){"
       },
       {
         "lineNumber": 25,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return in.nextLine();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
         "author": {
           "gitId": "pigoliver"
         },
@@ -1358,7 +1955,7 @@
       }
     ],
     "authorContributionMap": {
-      "pigoliver": 25
+      "pigoliver": 27
     }
   },
   {
@@ -1433,7 +2030,7 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return \"[D]\" + super.toString() + \" (by: \" + by + \")\";"
+        "content": "        return \"[D]\" + \"[\"+getStatusIcon()+\"]\"+\" \"+getDescription() + \" (by: \" + by + \")\";"
       },
       {
         "lineNumber": 11,
@@ -1447,11 +2044,32 @@
         "author": {
           "gitId": "pigoliver"
         },
+        "content": "    public String getBy(){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return by;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "pigoliver"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "pigoliver": 12
+      "pigoliver": 15
     }
   },
   {
@@ -1526,7 +2144,7 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return \"[E]\" + super.toString() + \" (at: \" + at + \")\";"
+        "content": "        return \"[E]\" + \"[\"+getStatusIcon()+\"]\"+\" \"+getDescription() + \" (at: \" + at + \")\";"
       },
       {
         "lineNumber": 11,
@@ -1540,11 +2158,32 @@
         "author": {
           "gitId": "pigoliver"
         },
+        "content": "    public String getAt(){"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return at;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "pigoliver"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "pigoliver": 12
+      "pigoliver": 15
     }
   },
   {
@@ -1661,45 +2300,59 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public String getDescription(){"
+        "content": "    public abstract boolean getIsDone();"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return this.description;"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "    public String getDescription(){"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public String toString(){"
+        "content": "        return this.description;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return \"[\"+getStatusIcon()+\"]\"+\" \"+getDescription();"
+        "content": "    }"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "    public String toString(){"
       },
       {
         "lineNumber": 22,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "        return \"[\"+getStatusIcon()+\"]\"+\" \"+getDescription();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
         "author": {
           "gitId": "pigoliver"
         },
@@ -1707,7 +2360,7 @@
       }
     ],
     "authorContributionMap": {
-      "pigoliver": 22
+      "pigoliver": 24
     }
   },
   {
@@ -1796,66 +2449,73 @@
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void setDone(){"
+        "content": "    public boolean getIsDone(){return isDone;}"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        this.isDone \u003d true;"
+        "content": "    public void setDone(){"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "        this.isDone \u003d true;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public void setNotDone(){"
+        "content": "    }"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        this.isDone \u003d false;"
+        "content": "    public void setNotDone(){"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "        this.isDone \u003d false;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    public String toString(){"
+        "content": "    }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "        return \"[T]\" + super.toString();"
+        "content": "    public String toString(){"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "pigoliver"
         },
-        "content": "    }"
+        "content": "        return \"[T]\" + super.toString();"
       },
       {
         "lineNumber": 21,
+        "author": {
+          "gitId": "pigoliver"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
         "author": {
           "gitId": "pigoliver"
         },
@@ -1863,7 +2523,7 @@
       }
     ],
     "authorContributionMap": {
-      "pigoliver": 21
+      "pigoliver": 22
     }
   },
   {

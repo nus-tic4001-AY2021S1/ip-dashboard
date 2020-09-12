@@ -1,502 +1,194 @@
 [
   {
-    "path": "src/main/java/Duke.java",
-    "fileType": "java",
+    "path": "README.md",
+    "fileType": "md",
     "lines": [
       {
         "lineNumber": 1,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "import NUS.Duke.DTO.TaskDTO;"
+        "content": "# NUS.Duke.Duke project template"
       },
       {
         "lineNumber": 2,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "import NUS.Duke.ProcessingException;"
+        "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "import NUS.Duke.utils.UI;"
+        "content": "This is a project template for a greenfield Java project. It\u0027s named after the Java mascot _Duke_. Given below are instructions on how to use it."
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "## Setting up in Intellij"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "import java.util.Date;"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "import java.util.List;"
+        "content": "Prerequisites: JDK 11, update Intellij to the most recent version."
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "import java.util.Scanner;"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "1. Open Intellij (if you are not in the welcome screen, click `File` \u003e `Close Project` to close the existing project dialog first)"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "public class Duke {"
+        "content": "1. Set up the correct JDK version, as follows:"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "   1. Click `Configure` \u003e `Structure for New Projects` and then `Project Settings` \u003e `Project` \u003e `Project SDK`"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "    public static List\u003cTaskDTO\u003e taskList \u003d new ArrayList\u003c\u003e();"
+        "content": "   1. If JDK 11 is listed in the drop down, select it. If it is not, click `New...` and select the directory where you installed JDK 11"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "    public static int taskId \u003d 0;"
+        "content": "   1. Click `OK`"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "1. Import the project into Intellij as follows:"
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "   1. Click `Open or Import`."
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "   1. Select the project directory, and click `OK`"
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "        Scanner scanner \u003d new Scanner(System.in);"
+        "content": "   1. If there are any further prompts, accept the defaults."
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "1. After the importing is complete, locate the `src/main/java/Duke.java` file, right-click it, and choose `Run Duke.main()`. If the setup is correct, you should see something like the below:"
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "        UI ui \u003d new UI();"
+        "content": "   ```"
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "        UI.printWelcomeMessage();"
+        "content": "   Hello from"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "        String command \u003d ui.readCommand();"
+        "content": "    ____        _        "
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "   |  _ \\ _   _| | _____ "
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "        while (!ParserUtil.getFunctionCommand(command).equals(\"bye\")) {"
+        "content": "   | | | | | | | |/ / _ \\"
       },
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "            processCommand(command);"
+        "content": "   | |_| | |_| |   \u003c  __/"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "timmyly7"
+          "gitId": "-"
         },
-        "content": "            command \u003d ui.readCommand();"
+        "content": "   |____/ \\__,_|_|\\_\\___|"
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 28,
-        "author": {
           "gitId": "-"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    public static void processCommand(String originalCommand) {"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        System.out.println(\"____________________________________________________________\");"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        String operation \u003d ParserUtil.getFunctionCommand(originalCommand);"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        String details \u003d originalCommand.substring(originalCommand.indexOf(\u0027 \u0027) + 1);"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        switch (operation){"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            case \"todo\":"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                ParserUtil.createTodoTask(details);"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                break;"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            case \"deadline\":"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                ParserUtil.createDeadlineTask(details);"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                break;"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            case \"event\":"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                try {"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                    ParserUtil.createEventTask(details);"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                } catch (ProcessingException e) {"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                    e.printStackTrace();"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                break;"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            case \"list\":"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                UI.printList(Duke.taskList);"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                break;"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            case \"bye\":"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                UI.printByeMessage();"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                System.exit(0);"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                break;"
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            case \"done\":"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                ParserUtil.doneTask(Integer.parseInt(details));"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                break;"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            default:"
-      },
-      {
-        "lineNumber": 62,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                UI.printErrorMessage(\"Sorry i dont understand the command\");"
-      },
-      {
-        "lineNumber": 63,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        System.out.println(\"____________________________________________________________\");"
-      },
-      {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
+        "content": "   ```"
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 66,
-      "-": 4
+      "timmyly7": 1,
+      "-": 25
     }
   },
   {
@@ -865,11 +557,158 @@
         "author": {
           "gitId": "timmyly7"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public String getPrintFileString() {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskType());"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (!isDone()){"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"0\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }else {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"1\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskName());"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(deadlineDateString);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\"\\n\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        return sb.toString();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "timmyly7"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 52
+      "timmyly7": 73
     }
   },
   {
@@ -1245,11 +1084,151 @@
         "author": {
           "gitId": "timmyly7"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public String getPrintFileString() {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskType());"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (!isDone()){"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"0\");"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }else {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"1\");"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskName());"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(eventTime);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\"\\n\");"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        return sb.toString();"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "timmyly7"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 53
+      "timmyly7": 73
     }
   },
   {
@@ -1695,11 +1674,25 @@
         "author": {
           "gitId": "timmyly7"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public abstract String getPrintFileString();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "timmyly7"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 63
+      "timmyly7": 65
     }
   },
   {
@@ -1970,11 +1963,679 @@
         "author": {
           "gitId": "timmyly7"
         },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public String getPrintFileString() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskType());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (!isDone()){"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"0\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }else {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"1\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskName());"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\"\\n\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        return sb.toString();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "timmyly7"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 38
+      "timmyly7": 55
+    }
+  },
+  {
+    "path": "src/main/java/NUS/Duke/Duke.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "package NUS.Duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.DTO.TaskDTO;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.ProcessingException;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.utils.ParserUtil;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.utils.UI;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Duke {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        Scanner scanner \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        UI ui \u003d new UI();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        UI.printWelcomeMessage();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        String command \u003d ui.readCommand();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        while (!ParserUtil.getFunctionCommand(command).equals(\"bye\")) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            processCommand(command);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            command \u003d ui.readCommand();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void processCommand(String originalCommand) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        System.out.println(\"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        String operation \u003d ParserUtil.getFunctionCommand(originalCommand);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        String details \u003d originalCommand.substring(originalCommand.indexOf(\u0027 \u0027) + 1);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        switch (operation){"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"todo\":"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                ParserUtil.createTodoTask(details);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"deadline\":"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                ParserUtil.createDeadlineTask(details);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"event\":"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    ParserUtil.createEventTask(details);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                } catch (ProcessingException e) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    e.printStackTrace();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"list\":"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                UI.printList(ParserUtil.taskList);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"bye\":"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                UI.printByeMessage();"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                System.exit(0);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"done\":"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                ParserUtil.doneTask(Integer.parseInt(details));"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"delete\":"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                ParserUtil.deleteTask(Integer.parseInt(details));"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            case \"save\":"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                ParserUtil.writeToFile();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                break;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            default:"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                UI.printErrorMessage(\"Sorry i dont understand the command\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        System.out.println(\"____________________________________________________________\");"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "timmyly7": 74,
+      "-": 3
     }
   },
   {
@@ -2133,6 +2794,1114 @@
     ],
     "authorContributionMap": {
       "timmyly7": 11
+    }
+  },
+  {
+    "path": "src/main/java/NUS/Duke/utils/ParserUtil.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "package NUS.Duke.utils;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.DTO.DeadlineDTO;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.DTO.EventDTO;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.DTO.TaskDTO;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.DTO.TodoDTO;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.ProcessingException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.utils.UI;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.util.Date;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "public class ParserUtil {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static List\u003cTaskDTO\u003e taskList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static int taskId \u003d 0;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * this is the function to spilt the input string originalCommand and get operation"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * @param originalCommand"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static String getFunctionCommand(String originalCommand){"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        String operation \u003d\"\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            if (!originalCommand.isEmpty()) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                operation \u003d originalCommand.split(\" \")[0];"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            }else {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        } catch (Exception exception) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            System.out.println(\"Expception occured\");"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        return operation.toLowerCase();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * This is the function to make task as done input param taskId"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * @param taskId"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void doneTask (int taskId){"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        taskList.forEach(task -\u003e {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            if (taskId \u003d\u003d task.getTaskId()){"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                task.processDoneTask();"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * This is the function to create event task by input param details"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * @param details"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void createEventTask(String details) throws ProcessingException {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            String taskName \u003d details.substring(0, details.indexOf(\"/at\"));"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            String eventTime \u003d details.substring(details.indexOf(\"/at\") + 4).trim();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            EventDTO task \u003d new EventDTO(taskName, ++taskId, eventTime);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            taskList.add(task);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            UI.printAddTaskMessage(task);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }catch (Exception e){"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            UI.printErrorMessage(\"Please check your input, /at is missing\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * This is the function to create deadline task by input param details"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * @param details"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void createDeadlineTask(String details) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            String taskName \u003d details.substring(0,details.indexOf(\"/by\"));"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            String deadlineDate \u003d details.substring(details.indexOf(\"/by\")+4).trim();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            DeadlineDTO task \u003d new DeadlineDTO(taskName,deadlineDate,++taskId);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            taskList.add(task);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            UI.printAddTaskMessage(task);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }catch (Exception e){"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            UI.printErrorMessage(\"Please check your input, /by is missing\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * This is the function to create todo task by input param details"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * @param details"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void createTodoTask(String details){"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        TodoDTO task \u003d new TodoDTO(details,++taskId);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        taskList.add(task);"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        UI.printAddTaskMessage(task);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * This is a function to delete task from tasklist with input param taskIdNumber"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * @param taskIdNumber"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void deleteTask (int taskIdNumber){"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        TaskDTO tempTask \u003d null;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            for(TaskDTO task : taskList){"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                if (taskIdNumber \u003d\u003d task.getTaskId()) {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    tempTask \u003d task;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            taskList.remove(tempTask);"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            UI.printDeleteTaskMessage(tempTask);"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            taskList.forEach(task -\u003e {"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                if (taskIdNumber \u003c task.getTaskId()) {"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    task.setTaskId(task.getTaskId() - 1);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            });"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }catch (Exception e){"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            System.out.println(e.getMessage());"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        taskId--;"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * This is the function to export the tasklist to a txt file in a format"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void writeToFile(){"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            FileWriter myWriter \u003d new FileWriter(\"DukeFile.txt\");"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            taskList.forEach(task -\u003e {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                try {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    myWriter.write(task.getPrintFileString());"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    System.out.println(\"An error occurred.\");"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    e.printStackTrace();"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            });"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            myWriter.close();"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            System.out.println(\"Successfully wrote to the file.\");"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            System.out.println(\"An error occurred.\");"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "timmyly7": 157
     }
   },
   {
@@ -2340,7 +4109,7 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        System.out.println(\"Hello! I\u0027m Duke\\n\" +"
+        "content": "        System.out.println(\"Hello! I\u0027m NUS.Duke.Duke\\n\" +"
       },
       {
         "lineNumber": 30,
@@ -2557,537 +4326,38 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "timmyly7": 60
-    }
-  },
-  {
-    "path": "src/main/java/ParserUtil.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "import NUS.Duke.DTO.DeadlineDTO;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "import NUS.Duke.DTO.EventDTO;"
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "import NUS.Duke.DTO.TaskDTO;"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "import NUS.Duke.DTO.TodoDTO;"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "import NUS.Duke.ProcessingException;"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "import NUS.Duke.utils.UI;"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "timmyly7"
-        },
         "content": ""
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "import java.util.Date;"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "public class ParserUtil {"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    public static int taskId \u003d 0;"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    public static String getFunctionCommand(String originalCommand){"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        String operation \u003d\"\";"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            if (!originalCommand.isEmpty()) {"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                operation \u003d originalCommand.split(\" \")[0];"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            }else {"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        } catch (Exception exception) {"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            System.out.println(\"Expception occured\");"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        return operation.toLowerCase();"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    public static void doneTask (int taskId){"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        Duke.taskList.forEach(task -\u003e {"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            if (taskId \u003d\u003d task.getTaskId()){"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "                task.processDoneTask();"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        });"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    public static void createEventTask(String details) throws ProcessingException {"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            String taskName \u003d details.substring(0, details.indexOf(\"/at\"));"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            String eventTime \u003d details.substring(details.indexOf(\"/at\") + 4).trim();"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            EventDTO task \u003d new EventDTO(taskName, ++taskId, eventTime);"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            Duke.taskList.add(task);"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            UI.printAddTaskMessage(task);"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        }catch (Exception e){"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            UI.printErrorMessage(\"Please check your input, /at is missing\");"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    public static void createDeadlineTask(String details) {"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            String taskName \u003d details.substring(0,details.indexOf(\"/by\"));"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            String deadlineDate \u003d details.substring(details.indexOf(\"/by\")+4).trim();"
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            DeadlineDTO task \u003d new DeadlineDTO(taskName,deadlineDate,++taskId);"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            Duke.taskList.add(task);"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "            UI.printAddTaskMessage(task);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        }catch (Exception e){"
+        "content": "    public static void printDeleteTaskMessage(TaskDTO task){"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "            UI.printErrorMessage(\"Please check your input, /by is missing\");"
+        "content": "        System.out.println(\" Noted. I\u0027ve removed this task: \\n\"+ task.getTaskFullDescription() +\"\\n\""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        }"
+        "content": "                +\" Now you have \"+ParserUtil.taskList.size()+\" tasks in the list\");"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 65,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    public static void createTodoTask(String details){"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        TodoDTO task \u003d new TodoDTO(details,++taskId);"
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        Duke.taskList.add(task);"
-      },
-      {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "        UI.printAddTaskMessage(task);"
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "timmyly7"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 75,
         "author": {
           "gitId": "timmyly7"
         },
@@ -3095,7 +4365,7 @@
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 75
+      "timmyly7": 65
     }
   },
   {
@@ -3546,6 +4816,163 @@
     ],
     "authorContributionMap": {
       "timmyly7": 63
+    }
+  },
+  {
+    "path": "text-ui-test/runtest.bat",
+    "fileType": "bat",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "@ECHO OFF"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "REM create bin directory if it doesn\u0027t exist"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "if not exist ..\\bin mkdir ..\\bin"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "REM delete output from previous run"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "del ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "REM compile the code into the bin folder"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "javac  -cp ..\\src -Xlint:none -d ..\\bin ..\\src\\main\\java\\NUS.Duke.Duke.java"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "IF ERRORLEVEL 1 ("
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    echo ********** BUILD FAILURE **********"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    exit /b 1"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ")"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "REM no error here, errorlevel \u003d\u003d 0"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "REM run the program, feed commands from input.txt file and redirect the output to the ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "java -classpath ..\\bin NUS.Duke.Duke \u003c input.txt \u003e ACTUAL.TXT"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "REM compare the output to the expected output"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "FC ACTUAL.TXT EXPECTED.TXT"
+      }
+    ],
+    "authorContributionMap": {
+      "timmyly7": 2,
+      "-": 19
     }
   }
 ]
