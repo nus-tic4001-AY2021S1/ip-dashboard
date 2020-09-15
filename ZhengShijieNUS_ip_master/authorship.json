@@ -1,5 +1,625 @@
 [
   {
+    "path": "Test/Duke/ParserTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "package Duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Duke.Command.*;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "class ParserTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    String cmdTodo\u003d\"todo read book\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    String cmdDeadline\u003d\"deadline watch movie /by 2020-09-14\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    String cmdEvent\u003d\"event meeting with John /at 2020-09-20\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    String cmdList \u003d \"list\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    String cmdDelete \u003d \"delete 1\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    String cmdDone \u003d \"done 1\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    String cmdUnknown \u003d \"what is this?\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    void getCommand() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Command todo \u003d new TodoCommand(\"read book\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Command deadline \u003d new DeadlineCommand(\"watch movie\",\"2020-09-14\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Command event \u003d new EventCommand(\"meeting with John\",\"2020-09-20\");"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Command list \u003d new ListCommand();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Command delete \u003d new DeleteCommand(\"1\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Command done \u003d new DoneCommand(\"1\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        Command unknown \u003d new OtherCommand(\"what\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(todo.getCMDType(), Parser.getCommand(cmdTodo).getCMDType());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(deadline.getCMDType(),Parser.getCommand(cmdDeadline).getCMDType());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(event.getCMDType(),Parser.getCommand(cmdEvent).getCMDType());"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(list.getCMDType(),Parser.getCommand(cmdList).getCMDType());"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(delete.getCMDType(),Parser.getCommand(cmdDelete).getCMDType());"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(done.getCMDType(),Parser.getCommand(cmdDone).getCMDType());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(unknown.getCMDType(),Parser.getCommand(cmdUnknown).getCMDType());"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(todo.getCMDContent(), Parser.getCommand(cmdTodo).getCMDContent());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(deadline.getCMDContent(),Parser.getCommand(cmdDeadline).getCMDContent());"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(event.getCMDContent(),Parser.getCommand(cmdEvent).getCMDContent());"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(delete.getCMDContent(),Parser.getCommand(cmdDelete).getCMDContent());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            assertEquals(done.getCMDContent(),Parser.getCommand(cmdDone).getCMDContent());"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        }catch(Exception e){"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "            e.getMessage();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ZhengShijieNUS": 48
+    }
+  },
+  {
+    "path": "Test/Duke/TaskListTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "package Duke;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Duke.Tasks.Deadlines;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Duke.Tasks.Events;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Duke.Tasks.Task;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import Duke.Tasks.ToDos;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "class TaskListTest {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    ToDos todo1 \u003d new ToDos(\"read book\");"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    ToDos todo2 \u003d new ToDos(\"read two book\");"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    Deadlines deadline1 \u003d new Deadlines(\"watch movies\", \"2020-09-14\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    Events event1 \u003d new Events(\"book a room\", \"2020-09-15\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    void findKeywordList() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        ArrayList\u003cTask\u003e a \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        TaskList original \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        String keyword \u003d \"book\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        a.add(todo1);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        a.add(todo2);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        a.add(event1);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        original.add(todo1);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        original.add(todo2);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        original.add(deadline1);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        original.add(event1);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "        assertEquals(a, original.findKeywordList(keyword));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ZhengShijieNUS"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ZhengShijieNUS": 38
+    }
+  },
+  {
     "path": "src/main/java/Duke.java",
     "fileType": "java",
     "lines": [
@@ -2089,7 +2709,7 @@
         "author": {
           "gitId": "ZhengShijieNUS"
         },
-        "content": "    public static String[] commandSplit(String s,String splitBy){"
+        "content": "    private static String[] commandSplit(String s,String splitBy){"
       },
       {
         "lineNumber": 15,
@@ -2334,7 +2954,7 @@
         "author": {
           "gitId": "ZhengShijieNUS"
         },
-        "content": "                    return new DeadlineCommand(deadlineContent[0].substring(9), deadlineContent[1].trim());"
+        "content": "                    return new DeadlineCommand(deadlineContent[0].substring(9,deadlineContent[0].length()-1), deadlineContent[1].trim());"
       },
       {
         "lineNumber": 50,
@@ -2418,7 +3038,7 @@
         "author": {
           "gitId": "ZhengShijieNUS"
         },
-        "content": "                    return new EventCommand(eventContent[0].substring(6), eventContent[1].trim());"
+        "content": "                    return new EventCommand(eventContent[0].substring(6,eventContent[0].length()-1), eventContent[1].trim());"
       },
       {
         "lineNumber": 62,

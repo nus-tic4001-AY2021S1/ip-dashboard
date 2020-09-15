@@ -192,215 +192,19 @@
     }
   },
   {
-    "path": "src/main/java/Dukes/Deadline.java",
-    "fileType": "java",
+    "path": "data/duke.txt",
+    "fileType": "txt",
     "lines": [
       {
         "lineNumber": 1,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "package Dukes;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "/**"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": " * deadline task description /by deadline description: add to the task list a deadline task with the given task"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": " * description and with the deadline description"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": " *"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": " * @inheritDoc"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "public class Deadline extends Task {"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    protected String by;"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public Deadline(String description, String by) {"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        super(description);"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        this.by \u003d by;"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        return \"[D]\" + super.toString() + \"(by:\" + by + \")\";"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public String toWriteFile() {"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        return \"D | \" + getFileStatusIcon() + \" | \" + description + \" | \" + by;"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
+        "content": "T | 0 | sda "
       }
     ],
     "authorContributionMap": {
-      "linqing42": 29
+      "linqing42": 1
     }
   },
   {
@@ -426,14 +230,14 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.command.Command;"
+        "content": "import Dukes.Tasks.TaskList;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "import Dukes.command.Command;"
       },
       {
         "lineNumber": 5,
@@ -447,420 +251,420 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * The Duke program implements an application that can store a list of task,save to a txt file."
+        "content": "/**"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * and print the task on the screen."
+        "content": " * The Duke program implements an application that can store a list of task,save to a txt file."
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * it link to other classes which is an member for Duke such as Storage, Task and Ui Class"
+        "content": " * and print the task on the screen."
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " *"
+        "content": " * it link to other classes which is an member for Duke such as Storage, Task and Ui Class"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * @author LIN QING"
+        "content": " *"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * @version 1.0"
+        "content": " * @author LIN QING"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * @since 14/9/2020"
+        "content": " * @version 1.0"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " */"
+        "content": " * @since 14/9/2020"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "public class Duke {"
+        "content": " */"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    private  Storage storage;"
+        "content": "public class Duke {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    private TaskList tasks;"
+        "content": "    private  Storage storage;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    private  Ui ui;"
+        "content": "    private TaskList tasks;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "    private  Ui ui;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @param path program will store the task in this path"
+        "content": "    /**"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @throws \u003ccode\u003eDukeException\u003c/code\u003e if problem reading file."
+        "content": "     * @param path program will store the task in this path"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "     * @throws \u003ccode\u003eDukeException\u003c/code\u003e if problem reading file."
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public Duke(String path)  {"
+        "content": "     */"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        ui \u003d new Ui();"
+        "content": "    public Duke(String path)  {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        storage \u003d new Storage(path);"
+        "content": "        ui \u003d new Ui();"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        try {"
+        "content": "        storage \u003d new Storage(path);"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            tasks \u003d new TaskList(storage.load());"
+        "content": "        try {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        } catch ( DukeException e ) {"
+        "content": "            tasks \u003d new TaskList(storage.load());"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            ui.printLoadingError(\"Problem reading file. Starting with an empty task list\");"
+        "content": "        } catch ( DukeException e ) {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            tasks \u003d new TaskList();"
+        "content": "            ui.printLoadingError(\"Problem reading file. Starting with an empty task list.\");"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        }"
+        "content": "            tasks \u003d new TaskList();"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * run program implements an application that simply shows the tasks and print on the screen"
+        "content": "    /**"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     *"
+        "content": "     * run program implements an application that simply shows the tasks and print on the screen"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @return task and the number of task in the list"
+        "content": "     *"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @throws \u003ccode\u003eDukeException\u003c/code\u003eException if the command word not in the case."
+        "content": "     * @return task and the number of task in the list"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "     * @throws \u003ccode\u003eDukeException\u003c/code\u003eException if the command word not in the case."
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void run() {"
+        "content": "     */"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        ui.printWelcome();"
+        "content": "    public void run() {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        boolean isExit \u003d false;"
+        "content": "        ui.printWelcome();"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        while (!isExit) {"
+        "content": "        boolean isExit \u003d false;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            try {"
+        "content": "        while (!isExit) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String fullCommand \u003d ui.readCommand();"
+        "content": "            try {"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                ui.showLine();"
+        "content": "                String fullCommand \u003d ui.readCommand();"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                Command c \u003d Parser.parse(fullCommand);"
+        "content": "                ui.showLine();"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c.execute(tasks, ui, storage);"
+        "content": "                Command c \u003d Parser.parse(fullCommand);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                isExit \u003d c.isExit();"
+        "content": "                c.execute(tasks, ui, storage);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            } catch (DukeException e) {"
+        "content": "                isExit \u003d c.isExit();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                ui.showError(e.getMessage());"
+        "content": "            } catch (DukeException e) {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            } finally {"
+        "content": "                ui.showError(e.getMessage());"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                ui.showLine();"
+        "content": "            } finally {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            }"
+        "content": "                ui.showLine();"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * This is Main method which made use of Duke and run methods"
+        "content": "    /**"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "     * This is main method which made use of Duke and run methods"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        public static void main(String[] args){"
+        "content": "     */"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            assert (args.length) \u003e 0;"
+        "content": "        public static void main(String[] args){"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                new Duke(\"data/duke.txt\").run();"
+        "content": "            assert (args.length) \u003e 0;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        }"
+        "content": "                new Duke(\"data/duke.txt\").run();"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "}"
+        "content": "        }"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 66,
@@ -882,165 +686,9 @@
           "gitId": "linqing42"
         },
         "content": ""
-      }
-    ],
-    "authorContributionMap": {
-      "linqing42": 68
-    }
-  },
-  {
-    "path": "src/main/java/Dukes/Event.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "package Dukes;"
       },
       {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "/**"
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": " * Represents an event task."
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "public class Event extends Task {"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    protected String at;"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public Event(String description, String at) {"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        super(description);"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        this.at \u003d at;"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        return \"[E]\" + super.toString() + \"(at:\" + at + \")\";"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public String toWriteFile() {"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        return \"E | \" + getFileStatusIcon() + \" | \" + description + \" | \" + at;"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 22,
+        "lineNumber": 69,
         "author": {
           "gitId": "linqing42"
         },
@@ -1048,7 +696,7 @@
       }
     ],
     "authorContributionMap": {
-      "linqing42": 22
+      "linqing42": 69
     }
   },
   {
@@ -1274,406 +922,406 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.command.AddCommand;"
+        "content": "import Dukes.Tasks.Deadline;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.command.DeleteCommand;"
+        "content": "import Dukes.Tasks.Event;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.command.DoneCommand;"
+        "content": "import Dukes.Tasks.Task;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.command.ExitCommand;"
+        "content": "import Dukes.Tasks.ToDo;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.command.Command;"
+        "content": "import Dukes.command.AddCommand;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.command.ListCommand;"
+        "content": "import Dukes.command.DeleteCommand;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "import Dukes.command.DoneCommand;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "/**"
+        "content": "import Dukes.command.ExitCommand;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * Parser program containing methods that deals with parsing the user command to extract meaningful details from it."
+        "content": "import Dukes.command.Command;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " */"
+        "content": "import Dukes.command.ListCommand;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "public class Parser {"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "import java.text.SimpleDateFormat;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Processes the user input and creates the corresponding commands."
+        "content": "import java.time.LocalDate;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @param input Command input by user."
+        "content": "import java.time.format.DateTimeFormatter;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @return Corresponding command that is input by user."
+        "content": "import java.util.Date;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @throws \u003ccode\u003eDukeException\u003c/code\u003eIf a new command cannot be created due to invalid input parameters."
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "/**"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": " * Parser program containing methods that deals with parsing the user command to extract meaningful details from it."
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public static Command parse(String input) throws DukeException {"
+        "content": " */"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        Task taskWord;"
+        "content": "public class Parser {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        Command c;"
+        "content": "    /**"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        String action \u003d input.split(\" \")[0].toLowerCase();"
+        "content": "     * Processes the user input and creates the corresponding commands."
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        switch (action) {"
+        "content": "     *"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"list\":"
+        "content": "     * @param input Command input by user."
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c \u003d new ListCommand();"
+        "content": "     * @return Corresponding command that is input by user."
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "     * @throws \u003ccode\u003eDukeException\u003c/code\u003eIf a new command cannot be created due to invalid input parameters."
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"todo\":"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (input.length() \u003c 6) {"
+        "content": "    public static Command parse(String input) throws DukeException {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
+        "content": "        Task taskWord;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": "        Command c \u003d null;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                taskWord \u003d new ToDo(input.substring(5));"
+        "content": "        String action \u003d input.split(\" \")[0].toLowerCase();"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c \u003d new AddCommand(taskWord);"
+        "content": "        SimpleDateFormat format \u003d new SimpleDateFormat(\"dd/MM/yyyy HHmm\");"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "        SimpleDateFormat formatter \u003d new SimpleDateFormat(\"dd MMM yyyy, hh:mm a\");"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        switch (action) {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"delete\":"
+        "content": "            case \"list\":"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (input.isEmpty() || input.length() \u003c 7) {"
+        "content": "                c \u003d new ListCommand();"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! There is no specific task to delete.\\n\");"
+        "content": "                break;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                int toDelete \u003d Ui.indexDetails(input);"
+        "content": "            case \"todo\":"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c \u003d new DeleteCommand(toDelete);"
+        "content": "                if (input.length() \u003c 6) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a todo cannot be empty.\");"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                }"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"done\":"
+        "content": "                taskWord \u003d new ToDo(input.substring(5));"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (input.length() \u003c 6) {"
+        "content": "                c \u003d new AddCommand(taskWord);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"please key in correct format.\\n\");"
+        "content": "                break;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                int toEdit \u003d Ui.indexDetails(input);"
+        "content": "            case \"delete\":"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c \u003d new DoneCommand(toEdit);"
+        "content": "                if (input.isEmpty() || input.length() \u003c 7) {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "                    throw new DukeException(\"☹ OOPS!!! There is no specific task to delete.\\n\");"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"deadline\":"
+        "content": "                int toDelete \u003d Ui.indexDetails(input);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (input.length() \u003c 10) {"
+        "content": "                c \u003d new DeleteCommand(toDelete);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a deadline cannot be empty.\\n\");"
+        "content": "                break;"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String[] splitDetail \u003d input.split(\"/by\");"
+        "content": "            case \"done\":"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (splitDetail.length \u003c 2) {"
+        "content": "                if (input.length() \u003c 6) {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"Please specify the deadline time\\n\");"
+        "content": "                    throw new DukeException(\"please key in correct format.\\n\");"
       },
       {
         "lineNumber": 62,
@@ -1687,781 +1335,389 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String task \u003d splitDetail[0].substring(9);"
+        "content": "                int toEdit \u003d Ui.indexDetails(input);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String by \u003d splitDetail[1];"
+        "content": "                c \u003d new DoneCommand(toEdit);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                taskWord \u003d new Deadline(task, by);"
+        "content": "                break;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c \u003d new AddCommand(taskWord);"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "            case \"deadline\":"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                if (input.length() \u003c 10) {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"event\":"
+        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a deadline cannot be empty.\\n\");"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (input.length() \u003c 7) {"
+        "content": "                }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a event cannot be empty.\\n\");"
+        "content": "                String[] splitDetail \u003d input.split(\"/by\");"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": "                if (splitDetail.length \u003c 2) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String[] splitEvent \u003d input.split(\"/at\");"
+        "content": "                    throw new DukeException(\"Please specify the deadline time\\n\");"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (splitEvent.length \u003c 2) {"
+        "content": "                }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"Please specify the event time\\n\");"
+        "content": "                String task \u003d splitDetail[0].substring(9);"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": "                String by \u003d splitDetail[1];"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String event \u003d splitEvent[0].substring(7);"
+        "content": "                try {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String time \u003d splitEvent[1];"
+        "content": "                    Date byDeadline \u003d format.parse(by);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                taskWord \u003d new Event(event, time);"
+        "content": "                    taskWord \u003d new Deadline(task, formatter.format(byDeadline));"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c \u003d new AddCommand(taskWord);"
+        "content": "                }catch (Exception e){"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "                    throw new DukeException(\"Please input a date in this format : dd/MM/yyyy HHmm\");"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"bye\":"
+        "content": "                c \u003d new AddCommand(taskWord);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            case \"exit\":"
+        "content": "                break;"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                c \u003d new ExitCommand();"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                break;"
+        "content": "            case \"event\":"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                if (input.length() \u003c 7) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            default:"
+        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a event cannot be empty.\\n\");"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
+        "content": "                }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        }"
+        "content": "                String[] splitEvent \u003d input.split(\"/at\");"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        return c;"
+        "content": "                if (splitEvent.length \u003c 2) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "                    throw new DukeException(\"Please specify the event time\\n\");"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "}"
+        "content": "                }"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                String event \u003d splitEvent[0].substring(7);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                String time \u003d splitEvent[1];"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                try {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "                    Date timeEvent \u003d format.parse(time);"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "  /*  private static Command list() {"
+        "content": "                    taskWord \u003d new Event(event, formatter.format(timeEvent));"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        return new ListCommand();"
+        "content": "                }catch(Exception e){"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "                    throw new DukeException(\"Please input a date in this format : dd/MM/yyyy HHmm\");"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    private void addCommandTask(String input) {"
+        "content": "                }"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        Task taskWord;"
+        "content": "                c \u003d new AddCommand(taskWord);"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        try {"
+        "content": "                break;"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            if (input.startsWith(\"todo\") \u0026\u0026 input.contains(\" \")) {"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "            case \"bye\":"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                addTask(taskWord);"
+        "content": "            case \"exit\":"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            } else if (input.startsWith(\"deadline\") \u0026\u0026 input.contains(\" \")) {"
+        "content": "                c \u003d new ExitCommand();"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (input.length() \u003c 10) {"
+        "content": "                break;"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a deadline cannot be empty.\\n\");"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": "            default:"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String[] splitDetail \u003d input.split(\"/by\");"
+        "content": "                throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\");"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (splitDetail.length \u003c 2) {"
+        "content": "        }"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    throw new DukeException(\"Please specify the deadline time\\n\");"
+        "content": "        return c;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                }"
+        "content": "    }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String task \u003d splitDetail[0];"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String by \u003d splitDetail[1];"
+        "content": "}"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                taskWord \u003d new Deadline(task, by);"
-      },
-      {
-        "lineNumber": 118,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                //taskWord \u003d new Deadline(task, Deadline.timeChange(by));"
-      },
-      {
-        "lineNumber": 119,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                addTaskCase(taskWord);"
-      },
-      {
-        "lineNumber": 120,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            } else if (input.startsWith(\"event\") \u0026\u0026 input.contains(\" \")) {"
-      },
-      {
-        "lineNumber": 121,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                if (input.length() \u003c 7) {"
-      },
-      {
-        "lineNumber": 122,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! The description of a event cannot be empty.\\n\");"
-      },
-      {
-        "lineNumber": 123,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 124,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                String[] splitEvent \u003d input.split(\"/at\");"
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                if (splitEvent.length \u003c 2) {"
-      },
-      {
-        "lineNumber": 126,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    throw new DukeException(\"Please specify the event time\\n\");"
-      },
-      {
-        "lineNumber": 127,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 128,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                String event \u003d splitEvent[0];"
-      },
-      {
-        "lineNumber": 129,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                String time \u003d splitEvent[1];"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                taskWord \u003d new Event(event, time);"
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                addTaskCase(taskWord);"
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            } else if(input.startsWith(\"delete\") \u0026\u0026 input.contains(\" \")){"
-      },
-      {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                if(tasks.isEmpty() || input.length() \u003c 7) {"
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! There is no specific task to delete.\\n\");"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                int toDelete \u003d Integer.parseInt(input.substring(input.indexOf(\u0027 \u0027) + 1)) - 1;"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                Task task \u003d tasks.getTask(toDelete);"
-      },
-      {
-        "lineNumber": 138,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                tasks.deleteTask(toDelete);"
-      },
-      {
-        "lineNumber": 139,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                System.out.println(\"Noted, I\u0027ve removed the following task:\\n\""
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + \"  \""
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + task"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + \"\\n\""
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + \"Now you have \""
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + tasks.getSize()"
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + \" tasks in the list.\");"
-      },
-      {
-        "lineNumber": 146,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            } else if (input.startsWith(\"done\") \u0026\u0026 input.contains(\" \")) {"
-      },
-      {
-        "lineNumber": 147,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                if (input.length() \u003c 6) {"
-      },
-      {
-        "lineNumber": 148,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    throw new DukeException(\"please key in correct format.\\n\");"
-      },
-      {
-        "lineNumber": 149,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                else if(tasks.isEmpty()){"
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    throw new DukeException(\"There is no task need to be done\\n\");"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                int toEdit \u003d Integer.parseInt(input.substring(input.indexOf(\u0027 \u0027) + 1)) - 1;"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                Task task \u003d tasks.getTask(toEdit);"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                task.setDone();"
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                System.out.println(\"     Nice! I\u0027ve marked this task as done:\\n\""
-      },
-      {
-        "lineNumber": 157,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + task"
-      },
-      {
-        "lineNumber": 158,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + \"\\n\""
-      },
-      {
-        "lineNumber": 159,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                        + \"___________________________________________________________________\\n\");"
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            }else{"
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                throw new DukeException(\"☹ OOPS!!! I\u0027m sorry, but I don\u0027t know what that means :-(\\n\");"
-      },
-      {
-        "lineNumber": 162,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        }catch (DukeException e) {"
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            System.out.print(e.getMessage());"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        } catch (Exception e) {"
-      },
-      {
-        "lineNumber": 166,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            assert false : \"Uncaught exception\";"
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            System.out.println(\"Please input a date in this format : dd/MM/yy HHmm\");"
-      },
-      {
-        "lineNumber": 168,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 169,
-        "author": {
-          "gitId": "linqing42"
-        },
         "content": ""
-      },
-      {
-        "lineNumber": 170,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 171,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 172,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 173,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "}*/"
       }
     ],
     "authorContributionMap": {
-      "linqing42": 173
+      "linqing42": 117
     }
   },
   {
@@ -2487,42 +1743,562 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.io.File;"
+        "content": "import Dukes.Tasks.Deadline;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.io.FileNotFoundException;"
+        "content": "import Dukes.Tasks.Event;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.io.FileWriter;"
+        "content": "import Dukes.Tasks.Task;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.io.IOException;"
+        "content": "import Dukes.Tasks.ToDo;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.util.ArrayList;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "linqing42"
         },
+        "content": "import java.io.File;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "import java.io.FileNotFoundException;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "import java.io.FileWriter;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "linqing42"
+        },
         "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " * Represents a storage in the hard disk."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "public class Storage {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    private ArrayList\u003cString\u003e details \u003d new ArrayList\u003cString\u003e();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    public static String filePath \u003d \"data/duke.txt\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    public Storage(String filepath) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        this.filePath \u003d filePath;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    public ArrayList\u003cString\u003e load() throws Dukes.Exceptions.FileNotFoundException {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            File file \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            file.createNewFile();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            Scanner in \u003d new Scanner(file);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            while (in.hasNext()) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                String input \u003d in.nextLine();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                String[] strArr \u003d input.split(\" \\\\| \");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                Task tasks \u003d null;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                if (strArr[0].equals(\"T\")) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                    tasks \u003d new ToDo(strArr[2]);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                } else if (strArr[0].equals(\"D\")) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                    tasks \u003d new Deadline(strArr[2], strArr[3]);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                } else if (strArr[0].equals(\"E\")) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                    tasks \u003d new Event(strArr[2], strArr[3]);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                    throw new Dukes.Exceptions.FileNotFoundException(\"Previous Tasks are corrupted. Please resetting your task . .\");"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                if (strArr[1].equals(\"1\")) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                    tasks.markAsDone();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                details.add(input);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            System.out.println(\"You have no task.\");"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            System.out.println(\"Problem occurred while creating a new file in Storage\");"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            assert (false);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        return details;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    public void saveTaskFile(ArrayList\u003cTask\u003e task) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            FileWriter fw \u003d new FileWriter(\"data/duke.txt\");"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            String fileDetails \u003d \"\";"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            for (Task t : task) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "                fileDetails +\u003d t.toWriteFile() + \"\\n\";"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            fw.write(fileDetails);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            fw.close();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "            System.out.println(\"FileWriting got problem\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "linqing42": 73
+    }
+  },
+  {
+    "path": "src/main/java/Dukes/Tasks/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "package Dukes.Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " * deadline task description /by deadline description: add to the task list a deadline task with the given task"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " * description and with the deadline description"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " * @inheritDoc"
       },
       {
         "lineNumber": 9,
@@ -2536,70 +2312,70 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "/**"
+        "content": " */"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * Represents a storage in the hard disk."
+        "content": "public class Deadline extends Task {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " */"
+        "content": "    protected String by;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "public class Storage {"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    private ArrayList\u003cString\u003e details \u003d new ArrayList\u003cString\u003e();"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public static String filePath \u003d \"data/duke.txt\";"
+        "content": "    public Deadline(String description, String by) {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        super(description);"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public Storage(String filepath) {"
+        "content": "        this.by\u003d by;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        this.filePath \u003d filePath;"
+        "content": "    }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 20,
@@ -2613,332 +2389,80 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public ArrayList\u003cString\u003e load() throws Dukes.Exceptions.FileNotFoundException {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        try {"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            File file \u003d new File(filePath);"
+        "content": "        return \"[D]\" + super.toString() + \"(by:\" + by  + \")\";"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            file.createNewFile();"
+        "content": "    }"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            Scanner in \u003d new Scanner(file);"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            while (in.hasNext()) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String input \u003d in.nextLine();"
+        "content": "    public String toWriteFile() {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                String[] strArr \u003d input.split(\" \\\\| \");"
+        "content": "        return \"D | \" + getFileStatusIcon() + \" | \" + description + \" | \" + by;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                Task tasks \u003d null;"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                if (strArr[0].equals(\"T\")) {"
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                    tasks \u003d new ToDo(strArr[2]);"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                } else if (strArr[0].equals(\"D\")) {"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    tasks \u003d new Deadline(strArr[2], strArr[3]);"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                } else if (strArr[0].equals(\"E\")) {"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    tasks \u003d new Event(strArr[2], strArr[3]);"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                } else {"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    throw new Dukes.Exceptions.FileNotFoundException(\"Previous Tasks are corrupted. Please resetting your task . .\");"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                if (strArr[1].equals(\"1\")) {"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                    tasks.markAsDone();"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                details.add(input);"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        } catch (FileNotFoundException e) {"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            System.out.println(\"You have no task.\");"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        } catch (IOException e) {"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            System.out.println(\"Problem occurred while creating a new file in Storage\");"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            assert (false);"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        return details;"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    public void saveTaskFile(ArrayList\u003cTask\u003e task) {"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            FileWriter fw \u003d new FileWriter(\"data/duke.txt\");"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            String fileDetails \u003d \"\";"
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            for (Task t : task) {"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "                fileDetails +\u003d t.toWriteFile() + \"\\n\";"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            fw.write(fileDetails);"
-      },
-      {
-        "lineNumber": 62,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            fw.close();"
-      },
-      {
-        "lineNumber": 63,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        } catch (IOException e) {"
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "            System.out.println(\"FileWriting got problem\");"
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "linqing42"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "linqing42"
-        },
         "content": "}"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 32,
         "author": {
           "gitId": "linqing42"
         },
@@ -2946,11 +2470,11 @@
       }
     ],
     "authorContributionMap": {
-      "linqing42": 68
+      "linqing42": 32
     }
   },
   {
-    "path": "src/main/java/Dukes/Task.java",
+    "path": "src/main/java/Dukes/Tasks/Event.java",
     "fileType": "java",
     "lines": [
       {
@@ -2958,7 +2482,177 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "package Dukes;"
+        "content": "package Dukes.Tasks;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " * Represents an event task."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    protected String at;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    public Event(String description, String at) {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        return \"[E]\" + super.toString() + \"(at:\" + at + \")\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    public String toWriteFile() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "        return \"E | \" + getFileStatusIcon() + \" | \" + description + \" | \" + at;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "linqing42": 23
+    }
+  },
+  {
+    "path": "src/main/java/Dukes/Tasks/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "package Dukes.Tasks;"
       },
       {
         "lineNumber": 2,
@@ -3302,7 +2996,7 @@
     }
   },
   {
-    "path": "src/main/java/Dukes/TaskList.java",
+    "path": "src/main/java/Dukes/Tasks/TaskList.java",
     "fileType": "java",
     "lines": [
       {
@@ -3310,7 +3004,7 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "package Dukes;"
+        "content": "package Dukes.Tasks;"
       },
       {
         "lineNumber": 2,
@@ -3324,154 +3018,154 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.util.ArrayList;"
+        "content": ""
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * Create a TaskList to store Task objects."
+        "content": "/**"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " */"
+        "content": " * Create a TaskList to store Task objects."
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "public class TaskList {"
+        "content": " */"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    protected ArrayList\u003cTask\u003e tasks \u003d new ArrayList\u003cTask\u003e(100);"
+        "content": "public class TaskList {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public ArrayList\u003cTask\u003e list \u003d new ArrayList\u003cTask\u003e();"
+        "content": "    protected ArrayList\u003cTask\u003e tasks \u003d new ArrayList\u003cTask\u003e(100);"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    public ArrayList\u003cTask\u003e list \u003d new ArrayList\u003cTask\u003e();"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public TaskList() {"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    public TaskList() {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public TaskList(ArrayList\u003cString\u003e load) {"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "    public TaskList(ArrayList\u003cString\u003e load) {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public boolean isEmpty() {"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        return false;"
+        "content": "    public boolean isEmpty() {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        return false;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 25,
@@ -3493,14 +3187,21 @@
           "gitId": "linqing42"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
       }
     ],
     "authorContributionMap": {
-      "linqing42": 27
+      "linqing42": 28
     }
   },
   {
-    "path": "src/main/java/Dukes/ToDo.java",
+    "path": "src/main/java/Dukes/Tasks/ToDo.java",
     "fileType": "java",
     "lines": [
       {
@@ -3508,7 +3209,7 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "package Dukes;"
+        "content": "package Dukes.Tasks;"
       },
       {
         "lineNumber": 2,
@@ -3706,619 +3407,640 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "import Dukes.Tasks.Task;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import java.util.Scanner;"
+        "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "/**"
+        "content": "import java.util.Scanner;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " * Create a UI class to manage user interface for users and handles interaction between the user"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "linqing42"
         },
-        "content": " */"
+        "content": "/**"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "public class Ui {"
+        "content": " * Create a UI class to manage user interface for users and handles interaction between the user"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    private Scanner in \u003d new Scanner(System.in);"
+        "content": " */"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "public class Ui {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Reads user input."
+        "content": "    private Scanner in \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @return User input."
+        "content": "    /**"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "     * Reads user input."
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    String readCommand() {"
+        "content": "     * @return User input."
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        return in.nextLine();"
+        "content": "     */"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "    String readCommand() {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        return in.nextLine();"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public Ui() {"
+        "content": "    }"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    public Ui() {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void showLine() {"
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"____________________________________________________________\\n\");"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "    public void showLine() {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        System.out.println(\"____________________________________________________________\\n\");"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void showError(String message) {"
+        "content": "    }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(message);"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "    public void showError(String message) {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "        System.out.println(message);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Prints the Duke logo and greets the user for the first time the program is run."
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void printWelcome() {"
+        "content": "     * Prints the Duke logo and greets the user for the first time the program is run."
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        String logo \u003d \" ____        _        \\n\""
+        "content": "     */"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+        "content": "    public void printWelcome() {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+        "content": "        String logo \u003d \" ____        _        \\n\""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\\n\");"
+        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        System.out.println(\"Hello from\\n\" + logo);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Hello! I\u0027m Duke\\nWhat can I do for you?\\n\");"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Prints the bye message and the list that will be save in hard disk when the user exits the program."
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void showExitMessage(ArrayList\u003cTask\u003e tasks) {"
+        "content": "     * Prints the bye message and the list that will be save in hard disk when the user exits the program."
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Your following tasks will be save: \");"
+        "content": "    public void showExitMessage(ArrayList\u003cTask\u003e tasks) {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        for (Task t : tasks) {"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "            System.out.println(t);"
+        "content": "        System.out.println(\"Your following tasks will be save: \");"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        }"
+        "content": "        for (Task t : tasks) {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+        "content": "            System.out.println(t);"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Prints the error when the information in storage could not be loaded."
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void printLoadingError(String s) {"
+        "content": "     * Prints the error when the information in storage could not be loaded."
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(s);"
+        "content": "     */"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "    public void printLoadingError(String s) {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "        System.out.println(s);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "linqing42"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public static int indexDetails(String input) {"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        int number \u003d Integer.parseInt(input.substring(input.indexOf(\u0027 \u0027) + 1)) - 1;"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        return number;"
+        "content": "    public static int indexDetails(String input) {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        int number \u003d Integer.parseInt(input.substring(input.indexOf(\u0027 \u0027) + 1)) - 1;"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "        return number;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Prints the message to inform user of a successful addition of a task to the list."
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @param task Task that has been added."
+        "content": "    /**"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @param numberOfTasks Number of tasks currently in the list."
+        "content": "     * Prints the message to inform user of a successful addition of a task to the list."
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "     * @param task Task that has been added."
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void printAddedMessage(Task task, int numberOfTasks) {"
+        "content": "     * @param numberOfTasks Number of tasks currently in the list."
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Got it. I\u0027ve added this task: \\n\" + task);"
+        "content": "     */"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Now you have \" + numberOfTasks + (numberOfTasks \u003d\u003d 1 ? \" task\" : \" tasks\") + \" in the list.\");"
+        "content": "    public void printAddedMessage(Task task, int numberOfTasks) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    } /**"
+        "content": "        System.out.println(\"Got it. I\u0027ve added this task: \\n\" + task);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Prints the message to inform user of a successful deletion."
+        "content": "        System.out.println(\"Now you have \" + numberOfTasks + (numberOfTasks \u003d\u003d 1 ? \" task\" : \" tasks\") + \" in the list.\");"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @param task Task that has been deleted."
+        "content": "    } /**"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @param numberOfTasks Number of tasks left in the list."
+        "content": "     * Prints the message to inform user of a successful deletion."
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "     * @param task Task that has been deleted."
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void printDeleteMessage(Task task, int numberOfTasks) {"
+        "content": "     * @param numberOfTasks Number of tasks left in the list."
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Noted. I\u0027ve removed this task: \\n\" + task);"
+        "content": "     */"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Now you have \" + numberOfTasks + (numberOfTasks \u003d\u003d 1 ? \" task\" : \" tasks\") + \" in the list.\");"
+        "content": "    public void printDeleteMessage(Task task, int numberOfTasks) {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Noted. I\u0027ve removed this task: \\n\" + task);"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    /**"
+        "content": "        System.out.println(\"Now you have \" + numberOfTasks + (numberOfTasks \u003d\u003d 1 ? \" task\" : \" tasks\") + \" in the list.\");"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * Prints the message to inform user that a task has been successfully marked as done."
+        "content": "    }"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     * @param task Task that has been marked as done."
+        "content": "    /**"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "     */"
+        "content": "     * Prints the message to inform user that a task has been successfully marked as done."
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    public void printDoneMessage(Task task) {"
+        "content": "     * @param task Task that has been marked as done."
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "        System.out.println(\"Nice! I\u0027ve marked this task as done:\\n\""
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "                + task);"
+        "content": "    public void printDoneMessage(Task task) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Nice! I\u0027ve marked this task as done:\\n\""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "}"
+        "content": "                + task);"
       },
       {
         "lineNumber": 91,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "linqing42"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 94,
         "author": {
           "gitId": "linqing42"
         },
@@ -4326,7 +4048,7 @@
       }
     ],
     "authorContributionMap": {
-      "linqing42": 91
+      "linqing42": 94
     }
   },
   {
@@ -4359,14 +4081,14 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.Task;"
+        "content": "import Dukes.Tasks.Task;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.TaskList;"
+        "content": "import Dukes.Tasks.TaskList;"
       },
       {
         "lineNumber": 6,
@@ -4557,14 +4279,14 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.Task;"
+        "content": "import Dukes.Tasks.Task;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.TaskList;"
+        "content": "import Dukes.Tasks.TaskList;"
       },
       {
         "lineNumber": 6,
@@ -4755,14 +4477,14 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.TaskList;"
+        "content": "import Dukes.Tasks.TaskList;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.Task;"
+        "content": "import Dukes.Tasks.Task;"
       },
       {
         "lineNumber": 6,
@@ -4995,14 +4717,14 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.TaskList;"
+        "content": "import Dukes.Tasks.TaskList;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.Task;"
+        "content": "import Dukes.Tasks.Task;"
       },
       {
         "lineNumber": 6,
@@ -5277,7 +4999,7 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.TaskList;"
+        "content": "import Dukes.Tasks.TaskList;"
       },
       {
         "lineNumber": 5,
@@ -5496,7 +5218,7 @@
         "author": {
           "gitId": "linqing42"
         },
-        "content": "import Dukes.TaskList;"
+        "content": "import Dukes.Tasks.TaskList;"
       },
       {
         "lineNumber": 5,
