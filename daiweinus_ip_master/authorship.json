@@ -1,35 +1,5 @@
 [
   {
-    "path": "Duke.txt",
-    "fileType": "txt",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "T  | 0 | read book"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "D  | 1 | return book | monday"
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      }
-    ],
-    "authorContributionMap": {
-      "daiweinus": 3
-    }
-  },
-  {
     "path": "README.md",
     "fileType": "md",
     "lines": [
@@ -356,7 +326,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public Save save;"
+        "content": "    public Storage storage;"
       },
       {
         "lineNumber": 20,
@@ -433,7 +403,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        save \u003d new Save(filePath);"
+        "content": "        storage \u003d new Storage(filePath);"
       },
       {
         "lineNumber": 31,
@@ -447,7 +417,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            tasks \u003d new TaskList(save.readTaskFromFile());"
+        "content": "            tasks \u003d new TaskList(storage.readTaskFromFile());"
       },
       {
         "lineNumber": 33,
@@ -503,7 +473,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        new Duke(\"C:/Users/David/Desktop/ip/Duke.txt\").run();"
+        "content": "        new Duke(\"Duke.txt\").run();"
       },
       {
         "lineNumber": 41,
@@ -762,87 +732,101 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        break;"
+        "content": "                    case \"find\":"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    case \"save\":"
+        "content": "                        tasks.findTasks(fullCommand);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        tasks.saveTasks();"
+        "content": "                        break;"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        break;"
+        "content": "                    case \"save\":"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    default:"
+        "content": "                        tasks.saveTasks();"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        ui.printError();"
+        "content": "                        break;"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                }"
+        "content": "                    default:"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            } catch (TaskException e) {"
+        "content": "                        ui.printError();"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                ui.printError(e.getMessage());"
+        "content": "                }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            }"
+        "content": "            } catch (TaskException e) {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        }"
+        "content": "                ui.printError(e.getMessage());"
       },
       {
         "lineNumber": 88,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
@@ -850,7 +834,7 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 86,
+      "daiweinus": 88,
       "-": 3
     }
   },
@@ -877,283 +861,409 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "/**"
+        "content": "import java.time.LocalDate;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": " * This Deadline class extends from task object."
+        "content": "import java.time.format.DateTimeFormatter;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": " *"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": " * @author Dai Wei"
+        "content": "/**"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": " * @version Finial version 2020.9.9"
+        "content": " * This Deadline class extends from task object."
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": " * @since Duke javadoc"
+        "content": " *"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": " */"
+        "content": " * @author Dai Wei"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "public class Deadline extends Task {"
+        "content": " * @version Finial version 2020.9.9"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": " * @since Duke javadoc"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    protected String by;"
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "public class Deadline extends Task {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * entity deadline."
+        "content": "    protected String by;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     *"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * @param description tasks\u0027 description"
+        "content": "    /**"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * @param by          tasks\u0027 deadline time"
+        "content": "     *convert data string to except format"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     */"
+        "content": "     *"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public Deadline(String description, String by) {"
+        "content": "     * @param startDate data/time string with yyyy-MM-dd format"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        super(description);"
+        "content": "     * @return  data/time string with MMM d yyyy format"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        this.by \u003d by;"
+        "content": "     */"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    }"
+        "content": "    public String getStartDate(String startDate)"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "    {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    /**"
+        "content": "        DateTimeFormatter inputFormat \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd\");"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * get user command description of by"
+        "content": "        DateTimeFormatter outputFormat \u003d DateTimeFormatter.ofPattern(\"MMM d yyyy\");"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     *"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * @return by"
+        "content": "        return LocalDate.parse(startDate, inputFormat).format(outputFormat);"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public String getBy() {"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        return by;"
+        "content": "    /**"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    }"
+        "content": "     * entity deadline."
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "     *"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    /**"
+        "content": "     * @param description tasks\u0027 description"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * override the to string method"
+        "content": "     * @param by          tasks\u0027 deadline time"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     *"
+        "content": "     */"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * @return user command Deadline to \"[D]\""
+        "content": "    public Deadline(String description, String by) {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     */"
+        "content": "        super(description);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    @Override"
+        "content": "        //this.by \u003d by;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public String toString() {"
+        "content": "        this.by \u003d  getStartDate(by);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        return \"[D]\" + super.printDescription() + \" (by: \" + by + \")\";"
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 43,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * get user command description of by"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return by"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String getBy() {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return by;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * override the to string method"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return user command Deadline to \"[D]\""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return \"[D]\" + super.printDescription() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
         "author": {
           "gitId": "daiweinus"
         },
@@ -1161,7 +1271,7 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 43
+      "daiweinus": 61
     }
   },
   {
@@ -2635,7 +2745,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "     * This function is create deadline object in task arrarylist."
+        "content": "     * This function is create deadline object in task arraylist."
       },
       {
         "lineNumber": 58,
@@ -2797,7 +2907,7 @@
     }
   },
   {
-    "path": "src/main/java/duke/command/Save.java",
+    "path": "src/main/java/duke/command/Storage.java",
     "fileType": "java",
     "lines": [
       {
@@ -2861,7 +2971,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "public class Save {"
+        "content": "public class Storage {"
       },
       {
         "lineNumber": 10,
@@ -2931,14 +3041,14 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public Save(String filePath) {"
+        "content": "    public Storage(String filePath) {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        Save.filePath \u003d filePath;"
+        "content": "        Storage.filePath \u003d filePath;"
       },
       {
         "lineNumber": 21,
@@ -3022,14 +3132,14 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    bw.append(\"D \");"
+        "content": "                   bw.append(\"D \");"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    bw.append(\" | \").append(task.isDone() ? \"1\" : \"0\").append(\" | \").append(task.getDescription()).append(\" | \").append(((Deadline) task).getBy());"
+        "content": "                    bw.append(\"| \").append(task.isDone() ? \"1\" : \"0\").append(\" | \").append(task.getDescription()).append(\" | \").append(((Deadline) task).getBy());"
       },
       {
         "lineNumber": 34,
@@ -4776,10 +4886,185 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public void saveTasks() { Save.writeTaskToFile(tasks); }"
+        "content": "    public void saveTasks() { Storage.writeTaskToFile(tasks); }"
       },
       {
         "lineNumber": 151,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * This function is to find tasks from task list."
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param fullCommand tasks\u0027 full command"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public void findTasks(String fullCommand) {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        List\u003cString\u003e ss \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        String description \u003d fullCommand.trim().substring(\"find\".length()).trim();"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                String s \u003d tasks.get(i).toString();"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                if (s.contains(description)) {"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                    ss.add(i+1 + \".\" + s );"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        if(ss.size() !\u003d 0) {"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            ui.showToUser(\"Here are the matching tasks in your list: \");"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            ss.forEach(System.out::println);"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            ui.printLine();"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            ui.showToUser(\"☹ OOPS!!! Our list not contain \" + \"\u0027\" + description + \"\u0027.\");"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "            ui.printLine();"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 176,
         "author": {
           "gitId": "daiweinus"
         },
@@ -4787,7 +5072,7 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 151
+      "daiweinus": 176
     }
   },
   {

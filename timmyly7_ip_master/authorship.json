@@ -214,133 +214,133 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "public class DeadlineDTO extends TaskDTO {"
+        "content": "import NUS.Duke.ProcessingException;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    private String deadlineDateString;"
+        "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "import java.text.ParseException;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    @Override"
+        "content": "import java.text.SimpleDateFormat;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    public String getTaskType() {"
+        "content": "import java.util.Date;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        return \"D\";"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": "public class DeadlineDTO extends TaskDTO {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "    SimpleDateFormat simpleDateFormat \u003d new SimpleDateFormat(\"yyyy-MM-dd\");"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    public DeadlineDTO(String taskName , String deadlineDateString, int taskId) {"
+        "content": "    SimpleDateFormat printFormat \u003d new SimpleDateFormat(\"yyyy MMM dd\");"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        this.setTaskName(taskName);"
+        "content": "    private String deadlineDateString;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        this.deadlineDateString \u003d deadlineDateString;"
+        "content": "    private Date deadline;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        this.setTaskId(taskId);"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "    public String getTaskType() {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    public String getDeadlineDateString() {"
+        "content": "        return \"D\";"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        return deadlineDateString;"
+        "content": "    }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "    public DeadlineDTO(String taskName , String deadlineDateString, int taskId) throws ProcessingException {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    public void setDeadlineDateString(String deadlineDateString) {"
+        "content": "        this.setTaskName(taskName);"
       },
       {
         "lineNumber": 22,
@@ -354,259 +354,259 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": "        this.setTaskId(taskId);"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    @Override"
+        "content": "            this.deadline \u003d simpleDateFormat.parse(deadlineDateString);"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    public String toString() {"
+        "content": "        } catch (ParseException e) {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        return super.toString() +\" (by: \"+deadlineDateString+\" )\";"
+        "content": "            throw new ProcessingException(\"Wrong date format. Please use the format as yyyy-mm-dd+\");"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    public String getTaskFullDescription() {"
+        "content": "    public Date getDeadline() {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        StringBuilder sb \u003d new StringBuilder();"
+        "content": "        return deadline;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\"[\");"
+        "content": "    }"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(getTaskType());"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\"]\");"
+        "content": "    public void setDeadline(Date deadline) {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\"[\");"
+        "content": "        this.deadline \u003d deadline;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        int ascii \u003d 0;"
+        "content": "    }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        if (!isDone()){"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "            ascii \u003d 0x2717;"
+        "content": "    public String getDeadlineDateString() {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        }else {"
+        "content": "        return deadlineDateString;"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "            ascii \u003d 0x2713;"
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "    public void setDeadlineDateString(String deadlineDateString) {"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        String sign \u003d Character.toString((char)ascii);"
+        "content": "        this.deadlineDateString \u003d deadlineDateString;"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(sign +\"]\");"
+        "content": "    }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(getTaskName());"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\"(by: \");"
+        "content": "    @Override"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(deadlineDateString);"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\" )\");"
+        "content": "        return super.toString() +\" (by: \"+deadlineDateString+\" )\";"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        return sb.toString();"
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    @Override"
+        "content": "    public String getTaskFullDescription() {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    public String getPrintFileString() {"
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        StringBuilder sb \u003d new StringBuilder();"
+        "content": "        sb.append(\"[\");"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "        sb.append(getTaskType());"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(getTaskType());"
+        "content": "        sb.append(\"]\");"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\" | \");"
+        "content": "        sb.append(\"[\");"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "        int ascii \u003d 0;"
       },
       {
         "lineNumber": 60,
@@ -620,7 +620,7 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "            sb.append(\"0\");"
+        "content": "            ascii \u003d 0x2717;"
       },
       {
         "lineNumber": 62,
@@ -634,7 +634,7 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "            sb.append(\"1\");"
+        "content": "            ascii \u003d 0x2713;"
       },
       {
         "lineNumber": 64,
@@ -648,59 +648,213 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\" | \");"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(getTaskName());"
+        "content": "        String sign \u003d Character.toString((char)ascii);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\" | \");"
+        "content": "        sb.append(sign +\"]\");"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(deadlineDateString);"
+        "content": "        sb.append(getTaskName());"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        sb.append(\"\\n\");"
+        "content": "        sb.append(\"(by: \");"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        return sb.toString();"
+        "content": "        sb.append(printFormat.format(deadline));"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": "        sb.append(\" )\");"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "        return sb.toString();"
       },
       {
         "lineNumber": 73,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public String getPrintFileString() {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskType());"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (!isDone()){"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"0\");"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }else {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\"1\");"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(getTaskName());"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\" | \");"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(deadlineDateString);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        sb.append(\"\\n\");"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        return sb.toString();"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
         "author": {
           "gitId": "timmyly7"
         },
@@ -708,7 +862,7 @@
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 73
+      "timmyly7": 95
     }
   },
   {
@@ -2567,49 +2721,49 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "            default:"
+        "content": "            case \"find\":"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "                UI.printErrorMessage(\"Sorry i dont understand the command\");"
+        "content": "                ParserUtil.findTask(details);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "                break;"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        }"
+        "content": "            default:"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "                UI.printErrorMessage(\"Sorry i dont understand the command\");"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "        System.out.println(\"____________________________________________________________\");"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "timmyly7"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 75,
@@ -2623,10 +2777,31 @@
         "author": {
           "gitId": "timmyly7"
         },
-        "content": ""
+        "content": "        System.out.println(\"____________________________________________________________\");"
       },
       {
         "lineNumber": 77,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
@@ -2634,7 +2809,7 @@
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 74,
+      "timmyly7": 77,
       "-": 3
     }
   },
@@ -3897,11 +4072,347 @@
         "author": {
           "gitId": "timmyly7"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     * This is the function to find the description from list of task"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void findTask(String keyword){"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        List foundTasks \u003d new ArrayList();"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        taskList.forEach(task -\u003e {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            if (task.getTaskName().toLowerCase().contains(keyword)){"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                foundTasks.add(task);"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        UI.printFoundTaskList(foundTasks);"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    static boolean match(String first, String second)"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // If we reach at the end of both strings,"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // we are done"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (first.length() \u003d\u003d 0 \u0026\u0026 second.length() \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // Make sure that the characters after \u0027*\u0027"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // are present in second string."
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // This function assumes that the first"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // string will not contain two consecutive \u0027*\u0027"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (first.length() \u003e 1 \u0026\u0026 first.charAt(0) \u003d\u003d \u0027*\u0027 \u0026\u0026"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                second.length() \u003d\u003d 0)"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // If the first string contains \u0027?\u0027,"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // or current characters of both strings match"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if ((first.length() \u003e 1 \u0026\u0026 first.charAt(0) \u003d\u003d \u0027?\u0027) ||"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                (first.length() !\u003d 0 \u0026\u0026 second.length() !\u003d 0 \u0026\u0026"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                        first.charAt(0) \u003d\u003d second.charAt(0)))"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            return match(first.substring(1),"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    second.substring(1));"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // If there is *, then there are two possibilities"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // a) We consider current character of second string"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        // b) We ignore current character of second string."
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (first.length() \u003e 0 \u0026\u0026 first.charAt(0) \u003d\u003d \u0027*\u0027)"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            return match(first.substring(1), second) ||"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                    match(first, second.substring(1));"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "timmyly7"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 157
+      "timmyly7": 205
     }
   },
   {
@@ -4361,11 +4872,102 @@
         "author": {
           "gitId": "timmyly7"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    public static void printFoundTaskList(List\u003cTaskDTO\u003e foundList){"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        if (foundList.size()\u003e0){"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            sb.append(\" Here are the matching tasks in your list: \\n\");"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            foundList.forEach(taskDTO -\u003e {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "                sb.append(taskDTO.getTaskId()+\":\"+taskDTO.getTaskFullDescription()+\"\\n\");"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            });"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            System.out.println(sb.toString());"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }else {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "            System.out.println(\"Sorry here are no match task in your list.\");"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "timmyly7"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "timmyly7": 65
+      "timmyly7": 78
     }
   },
   {
@@ -4816,6 +5418,183 @@
     ],
     "authorContributionMap": {
       "timmyly7": 63
+    }
+  },
+  {
+    "path": "src/test/java/JunitTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.DTO.TodoDTO;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.ProcessingException;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.utils.ParserUtil;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import NUS.Duke.utils.UI;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import org.junit.jupiter.api.BeforeAll;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertTrue;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "public class JunitTest {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    void junitTest() {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        ParserUtil parserUtil \u003d new ParserUtil();"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        UI ui \u003d new UI();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        parserUtil.createTodoTask(\"Buy food\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        parserUtil.createDeadlineTask(\"Happy Birthday To dad /by 2020-01-22\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        parserUtil.createTodoTask(\"TodoTest\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        ui.printList(parserUtil.taskList);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "        assertTrue(parserUtil.taskList.size()\u003d\u003d3);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "timmyly7"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "timmyly7": 24
     }
   },
   {

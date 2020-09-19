@@ -1,5 +1,21 @@
 [
   {
+    "path": "data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "T|0|  32132 |fdsaT|0| fds |343"
+      }
+    ],
+    "authorContributionMap": {
+      "binbinhui": 1
+    }
+  },
+  {
     "path": "src/main/java/DeadlineTasks.java",
     "fileType": "java",
     "lines": [
@@ -171,49 +187,49 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "import java.util.Scanner;"
+        "content": "/**"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * This is a small bot program to allow user to record their tasks and save in a txt file"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "-"
+          "gitId": "binbinhui"
         },
-        "content": "public class Duke {"
+        "content": " *"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public static void main(String[] args) throws DukeException {"
+        "content": " *"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "binbinhui"
+          "gitId": "-"
         },
-        "content": "        Switch switchTasks \u003d new Switch();"
+        "content": "public class Duke {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        switchTasks.option();"
+        "content": "    public static void main(String[] args) throws DukeException {"
       },
       {
         "lineNumber": 11,
@@ -225,12 +241,33 @@
       {
         "lineNumber": 12,
         "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        Switch switchTasks \u003d new Switch();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        switchTasks.option();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
@@ -238,7 +275,7 @@
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 10,
+      "binbinhui": 13,
       "-": 3
     }
   },
@@ -768,28 +805,28 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class Converter {"
+        "content": "/**"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * This is a action class, all command wil be exec down here."
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    Storage storage \u003d new Storage();"
+        "content": "public class Converter {"
       },
       {
         "lineNumber": 11,
@@ -803,84 +840,84 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public Converter(){"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    Storage storage \u003d new Storage();"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public Converter(){"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void saveToDo(String description, String time){"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        storage.setCommandName(new Todo(description,time));"
+        "content": "    }"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public void saveToDo(String description, String time){"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        storage.setCommandName(new Todo(description,time));"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void saveEvent(String description, String time) {"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        storage.setCommandName(new Event(description,time));"
+        "content": ""
       },
       {
         "lineNumber": 24,
@@ -894,7 +931,7 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "    public void saveEvent(String description, String time) {"
       },
       {
         "lineNumber": 26,
@@ -908,7 +945,7 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void saveDeadLine(String description, String time){"
+        "content": "        storage.setCommandName(new Event(description,time));"
       },
       {
         "lineNumber": 28,
@@ -922,140 +959,140 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        storage.setCommandName(new Deadline(description,time));"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public void saveDeadLine(String description, String time){"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void makeDone(String description) throws DukeException {"
+        "content": "        storage.setCommandName(new Deadline(description,time));"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        if(checkDataSize()){"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            System.out.println(\"Not data in the database\");"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        else {"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            printData();"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            String clean \u003d description.replaceAll(\"\\\\D+\", \"\");"
+        "content": "    public void fileLoader(){"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            int num \u003d Integer.parseInt(clean);"
+        "content": "        storage.readFromFile();"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            changeToDone(num);"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public void fileWriter(){"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private void changeToDone(int num){"
+        "content": "        storage.saveToFile();"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        if (num \u003c storage.getCommandName().size()){"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            int num1\u003dnum - 1;"
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            String makeDone \u003d storage.getCommandName().get(num1).toString();"
+        "content": ""
       },
       {
         "lineNumber": 49,
@@ -1069,42 +1106,42 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            storage.getCommandName().set(num1,makeDone.replace(\"x\",\"c\"));"
+        "content": "   // make done method"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "    public void makeDone(String description) throws DukeException {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        else {"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "           System.out.println(\"Invalid Input\");"
+        "content": "            String clean \u003d description.replaceAll(\"\\\\D+\", \"\");"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "            int num \u003d Integer.parseInt(clean);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "            changeToDone(num);"
       },
       {
         "lineNumber": 56,
@@ -1118,168 +1155,168 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void printData() throws DukeException {"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "       printArray();"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "    // change task into done. c means complete x means not done yet."
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    private void changeToDone(int num){"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private void printArray(){"
+        "content": "        if (num \u003c\u003d storage.getCommandName().size()){"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "            int num1\u003dnum - 1;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        if(checkDataSize()){"
+        "content": "            String makeDone \u003d storage.getCommandName().get(num1).toString();"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            System.out.println(\"Not data in the database\");"
+        "content": "            System.out.println(makeDone.replace(\"x\",\"c\") + \"has been set to done\");"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "            storage.getCommandName().set(num1,makeDone.replace(\"x\",\"c\"));"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        else {"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            int number \u003d 1;"
+        "content": "        }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            for (Object task : storage.getCommandName()) {"
+        "content": "        else {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                System.out.println(number + \". \" + task.toString());"
+        "content": "            System.out.println(\"Invalid Input\");"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                number ++;"
+        "content": "        }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            }"
+        "content": "    }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private boolean checkDataSize(){"
+        "content": "    // make delete method"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        if(storage.getCommandName().isEmpty()){"
+        "content": "    public void makeDelete(String description) throws DukeException {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            return true;"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "            String clean \u003d description.replaceAll(\"\\\\D+\", \"\");"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        return false;"
+        "content": "            int num \u003d Integer.parseInt(clean);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "            deleting(num);"
       },
       {
         "lineNumber": 81,
@@ -1293,11 +1330,298 @@
         "author": {
           "gitId": "binbinhui"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    // tasks deleting function"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    private void deleting(int num){"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        if (num \u003c\u003d storage.getCommandName().size()){"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            int num1\u003dnum - 1;"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(storage.getCommandName().get(num1) + \"has been deleted\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            storage.getCommandName().remove(num1);"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(\"there are \" +storage.getCommandName().size()+ \" tasks in the lists\");"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(\"Invalid Input\");"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    // print array list method"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public void printData() {"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "       printArray();"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    private void printArray(){"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            int number \u003d 1;"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            for (Object task : storage.getCommandName()) {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                System.out.println(number + \". \" + task.toString());"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                number ++;"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public boolean checkDataSize(){"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        if(storage.getCommandName().isEmpty()){"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "binbinhui"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 82
+      "binbinhui": 123
     }
   },
   {
@@ -1323,38 +1647,59 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class DukeException extends Exception{"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * This is a error handling class."
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public DukeException(String msg){"
+        "content": " */"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        super(msg);"
+        "content": "public class DukeException extends Exception{"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 8,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public DukeException(String msg){"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        super(msg);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
         "author": {
           "gitId": "binbinhui"
         },
@@ -1362,7 +1707,7 @@
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 8
+      "binbinhui": 11
     }
   },
   {
@@ -1402,49 +1747,49 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "import java.io.File;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "import java.io.FileNotFoundException;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class Storage {"
+        "content": "import java.io.FileWriter;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "import java.io.IOException;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "import java.util.Scanner;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private ArrayList commandName;"
+        "content": ""
       },
       {
         "lineNumber": 12,
@@ -1458,63 +1803,63 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public Storage(){"
+        "content": "/**"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * This is a storage class and file read and write. All data will be handle down here."
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        this.commandName \u003d new ArrayList(100);"
+        "content": " */"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "public class Storage {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    private String filePath\u003d\"/Users/linbinhui/Documents/TIC4001/data/duke.txt\";"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void setCommandName(Tasks obj){"
+        "content": "    private ArrayList commandName;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        commandName.add(obj);"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "    public Storage(){"
       },
       {
         "lineNumber": 22,
@@ -1528,38 +1873,668 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        this.commandName \u003d new ArrayList(100);"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public ArrayList getCommandName(){"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            return commandName;"
+        "content": "    }"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public void setCommandName(Tasks obj){"
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        commandName.add(obj);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public void setCommandName(String obj){"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        commandName.add(obj);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public ArrayList getCommandName(){"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            return commandName;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public ArrayList getCommandName1(){"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        return new ArrayList(commandName);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    // fild checker, check whether the file is create or not"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    private void fileChecker() {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            File myObj \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            if (myObj.createNewFile()) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                System.out.println(\"File created: \" + myObj.getName());"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(\"An error occurred.\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    // save the tasks into the txt file"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public void saveToFile() {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            fileChecker();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            FileWriter myWriter \u003d new FileWriter(filePath, false);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            for (Object task : commandName) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                System.out.println(task.toString());"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                String obj \u003d task.toString().replace(\"][\", \"|\").replace(\"[\", \"\")"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                        .replace(\"]\", \"|\").replace(\"(\", \"|\").replace(\")\", \"\")"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                        .replace(\"x\", \"0\").replace(\"c\", \"1\");"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                myWriter.write(obj);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            myWriter.close();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(\"Successfully wrote to the file.\");"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(\"An error occurred.\");"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    // read the task from the current file on the system"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    public void readFromFile(){"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            File myObj \u003d new File(filePath);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            Scanner myReader \u003d new Scanner(myObj);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            while (myReader.hasNextLine()) {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                String data \u003d myReader.nextLine();"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                divider(data);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            myReader.close();"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(\"An error occurred.\");"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    // convert the data from file into wanted form."
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    private void divider(String data){"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        String[] words\u003ddata.split(\"\\\\|\");"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        String word0\u003dwords[0];"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        String word1\u003dwords[1];"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        if(word1.equals(\"0\")){"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            word1\u003d\"x\";"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        else {"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            word1\u003d\"c\";"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        String word2\u003dwords[2];"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        if(words.length\u003c\u003d2){"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            data \u003d \"[\" + word0 + \"]\" + \"[\" + word1 + \"] \" + word2;"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        else{"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            String word3\u003dwords[3];"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            data \u003d \"[\" + word0 + \"]\" + \"[\" + word1 + \"] \" + word2 + \"(\" + word3 + \")\";"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        setCommandName(data);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
         "author": {
           "gitId": "binbinhui"
         },
@@ -1567,7 +2542,7 @@
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 28
+      "binbinhui": 118
     }
   },
   {
@@ -1593,70 +2568,70 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "import command.Converter;"
+        "content": ""
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class Switch {"
+        "content": " * This is a switch class, all the choices will be make by here."
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private boolean task;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private static String description;"
+        "content": "public class Switch {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private static String time;"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    private boolean task;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    Converter converter \u003d new Converter();"
+        "content": "    private static String description;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    Ui ui \u003d new Ui();"
+        "content": "    private static String time;"
       },
       {
         "lineNumber": 13,
@@ -1670,49 +2645,49 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    Converter converter \u003d new Converter();"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public Switch(){"
+        "content": "    Ui ui \u003d new Ui();"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        this.task\u003dtrue;"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public Switch(){"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        this.task\u003dtrue;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void option() throws DukeException {"
+        "content": "    }"
       },
       {
         "lineNumber": 21,
@@ -1726,154 +2701,154 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        ui.welcome();"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public void option() throws DukeException {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        while (task) {"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        // print out welcome msg"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            ui.tasks();"
+        "content": "        ui.welcome();"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            descriptionCheck();"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        // load the task from the txt file"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            switch(description){"
+        "content": "        converter.fileLoader();"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                case \"1\":"
+        "content": "        if(converter.checkDataSize()){"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    System.out.println(\"Please add a to do task\");"
+        "content": "            System.out.println(\"No data in the database\");"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    converter.saveToDo(descriptionCheck(),timeCheck());"
+        "content": "        }"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    break;"
+        "content": "        else {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "            System.out.println(\"This is current tasks\");"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                case \"2\":"
+        "content": "            converter.printData();"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    System.out.println(\"Please add a event task\");"
+        "content": "        }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    converter.saveEvent(descriptionCheck(),timeCheck());"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    break;"
+        "content": "        // While loop will be exit once the task become false."
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        while (task) {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                case \"3\":"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    System.out.println(\"Please add a deadline task\");"
+        "content": "            // print the choices we have"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    converter.saveDeadLine(descriptionCheck(),timeCheck());"
+        "content": "            ui.tasks();"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    break;"
+        "content": "            descriptionCheck();"
       },
       {
         "lineNumber": 44,
@@ -1887,105 +2862,105 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                case \"4\":"
+        "content": "            // redirect by using switch loop"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    System.out.println(\"list\");"
+        "content": "            switch(description){"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    converter.printData();"
+        "content": "                case \"1\":"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    break;"
+        "content": "                    System.out.println(\"Please add a to do task\");"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "                    converter.saveToDo(descriptionCheck(),timeCheck());"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                case \"5\":"
+        "content": "                    break;"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    System.out.println(\"Please mark done a task\");"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    converter.makeDone(descriptionCheck());"
+        "content": "                case \"2\":"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    break;"
+        "content": "                    System.out.println(\"Please add a event task\");"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "                    converter.saveEvent(descriptionCheck(),timeCheck());"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                case \"6\":"
+        "content": "                    break;"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    task \u003d false;"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    break;"
+        "content": "                case \"3\":"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                default:"
+        "content": "                    System.out.println(\"Please add a deadline task\");"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "                    System.out.println(\"Invalid Input please enter again\");"
+        "content": "                    converter.saveDeadLine(descriptionCheck(),timeCheck());"
       },
       {
         "lineNumber": 60,
@@ -1999,157 +2974,444 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "                case \"4\":"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "                    System.out.println(\"list\");"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        ui.goodBye();"
+        "content": "                    if(converter.checkDataSize()){"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "                        System.out.println(\"No data in the database\");"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "                    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private String descriptionCheck(){"
+        "content": "                    else {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        description \u003d ui.input();"
+        "content": "                        converter.printData();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        if(description.isEmpty()){"
+        "content": "                    }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "           descriptionCheck();"
+        "content": "                    break;"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        return description;"
+        "content": "                case \"5\":"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "                    System.out.println(\"Please mark done a task\");"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "                    if(converter.checkDataSize()){"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    private String timeCheck(){"
+        "content": "                        System.out.println(\"No data in the database\");"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        ui.time();"
+        "content": "                    }"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        time \u003d ui.input();"
+        "content": "                    else {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        if(time.isEmpty()){"
+        "content": "                        converter.printData();"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "            System.out.println(\"No Time has been set\");"
+        "content": "                        converter.makeDone(descriptionCheck());"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        }"
+        "content": "                    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        return time;"
+        "content": "                    break;"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 83,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                case \"6\":"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    System.out.println(\"Please delete a task\");"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    if(converter.checkDataSize()){"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                        System.out.println(\"No data in the database\");"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    else {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                        converter.printData();"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                        converter.makeDelete(descriptionCheck());"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                case \"7\":"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    task \u003d false;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                default:"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    System.out.println(\"Invalid Input please enter again\");"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "                    break;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        // save the tasks into txt file."
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        converter.fileWriter();"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        ui.goodBye();"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    private String descriptionCheck(){"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        description \u003d ui.input();"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        if(description.isEmpty()){"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "           descriptionCheck();"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        return description;"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    private String timeCheck(){"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        ui.time();"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        time \u003d ui.input();"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        if(time.isEmpty()){"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "            System.out.println(\"No Time has been set\");"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "        return time;"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
         "author": {
           "gitId": "binbinhui"
         },
@@ -2157,7 +3419,7 @@
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 83
+      "binbinhui": 124
     }
   },
   {
@@ -2239,7 +3501,7 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    // welcome come msg for the UI"
       },
       {
         "lineNumber": 12,
@@ -2323,140 +3585,140 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void divider(){"
+        "content": "    // divider for each line"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"-----------------------------------------------------------------\");"
+        "content": "    public void divider(){"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"-----------------------------------------------------------------\");"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void tasks() {"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        divider();"
+        "content": "    // options to choose the feature"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"Press 1: Add a to do task\");"
+        "content": "    public void tasks() {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"Press 2: Add an event \");"
+        "content": "        divider();"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"Press 3: Add a deadline task\");"
+        "content": "        System.out.println(\"Press 1: Add a to do task\");"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"Press 4: List all task\");"
+        "content": "        System.out.println(\"Press 2: Add an event \");"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"Press 5: Mark a task to be done\");"
+        "content": "        System.out.println(\"Press 3: Add a deadline task\");"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"Press 6: Exit\");"
+        "content": "        System.out.println(\"Press 4: List all task\");"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        divider();"
+        "content": "        System.out.println(\"Press 5: Mark a task to be done\");"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        System.out.println(\"Press 6: Delete a task\");"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Press 7: Exit\");"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        divider();"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void addTask(String obj){"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"added \" + obj);"
+        "content": "    }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    // add time msg"
       },
       {
         "lineNumber": 43,
@@ -2477,14 +3739,14 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 47,
@@ -2498,87 +3760,94 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public String input(){"
+        "content": "    // user input"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public String input(){"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        Scanner myObj \u003d new Scanner(System.in);"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        Scanner myObj \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        return myObj.nextLine();"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "        return myObj.nextLine();"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public void goodBye(){"
+        "content": "    // good bye msg"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        divider();"
+        "content": "    public void goodBye(){"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
+        "content": "        divider();"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "        System.out.println(\"Bye. Hope to see you again soon!\");"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 60,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
         "author": {
           "gitId": "binbinhui"
         },
@@ -2586,7 +3855,7 @@
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 60
+      "binbinhui": 61
     }
   },
   {
@@ -2612,28 +3881,28 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "import tasks.Tasks;"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * This is extend class inherited from Tasks."
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class Deadline extends Tasks {"
+        "content": " * adding deadline task"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 7,
@@ -2647,49 +3916,49 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public Deadline(String description, String time){"
+        "content": "public class Deadline extends Tasks {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        super(description, time);"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        super.type\u003d \"[D]\";"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "    public Deadline(String description, String time){"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        super(description, time);"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        super.type\u003d \"[D]\";"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public String toString(){"
+        "content": "    }"
       },
       {
         "lineNumber": 15,
@@ -2703,14 +3972,14 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        return type + status +\" \"+description +\" (\" + time +\")\";"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "    public String toString(){"
       },
       {
         "lineNumber": 18,
@@ -2724,11 +3993,32 @@
         "author": {
           "gitId": "binbinhui"
         },
+        "content": "        return type + status +\" \"+description +\" (\" + time +\")\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "binbinhui"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 19
+      "binbinhui": 22
     }
   },
   {
@@ -2754,108 +4044,129 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "import tasks.Tasks;"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * This is extend class inherited from Tasks."
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class Event extends Tasks {"
+        "content": " * adding event task"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public Event(String description, String time){"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        super(description, time);"
+        "content": "public class Event extends Tasks {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        super.type\u003d\"[E]\";"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "    public Event(String description, String time){"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        super(description, time);"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public String toString(){"
+        "content": "        super.type\u003d\"[E]\";"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        return type + status +\" \"+description + \"(\" + time +\")\";"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": "    public String toString(){"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        return type + status +\" \"+description + \"(\" + time +\")\";"
       },
       {
         "lineNumber": 18,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
         "author": {
           "gitId": "binbinhui"
         },
@@ -2863,7 +4174,7 @@
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 18
+      "binbinhui": 21
     }
   },
   {
@@ -2889,161 +4200,161 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class Tasks {"
+        "content": "/**"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * This is a class to manage all the tasks"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    protected String status;"
+        "content": " *"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    protected String description;"
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    protected String time;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    protected boolean isDone;"
+        "content": "public class Tasks {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    protected String type;"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    protected String status;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    protected String description;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public Tasks(String description, String time){"
+        "content": "    protected String time;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    protected boolean isDone;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        this.description\u003ddescription;"
+        "content": "    protected String type;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        this.status\u003d\"[x]\";"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        this.time\u003dtime;"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        this.isDone\u003dfalse;"
+        "content": "    public Tasks(String description, String time){"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        this.description\u003ddescription;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        this.status\u003d\"[x]\";"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    public String toString(){"
+        "content": "        this.time\u003dtime;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "        this.isDone\u003dfalse;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "        return status +\" \"+description;"
+        "content": "    }"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "    public String toString(){"
       },
       {
         "lineNumber": 26,
@@ -3057,11 +4368,39 @@
         "author": {
           "gitId": "binbinhui"
         },
+        "content": "        return status +\" \"+description;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "binbinhui"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 27
+      "binbinhui": 31
     }
   },
   {
@@ -3087,84 +4426,84 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "import tasks.Tasks;"
+        "content": ""
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "public class Todo extends Tasks {"
+        "content": " * This is extend class inherited from Tasks."
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": " * adding todo task"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "  public Todo(String description, String time){"
+        "content": " */"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "public class Todo extends Tasks {"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "      super(description, time);"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "  public Todo(String description, String time){"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "      super.type\u003d \"[T]\";"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "      super(description, time);"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "  }"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": ""
+        "content": "      super.type\u003d \"[T]\";"
       },
       {
         "lineNumber": 15,
@@ -3178,7 +4517,7 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "  public String toString(){"
+        "content": "  }"
       },
       {
         "lineNumber": 17,
@@ -3192,35 +4531,35 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "         if (time.isEmpty()){"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "             return type + status +\" \"+description;"
+        "content": "  public String toString(){"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "         }"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "         else {"
+        "content": "         if (time.isEmpty()){"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "             return type + status + \" \" + description + \" (\" + time +\")\";"
+        "content": "             return type + status +\" \"+description;"
       },
       {
         "lineNumber": 23,
@@ -3234,10 +4573,31 @@
         "author": {
           "gitId": "binbinhui"
         },
-        "content": "  }"
+        "content": "         else {"
       },
       {
         "lineNumber": 25,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "             return type + status + \" \" + description + \" (\" + time +\")\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "         }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "binbinhui"
+        },
+        "content": "  }"
+      },
+      {
+        "lineNumber": 28,
         "author": {
           "gitId": "binbinhui"
         },
@@ -3245,7 +4605,7 @@
       }
     ],
     "authorContributionMap": {
-      "binbinhui": 25
+      "binbinhui": 28
     }
   },
   {

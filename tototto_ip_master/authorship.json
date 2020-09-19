@@ -1,5 +1,596 @@
 [
   {
+    "path": "docs/README.md",
+    "fileType": "md",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "# User Guide"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "## Quick Start"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "1. Ensure you have Java 11 or above installed in your Computer."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "1. Download the latest Duke.jar from the release page."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "1. Copy the file to the folder you want to use as the home folder for Duke."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "1. Double-click the file to start the app."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "## Features "
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Allows user to add task to Duke and manage a list of pending items."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "### Features"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* Adding task to Duke"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "  * Adding a simple task "
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "  * Adding a task with a deadline (date \u0026 time)"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "  * Adding an event with a deadline (date \u0026 time range)"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* Allowing user to mark a task as completed "
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* Viewing a list of task"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "### `Keyword` - Describe action"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Keyword | "
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "------------ | "
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "```todo```  | "
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "```deadline```  | "
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "```event```  | "
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "```list```  | "
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "```done```  | "
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "```bye```  | "
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "## Usage"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### ```todo```"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Adds a task to Duke with task description given in ```\u003ctask desc\u003e```."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Usage: ```todo \u003ctask desc\u003e``` "
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Examples:"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* ```todo Buy an iPhone 12 at launch date```"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### ```deadline```"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Adds a task with deadline to Duke with task description given in ```\u003ctask desc\u003e```."
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "State completion deadline of the date \u0026 the time in ```\u003cdate\u003e \u003ctime\u003e```."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Usage: ```deadline \u003ctask desc\u003e /by \u003cdate\u003e \u003ctime\u003e``` "
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Examples:"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* ```todo Buy an iPhone 12 at launch date /by 30/10/2020 12pm```"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### ```event```"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Adds an event to Duke with task description given in ```\u003ctask desc\u003e```."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "State event period listing the date \u0026 the time period in ```\u003cdate\u003e \u003ctime\u003e```."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Usage: ```event \u003cevent desc\u003e /at \u003cdate\u003e \u003ctime period\u003e``` "
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Examples:"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* ```event Attend Apple\u0027s WWDC /at 12/06/2020 4am```"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### ```list```"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "List down all task that are logged in Duke."
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Usage: ```list``` "
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Examples:"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* ```list```"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### ```done```"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Mark tasks in Duke as completed."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Usage: ```done \u003ctask id\u003e``` "
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Examples:"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* ```done 4```"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### ```bye```"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Exit Duke program."
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Usage: ```bye``` "
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "##### Examples:"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "* ```bye```"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "## Saving the data"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "tototto"
+        },
+        "content": "Data is saved in the hard disk automatically after any command that changes the data. There is no need to save manually."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "tototto": 71,
+      "-": 12
+    }
+  },
+  {
     "path": "src/main/java/duke/Duke.java",
     "fileType": "java",
     "lines": [
