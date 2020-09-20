@@ -22,7 +22,7 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "import duke.ui.UI;"
+        "content": "import duke.ui.Ui;"
       },
       {
         "lineNumber": 4,
@@ -43,14 +43,318 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "import duke.database.Database;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Impala36"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
         "content": "import java.util.Scanner;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * A Personal Assistant Chatbot that helps a person to keep track of various things."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * @author Wang Zhenquan"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * @version Level 7"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * @since 20/08/2020"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "class Duke {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private final Ui ui \u003d new Ui();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private final Parser parser \u003d new Parser();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private final Scanner in \u003d new Scanner(System.in);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private final TaskList tasks \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private final Database database \u003d new Database(\"duke.txt\", tasks, ui);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private boolean isRepeating \u003d true;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        new Duke().run();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private void run() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        ui.printDukeLogo();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        ui.printGreeting();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        database.readDatabase(tasks, ui, database);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        repeatedUserInput();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private void repeatedUserInput() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        while (isRepeating) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            isRepeating \u003d parser.parseInput(in.nextLine(), ui, tasks, database);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 40,
+      "-": 2
+    }
+  },
+  {
+    "path": "src/main/java/duke/database/Database.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "package duke.database;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import duke.task.TaskList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import duke.task.Todo;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import duke.task.Deadline;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import duke.task.Event;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "import duke.ui.Ui;"
       },
       {
         "lineNumber": 8,
@@ -64,229 +368,522 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "/**"
+        "content": "import java.io.File;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " * A Personal Assistant Chatbot that helps a person to keep track of various things."
+        "content": "import java.io.FileNotFoundException;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " *"
+        "content": "import java.io.FileWriter;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " * @author Wang Zhenquan"
+        "content": "import java.io.IOException;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " * @version Level 5"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " * @since 20/08/2020"
+        "content": "import java.util.Scanner;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " */"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "class Duke {"
+        "content": " * Responsible for all interactions between the in-memory tasks and the tasks file."
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private UI ui \u003d new UI();"
+        "content": " */"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private Parser parser \u003d new Parser();"
+        "content": "public class Database {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private Scanner in \u003d new Scanner(System.in);"
+        "content": "    String fileName;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private boolean repeat \u003d true;"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    public Database(String fileName, TaskList tasks, Ui ui) {"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private void run() {"
+        "content": "        this.fileName \u003d fileName;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        TaskList tasks \u003d new TaskList();"
+        "content": "    }"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        ui.greet();"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        while (repeat) {"
+        "content": "    public void updateDatabase(TaskList tasks) throws IOException {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            repeat \u003d parser.parseInput(in.nextLine(), ui, tasks);"
+        "content": "        FileWriter fw \u003d new FileWriter(\"./\" + fileName, false);"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        }"
+        "content": "        for (int i \u003d 0; i \u003c tasks.size(); i++) {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "            String line \u003d (i + 1) + \". \" + tasks.get(i).getDescription() + \"\\n\";"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "            fw.write(line);"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "        }"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "        String logo \u003d \" ____        _        \\n\""
+        "content": "        fw.close();"
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "                + \"|  _ \\\\ _   _| | _____ \\n\""
+        "content": "    }"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "                + \"| | | | | | | |/ / _ \\\\\\n\""
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "                + \"| |_| | |_| |   \u003c  __/\\n\""
+        "content": "    public void readDatabase(TaskList tasks, Ui ui, Database database) {"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "                + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+        "content": "        try {"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "        System.out.println(\"Hello from\\n\" + logo);"
+        "content": "            ArrayList\u003cString\u003e lines \u003d getLines(fileName);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        new Duke().run();"
+        "content": "            tasks \u003d extractTasks(lines, tasks, ui, database);"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "            ui.printExistingTasks(tasks);"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (FileNotFoundException e) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printNoFileFound();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printRedBorderlines(ui.colorRed(\"IOException encountered: \" + e.getMessage()));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private ArrayList\u003cString\u003e getLines(String fileName) throws FileNotFoundException {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        Scanner s \u003d new Scanner(new File(fileName));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        ArrayList\u003cString\u003e list \u003d new ArrayList\u003cString\u003e();"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        while (s.hasNextLine()) {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            list.add(s.nextLine());"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        s.close();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return list;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public TaskList extractTasks(ArrayList\u003cString\u003e lines, TaskList tasks, Ui ui, Database database) throws IOException {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        for (String line : lines) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            FileWriter fw \u003d new FileWriter(fileName, true);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            String taskStatus \u003d line.split(\"]\")[0].substring(line.indexOf(\"[\") + 1);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            String taskType \u003d line.split(\"]\")[1].substring(line.indexOf(\"[\") - 1);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            String taskDescription \u003d line.split(\"]\")[2].trim();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            switch (taskType) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                case \"Todo\" -\u003e {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                    tasks.add(new Todo(\"[Todo]     \" + taskDescription));"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                case \"Deadline\" -\u003e {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                    tasks.add(new Deadline(\"[Deadline] \" + taskDescription));"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                case \"Event\" -\u003e {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                    tasks.add(new Event(\"[Event]    \" + taskDescription));"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            if (taskStatus.equals(\"\\u2713\")) {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                tasks.get(tasks.size() - 1).setDone();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return tasks;"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Impala36"
         },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "Impala36": 31,
-      "-": 9
+      "Impala36": 82
     }
   },
   {
@@ -426,161 +1023,161 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "import duke.ui.UI;"
+        "content": "import duke.task.TaskList;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "import duke.ui.Ui;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "public class Parser {"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    /**"
+        "content": "public class Parser {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "     * @param line The entire user input."
+        "content": "    /**"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "     */"
+        "content": "     * @param line The entire user input."
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    String getCommandWord(String line) {"
+        "content": "     */"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        return line.trim().split(\" \")[0];"
+        "content": "    String getCommandWord(String line) {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "        return line.trim().split(\" \")[0];"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "     * @param line  The entire user input."
+        "content": "    public boolean parseInput(String line, UI ui, TaskList tasks) {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "     * @param ui    The UI created in the Duke class."
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "     * @param tasks The TaskList created in the Duke class."
+        "content": "        String command \u003d getCommandWord(line);"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "     */"
+        "content": "        String taskDescription \u003d line.substring(line.indexOf(\" \") + 1).trim();"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public boolean parseInput(String line, UI ui, TaskList tasks) {"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        switch (command) {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        String command \u003d getCommandWord(line);"
+        "content": "            case \"list\" -\u003e {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        switch (command) {"
+        "content": "                ui.printAllTasks(tasks);"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            case \"list\" -\u003e {"
+        "content": "                return true;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+        "content": "            }"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    System.out.println((i + 1) + \". \" + tasks.get(i).getDescription());"
+        "content": "            case \"done\" -\u003e {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                }"
+        "content": "                tasks.setAsCompleted(taskDescription, tasks, ui, database);"
       },
       {
         "lineNumber": 27,
@@ -601,14 +1198,14 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            case \"done\" -\u003e {"
+        "content": "            case \"delete\" -\u003e {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                tasks.changeDone(line, ui, tasks);"
+        "content": "                tasks.deleteTask(taskDescription, tasks, ui, database);"
       },
       {
         "lineNumber": 31,
@@ -636,7 +1233,7 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                tasks.createTodo(line, ui, tasks);"
+        "content": "                tasks.createTodo(taskDescription, tasks, ui, database);"
       },
       {
         "lineNumber": 35,
@@ -664,7 +1261,7 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                tasks.createDeadline(line, ui, tasks);"
+        "content": "                tasks.createDeadline(taskDescription, tasks, ui, database);"
       },
       {
         "lineNumber": 39,
@@ -692,7 +1289,7 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                tasks.createEvent(line, ui, tasks);"
+        "content": "                tasks.createEvent(taskDescription, tasks, ui, database);"
       },
       {
         "lineNumber": 43,
@@ -713,87 +1310,80 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            // also exit when user input is empty"
+        "content": "            case \"bye\", \"\" -\u003e {     // also exits when user input is empty"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            case \"bye\", \"\" -\u003e {"
+        "content": "                ui.printFarewell();"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                ui.farewell();"
+        "content": "                return false;"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                return false;"
+        "content": "            }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            }"
+        "content": "            default -\u003e {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            default -\u003e {"
+        "content": "                ui.printInvalidCommand();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                ui.invalidCommand();"
+        "content": "                return true;"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                return true;"
+        "content": "            }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "Impala36"
-        },
         "content": ""
       },
       {
-        "lineNumber": 57,
+        "lineNumber": 56,
         "author": {
           "gitId": "Impala36"
         },
@@ -801,7 +1391,7 @@
       }
     ],
     "authorContributionMap": {
-      "Impala36": 57
+      "Impala36": 56
     }
   },
   {
@@ -820,35 +1410,35 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "class Deadline extends Todo {"
+        "content": " * Inherits the Todo class to represent Deadline tasks."
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private String[] split;"
+        "content": " */"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "public class Deadline extends Todo {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    Deadline(String input) {"
+        "content": "    public Deadline(String input) {"
       },
       {
         "lineNumber": 7,
@@ -862,7 +1452,7 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        split \u003d input.split(\"/by\");"
+        "content": "        String[] split \u003d input.split(\"/by\");"
       },
       {
         "lineNumber": 9,
@@ -899,59 +1489,66 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "class Event extends Todo {"
+        "content": " * Inherits the Todo class to represent Event tasks."
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private String[] split;"
+        "content": " */"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "public class Event extends Todo {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    Event(String input) {"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        super(input);"
+        "content": "    public Event(String input) {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        split \u003d input.split(\"/at\");"
+        "content": "        super(input);"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "        String[] split \u003d input.split(\"/at\");"
       },
       {
         "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
         "author": {
           "gitId": "Impala36"
         },
@@ -959,7 +1556,7 @@
       }
     ],
     "authorContributionMap": {
-      "Impala36": 10
+      "Impala36": 11
     }
   },
   {
@@ -978,199 +1575,157 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "/**"
+        "content": " * An abstract class that is inherited by the Todo, Deadline and Event classes."
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " * An abstract class that is inherited by the Todo, Deadline and Event classes."
+        "content": " */"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " */"
+        "content": "public abstract class Task {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    String task;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "public abstract class Task {"
+        "content": "    private boolean isDone;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    String task;"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private boolean isDone;"
+        "content": "    Task(String input) {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        task \u003d input;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    Task(String input) {"
+        "content": "    }"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        task \u003d input;"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    public void setDone() {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        this.isDone \u003d true;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    void setDone(boolean isDone) {"
+        "content": "    }"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        this.isDone \u003d isDone;"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    String getTaskStatus(Boolean isDone) {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        return \"[\" + (isDone ? \"\\u2713\" : \"\\u2718\") + \"] \"; //return tick or X symbols"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    boolean getDone() {"
+        "content": "    }"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        return isDone;"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    public String getDescription() {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        return getTaskStatus(isDone) + task;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    String getTaskStatus(Boolean isDone) {"
+        "content": "    }"
       },
       {
         "lineNumber": 24,
-        "author": {
-          "gitId": "Impala36"
-        },
-        "content": "        return \"[\" + (isDone ? \"\\u2713\" : \"\\u2718\") + \"] \"; //return tick or X symbols"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "Impala36"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "Impala36"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "Impala36"
-        },
-        "content": "    public String getDescription() {"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "Impala36"
-        },
-        "content": "        return getTaskStatus(isDone) + task;"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "Impala36"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 30,
         "author": {
           "gitId": "Impala36"
         },
@@ -1178,7 +1733,7 @@
       }
     ],
     "authorContributionMap": {
-      "Impala36": 30
+      "Impala36": 24
     }
   },
   {
@@ -1211,644 +1766,644 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "import duke.ui.UI;"
+        "content": "import duke.ui.Ui;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "import duke.database.Database;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "import java.util.ArrayList;"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "import java.io.IOException;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "/**"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " * Responsible for managing all the tasks in the list. This class will use an ArrayList inside it."
+        "content": "/**"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Impala36"
         },
-        "content": " */"
+        "content": " * Responsible for managing all the tasks in the list and displaying error messages to the user."
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "public class TaskList {"
+        "content": " * This class will use an ArrayList inside it."
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private ArrayList\u003cTask\u003e tasks;"
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "public class TaskList {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    TaskList(ArrayList\u003cTask\u003e tasks) {"
+        "content": "    private final ArrayList\u003cTask\u003e tasks;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        this.tasks \u003d tasks;"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    TaskList(ArrayList\u003cTask\u003e tasks) {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        this.tasks \u003d tasks;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public TaskList() {"
+        "content": "    }"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        tasks \u003d new ArrayList\u003c\u003e();"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    public TaskList() {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        tasks \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public int size() {"
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        return tasks.size();"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    public int size() {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        return tasks.size();"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    void add(Task task) {"
+        "content": "    }"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        tasks.add(task);"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    public void add(Task task) {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        tasks.add(task);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public Task get(int index) {"
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        return tasks.get(index);"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    void remove(int index) {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        tasks.remove(index - 1);"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void changeDone(String line, UI ui, TaskList tasks) {"
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        line \u003d line.substring(\"done\".length()).trim();"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        try {"
+        "content": "    public Task get(int index) {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            if (!line.isEmpty()) {"
+        "content": "        return tasks.get(index);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                markAsDone(line, ui, tasks);"
+        "content": "    }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            } else {"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                throw new DukeException(ui.colorRed(\"Please type in the\" +"
+        "content": "    public boolean isEmpty(String line) {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                        \" \u0027done \u003ctask index number\u003e\u0027 format.\"));"
+        "content": "        return line.isEmpty();"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            }"
+        "content": "    }"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (DukeException e) {"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(e.getMessage());"
+        "content": "    public String reformatLine(String type, String keyword, String line) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        }"
+        "content": "        line \u003d line.replaceFirst(\"/\" + keyword, \"(\" + keyword + \":\").concat(\")\");"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "        return type + line;"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    private void markAsDone(String line, UI ui, TaskList tasks) {"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        try {"
+        "content": "    public void setAsCompleted(String line, TaskList tasks, Ui ui, Database database) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            if (tasks.size() !\u003d 0) {"
+        "content": "        try {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                int index \u003d Integer.parseInt(line);"
+        "content": "            if (tasks.size() \u003d\u003d 0) {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                tasks.get(index - 1).setDone(true);"
+        "content": "                ui.printRedBorderlines(\"It appears that you have no tasks yet, so you can\u0027t complete any!\\n\" +"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                ui.markedAsDone(index, tasks);"
+        "content": "                        \"Perhaps you should start creating one?\");"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            } else ui.printError(\"There are no tasks to mark as done.\");"
+        "content": "                return;"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (NumberFormatException e) {"
+        "content": "            }"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(\"Please type a number for the index.\");"
+        "content": "            if (isEmpty(line)) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (IndexOutOfBoundsException e) {"
+        "content": "                throw new DukeException(\"You almost typed a proper done command, but you missed out the number!\\n\" +"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(\"Please type an index number from 1 to \""
+        "content": "                        \"Please type in the \u0027done \u003ctask index number\u003e\u0027 format.\");"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    + tasks.size() + \".\");"
+        "content": "            }"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        }"
+        "content": "            int index \u003d Integer.parseInt(line);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "            tasks.get(index - 1).setDone();"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "            ui.printTaskCompleted(index, tasks);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void createTodo(String line, UI ui, TaskList tasks) {"
+        "content": "            database.updateDatabase(tasks);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        try {"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            if (line.substring(\"todo\".length()).trim().isEmpty()) {"
+        "content": "        } catch (DukeException | IOException e) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                throw new DukeException"
+        "content": "            ui.printRedBorderlines(e.getMessage());"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                        (ui.colorRed(\"Please type in the \u0027todo \u003csomething\u003e\u0027 format.\"));"
+        "content": "        } catch (NumberFormatException e) {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            } else if (line.contains(\"todo\")) {"
+        "content": "            ui.printRedBorderlines(\"I\u0027m sorry, but the list goes numerically.\\nPerhaps you could type a number for the index?\");"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                line \u003d line.replaceFirst(\"todo\", \"[Todo]    \");"
+        "content": "        } catch (IndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                tasks.add(new Todo(line));"
+        "content": "            ui.printRedBorderlines(\"It appears that you only have \" + tasks.size() + \" task(s) in your list,\\n\" +"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                ui.taskAdded(line, tasks);"
+        "content": "                    \"perhaps you might want to try typing an index number from 1 to \" + tasks.size() + \" instead?\");"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (DukeException e) {"
+        "content": "    }"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(e.getMessage());"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        }"
+        "content": "    public void createTodo(String line, TaskList tasks, Ui ui, Database database) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "        try {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "            if (isEmpty(line)) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void createDeadline(String line, UI ui, TaskList tasks) {"
+        "content": "                throw new DukeException(\"It seems that you missed out the task description!\\n\" +"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        try {"
+        "content": "                        \"Please type in the \u0027todo \u003csomething\u003e\u0027 format.\");"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            if (line.substring(\"deadline\".length()).trim().isEmpty() || !line.contains(\"/by\")) {"
+        "content": "            }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                throw new DukeException"
+        "content": "            line \u003d \"[Todo]     \" + line;"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                        (ui.colorRed(\"Please type in the \u0027deadline \u003csomething\u003e /by \u003cwhen\u003e\u0027 format.\"));"
+        "content": "            tasks.add(new Todo(line));"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            } else if (line.contains(\"deadline\")) {"
+        "content": "            ui.printTaskAdded(tasks);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                String[] split \u003d line.split(\"/by\");"
+        "content": "            database.updateDatabase(tasks);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                if (split[0].isEmpty() || split[1].isEmpty()) {"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    throw new DukeException"
+        "content": "        } catch (DukeException | IOException e) {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                            (ui.colorRed(\"Please type in the \u0027deadline \" +"
+        "content": "            ui.printRedBorderlines(e.getMessage());"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                                    \"\u003csomething\u003e /by \u003cwhen\u003e\u0027 format.\"));"
+        "content": "        }"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                } else if (line.contains(\"deadline\")) {"
+        "content": "    }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    line \u003d line.replaceFirst(\"deadline\", \"[Deadline]\")"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                            .replaceFirst(\"/by\", \"(by:\")"
+        "content": "    public void createDeadline(String line, TaskList tasks, Ui ui, Database database) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                            .concat(\")\");"
+        "content": "        try {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    tasks.add(new Deadline(line));"
+        "content": "            if (isEmpty(line) || !line.contains(\"/by\")) {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    ui.taskAdded(line, tasks);"
+        "content": "                throw new DukeException(\"It seems that you\u0027ve missed out the task description or the /by \u003cwhen\u003e segment!\\n\" +"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                }"
+        "content": "                        \"Please type in the \u0027deadline \u003csomething\u003e /by \u003cwhen\u003e\u0027 format.\");"
       },
       {
         "lineNumber": 96,
@@ -1862,182 +2417,182 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (DukeException e) {"
+        "content": "            String[] split \u003d line.split(\"/by\");"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(e.getMessage());"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (IndexOutOfBoundsException e) {"
+        "content": "            if (isEmpty(split[0]) || isEmpty(split[1])) {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(\"Please type in something for \u003cwhen\u003e\" +"
+        "content": "                throw new DukeException(\"It seems that you\u0027ve missed out the task description or the /by \u003cwhen\u003e segment!\\n\" +"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    \" after \u0027deadline \u003csomething\u003e /by\u0027.\");"
+        "content": "                        \"Please type in the \u0027deadline \u003csomething\u003e /by \u003cwhen\u003e\u0027 format.\");"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "            line \u003d reformatLine(\"[Deadline] \", \"by\", line);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void createEvent(String line, UI ui, TaskList tasks) {"
+        "content": "            tasks.add(new Deadline(line));"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        try {"
+        "content": "            ui.printTaskAdded(tasks);"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            if (line.substring(\"event\".length()).trim().isEmpty() || !line.contains(\"/at\")) {"
+        "content": "            database.updateDatabase(tasks);"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                throw new DukeException"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                        (ui.colorRed(\"Please type in the \u0027event \u003csomething\u003e /at \u003cwhen\u003e\u0027 format.\"));"
+        "content": "        } catch (DukeException | IOException e) {"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            } else if (line.contains(\"event\")) {"
+        "content": "            ui.printRedBorderlines(e.getMessage());"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                String[] split \u003d line.split(\"/at\");"
+        "content": "        } catch (IndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                if (split[0].isEmpty() || split[1].isEmpty()) {"
+        "content": "            ui.printRedBorderlines(\"It seems that you\u0027ve missed out the deadline time!\\n\" +"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    throw new DukeException"
+        "content": "                    \"Please type in something for \u003cwhen\u003e after \u0027deadline \u003csomething\u003e /by\u0027.\");"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                            (ui.colorRed(\"Please type in the \u0027event \" +"
+        "content": "        }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                                    \"\u003csomething\u003e /at \u003cwhen\u003e\u0027 format.\"));"
+        "content": "    }"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                } else if (line.contains(\"event\")) {"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    line \u003d line.replaceFirst(\"event\", \"[Event]   \")"
+        "content": "    public void createEvent(String line, TaskList tasks, Ui ui, Database database) {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                            .replaceFirst(\"/at\", \"(at:\")"
+        "content": "        try {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                            .concat(\")\");"
+        "content": "            if (isEmpty(line) || !line.contains(\"/at\")) {"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    tasks.add(new Event(line));"
+        "content": "                throw new DukeException(\"It seems that you\u0027ve missed out the task description \" +"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    ui.taskAdded(line, tasks);"
+        "content": "                        \"or the /at \u003cwhen to when\u003e segment!\\n\" +"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                }"
+        "content": "                        \"Please type in the \u0027event \u003csomething\u003e /at \u003cwhen to when\u003e\u0027 format.\");"
       },
       {
         "lineNumber": 123,
@@ -2051,52 +2606,325 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (DukeException e) {"
+        "content": "            String[] split \u003d line.split(\"/at\");"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(e.getMessage());"
+        "content": ""
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        } catch (IndexOutOfBoundsException e) {"
+        "content": "            if (isEmpty(split[0]) || isEmpty(split[1])) {"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "            ui.printError(\"Please type in something for \u003cwhen\u003e\" +"
+        "content": "                throw new DukeException(\"It seems that you\u0027ve missed out the task description \" +"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                    \" after \u0027deadline \u003csomething\u003e /by\u0027.\");"
+        "content": "                        \"or the /at \u003cwhen to when\u003e segment!\\n\" +"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        }"
+        "content": "                        \"Please type in the \u0027event \u003csomething\u003e /at \u003cwhen to when\u003e\u0027 format.\");"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "            }"
       },
       {
         "lineNumber": 131,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            line \u003d reformatLine(\"[Event]    \", \"at\", line);"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            tasks.add(new Deadline(line));"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printTaskAdded(tasks);"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            database.updateDatabase(tasks);"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (DukeException | IOException e) {"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printRedBorderlines(e.getMessage());"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printRedBorderlines(\"It seems that you\u0027ve missed out the event time!\\n\" +"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                    \"Please type in something for \u003cwhen\u003e after \u0027deadline \u003csomething\u003e /by\u0027.\");"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void deleteTask(String line, TaskList tasks, Ui ui, Database database) {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            if (tasks.size() \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                ui.printRedBorderlines(\"It appears that you have no tasks yet, so you can\u0027t delete any!\\n\" +"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                        \"Perhaps you should start creating one?\");"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                return;"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            if (isEmpty(line)) {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                throw new DukeException(\"You almost typed a proper delete command, but you missed out the number!\\n\" +"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                        \"Please type in the \u0027delete \u003ctask index number\u003e\u0027 format.\");"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            int index \u003d Integer.parseInt(line);"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printTaskRemoved(tasks, index);"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            tasks.remove(index);"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            database.updateDatabase(tasks);"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (DukeException | IOException e) {"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printRedBorderlines(e.getMessage());"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (NumberFormatException e) {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printRedBorderlines(\"I\u0027m sorry, but the list goes numerically.\\nPerhaps you could type a number for the index?\");"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        } catch (IndexOutOfBoundsException e) {"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            ui.printRedBorderlines(\"It appears that you only have \" + tasks.size() + \" task(s) in your list,\\n\" +"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                    \"perhaps you might want to try typing an index number from 1 to \" + tasks.size() + \" instead?\");"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 170,
         "author": {
           "gitId": "Impala36"
         },
@@ -2104,7 +2932,7 @@
       }
     ],
     "authorContributionMap": {
-      "Impala36": 131
+      "Impala36": 170
     }
   },
   {
@@ -2123,52 +2951,66 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "class Todo extends Task {"
+        "content": " * Inherits the Task class to represent Todo tasks."
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    Todo(String input) {"
+        "content": "public class Todo extends Task {"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        super(input);"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "    public Todo(String input) {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "        super(input);"
       },
       {
         "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
         "author": {
           "gitId": "Impala36"
         },
@@ -2176,11 +3018,181 @@
       }
     ],
     "authorContributionMap": {
-      "Impala36": 9
+      "Impala36": 11
     }
   },
   {
-    "path": "src/main/java/duke/ui/UI.java",
+    "path": "src/main/java/duke/ui/Style.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "package duke.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " * Defines the style of graphical content for the whole program."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "public enum Style {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    BORDERLINE(\"\\n⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢⬡⬡⬢⬢\\n\"),"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    LOGO(\" ____        _        \\n\""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            + \"|  _ \\\\ _   _| | _____ \\n\""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            + \"| | | | | | | |/ / _ \\\\\\n\""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            + \"| |_| | |_| |   \u003c  __/\\n\""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\");"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    private final String string;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    Style(String string) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        this.string \u003d string;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public String getString() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        return string;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Impala36": 23
+    }
+  },
+  {
+    "path": "src/main/java/duke/ui/Ui.java",
     "fileType": "java",
     "lines": [
       {
@@ -2209,63 +3221,63 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "public class UI {"
+        "content": " * Responsible for displaying all messages and its format to the user except for error-related messages."
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void greet() {"
+        "content": "public class Ui {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        String greeting \u003d \"____________________________________________________________\\n\""
+        "content": "    /**"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"Hello! I\u0027m Duke\\n\""
+        "content": "     * @return Returns the input string in red color."
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"What can I do for you?\\n\""
+        "content": "     */"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"____________________________________________________________\\n\";"
+        "content": "    public String colorRed(String input) {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        System.out.println(greeting);"
+        "content": "        return \"\\033[31m\" + input + \"\\033[0m\";"
       },
       {
         "lineNumber": 13,
@@ -2279,35 +3291,35 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void farewell() {"
+        "content": "     * @return Returns the input string in green color."
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        String farewell \u003d \"Bye. Hope to see you again soon!\\n\""
+        "content": "     */"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"____________________________________________________________\\n\";"
+        "content": "    public String colorGreen(String input) {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        System.out.println(farewell);"
+        "content": "        return \"\\033[33m\" + input + \"\\033[0m\";"
       },
       {
         "lineNumber": 19,
@@ -2321,49 +3333,49 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void markedAsDone(int index, TaskList tasks) {"
+        "content": "     * Prints the input string with borderlines."
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        String done \u003d \"____________________________________________________________\\n\""
+        "content": "     */"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"\\033[33mTask [\" + index + \"] \""
+        "content": "    public void printBorderlines(String input) {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + tasks.get(index - 1).getDescription() + \" has been set as completed.\\033[0m\""
+        "content": "        System.out.println(Style.BORDERLINE.getString()"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"\\n____________________________________________________________\\n\";"
+        "content": "                + input"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        System.out.println(done);"
+        "content": "                + Style.BORDERLINE.getString());"
       },
       {
         "lineNumber": 27,
@@ -2377,192 +3389,563 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    void showTotal(TaskList tasks) {"
+        "content": "     * Prints the input string with red colored borderlines."
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        String total \u003d \"Tasks in the list: \" + tasks.size()"
+        "content": "    public void printRedBorderlines(String input) {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"\\n____________________________________________________________\\n\";"
+        "content": "        System.out.println(colorRed(Style.BORDERLINE.getString())"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        System.out.println(total);"
+        "content": "                + input"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "                + colorRed(Style.BORDERLINE.getString()));"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void printError(String s) {"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        System.out.println(colorRed(s));"
+        "content": "    public void printDukeLogo() {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "        System.out.println(Style.LOGO.getString());"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public String colorRed(String input) {"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        return \"\\033[31m\" + input + \"\\033[0m\";"
+        "content": "    public void printGreeting() {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "        String greeting \u003d \"Hello! I\u0027m Duke.\\n\""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "                + \"I can help you manage a list of tasks!\\n\""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void invalidCommand() {"
+        "content": "                + \"What you can tell me to do is listed below:\\n\""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        printError(\"Please enter a valid command.\");"
+        "content": "                + \"  ⬡  Create a Todo task     | \" + colorGreen(\"todo \u003cyour task\u003e\\n\")"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": "                + \"  ⬢  Create a Deadline task | \" + colorGreen(\"deadline \u003cyour task\u003e /by \u003cwhen\u003e\\n\")"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Impala36"
         },
-        "content": ""
+        "content": "                + \"  ⬡  Create an Event task   | \" + colorGreen(\"event \u003cyour task\u003e /at \u003cwhen to when\u003e\\n\")"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    public void taskAdded(String line, TaskList tasks) {"
+        "content": "                + \"  ⬢  Complete a task        | \" + colorGreen(\"done \u003ctask index number\u003e\\n\")"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        String added \u003d \"____________________________________________________________\\n\""
+        "content": "                + \"  ⬡  Delete a task          | \" + colorGreen(\"delete \u003ctask index number\u003e\\n\")"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + \"Great! You have entered a proper task as shown below:\\n\""
+        "content": "                + \"  ⬡  List down all tasks    | \" + colorGreen(\"list\\n\")"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "                + line;"
+        "content": "                + \"  ⬢  Exit my program        | \" + colorGreen(\"bye or hit Enter\\n\");"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        System.out.println(added);"
+        "content": "        printBorderlines(greeting);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "        showTotal(tasks);"
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Impala36"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 55,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printFarewell() {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String farewell \u003d \"Bye. Hope to see you again soon!\";"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        printBorderlines(farewell);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printTaskAdded(TaskList tasks) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String added \u003d \"Great! You have entered a proper task as shown below:\\n\""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + colorGreen(tasks.get(tasks.size() - 1).getDescription()"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + \"\\nWe now have \" + tasks.size() + \" task(s) in your list!\");"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        printBorderlines(added);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printTaskRemoved(TaskList tasks, int index) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String added \u003d \"Okay! We have removed the task as shown below:\\n\""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + colorRed(tasks.get(index - 1).getDescription()"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + colorGreen(\"\\nWe now have \" + (tasks.size() - 1) + \" task(s) in your list!\"));"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        printBorderlines(added);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printTaskCompleted(int index, TaskList tasks) {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String done \u003d \"Good work there! Now we have:\\n\""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + \"\\033[33mTask [\" + index + \"] \""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + tasks.get(index - 1).getDescription() + \" set as completed!\\033[0m\";"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        printBorderlines(done);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printAllTasks(TaskList tasks) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        if (tasks.size() \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            printBorderlines(\"It appears that you have no tasks! Perhaps you should start creating one?\");"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            return;"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String total \u003d \"Here are the tasks that you currently have!\\n\";"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        for (int i \u003d 0; i \u003c tasks.size(); i++) {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "            total \u003d total.concat((i + 1) + \". \" + tasks.get(i).getDescription()) + \"\\n\";"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        printBorderlines(total);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printInvalidCommand() {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        printRedBorderlines(\"It seems that you have typed something out of my unfortunately\\n\""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                + \"limited vocabulary. Can you try again?\");"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printNoFileFound() {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String message \u003d \"It looks like it\u0027s your first time as I could not find any existing task file.\\n\" +"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "                \"Get started by creating a task!\";"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        System.out.println(message);"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    public void printExistingTasks(TaskList tasks) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        String message \u003d \"An existing task file is found!\";"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        System.out.println(message);"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "        printAllTasks(tasks);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "Impala36"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 108,
         "author": {
           "gitId": "Impala36"
         },
@@ -2570,7 +3953,7 @@
       }
     ],
     "authorContributionMap": {
-      "Impala36": 55
+      "Impala36": 108
     }
   },
   {
@@ -2645,7 +4028,7 @@
         "author": {
           "gitId": "Impala36"
         },
-        "content": "javac  -cp ..\\src -Xlint:none -d ..\\bin ..\\src\\main\\java\\duke\\Duke.java"
+        "content": "javac  -cp ..\\src\\main\\java -Xlint:none -d ..\\bin ..\\src\\main\\java\\duke\\*.java"
       },
       {
         "lineNumber": 11,
