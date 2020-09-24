@@ -839,1512 +839,6 @@
     }
   },
   {
-    "path": "src/main/java/duke/Tasks/Deadline.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "package duke.Tasks;// Organize the classes into suitable duke.Tasks packages."
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "import java.time.LocalDate;"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "import java.time.format.DateTimeFormatter;"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "/**"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * This Deadline class extends from task object."
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " *"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @author Dai Wei"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @version Finial version 2020.9.9"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @since Duke javadoc"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "public class Deadline extends Task {"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    protected String by;"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *convert data string to except format"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param startDate data/time string with yyyy-MM-dd format"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return  data/time string with MMM d yyyy format"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String getStartDate(String startDate)"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    {"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        DateTimeFormatter inputFormat \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd\");"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        DateTimeFormatter outputFormat \u003d DateTimeFormatter.ofPattern(\"MMM d yyyy\");"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return LocalDate.parse(startDate, inputFormat).format(outputFormat);"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * entity deadline."
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param description tasks\u0027 description"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param by          tasks\u0027 deadline time"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public Deadline(String description, String by) {"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        super(description);"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        //this.by \u003d by;"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        this.by \u003d  getStartDate(by);"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * get user command description of by"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return by"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String getBy() {"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return by;"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * override the to string method"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return user command Deadline to \"[D]\""
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return \"[D]\" + super.printDescription() + \" (by: \" + by + \")\";"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "daiweinus": 61
-    }
-  },
-  {
-    "path": "src/main/java/duke/Tasks/Event.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "package duke.Tasks;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "/**"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * This Event class extends from task object."
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " *"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @author Dai Wei"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @version Finial version 2020.9.9"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @since Duke javadoc"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "public class Event extends Task {"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    protected String at;"
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * entity Event."
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param description tasks\u0027 description"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param at          tasks\u0027 event time"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public Event(String description, String at) {"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        super(description);"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        this.at \u003d at;"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * get user command description of at"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return at"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String getAt() {"
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return at;"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * override the to string method"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return user event Deadline to \"[E]\""
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return \"[E]\" + super.printDescription() + \" (at: \" + at + \")\";"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "daiweinus": 43
-    }
-  },
-  {
-    "path": "src/main/java/duke/Tasks/Task.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "package duke.Tasks;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "/**"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * This class to create task object."
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " *"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @author Dai Wei"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @version Finial version 2020.9.9"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @since Duke javadoc"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "public abstract class Task {"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    protected String description;"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    protected boolean isDone;"
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * entity task."
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param description"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public Task(String description) {"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        this.description \u003d description;"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        this.isDone \u003d false;"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * This function is get done or noe statues icon symbols"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return tick or X symbols"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String getStatusIcon() {"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * This constructs s setDone with is done"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param isDone set status done"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public void setDone(boolean isDone) {"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        this.isDone \u003d isDone;"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * This constructs return description"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return user command description"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String getDescription() {"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return this.description;"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * Abstarct the toString method"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return void"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public abstract String toString();"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * print the user command with status icon"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return user command with status icon"
-      },
-      {
-        "lineNumber": 62,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 63,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String printDescription() {"
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return \"[\" + getStatusIcon() + \"]\" + \" \" + getDescription();"
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * set user command to isDone"
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return user command status"
-      },
-      {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public boolean isDone() {"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return isDone;"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "daiweinus": 76
-    }
-  },
-  {
-    "path": "src/main/java/duke/Tasks/Todo.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "package duke.Tasks;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "/**"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * This class extends from task object."
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " *"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @author Dai Wei"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @version Finial version 2020.9.9"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " * @since Duke javadoc"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "public class Todo extends Task {"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * entity Todo."
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @param description users\u0027 tasks\u0027 description"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public Todo(String description) {"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        super(description);"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * override the to string method"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     * @return user command todo to \"[T]\""
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        return \"[T]\" + super.printDescription();"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "daiweinus": 30
-    }
-  },
-  {
     "path": "src/main/java/duke/command/Parser.java",
     "fileType": "java",
     "lines": [
@@ -2367,14 +861,14 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.Tasks.Deadline;"
+        "content": "import duke.task.Deadline;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.Tasks.Todo;"
+        "content": "import duke.task.Todo;"
       },
       {
         "lineNumber": 5,
@@ -2936,7 +1430,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.Tasks.*;"
+        "content": "import duke.task.*;"
       },
       {
         "lineNumber": 5,
@@ -3857,28 +2351,28 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.Tasks.Deadline;"
+        "content": "import duke.task.Deadline;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.Tasks.Event;"
+        "content": "import duke.task.Event;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.Tasks.Task;"
+        "content": "import duke.task.Task;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.Tasks.Todo;"
+        "content": "import duke.task.Todo;"
       },
       {
         "lineNumber": 7,
@@ -5719,6 +4213,1740 @@
     ],
     "authorContributionMap": {
       "daiweinus": 91
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Deadline.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.task;// Organize the classes into suitable duke.Tasks packages."
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import java.time.LocalDate;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import java.time.format.DateTimeFormatter;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * This Deadline class extends from task object."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @author Dai Wei"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @version Finial version 2020.9.9"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @since Duke javadoc"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "public class Deadline extends Task {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    protected String by;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *convert data string to except format"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param startDate data/time string with yyyy-MM-dd format"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return  data/time string with MMM d yyyy format"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String getStartDate(String startDate)"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        DateTimeFormatter inputFormat \u003d DateTimeFormatter.ofPattern(\"yyyy-MM-dd\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        DateTimeFormatter outputFormat \u003d DateTimeFormatter.ofPattern(\"MMM d yyyy\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return LocalDate.parse(startDate, inputFormat).format(outputFormat);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * entity deadline."
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param description tasks\u0027 description"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param by          tasks\u0027 deadline time"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public Deadline(String description, String by) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        //this.by \u003d by;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        this.by \u003d  getStartDate(by);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * get user command description of by"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return by"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String getBy() {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return by;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * override the to string method"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return user command Deadline to \"[D]\""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return \"[D]\" + super.printDescription() + \" (by: \" + by + \")\";"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 61
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Event.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * This Event class extends from task object."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @author Dai Wei"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @version Finial version 2020.9.9"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @since Duke javadoc"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "public class Event extends Task {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    protected String at;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * entity Event."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param description tasks\u0027 description"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param at          tasks\u0027 event time"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public Event(String description, String at) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        this.at \u003d at;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * get user command description of at"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return at"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String getAt() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return at;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * override the to string method"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return user event Deadline to \"[E]\""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return \"[E]\" + super.printDescription() + \" (at: \" + at + \")\";"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 43
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Task.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * This class to create task object."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @author Dai Wei"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @version Finial version 2020.9.9"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @since Duke javadoc"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "public abstract class Task {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    protected String description;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    protected boolean isDone;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * entity task."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param description"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public Task(String description) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        this.description \u003d description;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        this.isDone \u003d false;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * This function is get done or noe statues icon symbols"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return tick or X symbols"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String getStatusIcon() {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return (isDone ? \"\\u2713\" : \"\\u2718\"); //return tick or X symbols"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * This constructs s setDone with is done"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param isDone set status done"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public void setDone(boolean isDone) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        this.isDone \u003d isDone;"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * This constructs return description"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return user command description"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String getDescription() {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return this.description;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * Abstarct the toString method"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return void"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public abstract String toString();"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * print the user command with status icon"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return user command with status icon"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String printDescription() {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return \"[\" + getStatusIcon() + \"]\" + \" \" + getDescription();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * set user command to isDone"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return user command status"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public boolean isDone() {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return isDone;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 76
+    }
+  },
+  {
+    "path": "src/main/java/duke/task/Todo.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * This class extends from task object."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @author Dai Wei"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @version Finial version 2020.9.9"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " * @since Duke javadoc"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "public class Todo extends Task {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * entity Todo."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @param description users\u0027 tasks\u0027 description"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public Todo(String description) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        super(description);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * override the to string method"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     * @return user command todo to \"[T]\""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        return \"[T]\" + super.printDescription();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 30
+    }
+  },
+  {
+    "path": "test/java/duke/command/ParserTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import duke.task.Todo;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "public class ParserTest {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public void getCommandWord() {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        assertEquals(\"todo\", Parser.getCommand(\"todo read book\"));"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        assertEquals(\"deadline\", Parser.getCommand(\"deadline return book /by next Friday\"));"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        assertEquals(\"exit\", Parser.getCommand(\"exit\"));"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 17
+    }
+  },
+  {
+    "path": "test/java/duke/task/EventTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "public class EventTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public void testStringConversion() {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        assertEquals(\"[E][✘] project meeting (at: meeting room #1-2)\" , new Event(\"project meeting\", \"meeting room #1-2\").toString());"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 13
     }
   },
   {
