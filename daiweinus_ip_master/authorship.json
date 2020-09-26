@@ -1,5 +1,21 @@
 [
   {
+    "path": "Duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "T  | 0 | read"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 1
+    }
+  },
+  {
     "path": "README.md",
     "fileType": "md",
     "lines": [
@@ -189,6 +205,1199 @@
     "authorContributionMap": {
       "daiweinus": 2,
       "-": 24
+    }
+  },
+  {
+    "path": "docs/README.md",
+    "fileType": "md",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "# Jojo User Guide"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Jojo, a Personal Assistant Chatbot with Java-based Command Line Interface (CLI), that helps users to keep track of various things. "
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Quick Start"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "1. Ensure you have Java 11 or above installed in your Computer."
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "2. Download the latest ip.jar here."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "3. Open the Terminal/Command Prompt."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "4. Navigate to the project’s out\\artifacts\\ip_jar."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "5. Launch the Jojo Chatbot by running the command java -jar ip.jar."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "6. Type the command in the CLI program and press Enter to execute it.  "
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "   Some example commands you can try:"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "   + ` todo borrow book `"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "   + `deadline return book /by 2020-09-25`"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "   + `event project meeting /at meeting room #1-12`"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "## Features "
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Adding a Todo task: todo"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Adding a Deadline task: deadline"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Adding an Event task: event"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Listing all tasks: list"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Finding a tasks containing any keyword: find KEY_WORD"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Deleting a task : delete INDEX"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Marking as Done of a task: done INDEX"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Exiting the program : bye"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Saving the tasks to local: save"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Notes about the command format:"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "+ Words in UPPER_CASE are the parameters to be supplied by the user.  "
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  ` E.g. DESCRIPTION in the command todo DESCRIPTION. `"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 1: Adding a Todo task: todo "
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Adds a Todo task in the list. ToDos: tasks without any date/time attached."
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "todo Read book"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  [T][✘] borrow book"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Now you have 1 tasks in the list."
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 2: Adding a Deadline task: deadline"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Adds a Deadline task. Deadlines: tasks that need to be done before a specific date(yyyy-mm-dd)"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "deadline return book /by 2020-09-25"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  [D][✘] return book (by: Sep 25 2020)"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Now you have 2 tasks in the list."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 3: Adding an Event task: event"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Adds an Event task. Events: tasks that start at a address."
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "event project meeting /at meeting room #1-12"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Got it. I\u0027ve added this task:"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  [E][✘] project meeting (at: meeting room #1-12)"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Now you have 3 tasks in the list."
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 4: Listing task information: list"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Lists all tasks in Jojo."
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "list"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Here are the tasks in your list:"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  1. [T][✘] Read book"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  2. [D][✘] return book (by: Sep 25 2020)"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  3. [E][✘] project meeting (at: meeting room #1-12)"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 5: Finding tasks: find KEY_WORD"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Finds tasks in Jojo that match any of the specified keywords."
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "find book"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Here are the matching tasks in your list:"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  1. [T][✘] Read book"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  2. [D][✘] return book (by: Sep 25 2020)"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 6: Deleting a task : delete INDEX"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Deletes the specified task in Duke."
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "delete 2"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Noted. I\u0027ve removed this task:"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  [D][✘] return book (by: Sep 25 2020)"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Now you have 2 tasks in the list."
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 7: Deleting a task : delete INDEX"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Mark specified task as done."
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "done 1"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Nice! I\u0027ve marked this task as done:"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "[✓] Read book"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 8: Exiting the program : bye"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Exits the program."
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "bye"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Bye. Hope to see you again soon!"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "## Feature 9: Saving the tasks to local: save"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when Duke starts up. "
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "### Usage"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Example of usage:"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "save"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Expected outcome:"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Tasks save to disk Jojo.txt"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 149,
+      "-": 20
     }
   },
   {
@@ -473,7 +1682,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        new Duke(\"Duke.txt\").run();"
+        "content": "        new Duke(\"Jojo.txt\").run();"
       },
       {
         "lineNumber": 41,
@@ -5744,21 +6953,21 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import duke.task.Todo;"
+        "content": "import org.junit.jupiter.api.Test;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import org.junit.jupiter.api.Test;"
+        "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
       },
       {
         "lineNumber": 6,
@@ -5772,73 +6981,52 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+        "content": "public class ParserTest {"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "public class ParserTest {"
+        "content": "    public void getCommandWord() {"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "        assertEquals(\"todo\", Parser.getCommand(\"todo read book\"));"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    @Test"
+        "content": "        assertEquals(\"deadline\", Parser.getCommand(\"deadline return book /by next Friday\"));"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    public void getCommandWord() {"
+        "content": "        assertEquals(\"exit\", Parser.getCommand(\"exit\"));"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        assertEquals(\"todo\", Parser.getCommand(\"todo read book\"));"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        assertEquals(\"deadline\", Parser.getCommand(\"deadline return book /by next Friday\"));"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "daiweinus"
-        },
-        "content": "        assertEquals(\"exit\", Parser.getCommand(\"exit\"));"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "daiweinus"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 14,
         "author": {
           "gitId": "daiweinus"
         },
@@ -5846,11 +7034,11 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 17
+      "daiweinus": 14
     }
   },
   {
-    "path": "test/java/duke/task/EventTest.java",
+    "path": "test/java/duke/task/DeadlineTest.java",
     "fileType": "java",
     "lines": [
       {
@@ -5900,6 +7088,99 @@
         "author": {
           "gitId": "daiweinus"
         },
+        "content": "public class DeadlineTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    public void testStringConversion() {"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        assertEquals(\"[D][✘] 111 (by: Sep 18 2020)\" , new Deadline(\"111\", \"2020-09-18\").toString());"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "daiweinus": 12
+    }
+  },
+  {
+    "path": "test/java/duke/task/EventTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "package duke.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "daiweinus"
+        },
         "content": "public class EventTest {"
       },
       {
@@ -5907,14 +7188,14 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 10,
