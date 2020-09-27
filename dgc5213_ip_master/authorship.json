@@ -10046,84 +10046,84 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "//                Ui.showMessage((matchedCount) + \".\" + taskList.get(i).toString());"
+        "content": "                taskListKeywordFound.add(task);  // once there is a match to a task, add this task to the new task list:taskListKeywordFound"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                taskListKeywordFound.add(task);  // once there is a match to a task, add this task to the new task list:taskListKeywordFound"
+        "content": "            }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        }"
+        "content": "        if (matchedCount \u003d\u003d 0) {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        if (matchedCount \u003d\u003d 0) {"
+        "content": "            Ui.showMessage(\"Sorry! Cannot find any matched tasks in your list.\");"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            Ui.showMessage(\"Sorry! Cannot find any matched tasks in your list.\");"
+        "content": "        } else {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        } else {"
+        "content": "            Ui.showMessage(\"Here are the matching tasks in your list:\");"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            Ui.showMessage(\"Here are the matching tasks in your list:\");"
+        "content": "            for (int i \u003d 0; i \u003c taskListKeywordFound.size(); i++) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            for (int i \u003d 0; i \u003c taskListKeywordFound.size(); i++) {"
+        "content": "                Ui.showMessage((i + 1) + \".\" + taskListKeywordFound.get(i).toString());  // display the matched tasks to user from the task list:taskListKeywordFound"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "                Ui.showMessage((i + 1) + \".\" + taskListKeywordFound.get(i).toString());  // display the matched tasks to user from the task list:taskListKeywordFound"
+        "content": "            }"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 49,
@@ -10137,14 +10137,14 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "dgc5213"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 52,
@@ -10179,18 +10179,11 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "dgc5213"
-        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "dgc5213": 57
+      "dgc5213": 56
     }
   },
   {
@@ -10447,32 +10440,83 @@
         "author": {
           "gitId": "dgc5213"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "dgc5213"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "dgc5213"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "dgc5213"
-        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "dgc5213": 39
+      "dgc5213": 36
+    }
+  },
+  {
+    "path": "src/main/java/data/duke.txt",
+    "fileType": "txt",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "T | 0 | checking code"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "T | 1 | do a push"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "E | 0 | have dinner at Tom\u0027s home | 2020-10-11T23:00"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "D | 0 | read book | 2020-10-11"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "T | 1 | return book"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "E | 0 | go to school, buy book | 2020-12-12T12:00"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "T | 0 | testing"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "E | 0 | sfhsk | 2020-10-10T11:11"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "dgc5213"
+        },
+        "content": "T | 0 | sdhfksjh"
+      }
+    ],
+    "authorContributionMap": {
+      "dgc5213": 9
     }
   },
   {

@@ -251,7 +251,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "2. Download the latest ip.jar here."
+        "content": "2. Download the latest ip.jar [here](https://github.com/daiweinus/ip/releases)."
       },
       {
         "lineNumber": 7,
@@ -550,7 +550,7 @@
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "daiweinus"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -592,7 +592,7 @@
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "daiweinus"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -641,7 +641,7 @@
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "daiweinus"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -774,7 +774,7 @@
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
         "content": ""
       },
@@ -816,7 +816,7 @@
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
         "content": ""
       },
@@ -1096,7 +1096,7 @@
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
         "content": ""
       },
@@ -1299,7 +1299,7 @@
       {
         "lineNumber": 156,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
         "content": ""
       },
@@ -1320,7 +1320,7 @@
       {
         "lineNumber": 159,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
         "content": ""
       },
@@ -1362,14 +1362,14 @@
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
         "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
         "content": "Expected outcome:"
       },
@@ -1390,14 +1390,70 @@
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "-"
+          "gitId": "daiweinus"
         },
-        "content": ""
+        "content": "```"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "Hello from"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  __          __ "
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  | | ____    | | ____"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "  | |/ __ \\   | |/ __ \\"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "__/ | |__| |__/ | |__| |"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "\\__/ \\____/ \\__/ \\____/"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "```"
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 149,
-      "-": 20
+      "daiweinus": 162,
+      "-": 15
     }
   },
   {
@@ -1941,101 +1997,108 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    case \"find\":"
+        "content": "                        break;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        tasks.findTasks(fullCommand);"
+        "content": "                    case \"find\":"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        break;"
+        "content": "                        tasks.findTasks(fullCommand);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    case \"save\":"
+        "content": "                        break;"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        tasks.saveTasks();"
+        "content": "                    case \"save\":"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        break;"
+        "content": "                        tasks.saveTasks();"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                    default:"
+        "content": "                        break;"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                        ui.printError();"
+        "content": "                    default:"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                }"
+        "content": "                        ui.printError();"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            } catch (TaskException e) {"
+        "content": "                }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                ui.printError(e.getMessage());"
+        "content": "            } catch (TaskException e) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            }"
+        "content": "                ui.printError(e.getMessage());"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 90,
+        "author": {
+          "gitId": "daiweinus"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
@@ -2043,7 +2106,7 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 88,
+      "daiweinus": 89,
       "-": 3
     }
   },
@@ -4379,7 +4442,7 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "                ui.showToUser(\"duke.Tasks: \" + index + \" has marked as DONE.\");"
+        "content": "                ui.showToUser(\"Tasks: \" + index + \" has marked as DONE.\");"
       },
       {
         "lineNumber": 121,
@@ -4722,52 +4785,45 @@
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            ui.printLine();"
+        "content": "        }"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        }"
+        "content": "        else {"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        else {"
+        "content": "            ui.showToUser(\"☹ OOPS!!! Our list not contain \" + \"\u0027\" + description + \"\u0027.\");"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            ui.showToUser(\"☹ OOPS!!! Our list not contain \" + \"\u0027\" + description + \"\u0027.\");"
+        "content": "        }"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "            ui.printLine();"
+        "content": "        ui.printLine();"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "daiweinus"
         },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 175,
-        "author": {
-          "gitId": "daiweinus"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 176,
+        "lineNumber": 175,
         "author": {
           "gitId": "daiweinus"
         },
@@ -4775,7 +4831,7 @@
       }
     ],
     "authorContributionMap": {
-      "daiweinus": 176
+      "daiweinus": 175
     }
   },
   {
