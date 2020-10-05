@@ -8,635 +8,29 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "T|0|goto gym"
+        "content": "T|0|read books"
       },
       {
         "lineNumber": 2,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "T|0|goto cinema"
+        "content": "D|0|read some more book"
       },
       {
         "lineNumber": 3,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "T|0|go to somewere"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "T|0|go to gym"
+        "content": "E|0|return all book"
       }
     ],
     "authorContributionMap": {
-      "Yiheng0410": 4
+      "Yiheng0410": 3
     }
   },
   {
-    "path": "src/main/Test/ParserTest.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import Command.*;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import org.junit.jupiter.api.Test;"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import static org.junit.jupiter.api.Assertions.*;"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "class ParserTest {"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    String cmdTodo\u003d\"todo go to gym\";"
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    String cmdDeadline\u003d\"deadline buy milk /by 2020-08-15\";"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    String cmdEvent\u003d\"event attend wedding /at 2020-08-16\";"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    String cmdList \u003d \"list\";"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    String cmdDelete \u003d \"delete 3\";"
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    String cmdDone \u003d \"done 2\";"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    String cmdUnknown \u003d \"that\u0027s all?\";"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    void getCommand() {"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Command todo \u003d new TodoCommand(\"todo go to gym\");"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Command deadline \u003d new DeadlineCommand(\"buy milk\",\"2020-08-15\");"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Command event \u003d new EventCommand(\"attend wedding\",\"2020-08-16\");"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Command list \u003d new ListCommand();"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Command delete \u003d new DeleteCommand(\"3\");"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Command done \u003d new DoneCommand(\"2\");"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Command unknown \u003d new OtherCommand(\"that\");"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(todo.getCommandType(), Parser.getCommand(cmdTodo).getCommandType());"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(deadline.getCommandType(),Parser.getCommand(cmdDeadline).getCommandType());"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(event.getCommandType(),Parser.getCommand(cmdEvent).getCommandType());"
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(list.getCommandType(),Parser.getCommand(cmdList).getCommandType());"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(delete.getCommandType(),Parser.getCommand(cmdDelete).getCommandType());"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(done.getCommandType(),Parser.getCommand(cmdDone).getCommandType());"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(unknown.getCommandType(),Parser.getCommand(cmdUnknown).getCommandType());"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(todo.getCommandType(), Parser.getCommand(cmdTodo).getCommandType());"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(deadline.getCommandType(),Parser.getCommand(cmdDeadline).getCommandType());"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(event.getCommandType(),Parser.getCommand(cmdEvent).getCommandType());"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(delete.getCommandType(),Parser.getCommand(cmdDelete).getCommandType());"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            assertEquals(done.getCommandType(),Parser.getCommand(cmdDone).getCommandType());"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        }catch(Exception e){"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            e.getMessage();"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "Yiheng0410": 47
-    }
-  },
-  {
-    "path": "src/main/Test/TaskListTest.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import org.junit.jupiter.api.Test;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import Task.Tasks;"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import Task.ToDos;"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import Task.Deadlines;"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import Task.Events;"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import java.util.ArrayList;"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "import static org.junit.jupiter.api.Assertions.*;"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "class TaskListTest {"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    ToDos todo1 \u003d new ToDos(\"go to gym\");"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    ToDos todo2 \u003d new ToDos(\"go to supermarket\");"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    Deadlines ddl1 \u003d new Deadlines(\"buy milk\", \"2020-08-15\");"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    Events event1 \u003d new Events(\"attend wedding\", \"2020-08-16\");"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    void findTask() {"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        ArrayList\u003cTasks\u003e taskList\u003d new ArrayList\u003c\u003e();"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        TaskList original \u003d new TaskList();"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        String keyword \u003d \"supermarket\";"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        taskList.add(todo2);"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        original.add(todo1);"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        original.add(todo2);"
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        original.add(ddl1);"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        original.add(event1);"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        assertEquals(taskList, original.findTask(keyword));"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "Yiheng0410": 36
-    }
-  },
-  {
-    "path": "src/main/docs/README.md",
+    "path": "docs/README.md",
     "fileType": "md",
     "lines": [
       {
@@ -649,7 +43,7 @@
       {
         "lineNumber": 2,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -658,33 +52,33 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "## Features"
+        "content": "The DUKE is a Chatbot with Java-based Command Line Interface (CLI) to keep track user\u0027s daily tasks.  It has the following features:"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "The DUKE is a Chatbot with Java-based Command Line Interface (CLI) to keep track user\u0027s daily tasks."
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "It has the following features:"
+        "content": "# Feature 1"
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -693,294 +87,294 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 1"
+        "content": "_To **add a Todo task**. A Todo task is anything that you might want Duke to remind you. A Todo task does not have time restriction._"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "_To **add a Todo task**. A Todo task is anything that you might want Duke to remind you. A Todo task does not have time restriction._"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "### Usage  "
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Usage"
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Example of usage:"
+        "content": "```  "
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "todo Read book  "
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "todo Read book"
+        "content": "```  "
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "Expected outcome:  "
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "```  "
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Expected outcome:"
+        "content": "Got it. I\u0027ve added this task:  "
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": " [T][✘] Read bookNow you have 1 tasks in the list."
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Got it. I\u0027ve added this task:"
+        "content": " ```  "
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "  [T][✘] Read book"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "Now you have 1 tasks in the list."
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "# Feature 2  "
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "_To **add a Deadline task**. A Deadline task is something that you would like to complete before a specified date._  "
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 2"
+        "content": "  "
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "_To **add a Deadline task**. A Deadline task is something that you would like to complete before a specified date._"
+        "content": "### Usage  "
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Usage"
+        "content": "```  "
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Example of usage:"
+        "content": "deadline return book /by 2020-09-25  "
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "```  "
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "deadline return book /by 2020-09-25"
+        "content": "Expected outcome:  "
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "```  "
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "Got it. I\u0027ve added this task:  "
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Expected outcome:"
+        "content": "  [D][✘] return book (by: 2020-09-25)  "
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "Now you have 2 tasks in the list.  "
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Got it. I\u0027ve added this task:"
+        "content": "```"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "  [D][✘] return book (by: 2020-09-25)"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Now you have 2 tasks in the list."
+        "content": "# Feature 3  "
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "_To **add a Event task**. A Event task is some tasks that occur at a specified time and date._  "
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "  "
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 3"
+        "content": "### Usage  "
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "_To **add a Event task**. A Event task is some tasks that occur at a specified time and date._"
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "```  "
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Usage"
+        "content": "event project meeting /at 2020-09-25  "
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Example of usage:"
+        "content": "```  "
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "Expected outcome:  "
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "event project meeting /at 2020-09-25"
+        "content": "```  "
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "Got it. I\u0027ve added this task:  "
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "  [E][✘] project meeting (at: 2020-09-25)  "
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Expected outcome:"
+        "content": "Now you have 3 tasks in the list.  "
       },
       {
         "lineNumber": 50,
@@ -992,317 +386,317 @@
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "Got it. I\u0027ve added this task:"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "  [E][✘] project meeting (at: 2020-09-25)"
+        "content": "# Feature 4  "
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Now you have 3 tasks in the list."
+        "content": "_To **List down** all existed task(s)._  "
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "  "
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "### Usage  "
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 4"
+        "content": "```  "
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "_**List down** all existed task(s)._"
+        "content": "list  "
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "```  "
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "### Usage"
+        "content": "Expected outcome:  "
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Example of usage:"
+        "content": "```  "
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "Here are the tasks in your list:  "
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "list"
+        "content": " 1. [T][✘] Read book  "
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": " 2. [D][✘] return book (by: 2020-09-25)  "
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": " 3. [E][✘] project meeting (at: 2020-09-25)  "
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Expected outcome:"
+        "content": "```"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Here are the tasks in your list:"
+        "content": "# Feature 5  "
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "  1. [T][✘] Read book"
+        "content": "_To **Set task** status to be **done**._  "
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "  2. [D][✘] return book (by: 2020-09-25)"
+        "content": "  "
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "  3. [E][✘] project meeting (at: 2020-09-25)"
+        "content": "### Usage  "
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "```  "
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 5"
+        "content": "done 1  "
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "_**Set task** status to be **done**._"
+        "content": "```  "
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "Expected outcome:  "
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Usage"
+        "content": "```  "
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Example of usage:"
+        "content": "Nice! I\u0027ve marked this task as done:  "
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "[✓] Read book  "
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "done 1"
+        "content": "```"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "# Feature 6  "
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Expected outcome:"
+        "content": "_To **Find (search) tasks** with **Key Word**._  "
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "  "
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Nice! I\u0027ve marked this task as done:"
+        "content": "### Usage  "
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "[✓] Read book"
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "```  "
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "find book  "
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 6"
+        "content": "```  "
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "_**Find (search) tasks** with **Key Word**._"
+        "content": "  "
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "Expected outcome:  "
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Usage"
+        "content": "```  "
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Example of usage:"
+        "content": "Here are the matching tasks in your list:  "
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": " 1. [T][✘] Read book  "
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "find book"
+        "content": " 2. [D][✘] return book (by: 2020-09-25)  "
       },
       {
         "lineNumber": 96,
@@ -1323,105 +717,105 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Expected outcome:"
+        "content": "# Feature 7  "
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "_To **Delete a task** from the list._  "
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Here are the matching tasks in your list:"
+        "content": "  "
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "  1. [T][✘] Read book"
+        "content": "### Usage  "
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "  2. [D][✘] return book (by: 2020-09-25)"
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "```  "
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "delete 2  "
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 7"
+        "content": "```  "
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "_**Delete a task** from the list._"
+        "content": "  "
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "Expected outcome:  "
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Usage"
+        "content": "```  "
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Example of usage:"
+        "content": "Noted. I\u0027ve removed this task:  "
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "  [D][✘] return book (by: Sep 25 2020)  "
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "delete 2"
+        "content": "Now you have 2 tasks in the list."
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "```  "
       },
       {
         "lineNumber": 113,
@@ -1435,74 +829,292 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Expected outcome:"
+        "content": "# Feature 8  "
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "```"
+        "content": "_To **exit** the program."
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Noted. I\u0027ve removed this task:"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "  [D][✘] return book (by: Sep 25 2020)"
+        "content": "### Usage  "
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "Now you have 2 tasks in the list."
+        "content": "Example of usage:  "
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "```  "
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "bye"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "### Feature 8"
+        "content": "```  "
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "_**Auto Load** from existing task file and **Auto save** changes to task file whenever user makes change._"
+        "content": "  "
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "Yiheng0410"
         },
+        "content": "Expected outcome:  "
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "```  "
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": " Bye. Hope to see you again soon!"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "```  "
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
         "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "# Feature 9"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "_To **Auto Load** from existing task file and **Auto save** changes to task file whenever user makes change._"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "Example of usage:  "
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "```  "
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "No action is needed from user. "
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "User need to enter \u0027list\u0027 to list all tasks loaded from data file"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "```  "
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "# Summary of features and commands"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "Below is the table to summarise the features and its relevant commands"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|                |Features                       |Commands                     |"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|----------------|-------------------------------|-----------------------------|"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|1.              |Add a todo task                |`\u0027todo\u0027`+task name          |"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|2.              |Add a deadline task            |`\u0027deadline\u0027`+(task name)+  `\u0027/by\u0027` + (date)      |"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|3.              |Add an event task              |`\u0027event\u0027`+(task name)+  `\u0027/at\u0027` + (date)      |"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|4.              |List all tasks                 |`\u0027list\u0027`                     |"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|5.              |Set task status as completed   |`\u0027done\u0027` +(task id)          |"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|6.              |Find (search) tasks            |`\u0027find\u0027` +(key word)         |"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|7.              |Delete a task                  |`\u0027delete\u0027` +(task id)        |"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|8.              |Exit the program               |`\u0027bye\u0027`                      |"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "|9.              |Auto load task or auto save task|no action is needed         |"
       }
     ],
     "authorContributionMap": {
-      "Yiheng0410": 123
+      "Yiheng0410": 141,
+      "-": 13
     }
   },
   {
@@ -2162,6 +1774,64 @@
     }
   },
   {
+    "path": "src/main/java/Command/InvalidCommand.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "package Command;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "public class InvalidCommand extends Command{"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    public InvalidCommand(String type) {"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        this.type \u003d type;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Yiheng0410": 7
+    }
+  },
+  {
     "path": "src/main/java/Command/ListCommand.java",
     "fileType": "java",
     "lines": [
@@ -2224,64 +1894,6 @@
     ],
     "authorContributionMap": {
       "Yiheng0410": 8
-    }
-  },
-  {
-    "path": "src/main/java/Command/OtherCommand.java",
-    "fileType": "java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "package Command;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "public class OtherCommand extends Command{"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    public OtherCommand(String type) {"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        this.type \u003d type;"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "Yiheng0410": 7
     }
   },
   {
@@ -2491,35 +2103,35 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    static final String logo \u003d \" ____        _        \\n\""
+        "content": "    public Duke(String filepath) {"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "Yiheng0410"
         },
-        "content": "            + \"|  _ \\\\ _   _| | _____ \\n\""
+        "content": "        this.ui \u003d new Ui();"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "Yiheng0410"
         },
-        "content": "            + \"| | | | | | | |/ / _ \\\\\\n\""
+        "content": "        this.storage \u003d new Storage(filepath);"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "Yiheng0410"
         },
-        "content": "            + \"| |_| | |_| |   \u003c  __/\\n\""
+        "content": "        this.tasks \u003d new TaskList();"
       },
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "-"
+          "gitId": "Yiheng0410"
         },
-        "content": "            + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
+        "content": "    }"
       },
       {
         "lineNumber": 25,
@@ -2531,16 +2143,16 @@
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "Yiheng0410"
+          "gitId": "-"
         },
-        "content": "    static final String greetMsg \u003d \" Hello! I\u0027m Duke\\n\" + logo +"
+        "content": "    public static void main(String[] args) {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            \" What can I do for you?\";"
+        "content": "        new Duke(\"./data/duke.txt\").run();"
       },
       {
         "lineNumber": 28,
@@ -2554,7 +2166,7 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    static final String exitMsg \u003d \" Bye. Hope to see you again soon!\";"
+        "content": "    }"
       },
       {
         "lineNumber": 30,
@@ -2568,126 +2180,126 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public Duke(String filepath) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        this.ui \u003d new Ui();"
+        "content": "     * This method firstly print the greeting message to the user"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        this.storage \u003d new Storage(filepath);"
+        "content": "     * Then it will check if a data file is existed, if existed load the data file otherwise create a new data file"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        this.tasks \u003d new TaskList();"
+        "content": "     * Then it will parse user command to readable format and check if the commands are in the correct format"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "     * Finally it will execute the user command and save changes to the data file"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "-"
+          "gitId": "Yiheng0410"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "    public void run() {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        new Duke(\"./data/duke.txt\").run();"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "        ui.printLine();"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "        ui.printGreetMsg();"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "        ui.printLine();"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * This method firstly print the greeting message to the user"
+        "content": "        //Check if a data file is existed. If Existed, load the task from the data file, otherwise create a data file."
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * Then it will check if a data file is existed, if existed load the data file otherwise create a new data file"
+        "content": "        try {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * Then it will parse user command to readable format and check if the commands are in the correct format"
+        "content": "            storage.loadFromFile(tasks);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * Finally it will execute the user command and save changes to the data file"
+        "content": "        } catch (DukeException | IOException e) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     */"
+        "content": "            System.out.println(e.getMessage());"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public void run() {"
+        "content": "        }"
       },
       {
         "lineNumber": 49,
@@ -2701,714 +2313,714 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        ui.printLine();"
+        "content": "        //Parse user command to readable format"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        ui.print(greetMsg);"
+        "content": "        while (true) {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        ui.printLine();"
+        "content": "            String userInput \u003d ui.getCommand();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "            Command cmd \u003d null;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "          /*"
+        "content": "            try {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        1. Check if a data file is existed."
+        "content": "                cmd \u003d Parser.getCommand(userInput);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "           If Existed, load the task from the data file, otherwise create a data file."
+        "content": "            } catch (DukeException e) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "         */"
+        "content": "                ui.print(e.getMessage());"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        try {"
+        "content": "                continue;"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            storage.loadFromFile(tasks);"
+        "content": "            } catch (Exception e) {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        } catch (DukeException | IOException e) {"
+        "content": "                ui.print(\"☹ OOPS!!! Please try again.\");"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            System.out.println(e.getMessage());"
+        "content": "                continue;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "            //Check if user commands are in correct format"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        while (true) {"
+        "content": "            if (cmd instanceof InvalidCommand \u0026\u0026 cmd.getCommandType().equalsIgnoreCase(\"bye\")) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            String userInput \u003d ui.getCommand();"
+        "content": "                break;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            Command cmd \u003d null;"
+        "content": "            } else if (cmd instanceof InvalidCommand) {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "                ui.print(new DukeException(\"☹ OOPS!!! I\u0027m sorry, I don\u0027t understand what are you trying to say\").getMessage());"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            /*"
+        "content": "                continue;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            2.Parse user command to readable format"
+        "content": "            }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "             */"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            try {"
+        "content": "            //Execute the user command and update teh data file whenever user makes any changes"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                cmd \u003d Parser.getCommand(userInput);"
+        "content": "            executeCommand(cmd, tasks);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            } catch (DukeException e) {"
+        "content": "        }"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                ui.print(e.getMessage());"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                continue;"
+        "content": "        ui.printExitMsg();"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            } catch (Exception e) {"
+        "content": "        ui.printLine();"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                ui.print(\"☹ OOPS!!! Please try again.\");"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                continue;"
+        "content": "    }"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            /*"
+        "content": "     * @param cmd   User inputs"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            3.Check if user commands are"
+        "content": "     * @param tasks A TaskList"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            in correct format"
+        "content": "     */"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "             */"
+        "content": "    private void executeCommand(Command cmd, TaskList tasks) {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            if (cmd instanceof OtherCommand \u0026\u0026 cmd.getCommandType().equalsIgnoreCase(\"bye\")) {"
+        "content": "        switch (cmd.getCommandType()) {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": "            case \"list\": {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            }"
+        "content": "                ui.printTaskList(tasks);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            else if (cmd instanceof OtherCommand) {"
+        "content": "                break;"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                ui.print(new DukeException(\"☹ OOPS!!! I\u0027m sorry, I don\u0027t understand what are you trying to say\").getMessage());"
+        "content": "            }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                continue;"
+        "content": "            case \"done\":"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            }"
+        "content": "                changeTaskStatus(tasks, true, cmd);"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "                updateDataFile(tasks);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            /*"
+        "content": "                break;"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            4.Execute the user command and update teh data file whenever user makes any changes"
+        "content": "            case \"todo\":"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "             */"
+        "content": "                ToDos todo \u003d new ToDos(cmd.getCommandContent());"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            executeCommand(cmd, tasks);"
+        "content": "                tasks.add(todo);"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        }"
+        "content": "                ui.printTask(todo, tasks);"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "                updateDataFile(tasks);"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        ui.print(exitMsg);"
+        "content": "                break;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        ui.printLine();"
+        "content": "            case \"deadline\":"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "                Deadlines ddl \u003d new Deadlines(cmd.getCommandContent(), ((DeadlineCommand) cmd).getTime());"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "                tasks.add(ddl);"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "                ui.printTask(ddl, tasks);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    /**"
+        "content": "                updateDataFile(tasks);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param cmd User inputs"
+        "content": "                break;"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param tasks A TaskList"
+        "content": "            case \"event\":"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     */"
+        "content": "                Events event \u003d new Events(cmd.getCommandContent(), ((EventCommand) cmd).getTime());"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    private static void executeCommand(Command cmd, TaskList tasks) {"
+        "content": "                tasks.add(event);"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        switch (cmd.getCommandType()) {"
+        "content": "                ui.printTask(event, tasks);"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            case \"list\": {"
+        "content": "                updateDataFile(tasks);"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                printTaskList(tasks);"
+        "content": "                break;"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": "            case \"delete\":"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            }"
+        "content": "                deleteTask(tasks, cmd);"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            case \"done\":"
+        "content": "                updateDataFile(tasks);"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                changeTaskStatus(tasks, true, cmd);"
+        "content": "                break;"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                updateDataFile(tasks);"
+        "content": "            case \"find\":"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": "                findTask(tasks, cmd);"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            case \"todo\":"
+        "content": "                break;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                ToDos todo \u003d new ToDos(cmd.getCommandContent());"
+        "content": "        }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                tasks.add(todo);"
+        "content": "    }"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                printTask(todo, tasks);"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                updateDataFile(tasks);"
+        "content": "    /**"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": "     * This method will mark task status to \"Done\""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            case \"deadline\":"
+        "content": "     *"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                Deadlines ddl \u003d new Deadlines(cmd.getCommandContent(), ((DeadlineCommand) cmd).getTime());"
+        "content": "     * @param tasks  The task that need to be updated as \"Done\""
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                tasks.add(ddl);"
+        "content": "     * @param status true is done, false is not done"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                printTask(ddl, tasks);"
+        "content": "     * @param cmd    User Input"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                updateDataFile(tasks);"
+        "content": "     */"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": "    public void changeTaskStatus(TaskList tasks, boolean status, Command cmd) {"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            case \"event\":"
+        "content": "        int index \u003d ((DoneCommand) cmd).getIndex();"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                Events event \u003d new Events(cmd.getCommandContent(), ((EventCommand) cmd).getTime());"
+        "content": "        tasks.get(index - 1).setTaskStatus(status);"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                tasks.add(event);"
+        "content": "        ui.print(\"Nice! I\u0027ve marked this task as done: \");"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                printTask(event, tasks);"
+        "content": "        ui.print(tasks.get(index - 1).toString());"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                updateDataFile(tasks);"
+        "content": "    }"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            case \"delete\":"
+        "content": ""
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                deleteTask(tasks, cmd);"
+        "content": "    /**"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                updateDataFile(tasks);"
+        "content": "     * @param tasks the task that need to be deleted"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": "     * @param cmd   user inputs"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "            case \"find\":"
+        "content": "     */"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                findTask(tasks, cmd);"
+        "content": "    public void deleteTask(TaskList tasks, Command cmd) {"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                break;"
+        "content": "        int index \u003d ((DeleteCommand) cmd).getIndex();"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        }"
+        "content": "        ui.print(\" Noted. I\u0027ve removed this task:  \");"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "        ui.print(tasks.get(index - 1).toString());"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "        tasks.remove(index - 1);"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "        ui.print(\"Now you have \" + tasks.size() + \" task(s) in the list.\");"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * This method will mark task status to \"Done\""
+        "content": "    }"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param tasks The task that need to be updated as \"Done\""
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param status true is done, false is not done"
+        "content": "    /**"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param cmd User Input"
+        "content": "     * @param tasks the updated list of tasks that will be saved to the data file"
       },
       {
         "lineNumber": 152,
@@ -3422,465 +3034,157 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public static void changeTaskStatus(TaskList tasks, boolean status, Command cmd) {"
+        "content": "    public void updateDataFile(TaskList tasks) {"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        int index \u003d ((DoneCommand) cmd).getIndex();"
+        "content": "        Storage storage \u003d new Storage(\"/data/duke.txt\");"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        tasks.get(index - 1).setTaskStatus(status);"
+        "content": "        try {"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(\"Nice! I\u0027ve marked this task as done: \");"
+        "content": "            storage.saveToFile(tasks);"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(tasks.get(index - 1).toString());"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "            ui.print(\"☹ OOPS!!!Update failed. Something went wrong when save data to the data file, please try again.\");"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param task The new added task"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param tasks The list contains all tasks"
+        "content": "    /**"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     */"
+        "content": "     * @param tasks the list of all the tasks"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public static void printTask(Tasks task, TaskList tasks) {"
+        "content": "     * @param cmd   keywords used to search for the tasks"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(\"Got it. I\u0027ve added this task:\");"
+        "content": "     */"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(task.toString());"
+        "content": "    public void findTask(TaskList tasks, Command cmd) {"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(\"Now you have \" + tasks.size() + \" task(s) in the list.\");"
+        "content": "        int i \u003d 1;"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "        ui.print(\"Here are the matching tasks in your list:\");"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "        for (Tasks t : tasks.findTask(cmd.getCommandContent())) {"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    /**"
+        "content": "            ui.print(i + \".\" + t.toString());"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     * @param tasks The list contains all tasks"
+        "content": "            i++;"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "     */"
+        "content": "        }"
       },
       {
         "lineNumber": 173,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    public static void printTaskList(TaskList tasks) {"
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        int index \u003d 1;"
-      },
-      {
-        "lineNumber": 175,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        for (Tasks task : tasks.getAllTaskList()) {"
-      },
-      {
-        "lineNumber": 176,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            System.out.println(index + \".\" + task.toString());"
-      },
-      {
-        "lineNumber": 177,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            index++;"
-      },
-      {
-        "lineNumber": 178,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 179,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 180,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 181,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 182,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     * @param tasks the task that need to be deleted"
-      },
-      {
-        "lineNumber": 183,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     * @param cmd user inputs"
-      },
-      {
-        "lineNumber": 184,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 185,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    public static void deleteTask(TaskList tasks, Command cmd) {"
-      },
-      {
-        "lineNumber": 186,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        int index \u003d ((DeleteCommand) cmd).getIndex();"
-      },
-      {
-        "lineNumber": 187,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        System.out.println(\" Noted. I\u0027ve removed this task:  \");"
-      },
-      {
-        "lineNumber": 188,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        System.out.println(tasks.get(index - 1).toString());"
-      },
-      {
-        "lineNumber": 189,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        tasks.remove(index - 1);"
-      },
-      {
-        "lineNumber": 190,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        System.out.println(\"Now you have \" + tasks.size() + \" task(s) in the list.\");"
-      },
-      {
-        "lineNumber": 191,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 192,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 193,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 194,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 195,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     * @param tasks the updated list of tasks that will be saved to the data file"
-      },
-      {
-        "lineNumber": 196,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 197,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    public static void updateDataFile(TaskList tasks) {"
-      },
-      {
-        "lineNumber": 198,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        Storage storage \u003d new Storage(\"/data/duke.txt\");"
-      },
-      {
-        "lineNumber": 199,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 200,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            storage.saveToFile(tasks);"
-      },
-      {
-        "lineNumber": 201,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        } catch (IOException e) {"
-      },
-      {
-        "lineNumber": 202,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            System.out.println(\"☹ OOPS!!!Update failed. Something went wrong when save data to the data file, please try again.\");"
-      },
-      {
-        "lineNumber": 203,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 204,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 205,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 206,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 207,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     * @param tasks the list of all the tasks"
-      },
-      {
-        "lineNumber": 208,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     * @param cmd keywords used to search for the tasks"
-      },
-      {
-        "lineNumber": 209,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 210,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "    public static void findTask(TaskList tasks, Command cmd) {"
-      },
-      {
-        "lineNumber": 211,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        int i \u003d 0;"
-      },
-      {
-        "lineNumber": 212,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        System.out.println(\"Here are the matching tasks in your list:\");"
-      },
-      {
-        "lineNumber": 213,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        for (Tasks t : tasks.findTask(cmd.getCommandContent())) {"
-      },
-      {
-        "lineNumber": 214,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            System.out.println(i + \".\" + t.toString());"
-      },
-      {
-        "lineNumber": 215,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "            i++;"
-      },
-      {
-        "lineNumber": 216,
-        "author": {
-          "gitId": "Yiheng0410"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 218,
+        "lineNumber": 174,
         "author": {
           "gitId": "Yiheng0410"
         },
         "content": ""
       },
       {
-        "lineNumber": 219,
+        "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
@@ -3888,8 +3192,8 @@
       }
     ],
     "authorContributionMap": {
-      "Yiheng0410": 211,
-      "-": 8
+      "Yiheng0410": 171,
+      "-": 4
     }
   },
   {
@@ -4400,7 +3704,7 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! The time format is illegal.Format should be in \\\"yyyy-MM-dd\\\" \");"
+        "content": "                    throw new DukeException(\"☹ OOPS!!! The date format is incorrect.Format should be in \\\"yyyy-MM-dd\\\", please enter again.\");"
       },
       {
         "lineNumber": 65,
@@ -4484,7 +3788,7 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                    throw new DukeException(\"☹ OOPS!!! The time format is illegal.Format should be in \\\"yyyy-MM-dd\\\"\");"
+        "content": "                    throw new DukeException(\"☹ OOPS!!! The date format is incorrect.Format should be in \\\"yyyy-MM-dd\\\"，please enter again.\");"
       },
       {
         "lineNumber": 77,
@@ -4519,7 +3823,7 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "                return new OtherCommand(cmd[0]);"
+        "content": "                return new InvalidCommand(cmd[0]);"
       },
       {
         "lineNumber": 82,
@@ -6430,35 +5734,35 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public Ui() {"
+        "content": "    private final String logo \u003d \" ____        _        \\n\""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        this.scanner \u003d new Scanner(System.in);"
+        "content": "            + \"|  _ \\\\ _   _| | _____ \\n\""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "            + \"| | | | | | | |/ / _ \\\\\\n\""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "            + \"| |_| | |_| |   \u003c  __/\\n\""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public String getCommand(){"
+        "content": "            + \"|____/ \\\\__,_|_|\\\\_\\\\___|\\n\";"
       },
       {
         "lineNumber": 13,
@@ -6472,14 +5776,14 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        return scanner.nextLine();"
+        "content": "    private final String greetMsg \u003d \" Hello! I\u0027m Duke\\n\" + logo +\"\\n\"+"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "            \" What can I do for you?\";"
       },
       {
         "lineNumber": 16,
@@ -6493,94 +5797,297 @@
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public void print(String s){"
+        "content": "    private final String exitMsg \u003d \" Bye. Hope to see you again soon!\";"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(s);"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "    public Ui() {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public void printLine(){"
+        "content": "        this.scanner \u003d new Scanner(System.in);"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        print(\"________________________________________________________\");"
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": ""
+        "content": "    public String getCommand(){"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    public void printTask(Tasks t, TaskList tasks) {"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(\"Got it. I\u0027ve added this task:\");"
+        "content": "        return scanner.nextLine();"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(t.toString());"
+        "content": "    }"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "        System.out.println(\"Now you have \" + tasks.size() + \" tasks in the list.\");"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Yiheng0410"
         },
-        "content": "    }"
+        "content": "    public void print(String s){"
       },
       {
         "lineNumber": 30,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        System.out.println(s);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    public void printLine(){"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        print(\"________________________________________________________\");"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    public void printTask(Tasks t, TaskList tasks) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        print(\"Got it. I\u0027ve added this task:\");"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        print(t.toString());"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        print(\"Now you have \" + tasks.size() + \" tasks in the list.\");"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    public void printTaskList(TaskList tasks) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        int index \u003d 1;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        for (Tasks task : tasks.getAllTaskList()) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            print(index + \".\" + task.toString());"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            index++;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    public void printGreetMsg(){"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        print(greetMsg);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    public void printExitMsg(){"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        print(exitMsg);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
         "author": {
           "gitId": "Yiheng0410"
         },
@@ -6588,7 +6095,599 @@
       }
     ],
     "authorContributionMap": {
-      "Yiheng0410": 30
+      "Yiheng0410": 59
+    }
+  },
+  {
+    "path": "src/main/test/ParserTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import Command.*;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "class ParserTest {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    String cmdTodo\u003d\"todo go to gym\";"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    String cmdDeadline\u003d\"deadline buy milk /by 2020-08-15\";"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    String cmdEvent\u003d\"event attend wedding /at 2020-08-16\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    String cmdList \u003d \"list\";"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    String cmdDelete \u003d \"delete 3\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    String cmdDone \u003d \"done 2\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    String cmdInvalid \u003d \"that\u0027s all?\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    void getCommand() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        Command todo \u003d new TodoCommand(\"todo go to gym\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        Command deadline \u003d new DeadlineCommand(\"buy milk\",\"2020-08-15\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        Command event \u003d new EventCommand(\"attend wedding\",\"2020-08-16\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        Command list \u003d new ListCommand();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        Command delete \u003d new DeleteCommand(\"3\");"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        Command done \u003d new DoneCommand(\"2\");"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        Command unknown \u003d new InvalidCommand(\"that\u0027s\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(todo.getCommandType(), Parser.getCommand(cmdTodo).getCommandType());"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(deadline.getCommandType(),Parser.getCommand(cmdDeadline).getCommandType());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(event.getCommandType(),Parser.getCommand(cmdEvent).getCommandType());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(list.getCommandType(),Parser.getCommand(cmdList).getCommandType());"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(delete.getCommandType(),Parser.getCommand(cmdDelete).getCommandType());"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(done.getCommandType(),Parser.getCommand(cmdDone).getCommandType());"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(unknown.getCommandType(),Parser.getCommand(cmdInvalid).getCommandType());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(todo.getCommandType(), Parser.getCommand(cmdTodo).getCommandType());"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(deadline.getCommandType(),Parser.getCommand(cmdDeadline).getCommandType());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(event.getCommandType(),Parser.getCommand(cmdEvent).getCommandType());"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(delete.getCommandType(),Parser.getCommand(cmdDelete).getCommandType());"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            assertEquals(done.getCommandType(),Parser.getCommand(cmdDone).getCommandType());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        }catch(Exception e){"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "            e.getMessage();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Yiheng0410": 46
+    }
+  },
+  {
+    "path": "src/main/test/TaskListTest.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import org.junit.jupiter.api.Test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import Task.Tasks;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import Task.ToDos;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import Task.Deadlines;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import Task.Events;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "import static org.junit.jupiter.api.Assertions.*;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "class TaskListTest {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    ToDos todo1 \u003d new ToDos(\"go to gym\");"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    ToDos todo2 \u003d new ToDos(\"go to supermarket\");"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    Deadlines ddl1 \u003d new Deadlines(\"buy milk\", \"2020-08-15\");"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    Events event1 \u003d new Events(\"attend wedding\", \"2020-08-16\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    void findTask() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        ArrayList\u003cTasks\u003e taskList\u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        TaskList original \u003d new TaskList();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        String keyword \u003d \"supermarket\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        taskList.add(todo2);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        original.add(todo1);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        original.add(todo2);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        original.add(ddl1);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        original.add(event1);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "        assertEquals(taskList, original.findTask(keyword));"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Yiheng0410"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Yiheng0410": 36
     }
   }
 ]
